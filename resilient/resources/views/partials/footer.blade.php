@@ -1,7 +1,7 @@
 		
 
 		<!-- BEGIN JAVASCRIPT -->
-		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
 		<script src="{{URL::asset('js/libs/jquery/jquery-1.11.2.min.js')}}"></script>
 		<script src="{{URL::asset('js/libs/jquery/jquery-migrate-1.2.1.min.js')}}"></script>
 		<script src="{{URL::asset('js/libs/jquery-ui/jquery-ui.min.js')}}"></script>
