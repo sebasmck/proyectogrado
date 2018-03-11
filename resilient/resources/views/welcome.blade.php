@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Resilient</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -78,17 +78,18 @@
             @endif
 
             <div class="content">
+                <br>
+
+                <img src="{{asset('img/logo.png')}}" alt="Logo" style="width: 180px; height: auto; margin-bottom: 50px;">
+
                 <div class="title m-b-md">
-                    Laravel
+                    RESILIENT
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                {{-- <div class="links">
+                    <a href="">Documentation</a>
+                    <a href="">Laracasts</a>
+                </div> --}}
             </div>
         </div>
     </body>
