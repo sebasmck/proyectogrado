@@ -32,7 +32,6 @@
                 font-size: 44px;
             }
 
-            
             .m-b-md {
                 margin-bottom: 10px;
                 color: #636b6f;
@@ -49,9 +48,9 @@
 
     <div class="logocontainer" style="margin-bottom: 30px;">
 
-        <img src="{{asset('img/logo.png')}}" alt="Logo" style="width: 120px; height: auto;">
+        <img src="{{asset('img/logo.png')}}" alt="Logo" id="logo" style="width: 120px; height: auto; margin-right: 250px;">
 
-        <div class="title m-b-md">
+        <div class="title m-b-md pull-right" >
             RESILIENT
         </div>
 
@@ -110,7 +109,7 @@
                                 </button>
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Olvido Su contraseña?') }}
+                                    {{ __('Olvidó Su contraseña?') }}
                                 </a>
                             </div>
                         </div>
@@ -120,4 +119,25 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('addjs')
+<script>
+    var tl = new TimelineLite();
+
+    var title = $('.title'),
+        logo = $('#logo');
+
+    
+
+    tl.to(logo, 2, {rotation:90, transformOrigin:"left 50%"});
+
+
+    tl.from(title, 2.5, {left:100, opacity:0});
+
+    
+
+</script>
+    
+    
 @endsection
