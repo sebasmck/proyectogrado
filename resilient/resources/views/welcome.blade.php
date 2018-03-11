@@ -80,7 +80,7 @@
             <div class="content">
                 <br>
 
-                <img src="{{asset('img/logo.png')}}" alt="Logo" style="width: 180px; height: auto; margin-bottom: 50px;">
+                <img src="{{asset('img/logo.png')}}" alt="Logo" id="logo" style="width: 180px; height: auto; margin-bottom: 50px;">
 
                 <div class="title m-b-md">
                     RESILIENT
@@ -94,3 +94,6 @@
         </div>
     </body>
 </html>
+
+
+
