@@ -9,7 +9,7 @@ Home
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 40px;" >
-                Bienvenido
+                Manejo De Usuarios
             </div>
             
             <div style="margin-top: 100px;" class="card">
@@ -36,14 +36,24 @@ Home
                         <div class="card content-card">
                             <div class="card-body" style=" height: 400px;">
                                 
-                                <div class="col-md-5">
-                                    <img src="{{ asset('img/profilepic.jpg') }}" style="width: 180px; margin-top: 70px; height: auto; vertical-align: center; border-radius: 100px;" alt="">
-                                </div>
-                                <div class="col-md-5" style="margin-top: 70px;">
-                                    <h4>Nombre: {{ auth()->user()->name }}</h4> <br>
-                                    <h4>Correo: {{ auth()->user()->email }}</h4><br>
-                                    <h4>Usuario desde: {{ auth()->user()->created_at }} </h4>
-                                </div>
+                                <table id="example" class="display">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Email</th>
+                                        </tr>
+                                        
+                                    </thead>
+                                    @foreach ($users as $user)
+                                    <tbody>
+                                        <tr>
+                                            <td>{{$user->name}}</td>
+                                            <td>{{$user->email}}</td>
+                                        </tr>
+                                    </tbody>
+                                    @endforeach
+                                </table>
+                                
                             </div>
                         </div>
                     </div>
@@ -53,14 +63,24 @@ Home
         </div>
     </div>
 </div>
+
 @endsection
 
 @section('addjs')
-
-
-
+<script scr="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+	
+		<script>
+			$(document).ready(function() {
+				$('#example').DataTable();
+			} );
+		</script>
 
 <script>
+
+    $(document).ready( function () {
+        $('#example').DataTable();
+    } );    
 
     var tl = new TimelineLite();
 

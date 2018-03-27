@@ -11,6 +11,10 @@
 	<!-- Styles -->
 	{{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
 
+	<link rel="stylesheet" href="">
+
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
 	<link type="text/css" rel="stylesheet" href="{{asset('css/theme-default/bootstrap.css?1422792965')}}" />
 	
 	<link type="text/css" rel="stylesheet" href="{{asset('css/theme-default/materialadmin.css?1425466319')}}" />
@@ -29,13 +33,10 @@
 
 		<link type="text/css" rel="stylesheet" href="{{asset('css/theme-default/libs/DataTables/extensions/dataTables.tableTools.css?1423553990')}}" />
 
-		
-
 		<link type="text/css" rel="stylesheet" href="{{asset('css/theme-default/libs/dropzone/dropzone-theme.css?1424887864')}}" />
 		
-		
-
 		<link type="text/css" rel="stylesheet" href="{{asset('css/theme-default/libs/select2/select2.css?1424887856')}}" />
+
 		<link type="text/css" rel="stylesheet" href="{{asset('css/theme-default/libs/nestable/nestable.css?1423393667')}}" />
 		
 

@@ -1,14 +1,17 @@
 		
 
 		<!-- BEGIN JAVASCRIPT -->
+
+	
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+		
+		<script src="{{URL::asset('js/DataTables/datatables.min.js')}}" ></script>
 		<script src="{{URL::asset('js/libs/jquery/jquery-1.11.2.min.js')}}"></script>
 		<script src="{{URL::asset('js/libs/jquery/jquery-migrate-1.2.1.min.js')}}"></script>
 		<script src="{{URL::asset('js/libs/jquery-ui/jquery-ui.min.js')}}"></script>
 		<script src="{{URL::asset('js/libs/bootstrap/bootstrap.min.js')}}"></script>
 		<script src="{{URL::asset('js/libs/spin.js/spin.min.js')}}"></script>
 		<script src="{{URL::asset('js/libs/autosize/jquery.autosize.min.js')}}"></script>
-
 		<script src="{{URL::asset('js/libs/bootstrap-datepicker/bootstrap-datepicker.js')}}"></script>
 		<script src="{{URL::asset('js/libs/moment/moment.min.js')}}"></script>
 		<script src="{{URL::asset('js/libs/flot/jquery.flot.min.js')}}"></script>
@@ -31,15 +34,17 @@
 		<script src="{{URL::asset('js/core/source/AppNavSearch.js')}}"></script>
 		<script src="{{URL::asset('js/core/source/AppVendor.js')}}"></script>
 		<script src="{{URL::asset('js/core/demo/Demo.js')}}"></script>
-
 		<script src="{{URL::asset('js/core/demo/DemoFormComponents.js')}}"></script>
-		
-		
 		<script src="{{URL::asset('js/libs/dropzone/dropzone.min.js')}}"></script>
 		<script src="{{URL::asset('js/libs/select2/select2.min.js')}}"></script>
 		<script src="{{URL::asset('js/libs/nestable/jquery.nestable.js')}}"></script>
 		<script src="{{URL::asset('js/libs/ckeditor/ckeditor.js')}}"></script>
 		<script src="{{URL::asset('js/libs/ckeditor/adapters/jquery.js')}}"></script>
+		
+		
+		
+		
+		
 
 		{{-- <script>
 			@if(Session::has('message'))
