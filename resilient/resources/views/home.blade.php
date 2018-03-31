@@ -12,7 +12,7 @@ Home
                 Bienvenido
             </div>
             
-            <div style="margin-top: 100px;" class="card">
+            <div class="card">
                 <div  class="card-body">
                     <div class="col-md-3 col-xs-6">
                         <div class="card card1">
@@ -57,9 +57,6 @@ Home
 
 @section('addjs')
 
-
-
-
 <script>
 
     var tl = new TimelineLite();
@@ -72,7 +69,7 @@ Home
      content = $('.content-card');
 
 
-    tl.to(title, 1.5, {y:90});
+    tl.to(title, 1.5, {y:10});
     tl.from(card1, .3, {left:100, opacity:0});
     tl.from(card2, .3, {left:100, opacity:0});
     tl.from(card3, .3, {left:100, opacity:0});

@@ -21,5 +21,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/users', 'HomeController@displayUsers')->name('/users');
 
+Route::get('/datoscuidador', 'DatosCuidadorController@index')->name('/datoscuidador');
+
+Route::get('/datosnino', 'DatosNinoController@index')->name('/datosnino');
+
+Route::get('/pretest', 'PretestController@index')->name('/pretest');
+
+
 // Route::Resource('usuarios', 'UsersController');
 
