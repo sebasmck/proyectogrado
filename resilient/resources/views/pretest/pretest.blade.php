@@ -37,7 +37,7 @@ Cuestionario 1
 
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                        <button type="submit" class="btn btn-flat btn-primary ink-reaction">Siguiente</button>
+                  <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/pretest1')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                   </div>
             </div>
 

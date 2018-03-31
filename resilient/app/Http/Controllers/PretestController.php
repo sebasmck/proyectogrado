@@ -16,67 +16,119 @@ class PretestController extends Controller
         return view ('pretest.pretest');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    // start sequencer
+
+    public function pretest1(){
+
+        return view('pretest.pretest1');
+
+    }
+
+    public function pretest2(){
+
+        return view('pretest.pretest2');
+
+    }
+
+    public function pretest3(){
+
+        return view('pretest.pretest3');
+
+    }
+    
+    
+    public function pretestPrueba(){
+        return view ('pretest.pretestprueba');
+    }
+
+    public function pretestPrueba1(){
+        return view ('pretest.pretestprueba1');
+    }
+
+    public function pretestPrueba2(){
+        return view('pretest.pretestprueba2');
+    }
+
+    public function pretestPrueba3(){
+        return view('pretest.pretestprueba3');
+    }
+
+    public function pretestPrueba4(){
+        return view('pretest.pretestprueba4');
+    }
+    
+    public function pretestPrueba5(){
+        return view('pretest.pretestprueba5');
+    }
+
+    public function pretestPrueba6(){
+        return view('pretest.pretestprueba6');
+    }
+
+    public function pretestPrueba7(){
+        return view('pretest.pretestprueba7');
+    }
+
+
+    public function pretestPrueba8(){
+        return view('pretest.pretestprueba8');
+    }
+
+    public function pretestPrueba9(){
+        return view('pretest.pretestprueba9');
+    }
+
+    public function pretestPrueba10(){
+        return view('pretest.pretestprueba10');
+    }
+
+    public function pretestPrueba11(){
+        return view('pretest.pretestprueba11');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
     public function destroy($id)
     {
         //
