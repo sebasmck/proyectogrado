@@ -11,11 +11,11 @@ Pretest 4
             <div class="card">
 
                 <div class="card-head style-primary">
-                    <header>Pretest prueba 5</header>
+                    <header>Pretest</header>
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> 8.  Qué beneficios para fomentar la resiliencia
+                    <p><b> Qué beneficios para fomentar la resiliencia
                          puede tener que tu hijo(a) te reconozca como cuidador
                          y confíe en ti, en lugar de confiar en gente extraña</b></p>
                     <br>

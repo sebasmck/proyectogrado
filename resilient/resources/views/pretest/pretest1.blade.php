@@ -11,7 +11,7 @@ Cuestionario 1
             <div class="card">
 
                 <div class="card-head style-primary">
-                    <header>Bienvenido</header>
+                    <header>Bienvenido al modulo pretest</header>
                 </div>
 
                 <div class="card-body floating-label">

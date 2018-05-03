@@ -10,7 +10,7 @@ Datos Acudiente
     <form class="form">
         <div class="card">
             <div class="card-head style-primary">
-                <header>Ingresa tus datos</header>
+                <header>Ingresar datos acudiente</header>
             </div>
             <div class="card-body floating-label">
                 

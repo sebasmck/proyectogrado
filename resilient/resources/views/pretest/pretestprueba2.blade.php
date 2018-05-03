@@ -11,7 +11,7 @@ Pretest 1
             <div class="card">
 
                 <div class="card-head style-primary">
-                    <header>Pretest prueba 2</header>
+                    <header>Pretest</header>
                 </div>
 
                 <div class="card-body floating-label">

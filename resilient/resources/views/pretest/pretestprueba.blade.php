@@ -11,7 +11,7 @@ Cuestionario 3
             <div class="card">
 
                 <div class="card-head style-primary">
-                    <header>Pretest 3</header>
+                    <header>Prueba pretest</header>
                 </div>
 
                 <div class="card-body floating-label">

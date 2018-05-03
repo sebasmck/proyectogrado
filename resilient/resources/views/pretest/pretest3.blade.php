@@ -11,7 +11,7 @@ Cuestionario 2
             <div class="card">
 
                 <div class="card-head style-primary">
-                    <header>Pretest 2</header>
+                    <header>Prueba de resiliencia</header>
                 </div>
 
                 <div class="card-body floating-label">
