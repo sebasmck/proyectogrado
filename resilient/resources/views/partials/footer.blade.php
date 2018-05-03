@@ -69,6 +69,57 @@
 			@endif
 		</script> --}}
 
+			<script type="text/javascript" charset="utf-8">
+			  $(document).ready(function(){
+
+			        $('.inputdocument').keydown(function(e) { 
+			           this.value = (this.value + '').replace(/[.]/, '');
+			        });
+
+			        $('.inputdocument').keypress(function(e) { 
+			          this.value = (this.value + '').replace(/[.]/, '');
+			        });});
+
+			   function cambiarEstado(){
+				  	 if ( $('#selectescolaridad').val() == 60 ) {
+				        	$('#escolaridad').css('display', 'block');
+				        
+				    }else{
+				    		$('#escolaridad').css('display', 'none');
+				    }
+
+
+				     if ( $('#selectocupacion').val() == 60 ) {
+				        	$('#ocupacion').css('display', 'block');
+				        
+				    }else{
+				    		$('#ocupacion').css('display', 'none');
+				    }
+
+
+				     if ( $('#selectparentesco').val() == 60 ) {
+				        	$('#parentesco').css('display', 'block');
+				        
+				    }else{
+				    		$('#parentesco').css('display', 'none');
+				    }
+				}
+
+
+				/**function comprobarEstado(){
+
+					var selects = $('select');
+
+					for (var i = selects.length - 1; i >= 0; i--) {
+						selects[i] = 
+					} */
+				
+
+			</script>
+
+		<script type="text/javascript">
+    			$(".date").datepicker({format: 'dd/mm/yyyy'});
+		</script>  
 
 
 		{{-- <script type="text/javascript">

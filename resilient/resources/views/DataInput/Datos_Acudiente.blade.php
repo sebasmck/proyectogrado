@@ -6,6 +6,7 @@ Datos Acudiente
 
 @section('content')
 
+
 <div class="col-lg-offset-2 col-md-8">
     <form class="form">
         <div class="card">
@@ -49,7 +50,7 @@ Datos Acudiente
                     </div>
                     <div class="col-sm-5">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="Lastname2">
+                            <input type="text" class="form-control inputdocument" id="Lastname2">
                             <label for="Lastname2">Documento:</label>
                         </div>
                     </div>
@@ -58,20 +59,20 @@ Datos Acudiente
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <select id="select1" name="select1" class="form-control">
+                            <select id="selectparentesco" name="select1" class="form-control" onchange="cambiarEstado()">
                                 <option value="">&nbsp;</option>
                                 <option value="">Padre</option>
                                 <option value="">Madre</option>
                                 <option value="">Abuelo(a)</option>
-                                <option value="">Otro</option>
+                                <option value="60">Otro</option>
                             </select>
                             <label for="select1">Parentezco</label>
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="form-group">
+                        <div id="parentesco" class="form-group" style="display: none;">
                             <input type="text" class="form-control" id="Lastname2">
-                            <label for="Lastname2">Especificar en caso de seleccionar <b>Otro </b> </label>
+                            <label for="Lastname2">¿Cual es el otro? </label>
                         </div>
                     </div>
                 </div>
@@ -104,7 +105,7 @@ Datos Acudiente
                     <div class="col-sm-3">
                         <div class="form-group">
                                 <input type="text" class="form-control" id="Lastname2">
-                                <label for="Lastname2"><b>Otro </b> </label>
+                                <label for="Lastname2"><b>¿Que otro?</b> </label>
                         </div>
                     </div>
                 </div>
@@ -149,7 +150,7 @@ Datos Acudiente
                 <div class="row">
                     <div class="col-sm-6">
                             <div class="form-group">
-                                    <select id="select2" name="select2" class="form-control">
+                                    <select id="selectescolaridad" name="selectescolaridad" class="form-control selected" onchange="cambiarEstado()">
                                            <option value="">&nbsp;</option>
                                            <option value="30">Ninguno</option>
                                            <option value="40">Primaria</option>
@@ -157,36 +158,38 @@ Datos Acudiente
                                            <option value="40">Profesional/Pregrado</option>
                                            <option value="40">Profesional/Posgrado</option>
                                            <option value="40">Tecnico</option>
-                                           <option value="40">Tecnologo</option>   
-                                           <option value="40">Otro</option>                                        
+                                           <option value="40">Tecnologo</option>
+                                           <option value="50">No terminado</option>  
+                                           <option value="60">Otro</option>                                        
                                     </select>
-                                    <label for="select1">Escolaridad</label>
+                                    <label for="selectescolaridad">Escolaridad</label>
                                </div>
                     </div>
                     <div class="col-sm-6">
-                            <div class="form-group">
-                                    <input type="text" class="form-control" id="Lastname2">
-                                    <label for="Lastname2"><b>Otro </b> </label>
+                            <div id="escolaridad" class="form-group" style="display:none;">
+                                    <input type="text" class="form-control" id="opcion1">
+                                    <label for="Lastname2" ><b>¿Cual es el otro?</b> </label>
                             </div>
                     </div>
                 </div>
                 <div class="row">
                         <div class="col-sm-6">
                                 <div class="form-group">
-                                        <select id="select2" name="select2" class="form-control">
+                                        <select id="selectocupacion" name="select2" class="form-control selected"  onchange="cambiarEstado()">
                                                <option value="">&nbsp;</option>
                                                <option value="30">Empleado</option>
                                                <option value="40">Independiente</option>
                                                <option value="40">Desempleado</option>
                                                <option value="40">Hogar</option>
+                                               <option value="60">Otro</option>
                                         </select>
                                         <label for="select1">Ocupacion</label>
                                    </div>
                         </div>
                         <div class="col-sm-6">
-                                <div class="form-group">
+                                <div id="ocupacion" class="form-group"  style="display:none;">
                                         <input type="text" class="form-control" id="Lastname2">
-                                        <label for="Lastname2"><b>Otro </b> </label>
+                                        <label for="Lastname2"><b>¿Cual es el otro?</b> </label>
                                 </div>
                         </div>  
                 </div>
