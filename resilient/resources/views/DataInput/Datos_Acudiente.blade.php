@@ -7,7 +7,11 @@ Datos Acudiente
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-    <form class="form">
+    <form action="{{route('cuidador.store')}}" method="POST" class="form">
+
+      @csrf 
+             {{--  981324908123740981723409817efuysdf08a7sdyf807asdtfq087gfq08w7vgqef --}}
+
         <div class="card">
             <div class="card-head style-primary">
                 <header>Ingresa tus datos</header>
@@ -18,63 +22,54 @@ Datos Acudiente
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="Firstname2">
-                            <label for="Firstname2">Nombres Completos Acudiente:</label>
+                            <input type="text" class="form-control" name="Nombre_Acudiente" id="Nombre_Acudiente">
+                            <label for="Nombre_Acudiente">Nombres Completos Acudiente:</label>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="Lastname2">
-                            <label for="Lastname2">Apellidos Completos Acudiente:</label>
+                            <input type="text" class="form-control" name="Apellido_Acudiente" id="Apellido_Acudiente">
+                            <label for="Apellido_Acudiente">Apellidos Completos Acudiente:</label>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="Lastname2">
-                            <label for="Lastname2">Correo Electronico:</label>
+                            <input type="text" class="form-control" name="Correo_Acudiente" id="Correo_Acudiente">
+                            <label for="Correo_Acudiente">Correo Electronico:</label>
                         </div>
                     </div>
+                    {{-- PENDING 1 // Id_TipoDocumento --}}
                     <div class="col-sm-1">
                         <div class="form-group">
-                            <select id="select1" name="select1" class="form-control">
-                                <option value="">&nbsp;</option>
-                                <option value="30">C.E</option>
-                                <option value="40">C.C</option>
-                                <option value="40">Pasaporte</option>
-                            </select>
-                            <label for="select1">Tipo</label>
+                                {{ Form::select('Id_TipoDocumento', $tipodoc->prepend('none')->pluck('Nombre_TipoDocumento', 'Id_TipoDocumento'),NULL, ['class' => 'form-control', 'id' => 'Id_TipoDocumento']) }}
+                                <label for="Id_TipoDocumento">Tipo</label>
                         </div>
                     </div>
                     <div class="col-sm-5">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="Lastname2">
-                            <label for="Lastname2">Documento:</label>
+                            <input type="text" class="form-control" name="NumeroDocumento_Acudiente" id="NumeroDocumento_Acudiente">
+                            <label for="NumeroDocumento_Acudiente">Documento:</label>
                         </div>
                     </div>
                 </div>
-
+                {{-- PENDING 2 Id_RelacionInfante NEED EXTRA FIELD FOR OTRO --}}
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <select id="select1" name="select1" class="form-control">
-                                <option value="">&nbsp;</option>
-                                <option value="">Padre</option>
-                                <option value="">Madre</option>
-                                <option value="">Abuelo(a)</option>
-                                <option value="">Otro</option>
-                            </select>
-                            <label for="select1">Parentezco</label>
+                            {{ Form::select('Id_RelacionInfante', $relacion->prepend('none')->pluck('Nombre_RelacionInfante', 'Id_RelacionInfante'),NULL, ['class' => 'form-control', 'id' => 'Id_RelacionInfante']) }}
+                                <label for="Id_RelacionInfante">Parentezco</label>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="Lastname2">
-                            <label for="Lastname2">Especificar en caso de seleccionar <b>Otro </b> </label>
+                            <input type="text" name="OtroRelacionInfante" class="form-control" id="otrorelacion">
+                            <label for="otrorelacion">Especificar en caso de seleccionar <b>Otro </b> </label>
                         </div>
                     </div>
                 </div>
+                {{-- /////////////////////////////////////////////////////// --}}
                 
                 <div class="row">
                     <div class="col-sm-8">
@@ -83,19 +78,19 @@ Datos Acudiente
                             <br>
                             <div class="col-sm-12">
                                 <label class="checkbox-inline checkbox-styled">
-                                    {!! Form::checkbox('DisenoDesarrollo', '1') !!}<span>Padre</span>
+                                    {!! Form::checkbox('Padre', '1') !!}<span>Padre</span>
                                 </label>
                                 <label class="checkbox-inline checkbox-styled">
-                                    {!! Form::checkbox('Fabricante', '1') !!}<span>Madre</span>
+                                    {!! Form::checkbox('Madre', '1') !!}<span>Madre</span>
                                 </label>
                                 <label class="checkbox-inline checkbox-styled">
-                                    {!! Form::checkbox('PrestacionServicios', '1') !!}<span>Abuelo(a)</span>
+                                    {!! Form::checkbox('Abuelo', '1') !!}<span>Abuelo(a)</span> 
                                 </label>
                                 <label class="checkbox-inline checkbox-styled">
-                                    {!! Form::checkbox('MantenimientoAeronaves', '1') !!}<span>Hermano(a)</span>
+                                    {!! Form::checkbox('Hermano', '1') !!}<span>Hermano(a)</span>
                                 </label>
                                 <label class="checkbox-inline checkbox-styled">
-                                    {!! Form::checkbox('MantenimientoAeronaves', '1') !!}<span>Tio(a)</span>
+                                    {!! Form::checkbox('Tio', '1') !!}<span>Tio(a)</span>
                                 </label>
                             </div><!--end .col -->
                         </div><!--end .form-group -->
@@ -103,28 +98,24 @@ Datos Acudiente
                     <br>
                     <div class="col-sm-3">
                         <div class="form-group">
-                                <input type="text" class="form-control" id="Lastname2">
-                                <label for="Lastname2"><b>Otro </b> </label>
+                                <input type="text" name="Otro_Cuidador" class="form-control" id="Otro_Cuidador">
+                                <label for="Otro_Cuidador"><b>Otro </b></label>
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
                         <div class="col-sm-2">
-                                <div class="form-group">
-                                     <select id="select2" name="select2" class="form-control">
-                                            <option value="">&nbsp;</option>
-                                            <option value="30">Hombre</option>
-                                            <option value="40">Mujer</option>
-                                     </select>
-                                     <label for="select1">Sexo</label>
-                                </div>
+                          <div class="form-group">
+                                {{ Form::select('Id_Sexo', $sexo->prepend('none')->pluck('Nombre_Sexo', 'Id_Sexo'),NULL, ['class' => 'form-control', 'id' => 'Id_Sexo']) }}
+                                <label for="Id_Sexo">Sexo</label>
+                          </div>
                         </div>
                         <div class="col-sm-4">
                                 <div class="form-group control-width-normal">
                                         <div class="input-group date" id="demo-date">
                                             <div class="input-group-content">
-                                                <input type="text" class="form-control">
+                                                <input type="text" name="FechaDeNacimiento" class="form-control">
                                                 <label>Fecha de nacimiento</label>
                                             </div>
                                             <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -133,60 +124,37 @@ Datos Acudiente
                         </div>
                         <div class="col-sm-6">
                                 <div class="form-group">
-                                        <select id="select2" name="select2" class="form-control">
-                                               <option value="">&nbsp;</option>
-                                               <option value="30">Soltero(a)</option>
-                                               <option value="40">Casado(a)</option>
-                                               <option value="40">Divorciado(a)</option>
-                                               <option value="40">Viudo(a)</option>
-                                               <option value="40">Union Libre</option>
-                                        </select>
-                                        <label for="select1">Estado Civil</label>
-                                   </div>
+                                  {{ Form::select('Id_EstadoCivil', $estadocivil->prepend('none')->pluck('Nombre_EstadoCivil', 'Id_EstadoCivil'),NULL, ['class' => 'form-control', 'id' => 'Id_EstadoCivil']) }}
+                                  <label for="Id_EstadoCivil">Estado Civil</label>
+                                </div>
                         </div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-6">
                             <div class="form-group">
-                                    <select id="select2" name="select2" class="form-control">
-                                           <option value="">&nbsp;</option>
-                                           <option value="30">Ninguno</option>
-                                           <option value="40">Primaria</option>
-                                           <option value="40">Bachillerato</option>
-                                           <option value="40">Profesional/Pregrado</option>
-                                           <option value="40">Profesional/Posgrado</option>
-                                           <option value="40">Tecnico</option>
-                                           <option value="40">Tecnologo</option>   
-                                           <option value="40">Otro</option>                                        
-                                    </select>
-                                    <label for="select1">Escolaridad</label>
-                               </div>
+                                  {{ Form::select('Id_Escolaridad', $escolaridad->prepend('none')->pluck('Nombre_Escolaridad', 'Id_Escolaridad'),NULL, ['class' => 'form-control', 'id' => 'Id_Escolaridad']) }}
+                                  <label for="Id_Escolaridad">Escolaridad</label>
+                            </div>
                     </div>
                     <div class="col-sm-6">
                             <div class="form-group">
-                                    <input type="text" class="form-control" id="Lastname2">
-                                    <label for="Lastname2"><b>Otro </b> </label>
+                                    <input type="text" class="form-control" name="Otro_Escolaridad" id="Lastname2">
+                                    <label for="Otro_Escolaridad"><b>Otro </b> </label>
                             </div>
                     </div>
                 </div>
                 <div class="row">
                         <div class="col-sm-6">
                                 <div class="form-group">
-                                        <select id="select2" name="select2" class="form-control">
-                                               <option value="">&nbsp;</option>
-                                               <option value="30">Empleado</option>
-                                               <option value="40">Independiente</option>
-                                               <option value="40">Desempleado</option>
-                                               <option value="40">Hogar</option>
-                                        </select>
-                                        <label for="select1">Ocupacion</label>
-                                   </div>
+                                  {{ Form::select('Id_Ocupacion', $ocupacion->prepend('none')->pluck('Nombre_Ocupacion', 'Id_Ocupacion'),NULL, ['class' => 'form-control', 'id' => 'Id_Ocupacion']) }}
+                                  <label for="Id_Ocupacion">Ocupación</label>
+                            </div>
                         </div>
                         <div class="col-sm-6">
                                 <div class="form-group">
-                                        <input type="text" class="form-control" id="Lastname2">
-                                        <label for="Lastname2"><b>Otro </b> </label>
+                                        <input type="text" name="Otro_Ocupacion" class="form-control" id="Otro_Ocupacion">
+                                        <label for="Otro_Ocupacion"><b>Otro </b> </label>
                                 </div>
                         </div>  
                 </div>
@@ -280,6 +248,7 @@ Datos Acudiente
         </div><!--end .card -->
         
     </form>
+
 </div>
 
 
