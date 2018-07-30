@@ -21,6 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/users', 'HomeController@displayUsers')->name('/users');
 
+Route::get('/menuCuidador', 'HomeController@mostrarMenuCuidador')->name('/menuCuidador');
+
 // Datos Cuidador
 
 Route::Resource('cuidador', 'DatosCuidadorController');
