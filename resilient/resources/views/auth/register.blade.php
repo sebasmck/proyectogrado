@@ -8,11 +8,11 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" onsubmit="return validate()">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombres') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
@@ -26,7 +26,42 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="last-name" class="col-md-4 col-form-label text-md-right">{{__('Apellidos')}}</label>
+
+                            <div class="col-md-6">
+                                <input id="last-name" type="text" class="form-control{{ $errors->has('last-name') ? ' is-invalid' : '' }}" name="last-name" value="{{ old('last-name') }}" required autofocus>
+                            
+                                @if ($errors->has('last-name'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('last-name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                         <div class="form-group row">
+                            <label for="documento" class="col-md-4 col-form-label text-md-right">{{__('Documento')}}</label>
+                            <div class="col-md-3">
+                                <select name="tipo-documento" class="form-control{{ $errors->has('tipo_documento') ? ' is-invalid' : '' }}" id="tipo-documento">
+                                    <option value="1">C.C</option>
+                                    <option value="2">C.E</option>
+                                    <option value="3">PASAPORTE</option>
+                                </select>
+
+                            </div>
+                            <div class="col-md-3">
+                                <input id="documento" type="" class="form-control{{ $errors->has('documento') ? ' is-invalid' : '' }}" name="documento" value="{{ old('documento') }}" required autofocus>
+                            
+                                @if ($errors->has('documento'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('documento') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Email') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>

@@ -61,13 +61,15 @@ Route::get('/pretestprueba10', 'PretestController@pretestPrueba10')->name('/pret
 Route::get('/pretestprueba11', 'PretestController@pretestPrueba11')->name('/pretestprueba11');
 
 //Rutas para el postest 
-Route::get('/posttest', 'PostTestController@Index')->name('/posttest');
+Route::get('/posttest', 'PostTestController@index')->name('/posttest');
 Route::get('/posttest1', 'PostTestController@postTest1')->name('/posttest1');
 
 Route::get('/actividades', 'ActivityController@index')->name('/actividades');
 
 
 Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');
+
+Route::get('/cuidador-infantes', 'HomeController@traerInfantes')->name('/cuidador-infantes');
 
 
 

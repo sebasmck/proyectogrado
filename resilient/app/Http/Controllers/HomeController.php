@@ -38,4 +38,8 @@ class HomeController extends Controller
 
     }
 
+    public function traerInfantes() {
+        return view('cuidador.cuidador-infantes');
+    }
+
 }
