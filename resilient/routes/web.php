@@ -73,7 +73,7 @@ Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/activida
 
 Route::get('/cuidador-infantes', 'HomeController@traerInfantes')->name('/cuidador-infantes');
 
-
+Route::get('/cuidador-dashboard/{id}', 'HomeController@dashboardInfante')->name('/cuidador-dashboard');
 
 // Route::Resource('usuarios', 'UsersController');
 

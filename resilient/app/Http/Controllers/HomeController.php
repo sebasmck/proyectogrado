@@ -44,4 +44,22 @@ class HomeController extends Controller
         return view('cuidador.cuidador-infantes');
     }
 
+    public function dashboardInfante( $src) {
+        $ruta = "";
+        if( $src == 1 )
+        {
+            $ruta = "http://www.javierfenoll.com/wp-content/uploads/2013/12/ni%C3%B1o-cara-chocolate.jpg";
+        }else if($src == 2)
+        {
+            $ruta = "https://www.smartsalus.com/assets/media/por-genero-edades/infantil/nino-sonriendo-cara.jpg";
+        }else if($src == 3)
+        {
+            $ruta = "https://www.euroxpress.es/img/2012/11/Informe_ni__os_Unicef.jpg";
+        }else {
+            $ruta = "http://spanish.xinhuanet.com/titlepic/134201981_1430467874917_title1n.jpg";
+        }
+
+        return view('cuidador.dashboardInfante',['sour' => $ruta]);
+    }
+
 }
