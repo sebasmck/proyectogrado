@@ -29,13 +29,15 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function displayUsers(){
-
-
+    public function displayUsers()
+    {
         $users = User::all();
         return view('admin.UserManagement')->with('users', $users);
+    }
 
-
+    public function mostrarMenuCuidador()
+    {
+        return view('cuidador.menuCuidador');
     }
 
 }

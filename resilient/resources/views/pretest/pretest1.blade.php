@@ -39,16 +39,18 @@ Cuestionario 1
                                     <legend>
                                     <textarea name="textarea13" id="textarea13" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>
                             </div>
-                            <div class="col-sm-4">
-                                <img class="pull-right" src="{{asset('img/avatar.png')}}" alt="avatar">
-                            </div>
+                            
                     </div>
+
                     
                 </div> {{-- card-body no padding --}}
 
-                    
+                     <div class="col-sm-4">
+                                <img class="pull-right" src="{{asset('img/avatar.png')}}" alt="avatar">
+                            </div>
             </div><!--end .card-body -->
-
+             
+              
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
                     <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/pretest2')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
