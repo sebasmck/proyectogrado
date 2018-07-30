@@ -30,7 +30,7 @@ Home
 
                             <div class="col-md-6">  
                              <div class="card ">
-                              <a href=""><div class="card-body small-padding text-center ">
+                              <a href="{{ route('/cuidador-infantes') }}"><div class="card-body small-padding text-center ">
                                <img style="width:100%;height:300px" src="{{ asset('img/infante.jpg') }}" alt="">
                                  Ir A Infantes
                                </div>
