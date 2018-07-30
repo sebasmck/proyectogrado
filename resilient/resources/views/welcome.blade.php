@@ -9,7 +9,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
         <!-- Styles -->
         <style>
             html, body {
@@ -19,6 +20,12 @@
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
+            }
+            .overlay {
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:1;
             }
 
             .full-height {
@@ -46,7 +53,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 44px;
             }
 
             .links > a {
@@ -65,6 +72,21 @@
         </style>
     </head>
     <body>
+            <div class="jumbotron">
+                    
+                    <video autoplay="true" style="z-index:0; width:50%; height:100px; object-fit: cover;" preload="true">
+                    <source src="{{asset('video/welcome.mp4')}}" type="video/mp4" />
+                            Your browser does not support the video tag.
+                    </video>
+                    <div class="overlay">
+                            <form>
+                                <h1 style="color:white; margin-left:100px;">RESILIENT</h1>
+                            </form>
+                    </div>
+                    <H1>RESILIENT</H1>
+                    <img style="height:150px; width:auto; float:right;" src="{{asset('img/logo.png')}}" alt="Logo" id="logo" style="width: 180px; height: auto; margin-bottom: 50px;">
+            </div>
+        </div>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -76,21 +98,18 @@
                     @endauth
                 </div>
             @endif
-
+              
             <div class="content">
-                <br>
 
-                <img src="{{asset('img/logo.png')}}" alt="Logo" id="logo" style="width: 180px; height: auto; margin-bottom: 50px;">
-
-                <div class="title m-b-md">
-                    RESILIENT
-                </div>
-
-                {{-- <div class="links">
-                    <a href="">Documentation</a>
-                    <a href="">Laracasts</a>
-                </div> --}}
+            <div class="container">
+                    <div class="col-md-6">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem cum aliquid qui, corrupti nostrum ipsum ratione deleniti nisi eligendi itaque at minus suscipit facilis provident aut totam quasi adipisci tempore!
+                    </div>
             </div>
+                
+            </div>
+
+
         </div>
     </body>
 </html>

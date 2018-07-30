@@ -56,14 +56,8 @@ Cuestionario 1
     
          avatar = $('.avatar');
         //  content = $('.content-card');
-
-
-
-        
         // tl.to(title, 1.5, {y:10});
         // tl.from(card1, .3, {left:100, opacity:0});
-        
-    
     </script>
 
 @endsection  --}}

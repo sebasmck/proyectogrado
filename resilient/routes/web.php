@@ -21,7 +21,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/users', 'HomeController@displayUsers')->name('/users');
 
-Route::get('/datoscuidador', 'DatosCuidadorController@index')->name('/datoscuidador');
+// Datos Cuidador
+
+Route::Resource('cuidador', 'DatosCuidadorController');
 
 Route::get('/datosnino', 'DatosNinoController@index')->name('/datosnino');
 
@@ -58,7 +60,9 @@ Route::get('/pretestprueba10', 'PretestController@pretestPrueba10')->name('/pret
 
 Route::get('/pretestprueba11', 'PretestController@pretestPrueba11')->name('/pretestprueba11');
 
-Route::get('/pretestprueba11', 'PretestController@pretestPrueba11')->name('/pretestprueba11');
+//Rutas para el postest 
+Route::get('/posttest', 'PostTestController@Index')->name('/posttest');
+Route::get('/posttest1', 'PostTestController@postTest1')->name('/posttest1');
 
 Route::get('/actividades', 'ActivityController@index')->name('/actividades');
 
