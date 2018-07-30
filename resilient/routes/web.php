@@ -58,6 +58,12 @@ Route::get('/pretestprueba10', 'PretestController@pretestPrueba10')->name('/pret
 
 Route::get('/pretestprueba11', 'PretestController@pretestPrueba11')->name('/pretestprueba11');
 
+Route::get('/pretestprueba11', 'PretestController@pretestPrueba11')->name('/pretestprueba11');
+
+Route::get('/actividades', 'ActivityController@index')->name('/actividades');
+
+
+Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');
 
 
 
