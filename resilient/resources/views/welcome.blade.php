@@ -74,7 +74,7 @@
     <body>
             <div class="jumbotron">
                     
-                    <video autoplay="true" style="z-index:0; width:50%; height:100px; object-fit: cover;" preload="true">
+                    {{-- <video autoplay="true" style="z-index:0; width:50%; height:100px; object-fit: cover;" preload="true">
                     <source src="{{asset('video/welcome.mp4')}}" type="video/mp4" />
                             Your browser does not support the video tag.
                     </video>
@@ -82,9 +82,12 @@
                             <form>
                                 <h1 style="color:white; margin-left:100px;">RESILIENT</h1>
                             </form>
-                    </div>
-                    <H1>RESILIENT</H1>
+                    </div> --}}
+
+                    {{-- <H1>RESILIENT</H1> --}}
+                   
                     <img style="height:150px; width:auto; float:right;" src="{{asset('img/logo.png')}}" alt="Logo" id="logo" style="width: 180px; height: auto; margin-bottom: 50px;">
+                <h1 style="margin-left:100px;">RESILIENT</h1>
             </div>
         </div>
         <div class="flex-center position-ref full-height">
