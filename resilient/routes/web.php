@@ -82,3 +82,14 @@ Route::get('/escalap2', 'HomeController@goEscala')->name('/escalap2');
 
 // Route::Resource('usuarios', 'UsersController');
 
+
+//Cuestionario Escala WY
+
+Route::get('/datos-escala', 'EscalaWYController@index')->name('/datos-escala');
+
+Route::post('/escalaWY-cuestionario', 'EscalaWYController@updateCuidador')->name('/escalaWY-cuestionario');
+
+
+
+
+
