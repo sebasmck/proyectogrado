@@ -11,4 +11,5 @@ class Escolaridad extends Model
     protected $primaryKey = 'Id_Escolaridad';
 
     public $timestamps = false;
+
 }

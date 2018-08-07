@@ -64,16 +64,18 @@ Route::get('/pretestprueba11', 'PretestController@pretestPrueba11')->name('/pret
 
 //Rutas para el postest 
 Route::get('/posttest', 'PostTestController@index')->name('/posttest');
+
 Route::get('/posttest1', 'PostTestController@postTest1')->name('/posttest1');
 
 Route::get('/actividades', 'ActivityController@index')->name('/actividades');
-
 
 Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');
 
 Route::get('/cuidador-infantes', 'HomeController@traerInfantes')->name('/cuidador-infantes');
 
 Route::get('/cuidador-dashboard/{id}', 'HomeController@dashboardInfante')->name('/cuidador-dashboard');
+
+Route::get('/escalap2', 'HomeController@goEscala')->name('/escalap2');
 
 // Route::Resource('usuarios', 'UsersController');
 

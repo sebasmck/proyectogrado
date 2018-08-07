@@ -62,4 +62,8 @@ class HomeController extends Controller
         return view('cuidador.dashboardInfante',['sour' => $ruta]);
     }
 
+    public function goEscala() {
+        return view('escalaP2.escalaParentabilidad');
+    }
+
 }
