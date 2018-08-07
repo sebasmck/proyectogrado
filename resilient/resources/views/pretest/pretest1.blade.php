@@ -20,27 +20,38 @@ Cuestionario 1
                         <div class="col-sm-6">
                                 <div class="col-sm-9">
                                         <label class="radio-inline radio-styled">
-                                            <input type="radio" name="inlineRadioOptions" value="option1"><span>Si</span>
+                                            <input id="si" type="radio" name="inlineRadioOptions" value="option1"><span>Si</span>
                                         </label>
                                         <label class="radio-inline radio-styled">
-                                            <input type="radio" name="inlineRadioOptions" value="option2"><span>No</span>
+                                            <input type="radio" name="inlineRadioOptions" value="option2" id="no"><span>No</span>
                                         </label>
                                     </div>
                         </div>
                     </div>
                     <br>
                     <div class="row">
-                            <div class="col-sm-8">
+                            <div class="col-sm-8"  id="casoSi" style="display:none;">
                                     <label for="">
-                                            Aunque no sepas qué es resiliencia quisiéramos que nos dijeras ¿qué crees o entidades
-                                            de este término?
+                                            Cuéntanos que entiendes por resiliencia
                                     </label>
                                     <br><br>
-                                    <legend>
+                                   
                                     <textarea name="textarea13" id="textarea13" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>
+                               </div> 
+
+                                   <div class="col-sm-8" id="casoNo" style="display:none;">
+                                    <label for="">
+                                           De acuerdo, ¿qué crees o entiendes de este término?
+                                    </label>
+                                    <br><br>
+                                    <textarea name="textarea13" id="textarea13" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>
+                              </div>
+                                 
+
                             </div>
                             
-                    </div>
+               
+
 
                     
                 </div> {{-- card-body no padding --}}
@@ -63,10 +74,18 @@ Cuestionario 1
     </div>
 
 @endsection
-
-{{--  @section('addjs')
+ @section('addjs')
 
 <script>
+
+         $("#si").on( "click", function() {
+            $('#casoSi').show(); //muestro mediante id
+            $('#casoNo').hide();
+         });
+        $("#no").on( "click", function() {
+            $('#casoNo').show(); //oculto mediante id
+            $('#casoSi').hide(); //muestro mediante clase
+        });
 
         var tl = new TimelineLite();
     
@@ -82,4 +101,4 @@ Cuestionario 1
     
     </script>
 
-@endsection  --}}
+@endsection  
