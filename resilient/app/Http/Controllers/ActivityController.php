@@ -17,8 +17,6 @@ class ActivityController extends Controller
     }
 
     public function actividad1(){
-
         return view ('activities.2anos_2anos11meses.intro_activity1');
-
     }
 }
