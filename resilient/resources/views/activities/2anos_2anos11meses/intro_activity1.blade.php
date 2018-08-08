@@ -6,9 +6,9 @@ Intro Actividad 1
 
 @section('addcss')
     <style>
-        * {
-  box-sizing: border-box;
-}
+    * {
+        box-sizing: border-box;
+    }
 
 /* html, 
 body {
@@ -53,7 +53,7 @@ body {
   bottom: 92px;
   width: 100%;
   height: 8px;
-  background-color: red;
+  background-color: #caa17f;
   z-index: 1;
   border-radius: 20px;
 }
@@ -807,7 +807,23 @@ h2 a {
 .container th:nth-child(4) { display: none; }
 }
 
+button {
+  width: 150px;
+  border: none;
+  border-radius: 0 8px;
+  padding: 10px;
+  margin: 5px auto;
+  color: #fff;
+  background-color:#edbd4e;
+  box-shadow: 0px 4px 0px 0px #d1a24b;
+  transition: .35s;
+}
 
+button:hover {
+  cursor: pointer;
+  box-shadow: 0px 2px 0px 0px #d1a24b;
+  transform: translateY(2px);
+}
 
 </style>
 @endsection
@@ -829,7 +845,7 @@ h2 a {
         <div class="col-md-7">
             <div class="card">
                 <div class="card-head">
-                    <header>Descipción actividad</header>
+                    <header> <center> <b>  Descripción actividad </b> </center></header>
                 </div>
                 <div class="card-body text-default-light">
                    
@@ -858,7 +874,6 @@ h2 a {
                                         <td>Vínculo afectivo</td>
                                     </tr>
                                 <tr>
-                                
                                 </tbody>
                             </table>
 
@@ -917,8 +932,7 @@ h2 a {
                 </div><!--end .card-body -->
                 <div class="card-actionbar">
                     <div class="card-actionbar-row">
-
-                        <a href="javascript:void(0);" class="btn btn-flat btn-accent ink-reaction">Submit</a>
+                        <button style="margin-top:50px; margin-left:30%; margin-right:30% " onclick="">Comenzar</button>
                     </div>
                 </div><!--end .card-actionbar -->
             </div>
