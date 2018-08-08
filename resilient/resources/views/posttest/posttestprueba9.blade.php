@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Pretest 4
+Pretest 9
 @endsection
 
 @section('content')
@@ -15,7 +15,9 @@ Pretest 4
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> ¿Cómo crees que un niño(a) desarrollaría el reconocimiento de las personas más allegadas?
+                    <p><b> ¿Qué puede fortalecer 
+                        la confianza que tiene un 
+                        niño(a) hacia su cuidador?
                         </b></p>
                     <br>
 
@@ -23,26 +25,27 @@ Pretest 4
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a. Se desarrolla mediante el cuidado del adulto hacia el niño</span>
+                                    <span>a. Cuando el cuidador suple las necesidades físicas y emocionales del niño(a)</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1">
-                                    <span> b. El reconocimiento se da cuando el cuidador suple las necesidades el niño(a)</span>
+                                    <span> b. Mediante cuidado que el adulto puede tener hacia el niño</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option2">
-                                    <span>c. Cuando el adulto consciente y se mantiene cerca del niño
+                                    <span>
+                                            c. Con el establecimiento de límites sanos
                                         </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option3">
-                                    <span>d. Todas las anteriores</span>
+                                    <span>d. Todas la anteriores</span>
                                 </label>
                             </div>
                     </div>
@@ -59,7 +62,7 @@ Pretest 4
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/pretestprueba7')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/posttestprueba10')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 

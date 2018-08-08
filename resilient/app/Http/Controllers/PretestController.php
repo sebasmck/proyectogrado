@@ -36,6 +36,17 @@ class PretestController extends Controller
 
     }
     
+    public function pretest4(){
+
+        return view('pretest.pretest4');
+
+    }
+
+     public function pretest5(){
+
+        return view('pretest.pretest5');
+
+    }
     
     public function pretestPrueba(){
         return view ('pretest.pretestprueba');
@@ -85,19 +96,6 @@ class PretestController extends Controller
     public function pretestPrueba11(){
         return view('pretest.pretestprueba11');
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
     
     public function create()
     {

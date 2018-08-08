@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Pretest 4
+Pretest 10
 @endsection
 
 @section('content')
@@ -15,7 +15,7 @@ Pretest 4
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> ¿Cómo crees que un niño(a) desarrollaría el reconocimiento de las personas más allegadas?
+                    <p><b> De las siguientes opciones ¿cuál crees que es la definición correcta de crianza?
                         </b></p>
                     <br>
 
@@ -23,28 +23,35 @@ Pretest 4
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a. Se desarrolla mediante el cuidado del adulto hacia el niño</span>
+                                    <span>a. Son las técnicas y creencias que un padre/madre opta para formar a su hijo(a). </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1">
-                                    <span> b. El reconocimiento se da cuando el cuidador suple las necesidades el niño(a)</span>
+                                    <span>b. Son las creencias, conocimiento y actitudes de un padre/madre hacia la formación de
+                                            su hijo(a).</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option2">
-                                    <span>c. Cuando el adulto consciente y se mantiene cerca del niño
+                                    <span>
+                                            c. Es la forma de castigo que opta un padre para corregir y formar a su hija(a).
                                         </span>
                                 </label>
                             </div>
+
                             <div class="radio radio-styled">
-                                <label>
-                                    <input type="radio" name="optionsRadios" value="option3">
-                                    <span>d. Todas las anteriores</span>
-                                </label>
-                            </div>
+                                    <label>
+                                        <input type="radio" name="optionsRadios" value="option2">
+                                        <span>
+                                                d. Son los valores que un padre/madre transmite a su hijo(a) para guiarlo de forma
+adecuada.
+                                            </span>
+                                    </label>
+                                </div>
+                            
                     </div>
 
                    
@@ -59,7 +66,7 @@ Pretest 4
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/pretestprueba7')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/posttestprueba11')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 

@@ -15,37 +15,36 @@ Pretest 4
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> ¿Cómo crees que un niño(a) desarrollaría el reconocimiento de las personas más allegadas?
+                    <p><b>  ¿Qué cosas crees que como padres se puede hacer para  desarrollar la autonomía de un niño(a)?
                         </b></p>
                     <br>
 
                     <div class="col-sm-9">
-                            <div class="radio radio-styled">
+                            <div class="checkbox checkbox-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a. Se desarrolla mediante el cuidado del adulto hacia el niño</span>
+                                    <input type="checkbox" value="">
+                                    <span>a. Pidiéndole al niño que haga todas las labores de casa y de escuela solo</span>
                                 </label>
                             </div>
-                            <div class="radio radio-styled">
+                            <div class="checkbox checkbox-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option1">
-                                    <span> b. El reconocimiento se da cuando el cuidador suple las necesidades el niño(a)</span>
+                                    <input type="checkbox" value="">
+                                    <span>b. No dejando salir al niño, para protegerlo de los peligros que hay afuera</span>
                                 </label>
                             </div>
-                            <div class="radio radio-styled">
+                            <div class="checkbox checkbox-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option2">
-                                    <span>c. Cuando el adulto consciente y se mantiene cerca del niño
-                                        </span>
+                                    <input type="checkbox">
+                                    <span>c. Dándole herramientas al niño para que experimente los alrededores</span>
                                 </label>
                             </div>
-                            <div class="radio radio-styled">
+                            <div class="checkbox checkbox-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option3">
-                                    <span>d. Todas las anteriores</span>
+                                    <input type="checkbox">
+                                    <span>d. Enseñando herramientas para que ejecute tareas correspondientes para su edad</span>
                                 </label>
                             </div>
-                    </div>
+                        </div>
 
                    
 
@@ -59,9 +58,9 @@ Pretest 4
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/pretestprueba7')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/posttestprueba9')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
-              </div>
+            </div>
 
         </div><!--end .card -->
             

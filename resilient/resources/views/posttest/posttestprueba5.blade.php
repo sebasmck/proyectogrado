@@ -15,34 +15,33 @@ Pretest 4
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> ¿Cómo crees que un niño(a) desarrollaría el reconocimiento de las personas más allegadas?
-                        </b></p>
+                    <p><b> Qué beneficios para fomentar la resiliencia puede tener que tu hijo(a) te reconozca como cuidador y confíe en ti, en lugar de confiar en gente extraña</b></p>
                     <br>
 
                     <div class="col-sm-9">
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a. Se desarrolla mediante el cuidado del adulto hacia el niño</span>
+                                    <span>a. Que no se va a ir con otras personas que le pueden hacer daño</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1">
-                                    <span> b. El reconocimiento se da cuando el cuidador suple las necesidades el niño(a)</span>
+                                    <span> b. Si confía y me reconoce es porque yo estoy haciendo lo correcto con mi hijo(a)</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option2">
-                                    <span>c. Cuando el adulto consciente y se mantiene cerca del niño
+                                    <span>c. Que en un futuro mi hijo podrá confiar en mí y en otros, ya que yo soy quien suple sus necesidades
                                         </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option3">
-                                    <span>d. Todas las anteriores</span>
+                                    <span>d. Ningún beneficio, pues si se pierde no va a pedirle ayuda a nadie </span>
                                 </label>
                             </div>
                     </div>
@@ -59,7 +58,7 @@ Pretest 4
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/pretestprueba7')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/posttestprueba6')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 

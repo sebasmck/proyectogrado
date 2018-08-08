@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Cuestionario Postest 1 
+Postest 1 
 @endsection
 
 @section('content')
@@ -59,7 +59,7 @@ Cuestionario Postest 1
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
                    <!-- <button type="button" onClick="llamar();" >onClick</button> -->
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/pretest2')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/posttest2')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 

@@ -15,34 +15,34 @@ Pretest 4
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> ¿Cómo crees que un niño(a) desarrollaría el reconocimiento de las personas más allegadas?
-                        </b></p>
+                    <p><b>De las siguientes opciones ¿Cuál crees que puede mejorar la relación con el niño(a)?</b></p>
                     <br>
 
                     <div class="col-sm-9">
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a. Se desarrolla mediante el cuidado del adulto hacia el niño</span>
+                                    <span>a. Castigarlos prohibiendoles las salidas y otras cosas cuando se porten mal, pues así crecen con buenos valores.</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1">
-                                    <span> b. El reconocimiento se da cuando el cuidador suple las necesidades el niño(a)</span>
+                                    <span> b. Colocandoles reglas y límites claros, horarios que puedan seguir y que además les ayuden a fomentar el orden. </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option2">
-                                    <span>c. Cuando el adulto consciente y se mantiene cerca del niño
+                                    <span>c. Mediante el juego y actividades diarias que me permitan conocer mejor a mi hijo(a), así como él a mi. 
                                         </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option3">
-                                    <span>d. Todas las anteriores</span>
+                                    <span>d.Las respuestas b y c son correctas.
+                                    </span>
                                 </label>
                             </div>
                     </div>
@@ -59,7 +59,7 @@ Pretest 4
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/pretestprueba7')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/posttestprueba5')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 

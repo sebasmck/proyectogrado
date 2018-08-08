@@ -36,7 +36,16 @@ Pretest 10
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option2">
                                     <span>
-                                            c.   Desde el primer día de nacimiento.
+                                            c. Desde los 2 años
+                                        </span>
+                                </label>
+                            </div>
+
+                            <div class="radio radio-styled">
+                                <label>
+                                    <input type="radio" name="optionsRadios" value="option2">
+                                    <span>
+                                           d.  Desde el primer día de nacimiento.
                                         </span>
                                 </label>
                             </div>

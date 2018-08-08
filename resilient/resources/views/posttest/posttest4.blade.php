@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Pretest 4
+Pretest 1
 @endsection
 
 @section('content')
@@ -15,39 +15,43 @@ Pretest 4
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> ¿Cómo crees que un niño(a) desarrollaría el reconocimiento de las personas más allegadas?
-                        </b></p>
+                    <p><b>   ¿Cuáles elementos crees que conforman la resiliencia? Puedes seleccionar una o varias opciones.</b></p>
                     <br>
 
-                    <div class="col-sm-9">
-                            <div class="radio radio-styled">
+                    <div class="col-sm-6">
+                            <div class="checkbox checkbox-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a. Se desarrolla mediante el cuidado del adulto hacia el niño</span>
+                                    <input type="checkbox" value="">
+                                    <span>a. Autoestima</span>
                                 </label>
                             </div>
-                            <div class="radio radio-styled">
+                            <div class="checkbox checkbox-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option1">
-                                    <span> b. El reconocimiento se da cuando el cuidador suple las necesidades el niño(a)</span>
+                                    <input type="checkbox" value="">
+                                    <span>b. Afecto</span>
                                 </label>
                             </div>
-                            <div class="radio radio-styled">
+                            <div class="checkbox checkbox-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option2">
-                                    <span>c. Cuando el adulto consciente y se mantiene cerca del niño
-                                        </span>
+                                    <input type="checkbox" value="">
+                                    <span>c. Autonomía</span>
                                 </label>
                             </div>
-                            <div class="radio radio-styled">
+                            <div class="checkbox checkbox-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option3">
-                                    <span>d. Todas las anteriores</span>
+                                    <input type="checkbox" value="">
+                                    <span>d. Reconocimiento de cuidadores</span>
                                 </label>
                             </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" value="">
+                                    <span>e. Confianza</span>
+                                </label>
+                            </div>
+                            
                     </div>
 
-                   
 
                     <br><br>
                 </div> {{-- card-body no padding --}}
@@ -59,7 +63,7 @@ Pretest 4
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/pretestprueba7')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/posttest5')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 

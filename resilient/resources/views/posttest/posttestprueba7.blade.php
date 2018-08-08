@@ -15,7 +15,9 @@ Pretest 4
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> ¿Cómo crees que un niño(a) desarrollaría el reconocimiento de las personas más allegadas?
+                    <p><b>  ¿Crees que fomentar la autonomía 
+                        de un niño(a) aporta a que sea más 
+                        resiliente?
                         </b></p>
                     <br>
 
@@ -23,26 +25,29 @@ Pretest 4
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a. Se desarrolla mediante el cuidado del adulto hacia el niño</span>
+                                    <span>a.  Si, por que le permite adquirir herramientas para afrontar sus problemas y tomar
+                                            decisiones a futuro</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1">
-                                    <span> b. El reconocimiento se da cuando el cuidador suple las necesidades el niño(a)</span>
+                                    <span> b. No, porque ya no va a pedir ayuda para afrontar su problema y se quedara solo</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option2">
-                                    <span>c. Cuando el adulto consciente y se mantiene cerca del niño
+                                    <span>c. Sí, porque hará que adquiera herramientas para hacer todas las cosas solo, sin
+                                            depender de sus padres, ni amigos.
                                         </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option3">
-                                    <span>d. Todas las anteriores</span>
+                                    <span>d. No, ya que un niño autónomo tiene mayor probabilidad de revelarse a los límites del
+                                            hogar, y generar mayores dificultades</span>
                                 </label>
                             </div>
                     </div>
@@ -59,7 +64,7 @@ Pretest 4
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/pretestprueba7')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/posttestprueba8')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 

@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Cuestionario PostTest 
+PostTest 
 @endsection
 
 @section('content')
