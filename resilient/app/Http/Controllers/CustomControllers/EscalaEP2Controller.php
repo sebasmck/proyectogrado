@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\EscalaEP2DatosAnexos;
+use App\EscalaEP2DatosAnexosNino;
 use Illuminate\Http\Request;
 use App\EscalaEP2Acudiente;
 use App\EscalaResilienciaEP2;
@@ -80,6 +82,31 @@ class EscalaEP2Controller extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function actualizarDatosAnexosEscalaEP2(Request $request, $idCuidador ){
+
+        $datosAnexos = new EscalaEP2DatosAnexos();
+
+        $datosAnexos->id_acudiente_cuidador = $idCuidador;
+        $datosAnexos->ingreso_familiar = $request->input() ;
+        $datosAnexos->total_personas_vec = $request->input();
+        $datosAnexos->total_personas_m18 = $request->input();
+        $datosAnexos->numero_hijos = $request->input();
+
+        $datosAnexos->save();
+
+        $datosAnexosNino = new EscalaEP2DatosAnexosNino();
+
+        $datosAnexosNino->id_infante = $request->input();
+        $datosAnexosNino->discapacidad_nino = $request->input();
+        $datosAnexosNino->idescalaresilienciaep2_datosAnexo = $datosAnexos->id;
+        $datosAnexosNino->problema_nino = $request->input();
+
+        $datosAnexosNino->save();
+
+        return true;
+
     }
 
 }

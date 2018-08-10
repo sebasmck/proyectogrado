@@ -112,8 +112,9 @@ Route::get('/cuidador-dashboard/{id}', 'HomeController@dashboardInfante')->name(
 
 Route::get('/escalap2', 'HomeController@goEscala')->name('/escalap2');
 
+Route::post('/escalap2-datos-anexos/{id}', 'CustomControllers\EscalaEP2Controller@actualizarDatosAnexosEscalaEP2');
 
-// Route::Resource('usuarios', 'UsersController');
+// Route::Resource('usuarios', 'UsersController');s
 
 
 //Cuestionario Escala WY

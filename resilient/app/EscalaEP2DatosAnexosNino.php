@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class EscalaEP2DatosAnexos extends Model
+class EscalaEP2DatosAnexosNino extends Model
 {
-    protected $table = 'escalaresilenciaep2_datosAnexos';
+    protected $table = 'escalaresilenciaep2_datosAnexosNino';
 
     public $timestamps = false;
 }
