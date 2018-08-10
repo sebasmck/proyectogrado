@@ -8,7 +8,7 @@ use App\EscalaResilienciaEP2;
 use App\RespuestaEP2;
 use App\Cuidador; 
 
-class EscalaEP2 extends Controller
+class EscalaEP2Controller extends Controller
 {
      public function index()
     {
@@ -28,20 +28,15 @@ class EscalaEP2 extends Controller
      */
     public function store(Request $request, $id_usuario, $id_respuesta)
     {
-         $interseccion = new EscalaEP2Acudiente();
-         $escala = new EscalaResilienciaEP2();
+        $interseccion = new EscalaEP2Acudiente();
+        $escala = new EscalaResilienciaEP2();
 
 
-         
-          // datos escala puntajes 1,2,3,4 
-          
-          // datos para la intersección 
-          $inter-> = $inter->;
-          $inter-> = $inter->;
+        // datos escala puntajes 1,2,3,4
 
-          dd($request); 
+
+        dd($request);
     }
-    public function 
 
     /**
      * Display the specified resource.
@@ -74,7 +69,7 @@ class EscalaEP2 extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
     /**
      * Remove the specified resource from storage.
