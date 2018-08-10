@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\CustomControllers;
 
 use App\EscalaEP2DatosAnexos;
 use App\EscalaEP2DatosAnexosNino;
@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 use App\EscalaEP2Acudiente;
 use App\EscalaResilienciaEP2;
 use App\RespuestaEP2;
-use App\Cuidador; 
+use App\Cuidador;
+use App\Http\Controllers\Controller;
 
 class EscalaEP2Controller extends Controller
 {
@@ -84,29 +85,28 @@ class EscalaEP2Controller extends Controller
         //
     }
 
-    public function actualizarDatosAnexosEscalaEP2(Request $request, $idCuidador ){
+    public function actualizarDatosAnexosEscalaEP2(Request $request){
 
         $datosAnexos = new EscalaEP2DatosAnexos();
 
-        $datosAnexos->id_acudiente_cuidador = $idCuidador;
-        $datosAnexos->ingreso_familiar = $request->input() ;
-        $datosAnexos->total_personas_vec = $request->input();
-        $datosAnexos->total_personas_m18 = $request->input();
-        $datosAnexos->numero_hijos = $request->input();
+        $datosAnexos->id_acudiente_cuidador = 1;
+        $datosAnexos->ingreso_familiar = $request->input('ingreso-familiar') ;
+        $datosAnexos->total_personas_vec = $request->input('habitantes');
+        $datosAnexos->total_personas_m18 = $request->input('habitantes18');
+        $datosAnexos->numero_hijos = $request->input('hijos');
 
         $datosAnexos->save();
 
-        $datosAnexosNino = new EscalaEP2DatosAnexosNino();
+        //$datosAnexosNino = new EscalaEP2DatosAnexosNino();
 
-        $datosAnexosNino->id_infante = $request->input();
-        $datosAnexosNino->discapacidad_nino = $request->input();
-        $datosAnexosNino->idescalaresilienciaep2_datosAnexo = $datosAnexos->id;
-        $datosAnexosNino->problema_nino = $request->input();
+        //$datosAnexosNino->id_infante = $request->input();
+        //$datosAnexosNino->discapacidad_nino = $request->input();
+        //$datosAnexosNino->idescalaresilienciaep2_datosAnexo = $datosAnexos->id;
+        //$datosAnexosNino->problema_nino = $request->input();
 
-        $datosAnexosNino->save();
+        //$datosAnexosNino->save();
 
-        return true;
-
+        return $request;
     }
 
 }

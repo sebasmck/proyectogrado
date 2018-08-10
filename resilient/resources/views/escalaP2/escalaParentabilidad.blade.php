@@ -15,8 +15,9 @@ Datos Acudiente
             <h5>
                 <b>1. Datos de quien contesta:</b>
             </h5>
-
-            <div class="container-fluid">
+            <form method="POST" action="{{ route('/escalap2-datos-anexos') }}">
+                @csrf
+                <div class="container-fluid">
                 <div class="row">
 
                     <div class="form-group col-md-8">
@@ -124,7 +125,7 @@ Datos Acudiente
                             <label for="ingresp" class="col-md-4 col-form-label">Ingreso familiar total (al mes):</label>
 
                             <div class="col-md-8">
-                                <input class="form-control" id="ingreso" type="text" >
+                                <input class="form-control" id="ingreso" name="ingreso-familiar" type="text" >
                             </div>
 
                         </div>
@@ -199,7 +200,7 @@ Datos Acudiente
                             <label for="habitantes" class="col-md-8 col-form-label">¿Cuántas personas viven en su casa? Total:</label>
 
                             <div class="col-md-4">
-                                <input class="form-control" id="habitantes" type="text" >
+                                <input class="form-control" id="habitantes" name="habitantes" type="text" >
                             </div>
 
                         </div>
@@ -210,7 +211,7 @@ Datos Acudiente
                             <label for="habitantes18" class="col-md-8 col-form-label">Personas menores de 18 años:</label>
 
                             <div class="col-md-4">
-                                <input class="form-control" id="habitantes18" type="text" >
+                                <input class="form-control" id="habitantes18" name="habitantes18" type="text" >
                             </div>
 
                         </div>
@@ -222,7 +223,7 @@ Datos Acudiente
                             <label for="hijos" class="col-md-6 col-form-label">¿Cuántos hijos tiene?:</label>
 
                             <div class="col-md-6">
-                                <input class="form-control" id="hijos" type="text" >
+                                <input class="form-control" id="hijos" name="hijos" type="text" >
                             </div>
                         </div>
                     </div>
@@ -461,7 +462,10 @@ Datos Acudiente
                 </div>
     
             </div>
-    </div>
+
+                <button type="submit">Desarrollar escala</button>
+            </form>
+     </div>
 </div>
 
 @endsection

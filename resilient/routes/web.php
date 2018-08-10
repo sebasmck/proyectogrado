@@ -112,7 +112,7 @@ Route::get('/cuidador-dashboard/{id}', 'HomeController@dashboardInfante')->name(
 
 Route::get('/escalap2', 'HomeController@goEscala')->name('/escalap2');
 
-Route::post('/escalap2-datos-anexos/{id}', 'CustomControllers\EscalaEP2Controller@actualizarDatosAnexosEscalaEP2');
+Route::post('/escalap2-datos-anexos', 'CustomControllers\EscalaEP2Controller@actualizarDatosAnexosEscalaEP2')->name('/escalap2-datos-anexos');
 
 // Route::Resource('usuarios', 'UsersController');s
 
