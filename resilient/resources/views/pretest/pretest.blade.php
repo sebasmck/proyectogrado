@@ -17,9 +17,9 @@ Cuestionario 1
                 <div class="card-body floating-label">
                     <center>
                     <p style="text-align:justify; text-justify: inter-word;">
-                        Bienvenidos, antes de iniciar queremos AGRADECERLES por hacer parte de este programa sobre pautas de crianza resiliente, el cual estará lleno de aprendizajes nuevos. 
+                    Bienvenidos, antes de iniciar queremos agradecerles por hacer parte de este programa sobre pautas de crianza resiliente, el cual estará lleno de aprendizajes nuevos. 
 
-                        Es importante para nosotros saber qué tanto conoces acerca de pautas de crianza resilientes. A continuación, vas a encontrar una serie de preguntas las cuales nos darán una idea más clara acerca de tu conocimiento sobre el tema.  Algunas preguntas serán de selección múltiple, esto quiere decir que tendrás varias opciones de respuesta, pero solo deberás elegir una y otras preguntas serán abiertas, es decir que nos podrás dar tu opinión más sincera. 
+                    Es importante para nosotros saber qué tanto conoces acerca de pautas de crianza resilientes. A continuación, vas a encontrar una serie de preguntas las cuales nos darán una idea más clara acerca de tu conocimiento sobre el tema.  Algunas preguntas serán de selección múltiple, esto quiere decir que tendrás varias opciones de respuesta, pero solo deberás elegir una y otras preguntas serán abiertas, es decir que nos podrás dar tu opinión más sincera. 
 
                     </p>
                     </center>
