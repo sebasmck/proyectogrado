@@ -11,11 +11,11 @@ Pretest 4
             <div class="card">
 
                 <div class="card-head style-primary">
-                    <header>Pretest</header>
+                    <header>Post Test</header>
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b>  ¿Qué cosas crees que como padres se puede hacer para  desarrollar la autonomía de un niño(a)?
+                    <p><b>  ¿Qué cosas crees que como padres se puede hacer para desarrollar la autonomía de un niño/a?
                         </b></p>
                     <br>
 
@@ -23,25 +23,25 @@ Pretest 4
                             <div class="checkbox checkbox-styled">
                                 <label>
                                     <input type="checkbox" value="">
-                                    <span>a. Pidiéndole al niño que haga todas las labores de casa y de escuela solo</span>
+                                    <span>a.  Pidiéndole al niño/as que haga todas las labores de casa y de escuela solo. </span>
                                 </label>
                             </div>
                             <div class="checkbox checkbox-styled">
                                 <label>
                                     <input type="checkbox" value="">
-                                    <span>b. No dejando salir al niño, para protegerlo de los peligros que hay afuera</span>
+                                    <span>b.  No dejando salir al niño/a, para protegerlo de los peligros que hay afuera. </span>
                                 </label>
                             </div>
                             <div class="checkbox checkbox-styled">
                                 <label>
                                     <input type="checkbox">
-                                    <span>c. Dándole herramientas al niño para que experimente los alrededores</span>
+                                    <span>c.  Dándole herramientas al niño/as para que experimente los alrededores. </span>
                                 </label>
                             </div>
                             <div class="checkbox checkbox-styled">
                                 <label>
                                     <input type="checkbox">
-                                    <span>d. Enseñando herramientas para que ejecute tareas correspondientes para su edad</span>
+                                    <span>d. Enseñando herramientas para que ejecute tareas correspondientes para su edad. </span>
                                 </label>
                             </div>
                         </div>

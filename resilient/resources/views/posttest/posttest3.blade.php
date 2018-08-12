@@ -11,11 +11,11 @@ Cuestionario 2
             <div class="card">
 
                 <div class="card-head style-primary">
-                    <header>Prueba de resiliencia</header>
+                    <header>Post Test</header>
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b>¿Sabes si eres resiliente?</b></p>
+                    <p><b>¿Sabes tú si eres resiliente?</b></p>
                     <br>
 
                     <div class="row">
@@ -34,6 +34,7 @@ Cuestionario 2
                             <div class="col-sm-8"  id="casoSi" style="display:none;">
                                     <label for="">
                                             Cuéntanos cómo expresas dicha resiliencia
+
                                     </label>
                                     <br><br>
                                    
@@ -43,7 +44,7 @@ Cuestionario 2
 
                                    <div class="col-sm-8" id="casoNo" style="display:none;">
                                     <label for="">
-                                           Cuéntanos, ¿Por qué crees que no eres resiliente?
+                                       Cuéntanos, ¿Por qué crees que no eres resiliente?
                                     </label>
                                     <br><br>
                                     <textarea name="textarea13" id="textarea13" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>

@@ -15,9 +15,7 @@ Pretest 4
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b>  ¿Crees que fomentar la autonomía 
-                        de un niño(a) aporta a que sea más 
-                        resiliente?
+                    <p><b>  ¿Crees que fomentar la autonomía de un niño/a aporta a que sea más resiliente?
                         </b></p>
                     <br>
 
@@ -25,29 +23,26 @@ Pretest 4
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a.  Si, por que le permite adquirir herramientas para afrontar sus problemas y tomar
-                                            decisiones a futuro</span>
+                                    <span>Si, por que le permite adquirir herramientas para afrontar sus problemas y tomar decisiones a futuro.</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1">
-                                    <span> b. No, porque ya no va a pedir ayuda para afrontar su problema y se quedara solo</span>
+                                    <span> b. No, porque ya no va a pedir ayuda para afrontar su problema y se quedara solo.</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option2">
-                                    <span>c. Sí, porque hará que adquiera herramientas para hacer todas las cosas solo, sin
-                                            depender de sus padres, ni amigos.
+                                    <span>c. Sí, porque hará que adquiera herramientas para hacer todas las cosas solo, sin depender de sus padres, ni amigos. 
                                         </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option3">
-                                    <span>d. No, ya que un niño autónomo tiene mayor probabilidad de revelarse a los límites del
-                                            hogar, y generar mayores dificultades</span>
+                                    <span>d. No, ya que un niño/a autónomo tiene mayor probabilidad de revelarse a los límites del hogar, y generar mayores dificultades. </span>
                                 </label>
                             </div>
                     </div>

@@ -15,7 +15,7 @@ Pretest 10
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> De las siguientes opciones ¿cuál crees que es la definición correcta de crianza?
+                    <p><b> De las siguientes opciones ¿cuál crees que es la definición correcta de crianza?
                         </b></p>
                     <br>
 
@@ -23,21 +23,20 @@ Pretest 10
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a. Son las técnicas y creencias que un padre/madre opta para formar a su hijo(a). </span>
+                                    <span>a. Son las técnicas y creencias que un padre/madre opta para formar a su hijo. </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1">
-                                    <span>b. Son las creencias, conocimiento y actitudes de un padre/madre hacia la formación de
-                                            su hijo(a).</span>
+                                    <span>b. Son las creencias, conocimiento y actitudes de un padre/madre hacia la formación de su hijo</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option2">
                                     <span>
-                                            c. Es la forma de castigo que opta un padre para corregir y formar a su hija(a).
+                                            c. Es la forma de castigo que opta un padre para corregir y formar a su hijo.
                                         </span>
                                 </label>
                             </div>
@@ -46,7 +45,7 @@ Pretest 10
                                     <label>
                                         <input type="radio" name="optionsRadios" value="option2">
                                         <span>
-                                                d. Son los valores que un padre/madre transmite a su hijo(a) para guiarlo de forma
+                                                d. Son los valores que un padre/madre transmite a su hijo para guiarlo de forma adecuada.
 adecuada.
                                             </span>
                                     </label>

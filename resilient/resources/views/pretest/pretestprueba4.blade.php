@@ -15,26 +15,26 @@ Pretest 4
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b>De las siguientes opciones ¿Cuál crees que puede mejorar la relación con el niño(a)?</b></p>
+                    <p><b> De las siguientes opciones ¿Cuál crees que puede mejorar la relación con el niño/a?</b></p>
                     <br>
 
                     <div class="col-sm-9">
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a. Castigarlos prohibiendoles las salidas y otras cosas cuando se porten mal, pues así crecen con buenos valores.</span>
+                                    <span>a. Castigarlos prohibiéndoles las salidas y otras cosas cuando se porten mal, pues así crecen con buenos valores.</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1">
-                                    <span> b. Colocandoles reglas y límites claros, horarios que puedan seguir y que además les ayuden a fomentar el orden. </span>
+                                    <span> b. Colocándoles reglas y límites claros, horarios que puedan seguir y que además les ayuden a fomentar el orden.  </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option2">
-                                    <span>c. Mediante el juego y actividades diarias que me permitan conocer mejor a mi hijo(a), así como él a mi. 
+                                    <span>c. Mediante el juego y actividades diarias que me permitan conocer mejor a mi hijo, así como él a mí.  
                                         </span>
                                 </label>
                             </div>
