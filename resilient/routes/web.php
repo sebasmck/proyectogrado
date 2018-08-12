@@ -29,6 +29,8 @@ Route::Resource('cuidador', 'DatosCuidadorController');
 
 Route::get('/datosnino', 'DatosNinoController@index')->name('/datosnino');
 
+Route::get('/datosnino2', 'DatosNinoController@datosnino2')->name('/datosnino2');
+
 Route::get('/pretest0', 'PretestController@index')->name('/pretest0');
 
 Route::get('/pretest1', 'PretestController@pretest1')->name('/pretest1');
