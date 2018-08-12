@@ -11,37 +11,37 @@ Pretest 4
             <div class="card">
 
                 <div class="card-head style-primary">
-                    <header>Pretest</header>
+                    <header>Post Test</header>
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> Qué beneficios para fomentar la resiliencia puede tener que tu hijo(a) te reconozca como cuidador y confíe en ti, en lugar de confiar en gente extraña</b></p>
+                    <p><b> Qué beneficios para fomentar la resiliencia puede tener que tu hijo te reconozca como cuidador y confíe en ti, en lugar de confiar en gente extraña.</b></p>
                     <br>
 
                     <div class="col-sm-9">
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a. Que no se va a ir con otras personas que le pueden hacer daño</span>
+                                    <span>a. Que no se va a ir con otras personas que le pueden hacer daño. </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1">
-                                    <span> b. Si confía y me reconoce es porque yo estoy haciendo lo correcto con mi hijo(a)</span>
+                                    <span> b. Si confía y me reconoce es porque yo estoy haciendo lo correcto con mi hijo. </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option2">
-                                    <span>c. Que en un futuro mi hijo podrá confiar en mí y en otros, ya que yo soy quien suple sus necesidades
+                                    <span>c. Que en un futuro mi hijo podrá confiar en mí y en otros, ya que yo soy quien suple sus necesidades.
                                         </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option3">
-                                    <span>d. Ningún beneficio, pues si se pierde no va a pedirle ayuda a nadie </span>
+                                    <span>d. Ningún beneficio, pues si se pierde no va a pedirle ayuda a nadie.  </span>
                                 </label>
                             </div>
                     </div>

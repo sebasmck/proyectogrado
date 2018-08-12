@@ -32,7 +32,7 @@ Postest 1
                     <div class="row">
                               <div class="col-sm-8" id="casoSi" style="display:none;">
                                     <label for="">
-                                            ¿Qué descubriste que era?
+                                            Que bien, cuéntanos que entiendes por resiliencia
                                     </label>
                                     <br><br>
                                     <textarea name="textarea13" id="textarea13" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>
@@ -40,7 +40,7 @@ Postest 1
 
                                <div class="col-sm-8" id="casoNo" style="display:none;">
                                     <label for="">
-                                            ¿Qué crees que hizo que aprendieras poco sobre la resiliencia?
+                                              De acuerdo, ¿Qué crees o entiendes de este término?
                                     </label>
                                     <br><br>
                                     <textarea name="textarea13" id="textarea13" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>

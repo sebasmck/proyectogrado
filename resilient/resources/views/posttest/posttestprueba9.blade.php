@@ -11,13 +11,11 @@ Pretest 9
             <div class="card">
 
                 <div class="card-head style-primary">
-                    <header>Pretest</header>
+                    <header>Post Test</header>
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> ¿Qué puede fortalecer 
-                        la confianza que tiene un 
-                        niño(a) hacia su cuidador?
+                    <p><b> ¿Qué puede fortalecer la confianza que tiene un niño/a hacia su cuidador?
                         </b></p>
                     <br>
 
@@ -25,27 +23,27 @@ Pretest 9
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a. Cuando el cuidador suple las necesidades físicas y emocionales del niño(a)</span>
+                                    <span>a. Cuando el cuidador suple las necesidades físicas y emocionales del niño/a. </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1">
-                                    <span> b. Mediante cuidado que el adulto puede tener hacia el niño</span>
+                                    <span> b. Mediante cuidado que el adulto puede tener hacia el niño/a. </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option2">
                                     <span>
-                                            c. Con el establecimiento de límites sanos
+                                            c. Con el establecimiento de límites sanos.
                                         </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option3">
-                                    <span>d. Todas la anteriores</span>
+                                    <span>d. Todas la anteriores. </span>
                                 </label>
                             </div>
                     </div>
