@@ -96,6 +96,9 @@ class PretestController extends Controller
     public function pretestPrueba11(){
         return view('pretest.pretestprueba11');
     }
+    public function pretestPrueba12(){
+        return view('pretest.pretestprueba12');
+    }
     
     public function create()
     {

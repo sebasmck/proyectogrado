@@ -65,7 +65,7 @@ Route::get('/pretestprueba9', 'PretestController@pretestPrueba9')->name('/pretes
 Route::get('/pretestprueba10', 'PretestController@pretestPrueba10')->name('/pretestprueba10');
 
 Route::get('/pretestprueba11', 'PretestController@pretestPrueba11')->name('/pretestprueba11');
-
+Route::get('/pretestprueba12', 'PretestController@pretestPrueba12')->name('/pretestprueba12');
 //Rutas para el postest 
 Route::get('/posttest', 'PostTestController@index')->name('/posttest');
 

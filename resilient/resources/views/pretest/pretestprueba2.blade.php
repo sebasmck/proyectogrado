@@ -15,32 +15,32 @@ Pretest 1
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b>¿Cómo crees que una buena relación entre el cuidador y el niño(a) aportaría en el desarrollo de la resiliencia de un niño(a)?</b></p>
+                    <p><b>¿Cómo crees que una buena relación entre el cuidador y el niño/a aportaría en el desarrollo de la resiliencia del menor?</b></p>
                     <br>
 
                     <div class="col-sm-9">
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a. En que fomenta la confianza que tiene en sus capacidades y en los otros, permitiéndole apoyarse en ellos para pasar situaciones difíciles. </span>
+                                    <span>a. En que fomenta la confianza que tiene en sus capacidades y en los otros, permitiéndole apoyarse en ellos para pasar situaciones difíciles.  </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1">
-                                    <span> b.   Permitiendo mediante esa relación, que el niño(a) aprenda capacidades que después le aportarán a superar dificultades. </span>
+                                    <span> b.   Permitiendo mediante esa relación, que el niño/a aprenda capacidades que después le aportarán a superar dificultades.  </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option2">
-                                    <span>c. Mejorando el concepto que el niño tiene de sí mismo, </span>
+                                    <span>c. Mejorando el concepto que el niño/a tiene de sí mismo.  </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option3">
-                                    <span>d. Todas las anteriores </span>
+                                    <span>d. Todas las anteriores. </span>
                                 </label>
                             </div>
                         </div>
