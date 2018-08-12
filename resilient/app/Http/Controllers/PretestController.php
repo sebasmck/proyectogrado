@@ -13,7 +13,7 @@ class PretestController extends Controller
      */
     public function index()
     {
-        return view ('pretest.pretest');
+        return view ('pretest.pretest0');
     }
 
     // start sequencer
