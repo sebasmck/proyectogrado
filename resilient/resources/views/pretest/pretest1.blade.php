@@ -32,7 +32,7 @@ Cuestionario 1
                     <div class="row">
                             <div class="col-sm-8"  id="casoSi" style="display:none;">
                                     <label for="">
-                                            Cuéntanos que entiendes por resiliencia
+                                           Cuéntanos qué entiendes por resiliencia
                                     </label>
                                     <br><br>
                                    
@@ -41,7 +41,7 @@ Cuestionario 1
 
                                    <div class="col-sm-8" id="casoNo" style="display:none;">
                                     <label for="">
-                                           De acuerdo, ¿qué crees o entiendes de este término?
+                                         De acuerdo, ¿Qué crees o entiendes de este término?
                                     </label>
                                     <br><br>
                                     <textarea name="textarea13" id="textarea13" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>

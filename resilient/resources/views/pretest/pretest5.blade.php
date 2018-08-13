@@ -15,7 +15,7 @@ Pretest 1
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b>¿Desde que etapa crees que se desarrolla la resiliencia?</b></p>
+                    <p><b>¿Desde qué etapa crees que se desarrolla la resiliencia?</b></p>
                     <br>
 
                     <div class="col-sm-9">

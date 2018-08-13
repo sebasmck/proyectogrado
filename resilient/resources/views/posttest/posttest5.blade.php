@@ -15,32 +15,32 @@ Pretest 1
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b>¿Desde que etapa crees que se desarrolla la resiliencia?</b></p>
+                    <p><b> ¿Desde qué etapa crees que se desarrolla la resiliencia?</b></p>
                     <br>
 
                     <div class="col-sm-9">
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a. En la niñez</span>
+                                    <span>a. En la niñez.</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1">
-                                    <span>b. En la adolescencia</span>
+                                    <span>b. En la adolescencia.</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option2">
-                                    <span>c. Adultez</span>
+                                    <span>c. Adultez.</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option3">
-                                    <span>d.  Cualquier etapa</span>
+                                    <span>d.  Cualquier etapa.</span>
                                 </label>
                             </div>
                         </div>

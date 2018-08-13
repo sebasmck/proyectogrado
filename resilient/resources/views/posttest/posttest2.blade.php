@@ -15,7 +15,7 @@ Postest 2
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> MUY BIEN, AHORA TE VAMOS A CONTAR BREVEMENTE QUÉ ES RESILIENCIA PARA QUE PUEDAS TENER MAYOR CONOCIMIENTO </b></p>
+                    <p><b> RECUERDA QUE EN TÉRMINOS GENERALES LA RESILIENCIA… </b></p>
                     <br>
                     <div class="row">
                                     <br>

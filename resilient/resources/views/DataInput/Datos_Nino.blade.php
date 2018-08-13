@@ -19,14 +19,14 @@ Datos Niño
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <input type="text" class="form-control" id="Firstname2">
-                                            <label for="Firstname2">Nombres completos del niño/a:
+                                            <label for="Firstname2">Nombres completos del niño/a
 :                                                </label>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <input type="text" class="form-control" id="Lastname2">
-                                            <label for="Lastname2">Apellidos completos del niño/a:</label>
+                                            <label for="Lastname2">Apellidos completos del niño/a</label>
                                         </div>
                                     </div>
                                 </div>
@@ -95,18 +95,7 @@ Datos Niño
                     </div>
 
                     <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <select id="select2" name="select2" class="form-control">
-                                           <option value="">&nbsp;</option>
-                                           <option value="30">Mamá</option>
-                                           <option value="40">Papá</option>
-                                           <option value="40">Hermano(s)</option>                                                    </option>                                        
-                                </select>
-                                <label for="select1">Con Quien vive el niño?</label>
-                            </div>
-                        </div> 
-                        <div class="col-sm-3">
+                        <div class="col-sm-7">
                                 <div class="form-group">
                                     <select id="select2" name="select2" class="form-control">
                                                <option value="">&nbsp;</option>
@@ -116,13 +105,13 @@ Datos Niño
                                                <option value="">Otros</option>
                                             
                                     </select>
-                                    <label for="select1">Con Quien vive el niño?</label>
+                                    <label for="select1">Con quién vive el niño/a</label>
                                 </div>
                             </div> 
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="Firstname2">
-                                <label for="Firstname2">Especificar <b>Otros</b></label>
+                                <label for="Firstname2"> <b>Otros</b></label>
                             </div>
                         </div>
                     </div>
@@ -140,13 +129,13 @@ Datos Niño
                                            <option value="40">"Fallecido Padre"</option>
                                            <option value="40">"Otros"</option>
                                 </select>
-                                <label for="select1">Vinculo de los padres</label>
+                                <label for="select1">Vínculo de los padres </label>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="Firstname2">
-                                <label for="Firstname2">Especificar <b>Otros</b></label>
+                                <label for="Firstname2"><b>Otros</b></label>
                             </div>
                         </div>
 
@@ -154,10 +143,10 @@ Datos Niño
                             <div class="form-group">
                                 <select id="select2" name="select2" class="form-control">
                                            <option value="">&nbsp;</option>
-                                           <option value="30">Si</option>
-                                           <option value="40">No</option>
+                                           <option value="Si">Si</option>
+                                           <option value="No">No</option>
                                 </select>
-                                <label for="select1">El Embarazo fue Planeado?</label>
+                                <label for="select1">¿El embarazo fue planeado?</label>
                             </div>
                         </div>
 
@@ -188,7 +177,7 @@ Datos Niño
 
                         <div class="col-sm-3">
                             <div class="form-group">
-                                <label>¿A qué edad gestacional nació el niñ@?</label>
+                                <label>¿A qué edad gestacional nació el niño(a)?</label>
                                 <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input type="text" class="form-control ui-spinner-input" id="spinner" value="19" aria-valuemin="16" aria-valuenow="19" autocomplete="off" role="spinbutton">  <a class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"></a><a class="ui-spinner-button ui-spinner-down ui-corner-br" tabindex="-1"></a></span>
                             </div>
                         </div>
@@ -200,7 +189,7 @@ Datos Niño
                                         <option value="30">Si</option>
                                         <option value="40">No</option>
                                 </select>
-                                <label for="select1">¿Hubo complicaciones en el nacimiento del niño? </label>
+                                <label for="select1">¿Hubo complicaciones en el nacimiento del niño(a)? </label>
                             </div>
                         </div>
                         <div class="col-sm-3">
@@ -224,13 +213,13 @@ Datos Niño
                                                 <option value="40">Ninguna</option>
                                                 <option value="40">Otros</option>
                                         </select>
-                                        <label for="select1">Dificultades durante el embarazo </label>
+                                        <label for="select1"> Dificultades durante el embarazo </label>
                                     </div>
                             </div>
                             <div class="col-sm-3">
                                     <div class="form-group">
                                         <input type="text" class="form-control" id="Firstname2">
-                                        <label for="Firstname2">Especificar <b>Otros</b></label>
+                                        <label for="Firstname2"><b>Otros</b></label>
                                     </div>
                             </div>
                     </div>
@@ -297,297 +286,7 @@ Datos Niño
                             
                     </div>
 
-                            {{-- GESTION CALIDAD (ANSWER IS NO) --}}
-
-        
-                    
-                    <div class="row">
-
-                            <div class="card-body no-padding">
-      
-                                    {{--  <form name="comportamientos" id="comportamientos">  --}}
-                    
-                                      <ul class="list">
-                                        <li class="tile">
-                                          <a class="tile-content ink-reaction">
-                                            {!! Form::select('respuestaantelamadre', [
-                                             'si' => 'si',
-                                             'no' => 'no',
-                                             'n/a' => 'n/a',
-                                             ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
-                    
-                                            <div class="tile-text">
-                                              <small>
-                                               <b>1.</b> Mostró respuesta ante la madre
-                                             </small>
-                                           </div>
-                    
-                                         </a>
-                                       </li>
-                                       <li class="divider-full-bleed"></li>
-
-                                       <li class="tile">
-                                            <a class="tile-content ink-reaction">
-                                              {!! Form::select('respuestaantelamadre', [
-                                               'si' => 'si',
-                                               'no' => 'no',
-                                               'n/a' => 'n/a',
-                                               ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
-                      
-                                              <div class="tile-text">
-                                                <small>
-                                                 <b>2.</b> Rodó sobre sí mismo
-                                               </small>
-                                             </div>
-                      
-                                           </a>
-                                         </li>
-                                         <li class="divider-full-bleed"></li>
-
-                                         <li class="tile">
-                                                <a class="tile-content ink-reaction">
-                                                  {!! Form::select('respuestaantelamadre', [
-                                                   'si' => 'si',
-                                                   'no' => 'no',
-                                                   'n/a' => 'n/a',
-                                                   ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
-                          
-                                                  <div class="tile-text">
-                                                    <small>
-                                                     <b>3.</b> Se sentó solo
-                                                   </small>
-                                                 </div>
-                          
-                                               </a>
-                                             </li>
-                                        <li class="divider-full-bleed"></li>
-
-                                        <li class="tile">
-                                                <a class="tile-content ink-reaction">
-                                                  {!! Form::select('respuestaantelamadre', [
-                                                   'si' => 'si',
-                                                   'no' => 'no',
-                                                   'n/a' => 'n/a',
-                                                   ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
-                          
-                                                  <div class="tile-text">
-                                                    <small>
-                                                     <b>4.</b> Gateó
-                                                   </small>
-                                                 </div>
-                          
-                                               </a>
-                                             </li>
-                                        <li class="divider-full-bleed"></li>
-
-                                        <li class="tile">
-                                                <a class="tile-content ink-reaction">
-                                                  {!! Form::select('respuestaantelamadre', [
-                                                   'si' => 'si',
-                                                   'no' => 'no',
-                                                   'n/a' => 'n/a',
-                                                   ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
-                          
-                                                  <div class="tile-text">
-                                                    <small>
-                                                     <b>5.</b> Caminó solo
-                                                   </small>
-                                                 </div>
-                          
-                                               </a>
-                                             </li>
-                                        <li class="divider-full-bleed"></li>
-
-                                        <li class="tile">
-                                                <a class="tile-content ink-reaction">
-                                                  {!! Form::select('respuestaantelamadre', [
-                                                   'si' => 'si',
-                                                   'no' => 'no',
-                                                   'n/a' => 'n/a',
-                                                   ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
-                          
-                                                  <div class="tile-text">
-                                                    <small>
-                                                     <b>6.</b> Se vistió solo
-                                                   </small>
-                                                 </div>
-                          
-                                               </a>
-                                             </li>
-                                        <li class="divider-full-bleed"></li>
-
-                                        <li class="tile">
-                                                <a class="tile-content ink-reaction">
-                                                  {!! Form::select('respuestaantelamadre', [
-                                                   'si' => 'si',
-                                                   'no' => 'no',
-                                                   'n/a' => 'n/a',
-                                                   ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
-                          
-                                                  <div class="tile-text">
-                                                    <small>
-                                                     <b>7.</b> Fue solo al baño
-                                                   </small>
-                                                 </div>
-                          
-                                               </a>
-                                             </li>
-                                        <li class="divider-full-bleed"></li>
-
-                                        <li class="tile">
-                                                <a class="tile-content ink-reaction">
-                                                  {!! Form::select('respuestaantelamadre', [
-                                                   'si' => 'si',
-                                                   'no' => 'no',
-                                                   'n/a' => 'n/a',
-                                                   ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
-                          
-                                                  <div class="tile-text">
-                                                    <small>
-                                                     <b>8.</b> Dejó de orinarse en la cama por las noches
-                                                   </small>
-                                                 </div>
-                          
-                                               </a>
-                                             </li>
-                                        <li class="divider-full-bleed"></li>
-
-                                        <li class="tile">
-                                                <a class="tile-content ink-reaction">
-                                                  {!! Form::select('respuestaantelamadre', [
-                                                   'si' => 'si',
-                                                   'no' => 'no',
-                                                   'n/a' => 'n/a',
-                                                   ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
-                          
-                                                  <div class="tile-text">
-                                                    <small>
-                                                     <b>9.</b> Balbuceó
-                                                   </small>
-                                                 </div>
-                          
-                                               </a>
-                                             </li>
-                                        <li class="divider-full-bleed"></li>
-
-                                        <li class="tile">
-                                                <a class="tile-content ink-reaction">
-                                                  {!! Form::select('respuestaantelamadre', [
-                                                   'si' => 'si',
-                                                   'no' => 'no',
-                                                   'n/a' => 'n/a',
-                                                   ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
-                          
-                                                  <div class="tile-text">
-                                                    <small>
-                                                     <b>10.</b> Dijo su primera palabra
-                                                   </small>
-                                                 </div>
-                          
-                                               </a>
-                                             </li>
-                                        <li class="divider-full-bleed"></li>
-
-                                        <li class="tile">
-                                                <a class="tile-content ink-reaction">
-                                                  {!! Form::select('respuestaantelamadre', [
-                                                   'si' => 'si',
-                                                   'no' => 'no',
-                                                   'n/a' => 'n/a',
-                                                   ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
-                          
-                                                  <div class="tile-text">
-                                                    <small>
-                                                     <b>11.</b> Dijo varias palabras juntas
-                                                   </small>
-                                                 </div>
-                          
-                                               </a>
-                                             </li>
-                                        <li class="divider-full-bleed"></li>
-
-                                        <li class="tile">
-                                                <a class="tile-content ink-reaction">
-                                                  {!! Form::select('respuestaantelamadre', [
-                                                   'si' => 'si',
-                                                   'no' => 'no',
-                                                   'n/a' => 'n/a',
-                                                   ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
-                          
-                                                  <div class="tile-text">
-                                                    <small>
-                                                     <b>12.</b> El niño lacto
-                                                   </small>
-                                                 </div>
-                          
-                                               </a>
-                                             </li>
-                                        <li class="divider-full-bleed"></li>
-
-                                        <li class="tile">
-                                                <a class="tile-content ink-reaction">
-                                                  {!! Form::select('respuestaantelamadre', [
-                                                   'si' => 'si',
-                                                   'no' => 'no',
-                                                   'n/a' => 'n/a',
-                                                   ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
-                          
-                                                  <div class="tile-text">
-                                                    <small>
-                                                     <b>13.</b> El niño utilizo biberón
-                                                   </small>
-                                                 </div>
-                          
-                                               </a>
-                                             </li>
-                                        <li class="divider-full-bleed"></li>
-
-                                        <li class="tile">
-                                                <a class="tile-content ink-reaction">
-                                                  {!! Form::select('respuestaantelamadre', [
-                                                   'si' => 'si',
-                                                   'no' => 'no',
-                                                   'n/a' => 'n/a',
-                                                   ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
-                          
-                                                  <div class="tile-text">
-                                                    <small>
-                                                     <b>14.</b> El niño uso chupo
-                                                   </small>
-                                                 </div>
-                          
-                                               </a>
-                                             </li>
-                                        <li class="divider-full-bleed"></li>
-
-                                        <li class="tile">
-                                                <a class="tile-content ink-reaction">
-                                                  {!! Form::select('respuestaantelamadre', [
-                                                   'si' => 'si',
-                                                   'no' => 'no',
-                                                   'n/a' => 'n/a',
-                                                   ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
-                          
-                                                  <div class="tile-text">
-                                                    <small>
-                                                     <b>15.</b> Se alimentó solo
-                                                   </small>
-                                                 </div>
-                          
-                                               </a>
-                                             </li>
-                                        <li class="divider-full-bleed"></li>
-                                      </ul>
-                    
-                                      
-
-
-                    </div>
-                
-                    
-      
-                        
-      
+                   
       {{--  </form>  --}}
       
       {{-- alerts --}}
@@ -609,7 +308,7 @@ Datos Niño
                 </div><!--end .card-body -->
                 <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                        <button type="submit" class="btn btn-flat btn-primary ink-reaction">Create account</button>
+                        <button type="submit" class="btn btn-flat btn-primary ink-reaction">Continuar</button>
                     </div>
                 </div>
             </div><!--end .card -->

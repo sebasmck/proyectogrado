@@ -18,7 +18,7 @@ PostTest
                     <center>
                      <p style="text-align:center; text-justify: inter-word;"><b>¿QUÉ APRENDISTE DE RESILIENCIA?</b></p>   
                     <p style="text-align:center; text-justify: inter-word;">
-                        Muchas gracias por participar y haber sido parte de este  programa. A continuación repasaremos lo   visto a lo largo de este programa.
+                    Muchas gracias por participar y haber sido parte de este programa. A continuación, repasamos lo visto a lo largo de este programa.
                     </p>
                     </center>
 

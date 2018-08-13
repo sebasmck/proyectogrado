@@ -29,7 +29,9 @@ Route::Resource('cuidador', 'DatosCuidadorController');
 
 Route::get('/datosnino', 'DatosNinoController@index')->name('/datosnino');
 
-Route::get('/pretest', 'PretestController@index')->name('/pretest');
+Route::get('/datosnino2', 'DatosNinoController@datosnino2')->name('/datosnino2');
+
+Route::get('/pretest0', 'PretestController@index')->name('/pretest0');
 
 Route::get('/pretest1', 'PretestController@pretest1')->name('/pretest1');
 
@@ -65,7 +67,7 @@ Route::get('/pretestprueba9', 'PretestController@pretestPrueba9')->name('/pretes
 Route::get('/pretestprueba10', 'PretestController@pretestPrueba10')->name('/pretestprueba10');
 
 Route::get('/pretestprueba11', 'PretestController@pretestPrueba11')->name('/pretestprueba11');
-
+Route::get('/pretestprueba12', 'PretestController@pretestPrueba12')->name('/pretestprueba12');
 //Rutas para el postest 
 Route::get('/posttest', 'PostTestController@index')->name('/posttest');
 
@@ -95,7 +97,7 @@ Route::get('/posttestprueba10', 'PostTestController@posttestPrueba10')->name('/p
 
 Route::get('/posttestprueba11', 'PostTestController@posttestPrueba11')->name('/posttestprueba11');
 
-
+Route::get('/posttestprueba12', 'PostTestController@posttestPrueba12')->name('/posttestprueba12');
 // Rutas actividades 
 
 Route::get('/actividades', 'ActivityController@index')->name('/actividades');
