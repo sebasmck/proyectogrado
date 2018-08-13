@@ -33,12 +33,12 @@ Route::get('/pretest0', 'PretestController@index')->name('/pretest0');
 
 Route::get('/pretest1', 'PretestController@pretest1')->name('/pretest1');
 
-Route::get('/pretest2', 'PretestController@pretest2')->name('/pretest2');
+Route::post('/pretest2', 'PretestController@pretest2')->name('/pretest2');
 
 Route::get('/pretest3', 'PretestController@pretest3')->name('/pretest3');
 
-Route::get('/pretest4', 'PretestController@pretest4')->name('/pretest4');
-Route::get('/pretest5', 'PretestController@pretest5')->name('/pretest5');
+Route::post('/pretest4', 'PretestController@pretest4')->name('/pretest4');
+Route::post('/pretest5', 'PretestController@pretest5')->name('/pretest5');
 
 // if yes return god nows what, otherwise return test
 Route::get('/pretestprueba', 'PretestController@pretestPrueba')->name('/pretestprueba');

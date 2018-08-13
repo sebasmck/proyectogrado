@@ -7,7 +7,8 @@ Pretest 1
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" id="pregunta3" method="POST" action="{{route('/pretest5')}}">
+        {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -21,31 +22,31 @@ Pretest 1
                     <div class="col-sm-6">
                             <div class="checkbox checkbox-styled">
                                 <label>
-                                    <input type="checkbox" value="">
+                                    <input type="checkbox" value="1" name="autoestima"  required="true">
                                     <span>a. Autoestima</span>
                                 </label>
                             </div>
                             <div class="checkbox checkbox-styled">
                                 <label>
-                                    <input type="checkbox" value="">
+                                    <input type="checkbox" value="2" name="afecto">
                                     <span>b. Afecto</span>
                                 </label>
                             </div>
                             <div class="checkbox checkbox-styled">
                                 <label>
-                                    <input type="checkbox" value="">
+                                    <input type="checkbox" value="3" name="autonomia">
                                     <span>c. Autonomía</span>
                                 </label>
                             </div>
                             <div class="checkbox checkbox-styled">
                                 <label>
-                                    <input type="checkbox" value="">
+                                    <input type="checkbox" value="4" name="reconocimiento">
                                     <span>d. Reconocimiento de cuidadores</span>
                                 </label>
                             </div>
                             <div class="checkbox checkbox-styled">
                                 <label>
-                                    <input type="checkbox" value="">
+                                    <input type="checkbox" value="5" name="confianza">
                                     <span>e. Confianza</span>
                                 </label>
                             </div>
@@ -63,7 +64,7 @@ Pretest 1
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/pretest5')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction"> <button onclick="convertirValoresCheckbox()" type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 
@@ -74,22 +75,38 @@ Pretest 1
 
 @endsection
 
-{{--  @section('addjs')
+@section('addjs')
 
 <script>
 
         var tl = new TimelineLite();
     
          avatar = $('.avatar');
-        //  content = $('.content-card');
-
-
 
         
-        // tl.to(title, 1.5, {y:10});
-        // tl.from(card1, .3, {left:100, opacity:0});
-        
+
+        function convertirValoresCheckbox()
+        {
+            console.log("entro");
+            var checkboxes = $("checkbox");   
+            for (var i=0; i<checkboxes.length; i++) 
+            {
+               var actual = checkboxes[i];
+               if(actual.prop("checked") == true )
+               {
+                   console.log(actual);
+                   actual.value = 1;
+               }
+               else
+               {
+                   alert(actual);
+                   actual.value = 0; 
+               }
+
+            }
+            $('#pregunta3').submit();
+        }
     
     </script>
 
-@endsection  --}}
+@endsection 

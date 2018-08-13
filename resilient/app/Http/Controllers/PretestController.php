@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Documento;
+use App\Preguntas;
+use App\Pregunta1_2;
+use App\Pregunta_3;
 
 class PretestController extends Controller
 {
@@ -24,10 +28,33 @@ class PretestController extends Controller
 
     }
 
-    public function pretest2(){
-
+    public function pretest2(Request $request)
+    {
+        $preguntas = 1;
+        $documento = 1;
+        $pregunta1 = new Pregunta1_2();
+        $usuario = auth()->id();
+        $pregunta1->id_Documento = $documento;
+        $pregunta1->id_Preguntas = $preguntas;
+        $pregunta1->id_usuario = $usuario;
+         
+        if ($request->input('opcion')== 1 && $request->input('textarea1')==true ) 
+        {
+            $casono = 0;
+            $pregunta1->si = 1;
+            $pregunta1->no = $casono;
+            $pregunta1->respuesta =$request->input('textarea1');
+            $pregunta1->save();
+        } 
+        else if($request->input('opcion')==2 && $request->input('textarea2')==true) 
+        {
+            $casosi = 0;
+            $pregunta1->no =1;
+            $pregunta1->si = $casosi;
+            $pregunta1->respuesta =$request->input('textarea2');
+            $pregunta1->save();
+        }
         return view('pretest.pretest2');
-
     }
 
     public function pretest3(){
@@ -36,14 +63,55 @@ class PretestController extends Controller
 
     }
     
-    public function pretest4(){
+    public function pretest4(Request $request)
+    {
+        $preguntas = 2;
+        $documento = 1;
+        $pregunta1 = new Pregunta1_2();
+        $usuario = auth()->id();
+        $pregunta1->id_Documento = $documento;
+        $pregunta1->id_Preguntas = $preguntas;
+        $pregunta1->id_usuario = $usuario;
+         
+        if ($request->input('option')== 1 && $request->input('textarea1')==true ) 
+        {
+            $casono = 0;
+            $pregunta1->si = 1;
+            $pregunta1->no = $casono;
+            $pregunta1->respuesta =$request->input('textarea1');
+            $pregunta1->save();
+        } 
+        else if($request->input('option')==2 && $request->input('textarea2')==true) 
+        {
+            $casosi = 0;
+            $pregunta1->no = 1;
+            $pregunta1->si = $casosi;
+            $pregunta1->respuesta =$request->input('textarea2');
+            $pregunta1->save();
+        }
 
         return view('pretest.pretest4');
 
     }
 
-     public function pretest5(){
+     public function pretest5(Request $request){
+        // pregunta 3      
+        $preguntas = 3;
+        $documento = 1;
 
+        $pregunta3 = new Pregunta_3();
+        $usuario = auth()->id();
+
+        $pregunta3->id_Documento = $documento;
+        $pregunta3->id_Preguntas = $preguntas;
+        $pregunta3->id_usuario = $usuario;
+        $pregunta3->Autoestima = $request->input('autoestima');
+        $pregunta3->Afecto = $request->input('afecto');
+        $pregunta3->Autonomia = $request->input('autonomia');
+        $pregunta3->Reconocimiento = $request->input('reconocimiento');
+        $pregunta3->Confianza = $request->input('confianza');
+        $pregunta3->save();
+   
         return view('pretest.pretest5');
 
     }
