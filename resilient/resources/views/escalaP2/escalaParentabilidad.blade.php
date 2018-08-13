@@ -7,8 +7,11 @@ Datos Acudiente
 @section('content')
 
 <div class="card">
-    <div class="card-body">
-        <h2 class="card-title">Escala de parentabilidad positiva</h2>
+    <div class="card-head style-primary">
+        <header>Escala de parentabilidad positiva - Datos iniciales</header>
+    </div>
+    <div class="card-body floating-label">
+
 
             <br />
 
@@ -22,7 +25,7 @@ Datos Acudiente
 
                     <div class="form-group col-md-8">
                         <div class="form-row">
-                            <label for="nombre" class="col-md-2 col-form-label">NOMBRE:</label>
+                            <label for="nombre" class="col-md-2 col-form-label">Nombre:</label>
 
                             <div class="col-md-10">
                                 <input class="form-control" id="nombre" type="text" >
@@ -33,7 +36,7 @@ Datos Acudiente
 
                     <div class="form-group col-md-4">
                         <div class="form-row">
-                            <label for="edad" class="col-md-2 col-form-label">EDAD:</label>
+                            <label for="edad" class="col-md-2 col-form-label">Edad:</label>
 
                             <div class="col-md-8">
                                 <input class="form-control" id="edad" type="text" >
@@ -51,20 +54,20 @@ Datos Acudiente
 
                     <div class="form-group col-md-3">
                         <div class="form-row">
-                            <label class="col-md-2 col-form-label">SEXO:</label>
+                            <label class="col-md-2 col-form-label">Sexo:</label>
 
                             <div class="col-md-10">
 
                                 <div class="form-check form-check-inline col-md-5">
                                     <label class="radio-inline radio-styled form-check-label">
-                                         <input type="radio" class="form-check-input" checked="true" name="sexo" id="sexo-m" value="1">
+                                         <input type="radio" class="form-check-input" checked="true" id="sexo-m" value="1">
                                          <span>(M)</span>
                                      </label>
                                 </div>
 
                                 <div class="form-check form-check-inline col-md-5">
                                     <label class="radio-inline radio-styled form-check-label">
-                                            <input type="radio" class="form-check-input" name="sexo" id="sexo-f" value="2">
+                                            <input type="radio" class="form-check-input" id="sexo-f" value="2">
                                             <span>(F)</span>
                                     </label>
                                 </div>
@@ -81,36 +84,36 @@ Datos Acudiente
 
                                 <div class="form-check form-check-inline col-md-2">
                                     <label class="radio-inline radio-styled form-check-label">
-                                         <input type="radio" class="form-check-input" checked="true" name="escolaridad" id="escolaridad-a" value="1">
+                                         <input type="radio" class="form-check-input" checked="true" id="escolaridad-a" value="1">
                                          <span>Sin escolaridad</span>
                                     </label>
                                 </div>
 
                                 <div class="form-check form-check-inline col-md-2">
                                     <label class="radio-inline radio-styled form-check-label">
-                                         <input type="radio" class="form-check-input" name="escolaridad" id="escolaridad-b" value="2">
+                                         <input type="radio" class="form-check-input" id="escolaridad-b" value="2">
                                          <span>Básica</span>
                                     </label>
                                 </div>
 
                                 <div class="form-check form-check-inline col-md-2">
                                     <label class="radio-inline radio-styled form-check-label">
-                                         <input type="radio" class="form-check-input" name="escolaridad" id="escolaridad-c" value="3">
+                                         <input type="radio" class="form-check-input" id="escolaridad-c" value="3">
                                          <span>Media</span>
                                     </label>
                                 </div>
 
                                 <div class="form-check form-check-inline col-md-2">
                                     <label class="radio-inline radio-styled form-check-label">
-                                         <input type="radio" class="form-check-input" name="escolaridad" id="escolaridad-d" value="4">
+                                         <input type="radio" class="form-check-input" id="escolaridad-d" value="4">
                                          <span>Técnica</span>
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline col-md-2">
                                     <label class="radio-inline radio-styled form-check-label">
-                                         <input type="radio" class="form-check-input" name="escolaridad" id="escolaridad-e" value="5">
+                                         <input type="radio" class="form-check-input" id="escolaridad-e" value="5">
                                          <span>Universitaria</span>
-                                    </label
+                                    </label>
                                 </div>
                                 
                             </div>
@@ -122,7 +125,7 @@ Datos Acudiente
                 <div class="row">
                     <div class="form-group col-md-6">
                         <div class="form-row">
-                            <label for="ingresp" class="col-md-4 col-form-label">Ingreso familiar total (al mes):</label>
+                            <label for="ingreso" class="col-md-4 col-form-label">Ingreso familiar total (al mes):</label>
 
                             <div class="col-md-8">
                                 <input class="form-control" id="ingreso" name="ingreso-familiar" type="text" >
@@ -133,7 +136,7 @@ Datos Acudiente
 
                     <div class="form-group col-md-6">
                         <div class="form-row">
-                            <label for="ocupacion" class="col-md-4 col-form-label">OCUPACIÓN (en qué trabaja):</label>
+                            <label for="ocupacion" class="col-md-4 col-form-label">Ocupación (en qué trabaja):</label>
 
                             <div class="col-md-8">
                                 <input class="form-control" id="ocupacion" type="text" >
@@ -146,35 +149,35 @@ Datos Acudiente
                 <div class="row">
                                         <div class="form-group col-md-8">
                                             <div class="form-row">
-                                                <label class="col-md-2 col-form-label">ESTADO CIVIL:</label>
+                                                <label class="col-md-2 col-form-label">Estado civil:</label>
 
                                                 <div class="col-md-10">
 
                                                     <div class="form-check form-check-inline col-md-2">
                                                         <label class="radio-inline radio-styled form-check-label">
-                                                            <input type="radio" class="form-check-input" checked="true" name="estadocivil" id="estadocivil-a" value="1">
-                                                            <span>soltero/a</span>
+                                                            <input type="radio" class="form-check-input" checked="true" id="estadocivil-a" value="1">
+                                                            <span>Soltero/a</span>
                                                         </label>
                                                     </div>
 
                                                     <div class="form-check form-check-inline col-md-2">
                                                         <label class="radio-inline radio-styled form-check-label">
-                                                            <input type="radio" class="form-check-input" name="estadocivil" id="estadocivil-b" value="2">
-                                                            <span>casado</span>
+                                                            <input type="radio" class="form-check-input" id="estadocivil-b" value="2">
+                                                            <span>Casado</span>
                                                         </label>
                                                     </div>
 
                                                     <div class="form-check form-check-inline col-md-2">
                                                         <label class="radio-inline radio-styled form-check-label">
-                                                            <input type="radio" class="form-check-input" name="estadocivil" id="estadocivil-c" value="3">
-                                                            <span>divorciado</span>
+                                                            <input type="radio" class="form-check-input" id="estadocivil-c" value="3">
+                                                            <span>Divorciado</span>
                                                         </label>
                                                     </div>
 
                                                     <div class="form-check form-check-inline col-md-2">
                                                         <label class="radio-inline radio-styled form-check-label">
-                                                            <input type="radio" class="form-check-input" name="estadocivil" id="estadocivil-d" value="4">
-                                                            <span>viudo/a</span>
+                                                            <input type="radio" class="form-check-input" id="estadocivil-d" value="4">
+                                                            <span>Viudo/a</span>
                                                         </label>
                                                     </div>                                    
                                                 </div>
@@ -183,7 +186,7 @@ Datos Acudiente
 
                                     <div class="form-group col-md-4">
                                         <div class="form-row">
-                                            <label for="nacionalidad" class="col-md-4 col-form-label">NACIONALIDAD:</label>
+                                            <label for="nacionalidad" class="col-md-4 col-form-label">Nacionalidad:</label>
 
                                             <div class="col-md-8">
                                                 <input class="form-control" id="nacionalidad" type="text" >
@@ -197,7 +200,7 @@ Datos Acudiente
 
                     <div class="form-group col-md-4">
                         <div class="form-row">
-                            <label for="habitantes" class="col-md-8 col-form-label">¿Cuántas personas viven en su casa? Total:</label>
+                            <label for="habitantes" class="col-md-8 col-form-label">¿Cuántas personas viven en su casa? total:</label>
 
                             <div class="col-md-4">
                                 <input class="form-control" id="habitantes" name="habitantes" type="text" >
@@ -237,6 +240,8 @@ Datos Acudiente
                     </b>
                 </h5>
 
+                <input type="hidden" name="id-infante" value="1" />
+
                 <br />
 
                 <div class="row">
@@ -249,35 +254,35 @@ Datos Acudiente
 
                                 <div class="form-check form-check-inline col-md-2">
                                     <label class="radio-inline radio-styled form-check-label">
-                                        <input type="radio" class="form-check-input" checked="true" name="cuidador" id="cuidador-a" value="1">
-                                        <span>padre</span>
+                                        <input type="radio" class="form-check-input" checked="true" id="cuidador-a" value="1">
+                                        <span>Padre</span>
                                     </label>
                                 </div>
 
                                 <div class="form-check form-check-inline col-md-2">
                                     <label class="radio-inline radio-styled form-check-label">
-                                        <input type="radio" class="form-check-input" name="cuidador" id="cuidador-b" value="2">
-                                        <span>madre</span>
+                                        <input type="radio" class="form-check-input" id="cuidador-b" value="2">
+                                        <span>Madre</span>
                                     </label>
                                 </div>
 
                                 <div class="form-check form-check-inline col-md-2">
                                     <label class="radio-inline radio-styled form-check-label">
-                                        <input type="radio" class="form-check-input" name="cuidador" id="cuidador-c" value="3">
-                                        <span>abuelo/a</span>
+                                        <input type="radio" class="form-check-input" id="cuidador-c" value="3">
+                                        <span>Abuelo/a</span>
                                     </label>
                                 </div>
 
                                 <div class="form-check form-check-inline col-md-2">
                                     <label class="radio-inline radio-styled form-check-label">
-                                        <input type="radio" class="form-check-input" name="cuidador" id="cuidador-d" value="4">
-                                        <span>otro familiar</span>
+                                        <input type="radio" class="form-check-input" id="cuidador-d" value="4">
+                                        <span>Otro familiar</span>
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline col-md-2">
                                     <label class="radio-inline radio-styled form-check-label">
-                                        <input type="radio" class="form-check-input" name="cuidador" id="cuidador-e" value="5">
-                                        <span>cuidador no familiar</span>
+                                        <input type="radio" class="form-check-input" id="cuidador-e" value="5">
+                                        <span>Cuidador no familiar</span>
                                     </label>
                                 </div>
                                 
@@ -302,7 +307,7 @@ Datos Acudiente
 
                         <div class="form-group col-md-7">
                             <div class="form-row">
-                                <label for="edadninoanos" class="col-md-3 col-form-label">EDAD del Niño/a:</label>
+                                <label for="edadninoanos" class="col-md-3 col-form-label">Edad del Niño/a:</label>
 
                                 <div class="col-md-2">
                                     <input class="form-control" id="edadninoanos" type="text" >
@@ -334,14 +339,14 @@ Datos Acudiente
 
                                 <div class="form-check form-check-inline col-md-5">
                                     <label class="radio-inline radio-styled form-check-label">
-                                        <input type="radio" class="form-check-input" checked="true" name="sexo-nino" id="sexo-nino-m" value="1">
+                                        <input type="radio" class="form-check-input" checked="true" id="sexo-nino-m" value="1">
                                         <span>(M)</span>
                                     </label>
                                 </div>
 
                                 <div class="form-check form-check-inline col-md-5">
                                     <label class="radio-inline radio-styled form-check-label">
-                                        <input type="radio" class="form-check-input" name="sexo-nino" id="sexo-nino-f" value="2">
+                                        <input type="radio" class="form-check-input" id="sexo-nino-f" value="2">
                                         <span>(F)</span>
                                     </label>
                                 </div>
@@ -358,21 +363,21 @@ Datos Acudiente
 
                                 <div class="form-check form-check-inline col-md-3">
                                     <label class="radio-inline radio-styled form-check-label">
-                                         <input type="radio" class="form-check-input" checked="true" name="escolaridad-nino" id="escolaridad-nino-a" value="1">
+                                         <input type="radio" class="form-check-input" checked="true" id="escolaridad-nino-a" value="1">
                                          <span>Sala cuna</span>
                                     </label>
                                 </div>
 
                                 <div class="form-check form-check-inline col-md-3">
                                     <label class="radio-inline radio-styled form-check-label">
-                                         <input type="radio" class="form-check-input" name="escolaridad-nino" id="escolaridad-nino-b" value="2">
+                                         <input type="radio" class="form-check-input" id="escolaridad-nino-b" value="2">
                                          <span>Jardín infantil</span>
                                     </label>
                                 </div>
 
                                 <div class="form-check form-check-inline col-md-4">
                                     <label class="radio-inline radio-styled form-check-label">
-                                         <input type="radio" class="form-check-input" name="escolaridad-nino" id="escolaridad-nino-c" value="3">
+                                         <input type="radio" class="form-check-input" id="escolaridad-nino-c" value="3">
                                          <span>No asiste</span>
                                     </label>
                                 </div>
@@ -393,14 +398,16 @@ Datos Acudiente
 
                                     <div class="form-check form-check-inline col-md-5">
                                         <label class="radio-inline radio-styled form-check-label">
-                                            <input type="radio" class="form-check-input" checked="true" name="discapacidad" id="discapacidad-y" value="1">
+                                            <input type="radio" class="form-check-input" checked="true" name="discapacidad" id="discapacidad-n" value="1"
+                                                   onclick="onShowFieldByCheckboxValue('#discapacidad-n','#campo-dependiente-discapacidad');">
                                             <span>(NO)</span>
                                         </label>
                                     </div>
 
                                     <div class="form-check form-check-inline col-md-5">
                                         <label class="radio-inline radio-styled form-check-label">
-                                            <input type="radio" class="form-check-input" name="discapacidad" id="discapacidad-n" value="2">
+                                            <input type="radio" class="form-check-input" name="discapacidad" id="discapacidad-y" value="2"
+                                                   onclick="onShowFieldByCheckboxValue('#discapacidad-n','#campo-dependiente-discapacidad');">
                                             <span>(SI)</span>
                                         </label>
                                     </div>
@@ -409,12 +416,12 @@ Datos Acudiente
                             </div>
                         </div>
 
-                        <div class="form-group col-md-7">
+                        <div class="form-group col-md-7" id="campo-dependiente-discapacidad" style="display: none">
                                 <div class="form-row">
                                     <label for="discapacidad" class="col-md-2 col-form-label">¿Cuál?:</label>
 
                                     <div class="col-md-10">
-                                        <input class="form-control" id="discapacidad" type="text" >
+                                        <input class="form-control" id="discapacidad" name="discapacidad-descripcion" type="text" >
                                     </div>
 
                                 </div>
@@ -432,14 +439,18 @@ Datos Acudiente
 
                                 <div class="form-check form-check-inline col-md-5">
                                     <label class="radio-inline radio-styled form-check-label">
-                                        <input type="radio" class="form-check-input" checked="true" name="emocional" id="emocional-n" value="1">
+                                        <input type="radio" class="form-check-input" checked="true" name="emocional" id="emocional-n" value="1"
+                                        onclick="onShowFieldByCheckboxValue('#emocional-n','#campo-dependiente-emocional')">
+
                                         <span>(NO)</span>
                                     </label>
                                 </div>
 
                                 <div class="form-check form-check-inline col-md-5">
                                     <label class="radio-inline radio-styled form-check-label">
-                                        <input type="radio" class="form-check-input"  name="emocional" id="emocional-y" value="2">
+                                        <input type="radio" class="form-check-input"  name="emocional" id="emocional-y" value="2"
+                                        onclick="onShowFieldByCheckboxValue('#emocional-n','#campo-dependiente-emocional');">
+
                                         <span>(SI)</span>
                                     </label>
                                 </div>
@@ -448,12 +459,12 @@ Datos Acudiente
                         </div>
                     </div>
 
-                    <div class="form-group col-md-7">
+                    <div class="form-group col-md-7" id="campo-dependiente-emocional" style="display: none" >
                             <div class="form-row">
-                                <label for="discapacidad" class="col-md-2 col-form-label">¿Cuál?:</label>
+                                <label for="emocional" class="col-md-2 col-form-label">¿Cuál?:</label>
 
                                 <div class="col-md-10">
-                                    <input class="form-control" id="discapacidad" type="text" >
+                                    <input class="form-control" id="emocional" name="emocional-descripcion" type="text" >
                                 </div>
 
                             </div>
@@ -462,10 +473,19 @@ Datos Acudiente
                 </div>
     
             </div>
-
-                <button type="submit">Desarrollar escala</button>
+                <div class="card-actionbar">
+                    <div class="card-actionbar-row">
+                        <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Desarrollar escala</button>
+                    </div>
+                </div>
             </form>
      </div>
 </div>
 
 @endsection
+
+@section('addjs')
+
+
+@endsection
+
