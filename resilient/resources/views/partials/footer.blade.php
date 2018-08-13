@@ -40,7 +40,7 @@
 		<script src="{{URL::asset('js/libs/nestable/jquery.nestable.js')}}"></script>
 		<script src="{{URL::asset('js/libs/ckeditor/ckeditor.js')}}"></script>
 		<script src="{{URL::asset('js/libs/ckeditor/adapters/jquery.js')}}"></script>
-		
+		<script src="{{URL::asset('js/utils/dryUtils.js')}}"></script>
 		
 		
 		

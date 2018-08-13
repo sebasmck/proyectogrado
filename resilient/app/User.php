@@ -19,7 +19,7 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
-    /**
+    /**xo
      * The attributes that should be hidden for arrays.
      *
      * @var array
@@ -28,5 +28,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function cuidador(){
+        return $this->hasOne('App\Cuidador','Id_Acudiente');
+    }
     
 }

@@ -24,13 +24,13 @@ Datos Acudiente
                     <div class="col-sm-6">
                         <div class="form-group">
                             <input type="text" class="form-control" name="Nombre_Acudiente" id="Nombre_Acudiente">
-                            <label for="Nombre_Acudiente">Nombres Completos Acudiente:</label>
+                            <label for="Nombre_Acudiente">Nombres Completos del Acudiente:</label>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <input type="text" class="form-control" name="Apellido_Acudiente" id="Apellido_Acudiente">
-                            <label for="Apellido_Acudiente">Apellidos Completos Acudiente:</label>
+                            <label for="Apellido_Acudiente">Apellidos Completos del Acudiente:</label>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ Datos Acudiente
                     <div class="col-sm-6">
                         <div class="form-group">
                             <input type="text" class="form-control" name="Correo_Acudiente" id="Correo_Acudiente">
-                            <label for="Correo_Acudiente">Correo Electronico:</label>
+                            <label for="Correo_Acudiente">Dirección de correo electrónico:</label>
                         </div>
                     </div>
                     {{-- PENDING 1 // Id_TipoDocumento --}}
@@ -51,7 +51,7 @@ Datos Acudiente
                     <div class="col-sm-5">
                         <div class="form-group">
                             <input type="text" class="form-control" name="NumeroDocumento_Acudiente" id="NumeroDocumento_Acudiente">
-                            <label for="NumeroDocumento_Acudiente">Documento:</label>
+                            <label for="NumeroDocumento_Acudiente">Número de identificación</label>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@ Datos Acudiente
                     <div class="col-sm-6">
                         <div class="form-group">
                             {{ Form::select('Id_RelacionInfante', $relacion->prepend('none')->pluck('Nombre_RelacionInfante', 'Id_RelacionInfante'),NULL, ['class' => 'form-control', 'id' => 'Id_RelacionInfante']) }}
-                                <label for="Id_RelacionInfante">Parentezco</label>
+                                <label for="Id_RelacionInfante">Parentesco/relación con el niño/a</label>
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -243,7 +243,7 @@ Datos Acudiente
             </div><!--end .card-body -->
             <div class="card-actionbar">
                 <div class="card-actionbar-row">
-                    <button type="submit" class="btn btn-flat btn-primary ink-reaction">Create account</button>
+                    <button type="submit" class="btn btn-flat btn-primary ink-reaction">Continuar <b> > </b> </button>
                 </div>
             </div>
         </div><!--end .card -->

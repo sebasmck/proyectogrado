@@ -29,6 +29,8 @@ Route::Resource('cuidador', 'DatosCuidadorController');
 
 Route::get('/datosnino', 'DatosNinoController@index')->name('/datosnino');
 
+Route::get('/datosnino2', 'DatosNinoController@datosnino2')->name('/datosnino2');
+
 Route::get('/pretest0', 'PretestController@index')->name('/pretest0');
 
 Route::get('/pretest1', 'PretestController@pretest1')->name('/pretest1');
@@ -110,11 +112,11 @@ Route::get('/cuidador-dashboard/{id}', 'HomeController@dashboardInfante')->name(
 
 // Escalas de resiliencia EP2 
 
-Route::get('/escalap2', 'HomeController@goEscala')->name('/escalap2');
+Route::get('/escalap2', 'CustomControllers\EscalaEP2Controller@index')->name('/escalap2');
 
 Route::post('/escalap2-datos-anexos', 'CustomControllers\EscalaEP2Controller@actualizarDatosAnexosEscalaEP2')->name('/escalap2-datos-anexos');
 
-// Route::Resource('usuarios', 'UsersController');s
+Route::post('/guardar-escalap2-cuestionario', 'CustomControllers\EscalaEP2Controller@guardarEscala')->name('/guardar-escalap2-cuestionario');
 
 
 //Cuestionario Escala WY
