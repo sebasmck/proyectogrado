@@ -164,11 +164,10 @@ Datos Niño
                             <div class="form-group">
                                 <select id="select2" name="select2" class="form-control">
                                            <option value="">&nbsp;</option>
-                                           <option value="30">Si</option>
+                                           <option value="30">Si (De responder sí, ¿qué tipo?)</option>
                                            <option value="40">No</option>
                                 </select>
-                                <label for="select1">Durante el embarazo ¿la madre recibió algún medicamento? 
-(De responder sí, ¿qué tipo?)"</label>
+                                <label for="select1">Durante el embarazo ¿la madre recibió algún medicamento? </label>
                             </div>
                         </div>
                     </div>
