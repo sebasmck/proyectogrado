@@ -7,12 +7,12 @@ Escala
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-<form class="form">
-
+<form class="form" method="POST" action="{{route('/escalaWY-cuestionario-calculate')}}">
+{{csrf_field()}}
 
 <div class="card">
                 <div class="card-head style-primary">
-                    <header>Cuestionario Escala</header>
+                    <header>Escala de WALDING Y YOUNG</header>
                 </div>
  <div class="card-body floating-label">
   <div class="row">
@@ -45,14 +45,14 @@ Escala
 <table class="table table-striped">
 <thead>
     <tr>
-      <th scope="col">Pregunta</th>
-      <th scope="col">1</th>
-      <th scope="col">2</th>
-      <th scope="col">3</th>
-      <th scope="col">4</th>
-      <th scope="col">5</th>
-      <th scope="col">6</th>
-      <th scope="col">7</th>
+      <th scope="col"><b>Pregunta</b></th>
+      <th scope="col"> <b>1</b></th>
+      <th scope="col"><b>2</b></th>
+      <th scope="col"><b>3</b></th>
+      <th scope="col"><b>4</b></th>
+      <th scope="col"><b>5</b></th>
+      <th scope="col"><b>6</b></th>
+      <th scope="col"><b>7</b></th>
     </tr>
   </thead>
 
@@ -66,7 +66,7 @@ Escala
       </th>
       <td>
       <label class="radio-inline radio-styled">
-                                            <input type="radio" name="inlineRadioOptions" value="1"><span></span>
+                                            <input type="radio" name="inlineRadioOptions" value="1" required="true"><span></span>
                                         </label>
       </td>
       <td>
@@ -109,7 +109,7 @@ Escala
 de una manera u otra</label></td>
 
 <td><label class="radio-inline radio-styled">
-                                         <input type="radio" name="inlineRadioOptions2" value="1"><span></span>
+                                         <input type="radio" name="inlineRadioOptions2" value="1" required="true"><span></span>
                                      </label></td>
 <td><label class="radio-inline radio-styled">
                                          <input type="radio" name="inlineRadioOptions2" value="2"><span></span>
@@ -148,7 +148,7 @@ de una manera u otra</label></td>
 </td>
 <td>
                                      <label class="radio-inline radio-styled">
-                                         <input type="radio" name="inlineRadioOptions3" value="1"><span></span>
+                                         <input type="radio" name="inlineRadioOptions3" value="1" required="true"><span></span>
                                      </label>
                                      </td>
                                      <td>
@@ -189,7 +189,7 @@ de una manera u otra</label></td>
 las cosas que suceden a mi alrededor.</label></th>
 <td>
                                      <label class="radio-inline radio-styled">
-                                         <input type="radio" name="inlineRadioOptions4" value="1"><span></span>
+                                         <input type="radio" name="inlineRadioOptions4" value="1" required="true"><span></span>
                                      </label>
                                      </td>
                                      <td>
@@ -235,7 +235,7 @@ las cosas que suceden a mi alrededor.</label></th>
 
      <td>
      <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions5" value="1">
+               <input type="radio" name="inlineRadioOptions5" value="1" required="true">
            </label>
            </td>
            <td>
@@ -279,7 +279,7 @@ las cosas que suceden a mi alrededor.</label></th>
     </th>
 <td>
     <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions6" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions6" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -321,7 +321,7 @@ las cosas que suceden a mi alrededor.</label></th>
     </th>
 <td>
  <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions7" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions7" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -363,7 +363,7 @@ las cosas que suceden a mi alrededor.</label></th>
      </th>
      <td>
        <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions8" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions8" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -403,7 +403,7 @@ las cosas que suceden a mi alrededor.</label></th>
     </th>
     <td>
     <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions9" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions9" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -450,7 +450,7 @@ las cosas que suceden a mi alrededor.</label></th>
   </th> 
          <td>
          <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions10" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions10" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -493,7 +493,7 @@ las cosas que suceden a mi alrededor.</label></th>
 
 <td>
          <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions11" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions11" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -542,7 +542,7 @@ las cosas que suceden a mi alrededor.</label></th>
 
 <td>
          <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions12" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions12" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -589,7 +589,7 @@ experimentado anteriormente</label>
 
 <td>
          <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions13" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions13" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -635,7 +635,7 @@ experimentado anteriormente</label>
 
 <td>
          <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions14" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions14" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -680,7 +680,7 @@ experimentado anteriormente</label>
 
 <td>
          <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions15" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions15" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -725,7 +725,7 @@ experimentado anteriormente</label>
 
 <td>
          <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions16" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions16" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -767,7 +767,7 @@ difíciles</label>
 </th>
 <td>
          <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions17" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions17" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -812,7 +812,7 @@ puede confiar</label>
 
 <td>
          <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions18" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions18" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -859,7 +859,7 @@ maneras</label>
 </th>
 <td>
          <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions19" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions19" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -900,7 +900,7 @@ maneras</label>
 </th>
 <td>
          <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions20" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions20" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -943,7 +943,7 @@ maneras</label>
 </th>
 <td>
          <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions21" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions21" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -987,7 +987,7 @@ hacer nada</label>
 </th>
 <td>
          <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions22" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions22" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -1031,7 +1031,7 @@ encuentro una salida</label>
 </th>
 <td>
          <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions23" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions23" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -1075,7 +1075,7 @@ hacer</label>
 </th>
 <td>
          <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions24" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions24" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -1117,7 +1117,7 @@ hacer</label>
 </th>
 <td>
          <label class="radio-inline radio-styled">
-               <input type="radio" name="inlineRadioOptions25" value="1"><span></span>
+               <input type="radio" name="inlineRadioOptions25" value="1" required="true"><span></span>
            </label>
            </td>
            <td>
@@ -1157,7 +1157,7 @@ hacer</label>
 </table>
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/escalaWY-cuestionario')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                   <button  type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button>
                   </div>
             </div>
 </div>         
