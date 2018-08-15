@@ -11,11 +11,11 @@ Pretest 4
             <div class="card">
 
                 <div class="card-head style-primary">
-                    <header>Pretest</header>
+                    <header>Post Test</header>
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> ¿Cómo crees que un niño(a) desarrollaría el reconocimiento de las personas más allegadas?
+                    <p><b>9. ¿Cómo crees que un niño/a desarrollaría el reconocimiento de las personas más allegadas?
                         </b></p>
                     <br>
 
@@ -23,26 +23,26 @@ Pretest 4
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a. Se desarrolla mediante el cuidado del adulto hacia el niño</span>
+                                    <span>a. Se desarrolla mediante el cuidado del adulto hacia el niño/a. </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1">
-                                    <span> b. El reconocimiento se da cuando el cuidador suple las necesidades el niño(a)</span>
+                                    <span> b. El reconocimiento se da cuando el cuidador suple las necesidades el niño/a. </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option2">
-                                    <span>c. Cuando el adulto consciente y se mantiene cerca del niño
+                                    <span>c. Cuando el adulto consciente y se mantiene cerca del niño/a.
                                         </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option3">
-                                    <span>d. Todas las anteriores</span>
+                                    <span>d. Todas las anteriores. </span>
                                 </label>
                             </div>
                     </div>

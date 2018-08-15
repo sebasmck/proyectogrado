@@ -930,6 +930,7 @@ button:hover {
                               </div>
 
                 </div><!--end .card-body -->
+                
                 <div class="card-actionbar">
                     <div class="card-actionbar-row">
                         <button style="margin-top:50px; margin-left:30%; margin-right:30% " onclick="">Comenzar</button>

@@ -4,7 +4,7 @@
 
 	
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
-		
+	
 		<script src="{{URL::asset('js/DataTables/datatables.min.js')}}" ></script>
 		<script src="{{URL::asset('js/libs/jquery/jquery-1.11.2.min.js')}}"></script>
 		<script src="{{URL::asset('js/libs/jquery/jquery-migrate-1.2.1.min.js')}}"></script>
@@ -40,7 +40,10 @@
 		<script src="{{URL::asset('js/libs/nestable/jquery.nestable.js')}}"></script>
 		<script src="{{URL::asset('js/libs/ckeditor/ckeditor.js')}}"></script>
 		<script src="{{URL::asset('js/libs/ckeditor/adapters/jquery.js')}}"></script>
+		<script src="{{URL::asset('js/utils/dryUtils.js')}}"></script>
 		
+		<!-- prueba con este codigo para los checkbox-->
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		
 		
 		

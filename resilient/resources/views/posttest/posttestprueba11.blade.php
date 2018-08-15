@@ -11,11 +11,11 @@ Pretest 10
             <div class="card">
 
                 <div class="card-head style-primary">
-                    <header>Pretest</header>
+                    <header>Post Test</header>
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> De las siguientes opciones ¿cuál crees que es la definición correcta de crianza?
+                    <p><b>14. De las siguientes opciones ¿cuál crees que es la definición correcta de crianza?
                         </b></p>
                     <br>
 
@@ -23,21 +23,21 @@ Pretest 10
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a. Son las técnicas y creencias que un padre/madre opta para formar a su hijo(a). </span>
+                                    <span>a. Son las técnicas y creencias que un padre/madre opta para formar a su hijo. </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1">
-                                    <span>b. Son las creencias, conocimiento y actitudes de un padre/madre hacia la formación de
-                                            su hijo(a).</span>
+                                    <span>b. Son las creencias, conocimiento y actitudes de un padre/madre hacia la formación de su hijo.</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option2">
                                     <span>
-                                            c. Es la forma de castigo que opta un padre para corregir y formar a su hija(a).
+                                      c.  Es la forma de castigo que opta un padre para corregir y formar a su hija.
+.
                                         </span>
                                 </label>
                             </div>
@@ -46,7 +46,7 @@ Pretest 10
                                     <label>
                                         <input type="radio" name="optionsRadios" value="option2">
                                         <span>
-                                                d. Son los valores que un padre/madre transmite a su hijo(a) para guiarlo de forma
+                                                d. Son los valores que un padre/madre transmite a su hijo para guiarlo de forma adecuada.
 adecuada.
                                             </span>
                                     </label>
@@ -66,7 +66,7 @@ adecuada.
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/posttestprueba11')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/posttestprueba12')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 

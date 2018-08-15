@@ -25,7 +25,7 @@ Cuestionario 2
                                                     <header>Resiliencia</header>
                                                 </div><!--end .card-head -->
                                                 <div class="card-body">
-                                                    <p>se ha definido como la capacidad que tienen la personas para sobrepasar un evento adverso, o situación estresante.
+                                                    <p>Se ha definido como la capacidad que tienen la personas para sobrepasar un evento adverso, o situación estresante.
                                                     </p>
                                                 </div><!--end .card-body -->
                                             </div><!--end .card -->

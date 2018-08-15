@@ -11,11 +11,11 @@ Pretest 10
             <div class="card">
 
                 <div class="card-head style-primary">
-                    <header>Pretest</header>
+                    <header>Post Test</header>
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> ¿Cuándo crees que se comienza a desarrollar la confianza?
+                    <p><b>13. ¿Cuándo crees que se comienza a desarrollar la confianza?
                         </b></p>
                     <br>
 
@@ -23,20 +23,20 @@ Pretest 10
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a.   Desde los 10 años</span>
+                                    <span>a.   Desde los 10 años. </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option1">
-                                    <span>b.   Desde los 5 años</span>
+                                    <span>b.   Desde los 5 años. </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="option2">
                                     <span>
-                                            c. Desde los 2 años
+                                            c. Desde los 2 años.
                                         </span>
                                 </label>
                             </div>

@@ -7,7 +7,8 @@ Pretest 10
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="POST" action="{{route('/pretestprueba12')}}">
+        {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -15,38 +16,37 @@ Pretest 10
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> De las siguientes opciones ¿cuál crees que es la definición correcta de crianza?
+                    <p><b> 14. De las siguientes opciones ¿cuál crees que es la definición correcta de crianza?
                         </b></p>
                     <br>
 
                     <div class="col-sm-9">
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a. Son las técnicas y creencias que un padre/madre opta para formar a su hijo(a). </span>
+                                    <input type="radio" name="optionsRadios" value="1"required>
+                                    <span>a. Son las técnicas y creencias que un padre/madre opta para formar a su hijo. </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option1">
-                                    <span>b. Son las creencias, conocimiento y actitudes de un padre/madre hacia la formación de
-                                            su hijo(a).</span>
+                                    <input type="radio" name="optionsRadios" value="2">
+                                    <span>b. Son las creencias, conocimiento y actitudes de un padre/madre hacia la formación de su hijo</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option2">
+                                    <input type="radio" name="optionsRadios" value="3">
                                     <span>
-                                            c. Es la forma de castigo que opta un padre para corregir y formar a su hija(a).
+                                            c. Es la forma de castigo que opta un padre para corregir y formar a su hijo.
                                         </span>
                                 </label>
                             </div>
 
                             <div class="radio radio-styled">
                                     <label>
-                                        <input type="radio" name="optionsRadios" value="option2">
+                                        <input type="radio" name="optionsRadios" value="4">
                                         <span>
-                                                d. Son los valores que un padre/madre transmite a su hijo(a) para guiarlo de forma
+                                                d. Son los valores que un padre/madre transmite a su hijo para guiarlo de forma adecuada.
 adecuada.
                                             </span>
                                     </label>
@@ -66,7 +66,7 @@ adecuada.
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/pretestprueba11')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 

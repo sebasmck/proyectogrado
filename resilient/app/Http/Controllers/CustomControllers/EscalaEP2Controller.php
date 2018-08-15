@@ -4,19 +4,18 @@ namespace App\Http\Controllers\CustomControllers;
 
 use App\EscalaEP2DatosAnexos;
 use App\EscalaEP2DatosAnexosNino;
+use App\EscalaEP2Enunciado;
+use App\EscalaEP2Respuesta;
 use Illuminate\Http\Request;
-use App\EscalaEP2Acudiente;
-use App\EscalaResilienciaEP2;
-use App\RespuestaEP2;
 use App\Cuidador;
 use App\Http\Controllers\Controller;
 
 class EscalaEP2Controller extends Controller
 {
      public function index()
-    {
-        return null; 
-    }
+     {
+        return view('escalaP2.escalaParentabilidad');
+     }
 
      public function create()
     {
@@ -29,16 +28,34 @@ class EscalaEP2Controller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $id_usuario, $id_respuesta)
+    public function guardarEscala(Request $request)
     {
-        $interseccion = new EscalaEP2Acudiente();
-        $escala = new EscalaResilienciaEP2();
+        $idEscalaDatosAnexosNino = $request->input('id-escala-datos-anexos');
+        $data = array();
+        $puntos = 0;
 
+        // obtener los datos de la encuesta
+        for ($i=0; $i < 54; $i++) {
+            if($request->exists('pregunta'.($i+1)))
+            {
+                $respuestaActual = $request->input('pregunta' . ($i + 1));
+                $respuestaNueva = array('id_EscalaDatosAnexosNino' => $idEscalaDatosAnexosNino,
+                                        'Id_Respuesta' => $respuestaActual,
+                                        'id_EnunciadoEP2' => ($i+1));
+                $puntos = $puntos + $respuestaActual;
 
-        // datos escala puntajes 1,2,3,4
+                array_push($data, $respuestaNueva);
+            }
+        }
 
+        // actualizar los puntos en la tabla padre
+        $datosAnexosNino = EscalaEP2DatosAnexosNino::find($idEscalaDatosAnexosNino);
+        $datosAnexosNino->puntos = $puntos;
+        $datosAnexosNino->save();
 
-        dd($request);
+        $rtaCargado = EscalaEP2Respuesta::insert($data);
+
+        return $request;
     }
 
     /**
@@ -85,11 +102,30 @@ class EscalaEP2Controller extends Controller
         //
     }
 
+    public function irACuestionario( $idInfante, $idEscalaDatosAnexosNino ) {
+        $preguntasCuestionario = EscalaEP2Enunciado::all();
+        $preguntasData = array();
+        foreach($preguntasCuestionario as $preguntaActual)
+        {
+            array_push($preguntasData, $preguntaActual->Pregunta_EnunciadoEP2);
+        }
+        
+       $data = ['preguntasCuestionario' => $preguntasData,
+                'idInfante' => $idInfante,
+                'idEscalaDatosAnexosNino' => $idEscalaDatosAnexosNino];
+
+       return view('escalaP2.escalaParentabilidadCuestionario',$data);
+    }
+
+
     public function actualizarDatosAnexosEscalaEP2(Request $request){
 
         $datosAnexos = new EscalaEP2DatosAnexos();
 
-        $datosAnexos->id_acudiente_cuidador = 1;
+        $id_usuario = auth()->id();
+        $acudiente = Cuidador::where('id_usuario', $id_usuario)->get()[0];
+
+        $datosAnexos->id_acudiente_cuidador = $acudiente->Id_Acudiente;
         $datosAnexos->ingreso_familiar = $request->input('ingreso-familiar') ;
         $datosAnexos->total_personas_vec = $request->input('habitantes');
         $datosAnexos->total_personas_m18 = $request->input('habitantes18');
@@ -97,16 +133,16 @@ class EscalaEP2Controller extends Controller
 
         $datosAnexos->save();
 
-        //$datosAnexosNino = new EscalaEP2DatosAnexosNino();
+        $datosAnexosNino = new EscalaEP2DatosAnexosNino();
 
-        //$datosAnexosNino->id_infante = $request->input();
-        //$datosAnexosNino->discapacidad_nino = $request->input();
-        //$datosAnexosNino->idescalaresilienciaep2_datosAnexo = $datosAnexos->id;
-        //$datosAnexosNino->problema_nino = $request->input();
+        $datosAnexosNino->id_infante = $request->input('id-infante');
+        $datosAnexosNino->discapacidad_nino = $request->input('discapacidad-descripcion');
+        $datosAnexosNino->problema_nino = $request->input('emocional-descripcion');
+        $datosAnexosNino->idescalaresilienciaep2_datosAnexo = $datosAnexos->id;
 
-        //$datosAnexosNino->save();
+        $datosAnexosNino->save();
 
-        return $request;
+        return $this->irACuestionario( $datosAnexosNino->id_infante, $datosAnexosNino->id);
     }
 
 }

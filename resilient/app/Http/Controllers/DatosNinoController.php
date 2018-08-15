@@ -16,6 +16,11 @@ class DatosNinoController extends Controller
         return view('DataInput.Datos_Nino');
     }
 
+
+    public function datosnino2(){
+        return view ('DataInput.Datos_Comportamientos');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

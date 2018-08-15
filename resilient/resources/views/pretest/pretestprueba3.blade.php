@@ -15,38 +15,38 @@ Pretest 1
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b>   ¿Qué técnicas disciplinarias utilizas en la mayoría de los casos cuando tu hijo/a se comporta de manera inadecuada? Por favor marca tres técnicas que utilizas en casa con tu hijo/a.</b></p>
+                    <p><b>6. ¿Qué técnicas disciplinarias utilizas en la mayoría de los casos cuando tu hijo/a se comporta de manera inadecuada? Por favor marca tres técnicas que utilizas</b></p>
                     <br>
 
                     <div class="col-sm-6">
                             <div class="checkbox checkbox-styled">
                                 <label>
                                     <input type="checkbox" value="">
-                                    <span>a. Ignorar el comportamiento del niño(a)</span>
+                                    <span>a. Ignorar el comportamiento del niño/a y no le dice nada.</span>
                                 </label>
                             </div>
                             <div class="checkbox checkbox-styled">
                                 <label>
                                     <input type="checkbox" value="">
-                                    <span>b. Golpear al niño(a)</span>
+                                    <span>b. Golpear al niño/a. </span>
                                 </label>
                             </div>
                             <div class="checkbox checkbox-styled">
                                 <label>
                                     <input type="checkbox" value="">
-                                    <span> c. Explicarle porque está mal lo que hace</span>
+                                    <span> c. Explicarle porque está mal lo que hace.</span>
                                 </label>
                             </div>
                             <div class="checkbox checkbox-styled">
                                 <label>
                                     <input type="checkbox" value="">
-                                    <span>d. Amenazar al niño(a)</span>
+                                    <span>d. Amenazar al niño/a. </span>
                                 </label>
                             </div>
                             <div class="checkbox checkbox-styled">
                                 <label>
                                     <input type="checkbox" value="">
-                                    <span>e. Prefiere darle libertad en su personalidad</span>
+                                    <span>e. Prefiere darle libertad en su personalidad.</span>
                                 </label>
                             </div>
                             
@@ -56,28 +56,28 @@ Pretest 1
                             <div class="checkbox checkbox-styled">
                                     <label>
                                         <input type="checkbox" value="">
-                                        <span>f. Razonar con el niño(a)</span>
+                                        <span>f. Razonar con el niño/a. </span>
                                     </label>
                                 </div>
 
                                 <div class="checkbox checkbox-styled">
                                         <label>
                                             <input type="checkbox" value="">
-                                            <span>g. Lo grita y le dice que no vuelva hacer eso</span>
+                                            <span>g. Lo grita y le dice que no vuelva hacer eso.</span>
                                         </label>
                                     </div>
 
                                     <div class="checkbox checkbox-styled">
                                             <label>
                                                 <input type="checkbox" value="">
-                                                <span>h. No utiliza ninguna técnica</span>
+                                                <span>h. No utiliza ninguna técnica.</span>
                                             </label>
                                         </div>
 
                                         <div class="checkbox checkbox-styled">
                                                 <label>
                                                     <input type="checkbox" value="">
-                                                    <span>i. hace reflexionar a su hijo/a de su comportamiento</span>
+                                                    <span>i. Hace reflexionar a su hijo/a de su comportamiento. </span>
                                                 </label>
                                             </div>
                     </div>

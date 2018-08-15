@@ -7,7 +7,8 @@ Cuestionario 1
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="POST" action="{{route('/pretest2')}}">
+        {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -20,10 +21,11 @@ Cuestionario 1
                         <div class="col-sm-6">
                                 <div class="col-sm-9">
                                         <label class="radio-inline radio-styled">
-                                            <input id="si" type="radio" name="inlineRadioOptions" value="option1"><span>Si</span>
+                                            <input id="si" type="radio" name="opcion" value="1" checked ="true" required="true"><span>Si</span>
                                         </label>
+
                                         <label class="radio-inline radio-styled">
-                                            <input type="radio" name="inlineRadioOptions" value="option2" id="no"><span>No</span>
+                                            <input type="radio" name="opcion" value="2" id="no"><span>No</span>
                                         </label>
                                     </div>
                         </div>
@@ -31,29 +33,25 @@ Cuestionario 1
                     <br>
                     <div class="row">
                             <div class="col-sm-8"  id="casoSi" style="display:none;">
-                                    <label for="">
-                                            Cuéntanos que entiendes por resiliencia
+                                    <label for="" >
+                                           Cuéntanos qué entiendes por resiliencia
                                     </label>
                                     <br><br>
                                    
-                                    <textarea name="textarea13" id="textarea13" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>
+                                    <textarea name="textarea1" id="textarea" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>
                                </div> 
 
                                    <div class="col-sm-8" id="casoNo" style="display:none;">
                                     <label for="">
-                                           De acuerdo, ¿qué crees o entiendes de este término?
+                                         De acuerdo, ¿Qué crees o entiendes de este término?
                                     </label>
                                     <br><br>
-                                    <textarea name="textarea13" id="textarea13" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>
+                                    <textarea name="textarea2" id="textarea2" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>
                               </div>
                                  
 
                             </div>
                             
-               
-
-
-                    
                 </div> {{-- card-body no padding --}}
 
                      <div class="col-sm-4">
@@ -64,7 +62,7 @@ Cuestionario 1
               
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/pretest2')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 
