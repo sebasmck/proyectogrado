@@ -15,7 +15,7 @@ Pretest 4
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> ¿Crees que fomentar la autonomía de un niño/a aporta a que sea más resiliente?
+                    <p><b> 10. ¿Crees que fomentar la autonomía de un niño/a aporta a que sea más resiliente?
                         </b></p>
                     <br>
 

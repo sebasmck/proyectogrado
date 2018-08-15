@@ -40,42 +40,44 @@ Route::post('/pretest2', 'PretestController@pretest2')->name('/pretest2');
 Route::get('/pretest3', 'PretestController@pretest3')->name('/pretest3');
 
 Route::post('/pretest4', 'PretestController@pretest4')->name('/pretest4');
+
 Route::post('/pretest5', 'PretestController@pretest5')->name('/pretest5');
 
 // if yes return god nows what, otherwise return test
 Route::get('/pretestprueba', 'PretestController@pretestPrueba')->name('/pretestprueba');
-
 Route::get('/pretestprueba1', 'PretestController@pretestPrueba1')->name('/pretestprueba1');
+// aca continua el pretest 
+Route::post('/pretestprueba2', 'PretestController@pretestPrueba2')->name('/pretestprueba2');
 
-
-Route::get('/pretestprueba2', 'PretestController@pretestPrueba2')->name('/pretestprueba2');
-
-Route::get('/pretestprueba3', 'PretestController@pretestPrueba3')->name('/pretestprueba3');
+Route::post('/pretestprueba3', 'PretestController@pretestPrueba3')->name('/pretestprueba3');
 
 Route::get('/pretestprueba4', 'PretestController@pretestPrueba4')->name('/pretestprueba4');
 
-Route::get('/pretestprueba5', 'PretestController@pretestPrueba5')->name('/pretestprueba5');
+Route::post('/pretestprueba5', 'PretestController@pretestPrueba5')->name('/pretestprueba5');
 
-Route::get('/pretestprueba6', 'PretestController@pretestPrueba6')->name('/pretestprueba6');
+Route::post('/pretestprueba6', 'PretestController@pretestPrueba6')->name('/pretestprueba6');
 
-Route::get('/pretestprueba7', 'PretestController@pretestPrueba7')->name('/pretestprueba7');
+Route::post('/pretestprueba7', 'PretestController@pretestPrueba7')->name('/pretestprueba7');
 
-Route::get('/pretestprueba8', 'PretestController@pretestPrueba8')->name('/pretestprueba8');
+Route::post('/pretestprueba8', 'PretestController@pretestPrueba8')->name('/pretestprueba8');
 
-Route::get('/pretestprueba9', 'PretestController@pretestPrueba9')->name('/pretestprueba9');
+Route::post('/pretestprueba9', 'PretestController@pretestPrueba9')->name('/pretestprueba9');
 
-Route::get('/pretestprueba10', 'PretestController@pretestPrueba10')->name('/pretestprueba10');
+Route::post('/pretestprueba10', 'PretestController@pretestPrueba10')->name('/pretestprueba10');
 
-Route::get('/pretestprueba11', 'PretestController@pretestPrueba11')->name('/pretestprueba11');
-Route::get('/pretestprueba12', 'PretestController@pretestPrueba12')->name('/pretestprueba12');
+Route::post('/pretestprueba11', 'PretestController@pretestPrueba11')->name('/pretestprueba11');
+
+Route::post('/pretestprueba12', 'PretestController@pretestPrueba12')->name('/pretestprueba12');
+
 //Rutas para el postest 
 Route::get('/posttest', 'PostTestController@index')->name('/posttest');
-
 Route::get('/posttest1', 'PostTestController@postTest1')->name('/posttest1');
 Route::get('/posttest2', 'PostTestController@posttest2')->name('/posttest2');
 Route::get('/posttest3', 'PostTestController@posttest3')->name('/posttest3');
 Route::get('/posttest4', 'PostTestController@posttest4')->name('/posttest4');
 Route::get('/posttest5', 'PostTestController@posttest5')->name('/posttest5');
+
+Route::get('/posttestprueba1', 'PostTestController@posttestPrueba1')->name('/posttestprueba1');
 
 Route::get('/posttestprueba2', 'PostTestController@posttestPrueba2')->name('/posttestprueba2');
 

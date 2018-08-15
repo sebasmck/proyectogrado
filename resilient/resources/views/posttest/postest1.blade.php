@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Postest 1 
+Post Test 1 
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@ Postest 1
             <div class="card">
 
                 <div class="card-head style-primary">
-                    <header>PostTest Pregunta 1</header>
+                    <header>Post Test</header>
                 </div>
 
                 <div class="card-body floating-label">

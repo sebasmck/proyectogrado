@@ -15,7 +15,7 @@ Pretest 10
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> ¿Cuándo crees que se comienza a desarrollar la confianza?
+                    <p><b>13. ¿Cuándo crees que se comienza a desarrollar la confianza?
                         </b></p>
                     <br>
 

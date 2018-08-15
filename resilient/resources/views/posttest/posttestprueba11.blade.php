@@ -15,7 +15,7 @@ Pretest 10
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> De las siguientes opciones ¿cuál crees que es la definición correcta de crianza?
+                    <p><b>14. De las siguientes opciones ¿cuál crees que es la definición correcta de crianza?
                         </b></p>
                     <br>
 
@@ -66,7 +66,7 @@ adecuada.
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/posttestprueba11')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/posttestprueba12')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 

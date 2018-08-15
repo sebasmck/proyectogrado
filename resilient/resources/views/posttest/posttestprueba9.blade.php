@@ -15,7 +15,7 @@ Pretest 9
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> ¿Qué puede fortalecer la confianza que tiene un niño/a hacia su cuidador?
+                    <p><b>12. ¿Qué puede fortalecer la confianza que tiene un niño/a hacia su cuidador?
                         </b></p>
                     <br>
 

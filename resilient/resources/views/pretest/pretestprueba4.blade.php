@@ -7,7 +7,8 @@ Pretest 4
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="POST" action="{{route('/pretestprueba5')}}">
+        {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -15,32 +16,32 @@ Pretest 4
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> De las siguientes opciones ¿Cuál crees que puede mejorar la relación con el niño/a?</b></p>
+                    <p><b>7. De las siguientes opciones ¿Cuál crees que puede mejorar la relación con el niño/a?</b></p>
                     <br>
 
                     <div class="col-sm-9">
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option1" checked="">
+                                    <input type="radio" name="optionsRadios" value="1" required >
                                     <span>a. Castigarlos prohibiéndoles las salidas y otras cosas cuando se porten mal, pues así crecen con buenos valores.</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option1">
+                                    <input type="radio" name="optionsRadios" value="2">
                                     <span> b. Colocándoles reglas y límites claros, horarios que puedan seguir y que además les ayuden a fomentar el orden.  </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option2">
+                                    <input type="radio" name="optionsRadios" value="3">
                                     <span>c. Mediante el juego y actividades diarias que me permitan conocer mejor a mi hijo, así como él a mí.  
                                         </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option3">
+                                    <input type="radio" name="optionsRadios" value="4">
                                     <span>d.Las respuestas b y c son correctas.
                                     </span>
                                 </label>
@@ -59,7 +60,7 @@ Pretest 4
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/pretestprueba5')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 

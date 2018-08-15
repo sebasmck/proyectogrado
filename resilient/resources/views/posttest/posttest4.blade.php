@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Pretest 1
+Post Test 3
 @endsection
 
 @section('content')
@@ -15,7 +15,7 @@ Pretest 1
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b>   ¿Cuáles elementos crees que conforman la resiliencia? Puedes seleccionar una o varias opciones</b></p>
+                    <p><b>3. ¿Cuáles elementos crees que conforman la resiliencia? Puedes seleccionar una o varias opciones</b></p>
                     <br>
 
                     <div class="col-sm-6">

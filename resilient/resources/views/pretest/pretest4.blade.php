@@ -16,7 +16,7 @@ Pretest 1
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b>   ¿Cuáles elementos crees que conforman la resiliencia? Puedes seleccionar una o varias opciones.</b></p>
+                    <p><b>3. ¿Cuáles elementos crees que conforman la resiliencia? Puedes seleccionar una o varias opciones.</b></p>
                     <br>
 
                     <div class="col-sm-6">
@@ -87,24 +87,23 @@ Pretest 1
 
         function convertirValoresCheckbox()
         {
-            console.log("entro");
-            var checkboxes = $("checkbox");   
+            var checkboxes = $("checkbox");  
             for (var i=0; i<checkboxes.length; i++) 
             {
                var actual = checkboxes[i];
-               if(actual.prop("checked") == true )
+               console.log("Entro al if");
+               if($(actual.attr( "checked" )== true ))
                {
-                   console.log(actual);
-                   actual.value = 1;
+                console.log("Entro al if");
+                   actual = 1;
                }
                else
                {
-                   alert(actual);
-                   actual.value = 0; 
+                   actual.val() = 0; 
                }
 
             }
-            $('#pregunta3').submit();
+           $('#pregunta3').submit();
         }
     
     </script>

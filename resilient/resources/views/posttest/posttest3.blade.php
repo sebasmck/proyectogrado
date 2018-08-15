@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Cuestionario 2
+Post Test 2
 @endsection
 
 @section('content')
@@ -15,7 +15,7 @@ Cuestionario 2
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b>¿Sabes tú si eres resiliente?</b></p>
+                    <p><b>2. ¿Sabes tú si eres resiliente?</b></p>
                     <br>
 
                     <div class="row">

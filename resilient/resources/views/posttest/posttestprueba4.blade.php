@@ -15,7 +15,7 @@ Pretest 4
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b>De las siguientes opciones ¿Cuál crees que puede mejorar la relación con el niño/a?</b></p>
+                    <p><b> 7. De las siguientes opciones ¿Cuál crees que puede mejorar la relación con el niño/a?</b></p>
                     <br>
 
                     <div class="col-sm-9">
