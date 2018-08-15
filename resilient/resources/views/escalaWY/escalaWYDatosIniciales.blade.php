@@ -21,19 +21,15 @@ Escala
 
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input maxlength="2" type="text" class="form-control number" id="age" name="edad">
+                                            <input required="true" maxlength="2" type="text" class="form-control number" id="age" name="edad">
                                             <label for="age">Edad:                                                </label>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                          <select id="state" class="form-control">  
-                                          <option value="">&nbsp;</option>
-                                          <option value="1">Soltero/a</option>
-                                          <option value="2">Casado/a</option>
-                                          <option value="3">Divorciado/a</option>
-                                          <option value="4">Viudo/a</option>
-                                          <option value="5">Otro</option>
+                                          <select disabled="true" id="state" class="form-control">  
+
+                                          <option value="2">{{$estadoCivi}}</option>
                                           </select>
                                           <label for="state">Estado civil:</label>
                                         </div>
@@ -50,19 +46,17 @@ Escala
 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control number" maxlength="2" id="numberChilren" name="children">
+                                            <input required="true" type="text" class="form-control number" maxlength="2" id="numberChilren" name="children">
                                             <label for="numberChilren">Número de hijos:</label>
                                         </div>
                                     </div>
 
                                      <div class="col-sm-6">
                                         <div class="form-group">
-                                            <select id="education" class="form-control">
-                                            <option value="">&nbsp;</option>
-                                            <option value="3">Primaria</option>
-                                            <option value="1">Bachiller</option>
-                                            <option value="2">Técnico</option>
-                                            <option value="3">Profesional</option>
+                                            <select disabled="true" id="education" class="form-control">
+
+                                            <option value="2">{{$escolaridad}}</option>
+    
                                             </select>
                                             <label for="education">Nivel de educación:</label>
                                         </div>
@@ -98,16 +92,14 @@ $(document).ready(function(){
     });
 
      $(".number").keypress(function(event){
-         var key = event.KeyCode || event.charCode;
-        if(key >= 48 && key <= 57 ){
+         var key = event.KeyCode || event.charCode || event.which;
+        if((key >= 48 && key <= 57) || key ==8) {
         
         }else{
          event.preventDefault();
         }
 
      });
-
-
      
 
 

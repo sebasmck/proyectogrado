@@ -123,6 +123,8 @@ Route::get('/datos-escala', 'EscalaWYController@index')->name('/datos-escala');
 
 Route::post('/escalaWY-cuestionario', 'EscalaWYController@updateCuidador')->name('/escalaWY-cuestionario');
 
+Route::post('/escalaWY-cuestionario-calculate', 'EscalaWYController@calculateEscalaWY')->name('/escalaWY-cuestionario-calculate');
+
 
 
 

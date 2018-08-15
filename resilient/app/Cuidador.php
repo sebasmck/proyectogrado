@@ -12,4 +12,13 @@ class Cuidador extends Model
 
     public $timestamps = false;
 
+    public function escolaridad(){
+       return $this->hasone('App\Escolaridad' , 'Id_Escolaridad' , 'Id_Escolaridad');
+    }
+
+    public function estadoCivil(){
+        return $this->hasone('App\EstadoCivil' , 'Id_EstadoCivil' , 'Id_EstadoCivil');
+    }
+
+
 }
