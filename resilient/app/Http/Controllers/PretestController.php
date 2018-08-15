@@ -106,11 +106,11 @@ class PretestController extends Controller
         $pregunta3->id_Documento = $documento;
         $pregunta3->id_Preguntas = $preguntas;
         $pregunta3->id_usuario = $usuario;
-        $pregunta3->Autoestima = $request->input('autoestima');
-        $pregunta3->Afecto = $request->input('afecto');
-        $pregunta3->Autonomia = $request->input('autonomia');
-        $pregunta3->Reconocimiento = $request->input('reconocimiento');
-        $pregunta3->Confianza = $request->input('confianza');
+        $pregunta3->Autoestima = $request->input('Autoestima');
+        $pregunta3->Afecto = $request->input('Afecto');
+        $pregunta3->Autonomia = $request->input('Autonomia');
+        $pregunta3->Reconocimiento = $request->input('Reconocimiento');
+        $pregunta3->Confianza = $request->input('Confianza');
         $pregunta3->save();
    
         return view('pretest.pretest5');
@@ -142,19 +142,18 @@ class PretestController extends Controller
         return view('pretest.pretestprueba2');
     }
 
-    public function pretestPrueba3()
+    public function pretestPrueba3(Request $request)
     {
         // pregunta 5      
         $preguntas = 5;
         //documento pre test 
         $documento = 1;
-
         $pregunta5 = new RespuestaSeleccionada();
         $usuario = auth()->id();
         $pregunta5->id_Documento = $documento;
         $pregunta5->id_Pregunta = $preguntas;
         $pregunta5->id_usuario = $usuario;
-        $pregunta5->seleccionada=$request->input('optionsRadios');
+        $pregunta5->seleccionada = $request->input('optionsRadios');
         $pregunta5->save();
         return view('pretest.pretestprueba3');
     }
@@ -163,7 +162,7 @@ class PretestController extends Controller
         return view('pretest.pretestprueba4');
     }
     
-    public function pretestPrueba5()
+    public function pretestPrueba5(Request $request)
     {
          // pregunta 7      
          $preguntas = 7;
@@ -180,7 +179,7 @@ class PretestController extends Controller
         return view('pretest.pretestprueba5');
     }
 
-    public function pretestPrueba6(){
+    public function pretestPrueba6(Request $request){
        // pregunta 8      
        $preguntas = 8;
        //documento pre test 
@@ -196,7 +195,7 @@ class PretestController extends Controller
         return view('pretest.pretestprueba6');
     }
 
-    public function pretestPrueba7(){
+    public function pretestPrueba7(Request $request){
 
          // pregunta 9      
        $preguntas = 9;
@@ -214,7 +213,7 @@ class PretestController extends Controller
     }
 
 
-    public function pretestPrueba8(){
+    public function pretestPrueba8(Request $request){
 
         // pregunta 10      
        $preguntas = 10;
@@ -231,7 +230,7 @@ class PretestController extends Controller
         return view('pretest.pretestprueba8');
     }
 
-    public function pretestPrueba9(){
+    public function pretestPrueba9(Request $request){
 
         // pregunta 11      
        $preguntas = 11;
@@ -248,7 +247,7 @@ class PretestController extends Controller
         return view('pretest.pretestprueba9');
     }
 
-    public function pretestPrueba10(){
+    public function pretestPrueba10(Request $request){
          // pregunta 12      
        $preguntas = 12;
        //documento pre test 
@@ -263,7 +262,7 @@ class PretestController extends Controller
         return view('pretest.pretestprueba10');
     }
 
-    public function pretestPrueba11(){
+    public function pretestPrueba11(Request $request){
          // pregunta 13      
        $preguntas = 13;
        //documento pre test 
@@ -277,7 +276,7 @@ class PretestController extends Controller
        $pregunta13->save();
         return view('pretest.pretestprueba11');
     }
-    public function pretestPrueba12()
+    public function pretestPrueba12(Request $request)
     {
          // pregunta 14      
        $preguntas = 14;

@@ -23,7 +23,7 @@ Pretest 10
                     <div class="col-sm-9">
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="1"required>
+                                    <input type="radio" name="optionsRadios" value="1" required>
                                     <span>a. Son las técnicas y creencias que un padre/madre opta para formar a su hijo. </span>
                                 </label>
                             </div>

@@ -7,35 +7,32 @@ Pretest 10
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
-            <div class="card" method="POST" action="{{route('/pretestprueba11')}}">
-        {{csrf_field()}}
-
+    <form class="form"  method="POST" action="{{route('/pretestprueba11')}}">
+            {{csrf_field()}}
+            <div class="card">
                 <div class="card-head style-primary">
                     <header>Pretest</header>
                 </div>
-
                 <div class="card-body floating-label">
                     <p><b> 13. ¿Cuándo crees que se comienza a desarrollar la confianza?
                         </b></p>
                     <br>
-
                     <div class="col-sm-9">
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="1" required>
+                                <input type="radio" name="optionsRadios" value="1" required>
                                     <span>a.   Desde los 10 años.</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="2">
+                                <input type="radio" name="optionsRadios" value="2" >
                                     <span>b.   Desde los 5 años.</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="3">
+                                <input type="radio" name="optionsRadios" value="3" >
                                     <span>
                                             c. Desde los 2 años.
                                         </span>
@@ -44,7 +41,7 @@ Pretest 10
 
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="4">
+                                <input type="radio" name="optionsRadios" value="4" >
                                     <span>
                                            d.  Desde el primer día de nacimiento.
                                         </span>
@@ -57,10 +54,6 @@ Pretest 10
 
                     <br><br>
                 </div> {{-- card-body no padding --}}
-
-
-
-                    
             </div><!--end .card-body -->
 
             <div class="card-actionbar">
@@ -71,8 +64,8 @@ Pretest 10
 
         </div><!--end .card -->
             
-        </form>
-    </div>
+    </form>
+</div>
 
 @endsection
 

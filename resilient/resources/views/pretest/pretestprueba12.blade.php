@@ -29,8 +29,8 @@ Pretest 12
           <ul class="list">
             <li class="tile">
               <a class="tile-content ink-reaction">
-                {!! Form::select('respuestaantelamadre', [
-                 'falso' => 'falso',
+                {!! Form::select('pregunta15', [
+                  'falso' => 'falso',
                  'verdadero' => 'verdadero',
                  ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
 
@@ -47,7 +47,7 @@ crianza y las creencias acerca de la crianza.
 
            <li class="tile">
                 <a class="tile-content ink-reaction">
-                  {!! Form::select('respuestaantelamadre', [
+                  {!! Form::select('pregunta16', [
                     'falso' => 'falso',
                  'verdadero' => 'verdadero',
                    ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
@@ -66,9 +66,9 @@ crianza y las creencias acerca de la crianza.
 
              <li class="tile">
                     <a class="tile-content ink-reaction">
-                      {!! Form::select('respuestaantelamadre', [
+                      {!! Form::select('pregunta17', [
                         'falso' => 'falso',
-                       'verdadero' => 'verdadero',
+                 'verdadero' => 'verdadero',
                        ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
 
                       <div class="tile-text">

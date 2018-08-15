@@ -21,34 +21,33 @@ Pretest 1
 
                     <div class="col-sm-6">
                             <div class="checkbox checkbox-styled">
-                                <label>
-                                    <input type="checkbox" value="1" name="autoestima"  required="true">
-                                    <span>a. Autoestima</span>
-                                </label>
+                               <label class="checkbox-inline checkbox-styled">
+                                    {!! Form::checkbox('Autoestima', '1') !!}<span>a. Autoestima</span>
+                               </label>
                             </div>
+
                             <div class="checkbox checkbox-styled">
-                                <label>
-                                    <input type="checkbox" value="2" name="afecto">
-                                    <span>b. Afecto</span>
-                                </label>
+                                <label class="checkbox-inline checkbox-styled">
+                                    {!! Form::checkbox('Afecto', '1') !!}<span>b. Afecto</span>
+                               </label>
                             </div>
+
                             <div class="checkbox checkbox-styled">
-                                <label>
-                                    <input type="checkbox" value="3" name="autonomia">
-                                    <span>c. Autonomía</span>
-                                </label>
+                             <label class="checkbox-inline checkbox-styled">
+                                    {!! Form::checkbox('Autonomia', '1') !!}<span>c. Autonomia</span>
+                             </label>
                             </div>
+
                             <div class="checkbox checkbox-styled">
-                                <label>
-                                    <input type="checkbox" value="4" name="reconocimiento">
-                                    <span>d. Reconocimiento de cuidadores</span>
-                                </label>
+                            <label class="checkbox-inline checkbox-styled">
+                                    {!! Form::checkbox('Reconocimiento', '1') !!}<span>d.Reconocimiento de cuidadores</span>
+                             </label>
                             </div>
+
                             <div class="checkbox checkbox-styled">
-                                <label>
-                                    <input type="checkbox" value="5" name="confianza">
-                                    <span>e. Confianza</span>
-                                </label>
+                            <label class="checkbox-inline checkbox-styled">
+                                    {!! Form::checkbox('Confianza', '1') !!}<span>e. Confianza</span>
+                             </label>
                             </div>
                             
                     </div>
@@ -64,7 +63,7 @@ Pretest 1
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction"> <button onclick="convertirValoresCheckbox()" type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 
@@ -75,7 +74,7 @@ Pretest 1
 
 @endsection
 
-@section('addjs')
+{{--@section('addjs')
 
 <script>
 
@@ -83,29 +82,7 @@ Pretest 1
     
          avatar = $('.avatar');
 
-        
-
-        function convertirValoresCheckbox()
-        {
-            var checkboxes = $("checkbox");  
-            for (var i=0; i<checkboxes.length; i++) 
-            {
-               var actual = checkboxes[i];
-               console.log("Entro al if");
-               if($(actual.attr( "checked" )== true ))
-               {
-                console.log("Entro al if");
-                   actual = 1;
-               }
-               else
-               {
-                   actual.val() = 0; 
-               }
-
-            }
-           $('#pregunta3').submit();
-        }
     
     </script>
 
-@endsection 
+@endsection --}}

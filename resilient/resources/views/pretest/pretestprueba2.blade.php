@@ -35,7 +35,7 @@ Pretest 1
                             <div class="radio radio-styled">
                                 <label>
                                     <input type="radio" name="optionsRadios" value="3">
-                                    <span>c. Mejorando el concepto que el niño/a tiene de sí mismo.  </span>
+                                    <span>c. Mejorando el concepto que el niño/a tiene de sí mismo.</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
