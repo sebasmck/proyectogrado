@@ -15,7 +15,7 @@ Pretest 4
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> Qué beneficios para fomentar la resiliencia puede tener que tu hijo te reconozca como cuidador y confíe en ti, en lugar de confiar en gente extraña.</b></p>
+                    <p><b> 8. Qué beneficios para fomentar la resiliencia puede tener que tu hijo te reconozca como cuidador y confíe en ti, en lugar de confiar en gente extraña.</b></p>
                     <br>
 
                     <div class="col-sm-9">

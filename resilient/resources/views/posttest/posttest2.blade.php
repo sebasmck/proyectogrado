@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Postest 2
+Post Test Resiliencia
 @endsection
 
 @section('content')

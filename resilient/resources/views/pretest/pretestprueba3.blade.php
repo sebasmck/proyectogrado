@@ -15,7 +15,7 @@ Pretest 1
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> ¿Qué técnicas disciplinarias utilizas en la mayoría de los casos cuando tu hijo/a se comporta de manera inadecuada? Por favor marca tres técnicas que utilizas</b></p>
+                    <p><b>6. ¿Qué técnicas disciplinarias utilizas en la mayoría de los casos cuando tu hijo/a se comporta de manera inadecuada? Por favor marca tres técnicas que utilizas</b></p>
                     <br>
 
                     <div class="col-sm-6">

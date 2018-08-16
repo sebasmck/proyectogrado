@@ -15,7 +15,7 @@ Pretest 4
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b>  ¿Qué cosas crees que como padres se puede hacer para desarrollar la autonomía de un niño/a?
+                    <p><b> 11. ¿Qué cosas crees que como padres se puede hacer para desarrollar la autonomía de un niño/a?
                         </b></p>
                     <br>
 

@@ -16,7 +16,7 @@ Cuestionario 2
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b>¿Sabes si eres resiliente?</b></p>
+                    <p><b>2. ¿Sabes si eres resiliente?</b></p>
                     <br>
 
                     <div class="row">

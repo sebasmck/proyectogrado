@@ -11,11 +11,11 @@ Pretest 1
             <div class="card">
 
                 <div class="card-head style-primary">
-                    <header>Pretest</header>
+                    <header>Post Test</header>
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> ¿Desde qué etapa crees que se desarrolla la resiliencia?</b></p>
+                    <p><b>4. ¿Desde qué etapa crees que se desarrolla la resiliencia?</b></p>
                     <br>
 
                     <div class="col-sm-9">

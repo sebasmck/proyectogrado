@@ -41,6 +41,10 @@ class PostTestController extends Controller
 
     }
 
+    public function posttestPrueba1(){
+        return view('posttest.posttestprueba1');
+    }
+
      public function posttestPrueba2(){
         return view('posttest.posttestprueba2');
     }

@@ -15,7 +15,7 @@ Pretest 4
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> ¿Cómo crees que un niño/a desarrollaría el reconocimiento de las personas más allegadas?
+                    <p><b>9. ¿Cómo crees que un niño/a desarrollaría el reconocimiento de las personas más allegadas?
                         </b></p>
                     <br>
 

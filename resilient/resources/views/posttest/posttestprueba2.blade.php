@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Pretest 1
+Post Test 1
 @endsection
 
 @section('content')
@@ -15,7 +15,7 @@ Pretest 1
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b>¿Cómo crees que una buena relación entre el cuidador y el niño/a aportaría en el desarrollo de la resiliencia del menor?</b></p>
+                    <p><b>5. ¿Cómo crees que una buena relación entre el cuidador y el niño/a aportaría en el desarrollo de la resiliencia del menor?</b></p>
                     <br>
 
                     <div class="col-sm-9">
@@ -55,7 +55,7 @@ Pretest 1
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/pretestprueba3')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/posttestprueba3')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 
