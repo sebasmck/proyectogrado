@@ -14,7 +14,13 @@ class EscalaEP2Controller extends Controller
 {
      public function index()
      {
-        return view('escalaP2.escalaParentabilidad');
+         $id_usuario = auth()->id();
+         $acudiente = Cuidador::where('id_usuario', $id_usuario)->with('sexo','escolaridad','ocupacion','estadoCivil')->get();
+         if(array_has($acudiente,'0')){
+            $acudiente = $acudiente[0];
+         }
+        
+        return view('escalaP2.escalaParentabilidad', ['acudiente' => $acudiente]);
      }
 
      public function create()

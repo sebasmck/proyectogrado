@@ -26,9 +26,9 @@ Datos Acudiente
                     <div class="form-group col-md-8">
                         <div class="form-row">
                             <label for="nombre" class="col-md-2 col-form-label">Nombre:</label>
-
+                            
                             <div class="col-md-10">
-                                <input class="form-control" id="nombre" type="text" >
+                                <input class="form-control" id="nombre" type="text" value="{{ $acudiente->Nombre_Acudiente }}" disabled>
                             </div>
 
                         </div>
@@ -60,14 +60,14 @@ Datos Acudiente
 
                                 <div class="form-check form-check-inline col-md-5">
                                     <label class="radio-inline radio-styled form-check-label">
-                                         <input type="radio" class="form-check-input" checked="true" id="sexo-m" value="1">
+                                         <input type="radio" class="form-check-input"  {{ ($acudiente->Id_Sexo == 1)?'checked':'false' }} id="sexo-m" value="1" disabled>
                                          <span>(M)</span>
                                      </label>
                                 </div>
 
                                 <div class="form-check form-check-inline col-md-5">
                                     <label class="radio-inline radio-styled form-check-label">
-                                            <input type="radio" class="form-check-input" id="sexo-f" value="2">
+                                            <input type="radio" class="form-check-input" {{ ($acudiente->Id_Sexo == 2)?'checked':'false' }}   id="sexo-f" value="2" disabled>
                                             <span>(F)</span>
                                     </label>
                                 </div>
@@ -84,34 +84,34 @@ Datos Acudiente
 
                                 <div class="form-check form-check-inline col-md-2">
                                     <label class="radio-inline radio-styled form-check-label">
-                                         <input type="radio" class="form-check-input" checked="true" id="escolaridad-a" value="1">
+                                         <input type="radio" class="form-check-input" {{ ($acudiente->Id_Escolaridad == 1)?'checked':'false' }} disabled id="escolaridad-a" value="1">
                                          <span>Sin escolaridad</span>
                                     </label>
                                 </div>
 
                                 <div class="form-check form-check-inline col-md-2">
                                     <label class="radio-inline radio-styled form-check-label">
-                                         <input type="radio" class="form-check-input" id="escolaridad-b" value="2">
+                                         <input type="radio" class="form-check-input" {{ ($acudiente->Id_Escolaridad == 2)?'checked':'false' }} disabled  id="escolaridad-b" value="2">
                                          <span>Básica</span>
                                     </label>
                                 </div>
 
                                 <div class="form-check form-check-inline col-md-2">
                                     <label class="radio-inline radio-styled form-check-label">
-                                         <input type="radio" class="form-check-input" id="escolaridad-c" value="3">
+                                         <input type="radio" class="form-check-input" {{ ($acudiente->Id_Escolaridad == 3)?'checked':'false' }} disabled  id="escolaridad-c" value="3">
                                          <span>Media</span>
                                     </label>
                                 </div>
 
                                 <div class="form-check form-check-inline col-md-2">
                                     <label class="radio-inline radio-styled form-check-label">
-                                         <input type="radio" class="form-check-input" id="escolaridad-d" value="4">
+                                         <input type="radio" class="form-check-input" {{ ($acudiente->Id_Escolaridad == 4)?'checked':'false' }} disabled  id="escolaridad-d" value="4">
                                          <span>Técnica</span>
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline col-md-2">
-                                    <label class="radio-inline radio-styled form-check-label">
-                                         <input type="radio" class="form-check-input" id="escolaridad-e" value="5">
+                                    <label class="radio-inline radio-styled form-check-label"> 
+                                         <input type="radio" class="form-check-input" {{ ($acudiente->Id_Escolaridad == 5)?'checked':'false' }} disabled  id="escolaridad-e" value="5">
                                          <span>Universitaria</span>
                                     </label>
                                 </div>
