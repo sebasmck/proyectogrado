@@ -10,7 +10,7 @@ Datos Niño
         <form class="form">
             <div class="card">
                 <div class="card-head style-primary">
-                    <header>Ingresa los datos del niño</header>
+                    <header>Ingresa los datos del niño/a</header>
                 </div>
                 <div class="card-body floating-label">
                     
@@ -188,7 +188,7 @@ Datos Niño
                                         <option value="30">Si</option>
                                         <option value="40">No</option>
                                 </select>
-                                <label for="select1">¿Hubo complicaciones en el nacimiento del niño(a)? </label>
+                                <label for="select1">¿Hubo complicaciones en el nacimiento del niño/a? </label>
                             </div>
                         </div>
                         <div class="col-sm-3">
@@ -268,8 +268,8 @@ Datos Niño
                                                 <option value="">&nbsp;</option>
                                                 <option value="30">Hemorragias</option>
                                                 <option value="40">Incompatibilidad sanguínea fetal</option>
-                                                <option value="40">RCI</option>
-                                                <option value="40">BPN</option>
+                                                <option value="40">Retraso del crecimiento intrauterino (RCI)</option>
+                                                <option value="40">Bajo peso al nacer (BPN)</option>
                                                 <option value="40">Prematurez</option>
                                                 <option value="40">Otro</option>
                                         </select>

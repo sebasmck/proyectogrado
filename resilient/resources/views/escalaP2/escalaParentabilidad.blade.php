@@ -8,7 +8,7 @@ Datos Acudiente
 
 <div class="card">
     <div class="card-head style-primary">
-        <header>Escala de parentabilidad positiva - Datos iniciales</header>
+        <header>Escala de parentalidad positiva - Datos iniciales</header>
     </div>
     <div class="card-body floating-label">
 

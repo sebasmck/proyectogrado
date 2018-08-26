@@ -230,7 +230,7 @@ Datos Niño
                           
                                                   <div class="tile-text">
                                                     <small>
-                                                     <b>12.</b> El niño lacto
+                                                     <b>12.</b> El niño lactó
                                                    </small>
                                                  </div>
                           
@@ -248,7 +248,7 @@ Datos Niño
                           
                                                   <div class="tile-text">
                                                     <small>
-                                                     <b>13.</b> El niño utilizo biberón
+                                                     <b>13.</b> El niño utilizó biberón
                                                    </small>
                                                  </div>
                           

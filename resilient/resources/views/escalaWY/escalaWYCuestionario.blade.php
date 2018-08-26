@@ -46,7 +46,7 @@ Escala
 <thead>
     <tr>
       <th scope="col"><b>Pregunta</b></th>
-      <th scope="col"> <b>1</b></th>
+      <th scope="col"><b>1</b></th>
       <th scope="col"><b>2</b></th>
       <th scope="col"><b>3</b></th>
       <th scope="col"><b>4</b></th>

@@ -11,7 +11,7 @@
             @csrf            
             <div class="card">
                 <div class="card-head style-primary">
-                    <header>Cuestionario Escala de parentabilidad</header>
+                    <header>Cuestionario Escala de parentalidad</header>
                 </div>
                 <div class="card-body floating-label">
 

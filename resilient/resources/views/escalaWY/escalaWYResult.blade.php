@@ -20,7 +20,7 @@ Escala
                                         <div class="form-group">
 
             <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 20px;color:black;" >
-                                            <label>{{$result}}</label>
+                                            <label>  <p style="text-align:justify; text-justify: inter-word;">{{$result}}</p></label>
                                              </div>
                                              </div>
                                              </div>

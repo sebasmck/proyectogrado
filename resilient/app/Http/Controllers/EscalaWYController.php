@@ -107,7 +107,7 @@ class EscalaWYController extends Controller{
           $str = "Tienes un nivel de Resiliencia Muy Bajo, 
           esto quiere decir que se te dificulta tener confianza,
            perseverancia, ecuanimidad y aceptación de ti mismo. Recuerda trabajar estos aspectos para mejorar
-           tu resiliencia y al mismo tiempo fortalecer unas pautas de crianza resiliente con tus hijos";
+           tu resiliencia y al mismo tiempo fortalecer unas pautas de crianza resiliente con tus hijos.";
            $img = asset('img/test2.png');
           }else if($sum >= 127 && $sum < 140){
           $str="Tienes un nivel de Resiliencia Bajo, posees una tendencia a depender de otras 
@@ -133,9 +133,9 @@ class EscalaWYController extends Controller{
      // $escalaA->Id_Acudiente = auth()->id();
      $id_usuario = auth()->id();
      $acudiente = Cuidador::where('id_usuario', $id_usuario)->value('Id_Acudiente');
-
-     $escalaA->Id_Acudiente = $acudiente;
-      $escalaA->puntaje_total_escalar = $sum;
+      
+      $escalaA->Id_Acudiente = $acudiente;
+      $escalaA->PuntosTotales = $sum;
       $escalaA->save();
 
       return  view('escalaWY.escalaWYResult')->with('result' , $str)->with('img', $img);  
