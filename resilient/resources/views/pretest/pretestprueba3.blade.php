@@ -7,7 +7,8 @@ Pretest 1
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="POST" action="{{route('/pretestprueba4')}}">
+        {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -20,33 +21,33 @@ Pretest 1
 
                     <div class="col-sm-6">
                             <div class="checkbox checkbox-styled">
-                                <label>
-                                    <input type="checkbox" value="">
-                                    <span>a. Ignorar el comportamiento del niño/a y no le dice nada.</span>
+                                  <label class="checkbox-inline checkbox-styled">
+                                    {!! Form::checkbox('ignorar', '1') !!}<span>a. Ignorar el comportamiento del niño/a y no le dice nada.</span>
+                               </label>
+                            </div>
+
+                            <div class="checkbox checkbox-styled">
+                                <label class="checkbox-inline checkbox-styled">
+                                    {!! Form::checkbox('golpear', '1') !!}<span>b. Golpear al niño/a. </span>
+                               </label>
+                            </div>
+
+                            <div class="checkbox checkbox-styled">
+
+                                  <label class="checkbox-inline checkbox-styled">
+                                    {!! Form::checkbox('explicarle', '1') !!}<span>c. Explicarle porque está mal lo que hace. </span>
+                                 </label>
+                            </div>
+
+                            <div class="checkbox checkbox-styled">
+                                <label class="checkbox-inline checkbox-styled">
+                                    {!! Form::checkbox('amenazar', '1') !!}<span>d. Amenazar al niño/a.</span>
                                 </label>
                             </div>
                             <div class="checkbox checkbox-styled">
-                                <label>
-                                    <input type="checkbox" value="">
-                                    <span>b. Golpear al niño/a. </span>
-                                </label>
-                            </div>
-                            <div class="checkbox checkbox-styled">
-                                <label>
-                                    <input type="checkbox" value="">
-                                    <span> c. Explicarle porque está mal lo que hace.</span>
-                                </label>
-                            </div>
-                            <div class="checkbox checkbox-styled">
-                                <label>
-                                    <input type="checkbox" value="">
-                                    <span>d. Amenazar al niño/a. </span>
-                                </label>
-                            </div>
-                            <div class="checkbox checkbox-styled">
-                                <label>
-                                    <input type="checkbox" value="">
-                                    <span>e. Prefiere darle libertad en su personalidad.</span>
+
+                                <label class="checkbox-inline checkbox-styled">
+                                    {!! Form::checkbox('prefiere', '1') !!}<span>e. Prefiere darle libertad en su personalidad.</span>
                                 </label>
                             </div>
                             
@@ -54,32 +55,30 @@ Pretest 1
 
                     <div class="col-sm-6">
                             <div class="checkbox checkbox-styled">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        <span>f. Razonar con el niño/a. </span>
-                                    </label>
-                                </div>
+
+                                <label class="checkbox-inline checkbox-styled">
+                                    {!! Form::checkbox('razonar', '1') !!}<span>f. Razonar con el niño/a.</span>
+                                </label>
+                            </div>
 
                                 <div class="checkbox checkbox-styled">
-                                        <label>
-                                            <input type="checkbox" value="">
-                                            <span>g. Lo grita y le dice que no vuelva hacer eso.</span>
-                                        </label>
+                                 
+                                <label class="checkbox-inline checkbox-styled">
+                                    {!! Form::checkbox('grita', '1') !!}<span>g. Lo grita y le dice que no vuelva hacer eso.</span>
+                                </label>
                                     </div>
 
                                     <div class="checkbox checkbox-styled">
-                                            <label>
-                                                <input type="checkbox" value="">
-                                                <span>h. No utiliza ninguna técnica.</span>
-                                            </label>
+                                    <label class="checkbox-inline checkbox-styled">
+                                    {!! Form::checkbox('no', '1') !!}<span>h. No utiliza ninguna técnica.</span>
+                                   </label>
                                         </div>
 
                                         <div class="checkbox checkbox-styled">
-                                                <label>
-                                                    <input type="checkbox" value="">
-                                                    <span>i. Hace reflexionar a su hijo/a de su comportamiento. </span>
-                                                </label>
-                                            </div>
+                                        <label class="checkbox-inline checkbox-styled">
+                                           {!! Form::checkbox('reflexionar', '1') !!}<span>i. Hace reflexionar a su hijo/a de su comportamiento.</span>
+                                        </label>
+                                    </div>
                     </div>
 
                     <br><br>
@@ -92,7 +91,7 @@ Pretest 1
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/pretestprueba4')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 

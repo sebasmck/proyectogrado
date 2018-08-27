@@ -7,7 +7,8 @@ Pretest 12
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="POST" action="{{route('/preguntascierreposttest')}}">
+        {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -24,71 +25,71 @@ Pretest 12
 
 <div class="card-body no-padding">
 
-        {{--  <form name="comportamientos" id="comportamientos">  --}}
+     {{--  <form name="comportamientos" id="comportamientos">  --}}
 
-          <ul class="list">
-            <li class="tile">
-              <a class="tile-content ink-reaction">
-                {!! Form::select('respuestaantelamadre', [
-                 'falso' => 'falso',
-                 'verdadero' => 'verdadero',
-                 ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
+<ul class="list">
+  <li class="tile">
+    <a class="tile-content ink-reaction">
+      {!! Form::select('pregunta15', [
+        '0' => 'falso',
+        '1' => 'verdadero',
+       ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
 
-                <div class="tile-text">
-                  <small>
-                   <b>15.</b> La crianza implica tres procesos psicosociales: las pautas de crianza, las prácticas de
+      <div class="tile-text">
+        <small>
+         <b>15.</b> La crianza implica tres procesos psicosociales: las pautas de crianza, las prácticas de
 crianza y las creencias acerca de la crianza.
-                 </small>
-               </div>
+       </small>
+     </div>
 
-             </a>
-           </li>
-           <li class="divider-full-bleed"></li>
+   </a>
+ </li>
+ <li class="divider-full-bleed"></li>
 
-           <li class="tile">
-                <a class="tile-content ink-reaction">
-                  {!! Form::select('respuestaantelamadre', [
-                    'falso' => 'falso',
-                 'verdadero' => 'verdadero',
-                   ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
+ <li class="tile">
+      <a class="tile-content ink-reaction">
+        {!! Form::select('pregunta16', [
+          '0' => 'falso',
+        '1' => 'verdadero',
+         ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
 
-                  <div class="tile-text">
-                    <small>
-                     <b>16.</b> Las pautas de crianza, se definen como las acciones y comportamientos de los padres
-                     dirigidas a guiar las conductas de los niños/as con el objetivo de que aprendan por
-                     medio de educación o por imitación.
-                   </small>
-                 </div>
+        <div class="tile-text">
+          <small>
+           <b>16.</b> Las pautas de crianza, se definen como las acciones y comportamientos de los padres
+           dirigidas a guiar las conductas de los niños/as con el objetivo de que aprendan por
+           medio de educación o por imitación.
+         </small>
+       </div>
 
-               </a>
-             </li>
-             <li class="divider-full-bleed"></li>
+     </a>
+   </li>
+   <li class="divider-full-bleed"></li>
 
-             <li class="tile">
-                    <a class="tile-content ink-reaction">
-                      {!! Form::select('respuestaantelamadre', [
-                        'falso' => 'falso',
-                       'verdadero' => 'verdadero',
-                       ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
+   <li class="tile">
+          <a class="tile-content ink-reaction">
+            {!! Form::select('pregunta17', [
+              '0' => 'falso',
+              '1' => 'verdadero',
+             ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
 
-                      <div class="tile-text">
-                        <small>
-                         <b>17.</b> Las creencias acerca de la crianza se definen como el conocimiento sobre cómo se
+            <div class="tile-text">
+              <small>
+               <b>17.</b> Las creencias acerca de la crianza se definen como el conocimiento sobre cómo se
 debe criar un niño/a y a las explicaciones que brindan los padres frente a la forma como
 estas causan las acciones de sus hijos
-                       </small>
-                     </div>
+             </small>
+           </div>
 
-                   </a>
-                 </li>
-            <li class="divider-full-bleed"></li>
-          </ul>
+         </a>
+       </li>
+  <li class="divider-full-bleed"></li>
+</ul>
 </div>
-                            
-                    </div>
+                  
+          </div>
 
-                    <br><br>
-                </div> {{-- card-body no padding --}}
+          <br><br>
+      </div> {{-- card-body no padding --}}
 
 
 
@@ -97,7 +98,7 @@ estas causan las acciones de sus hijos
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href=""> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Finalizar</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" > <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Finalizar</button></a>
                     </div>
               </div>
 

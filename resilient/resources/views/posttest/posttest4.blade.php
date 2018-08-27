@@ -7,7 +7,8 @@ Post Test 3
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="POST" action="{{route('/posttest5')}}">
+        {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -20,34 +21,33 @@ Post Test 3
 
                     <div class="col-sm-6">
                             <div class="checkbox checkbox-styled">
-                                <label>
-                                    <input type="checkbox" value="">
-                                    <span>a. Autoestima</span>
-                                </label>
+                               <label class="checkbox-inline checkbox-styled">
+                                    {!! Form::checkbox('Autoestima', '1') !!}<span>a. Autoestima</span>
+                               </label>
                             </div>
+
                             <div class="checkbox checkbox-styled">
-                                <label>
-                                    <input type="checkbox" value="">
-                                    <span>b. Afecto</span>
-                                </label>
+                                <label class="checkbox-inline checkbox-styled">
+                                    {!! Form::checkbox('Afecto', '1') !!}<span>b. Afecto</span>
+                               </label>
                             </div>
+
                             <div class="checkbox checkbox-styled">
-                                <label>
-                                    <input type="checkbox" value="">
-                                    <span>c. Autonomía</span>
-                                </label>
+                             <label class="checkbox-inline checkbox-styled">
+                                    {!! Form::checkbox('Autonomia', '1') !!}<span>c. Autonomia</span>
+                             </label>
                             </div>
+
                             <div class="checkbox checkbox-styled">
-                                <label>
-                                    <input type="checkbox" value="">
-                                    <span>d. Reconocimiento de cuidadores</span>
-                                </label>
+                            <label class="checkbox-inline checkbox-styled">
+                                    {!! Form::checkbox('Reconocimiento', '1') !!}<span>d.Reconocimiento de cuidadores</span>
+                             </label>
                             </div>
+
                             <div class="checkbox checkbox-styled">
-                                <label>
-                                    <input type="checkbox" value="">
-                                    <span>e. Confianza</span>
-                                </label>
+                            <label class="checkbox-inline checkbox-styled">
+                                    {!! Form::checkbox('Confianza', '1') !!}<span>e. Confianza</span>
+                             </label>
                             </div>
                             
                     </div>
@@ -63,7 +63,7 @@ Post Test 3
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/posttest5')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 

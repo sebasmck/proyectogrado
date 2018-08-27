@@ -7,6 +7,8 @@ use App\Documento;
 use App\Preguntas;
 use App\Pregunta1_2;
 use App\Pregunta_3;
+use App\Pregunta_6;
+use App\Preguntas_15_16_17;
 use App\RespuestaSeleccionada;
 
 class PretestController extends Controller
@@ -74,7 +76,7 @@ class PretestController extends Controller
         $pregunta1->id_Preguntas = $preguntas;
         $pregunta1->id_usuario = $usuario;
          
-        if ($request->input('option')== 1 && $request->input('textarea1')==true ) 
+        if ($request->input('inlineRadioOptions')== 1 && $request->input('textarea1')==true ) 
         {
             $casono = 0;
             $pregunta1->si = 1;
@@ -82,7 +84,7 @@ class PretestController extends Controller
             $pregunta1->respuesta =$request->input('textarea1');
             $pregunta1->save();
         } 
-        else if($request->input('option')==2 && $request->input('textarea2')==true) 
+        else if($request->input('inlineRadioOptions')==2 && $request->input('textarea2')==true) 
         {
             $casosi = 0;
             $pregunta1->no = 1;
@@ -106,11 +108,11 @@ class PretestController extends Controller
         $pregunta3->id_Documento = $documento;
         $pregunta3->id_Preguntas = $preguntas;
         $pregunta3->id_usuario = $usuario;
-        $pregunta3->Autoestima = $request->input('Autoestima');
-        $pregunta3->Afecto = $request->input('Afecto');
-        $pregunta3->Autonomia = $request->input('Autonomia');
-        $pregunta3->Reconocimiento = $request->input('Reconocimiento');
-        $pregunta3->Confianza = $request->input('Confianza');
+        $pregunta3->Autoestima = $request->has('Autoestima')?$request->input('Autoestima'):'0';
+        $pregunta3->Afecto = $request->has('Afecto')?$request->input('Afecto'):'0';
+        $pregunta3->Autonomia = $request->has('Autonomia')?$request->input('Autonomia'):'0';
+        $pregunta3->Reconocimiento = $request->has('Reconocimiento')?$request->input('Reconocimiento'):'0';
+        $pregunta3->Confianza = $request->has('Confianza')?$request->input('Confianza'):'0';
         $pregunta3->save();
    
         return view('pretest.pretest5');
@@ -158,7 +160,30 @@ class PretestController extends Controller
         return view('pretest.pretestprueba3');
     }
 
-    public function pretestPrueba4(){
+    public function pretestPrueba4(Request $request){
+
+        $preguntas = 6;
+        $documento = 1;
+        $pregunta6 = new Pregunta_6();
+        $usuario = auth()->id();
+
+        $pregunta6->id_Documento = $documento;
+        $pregunta6->id_Pregunta = $preguntas;
+        $pregunta6->id_usuario = $usuario;
+
+
+        $pregunta6->Ignorar = $request->has('ignorar')?$request->input('ignorar'):'0';
+        $pregunta6->Golpear = $request->has('golpear')?$request->input('golpear'):'0';
+        $pregunta6->Explicarle = $request->has('explicarle')?$request->input('explicarle'):'0';
+        $pregunta6->Amenazar = $request->has('amenazar')?$request->input('amenazar'):'0';
+        $pregunta6->Libertad = $request->has('prefiere')?$request->input('prefiere'):'0';
+        $pregunta6->Razonar = $request->has('razonar')?$request->input('razonar'):'0';
+        $pregunta6->Gritar = $request->has('grita')?$request->input('grita'):'0';
+        $pregunta6->Tecnica = $request->has('no')?$request->input('no'):'0';        
+        $pregunta6->Reflexionar = $request->has('reflexionar')?$request->input('reflexionar'):'0';
+        
+        $pregunta6->save();
+
         return view('pretest.pretestprueba4');
     }
     
@@ -292,9 +317,43 @@ class PretestController extends Controller
         return view('pretest.pretestprueba12');
     }
     
-    public function pretestFinalizado(){
+    public function pretestFinalizado(Request $request)
+    {
+       //pregunta 15      
+       $preguntas_15 = 15;
+       //pregunta 17      
+       $preguntas_16 = 16;
+       //pregunta 17      
+       $preguntas_17 = 17;
+
+       //documento pre test 
+       $documento = 1;
+       $usuario = auth()->id();
+       $pregunta15 = new Preguntas_15_16_17(); 
+       $pregunta16 = new Preguntas_15_16_17(); 
+       $pregunta17 = new Preguntas_15_16_17();
+    
+       $pregunta15->id_Documento =  $documento; 
+       $pregunta15->id_usuario =  $usuario; 
+       $pregunta15->id_Preguntas =  $preguntas_15; 
+       $pregunta15->valorDeVerdad  = $request->input('pregunta15');
+       $pregunta15->save();  
        
+       $pregunta16->id_Documento =  $documento; 
+       $pregunta16->id_usuario =  $usuario;  
+       $pregunta16->id_Preguntas =  $preguntas_16; 
+       $pregunta16->valorDeVerdad  = $request->input('pregunta16');
+       $pregunta16->save(); 
+
+       $pregunta17->id_Documento =  $documento; 
+       $pregunta17->id_usuario =  $usuario; 
+       $pregunta17->id_Preguntas =  $preguntas_17; 
+       $pregunta17->valorDeVerdad  = $request->input('pregunta17');
+       $pregunta17->save(); 
+
+       return view('pretest.pretestfinal');
     }
+
     public function create()
     {
         //

@@ -7,7 +7,8 @@ Pretest 9
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="POST" action="{{route('/posttestprueba10')}}">
+        {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -22,28 +23,28 @@ Pretest 9
                     <div class="col-sm-9">
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option1" checked="">
+                                    <input type="radio" name="optionsRadios" value="1" required>
                                     <span>a. Cuando el cuidador suple las necesidades físicas y emocionales del niño/a. </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option1">
-                                    <span> b. Mediante cuidado que el adulto puede tener hacia el niño/a. </span>
+                                    <input type="radio" name="optionsRadios" value="2">
+                                    <span> b. Mediante cuidado que el adulto puede tener hacia el niño/a</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option2">
+                                    <input type="radio" name="optionsRadios" value="3">
                                     <span>
-                                            c. Con el establecimiento de límites sanos.
+                                            c. Con el establecimiento de límites sanos. 
                                         </span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option3">
-                                    <span>d. Todas la anteriores. </span>
+                                    <input type="radio" name="optionsRadios" value="4">
+                                    <span>d. Todas las anteriores. </span>
                                 </label>
                             </div>
                     </div>
@@ -60,7 +61,7 @@ Pretest 9
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/posttestprueba10')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 

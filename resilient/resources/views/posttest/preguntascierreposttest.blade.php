@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Pretest Final
+Post Test Final
 @endsection
 
 @section('content')
@@ -12,26 +12,27 @@ Pretest Final
             <div class="card">
 
                 <div class="card-head style-primary">
-                    <header>Pretest</header>
+                    <header>Post Test - Preguntas De Cierre</header>
                 </div>
 
                 <div class="card-body floating-label"> 
-                
+                <p style="text-align:center; text-justify: inter-word;">
+                     Vamos a ver qué tanto aprendiste durante este tiempo con nosotros. A continuación, encontrarás las actividades 
+                     sueltas y tendrás que arrastrarlas hasta la casilla que le corresponda.
+                </p>
+
                </div>
                             
-                    </div>
+               </div>
                           
                     <br><br>
-                </div> {{-- card-body no padding --}}
+                </div> {{-- card-body no padding --}}  
 
-
-
-                    
             </div><!--end .card-body -->
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href=""> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Finalizar</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" > <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 

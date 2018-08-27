@@ -7,7 +7,8 @@ Post Test 2
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="POST" action="{{route('/posttest4')}}">
+        {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -23,10 +24,10 @@ Post Test 2
                             <div class="col-sm-6">
                                 <div class="col-sm-9">
                                         <label class="radio-inline radio-styled">
-                                            <input id="si" type="radio" name="inlineRadioOptions" value="option1"><span>Si</span>
+                                            <input id="si" type="radio" name="inlineRadioOptions" value="1"><span>Si</span>
                                         </label>
                                         <label class="radio-inline radio-styled">
-                                            <input type="radio" name="inlineRadioOptions" value="option2" id="no"><span>No</span>
+                                            <input type="radio" name="inlineRadioOptions" value="2" id="no"><span>No</span>
                                         </label>
                                     </div>
                             </div>
@@ -38,7 +39,7 @@ Post Test 2
                                     </label>
                                     <br><br>
                                    
-                                    <textarea name="textarea13" id="textarea13" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>
+                                    <textarea name="textarea1" id="textarea1" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>
 
                                </div> 
 
@@ -47,7 +48,7 @@ Post Test 2
                                        Cuéntanos, ¿Por qué crees que no eres resiliente?
                                     </label>
                                     <br><br>
-                                    <textarea name="textarea13" id="textarea13" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>
+                                    <textarea name="textarea2" id="textarea2" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>
                               </div>
 
                     
@@ -61,7 +62,7 @@ Post Test 2
 
                     <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/posttest4')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
                   </div>
 
