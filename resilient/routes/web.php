@@ -117,7 +117,7 @@ Route::get('/cuidador-dashboard/{id}', 'HomeController@dashboardInfante')->name(
 
 // Escalas de resiliencia EP2 
 
-Route::get('/escalap2', 'CustomControllers\EscalaEP2Controller@index')->name('/escalap2');
+Route::get('/escalap2/{id}', 'CustomControllers\EscalaEP2Controller@escalaEp2ByNino')->name('/escalap2');
 
 Route::post('/escalap2-datos-anexos', 'CustomControllers\EscalaEP2Controller@actualizarDatosAnexosEscalaEP2')->name('/escalap2-datos-anexos');
 
