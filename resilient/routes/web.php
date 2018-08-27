@@ -51,7 +51,7 @@ Route::post('/pretestprueba2', 'PretestController@pretestPrueba2')->name('/prete
 
 Route::post('/pretestprueba3', 'PretestController@pretestPrueba3')->name('/pretestprueba3');
 
-Route::get('/pretestprueba4', 'PretestController@pretestPrueba4')->name('/pretestprueba4');
+Route::post('/pretestprueba4', 'PretestController@pretestPrueba4')->name('/pretestprueba4');
 
 Route::post('/pretestprueba5', 'PretestController@pretestPrueba5')->name('/pretestprueba5');
 
@@ -69,39 +69,42 @@ Route::post('/pretestprueba11', 'PretestController@pretestPrueba11')->name('/pre
 
 Route::post('/pretestprueba12', 'PretestController@pretestPrueba12')->name('/pretestprueba12');
 
+Route::post('/pretestfinal', 'PretestController@pretestFinalizado')->name('/pretestfinal');
+
+
 //Rutas para el postest 
-Route::get('/posttest', 'PostTestController@index')->name('/posttest');
+Route::get('/postest', 'PostTestController@index')->name('/postest');
 Route::get('/posttest1', 'PostTestController@postTest1')->name('/posttest1');
-Route::get('/posttest2', 'PostTestController@posttest2')->name('/posttest2');
+
+Route::post('/posttest2', 'PostTestController@posttest2')->name('/posttest2');
+
 Route::get('/posttest3', 'PostTestController@posttest3')->name('/posttest3');
-Route::get('/posttest4', 'PostTestController@posttest4')->name('/posttest4');
-Route::get('/posttest5', 'PostTestController@posttest5')->name('/posttest5');
 
-Route::get('/posttestprueba1', 'PostTestController@posttestPrueba1')->name('/posttestprueba1');
+Route::post('/posttest4', 'PostTestController@posttest4')->name('/posttest4');
 
-Route::get('/posttestprueba2', 'PostTestController@posttestPrueba2')->name('/posttestprueba2');
+Route::post('/posttest5', 'PostTestController@posttest5')->name('/posttest5');
 
-Route::get('/posttestprueba3', 'PostTestController@posttestPrueba3')->name('/posttestprueba3');
+Route::post('/posttestprueba1', 'PostTestController@posttestPrueba1')->name('/posttestprueba1');
+Route::post('/posttestprueba2', 'PostTestController@posttestPrueba2')->name('/posttestprueba2');
+Route::post('/posttestprueba3', 'PostTestController@posttestPrueba3')->name('/posttestprueba3');
+Route::post('/posttestprueba4', 'PostTestController@posttestPrueba4')->name('/posttestprueba4');
+Route::post('/posttestprueba5', 'PostTestController@posttestPrueba5')->name('/posttestprueba5');
+Route::post('/posttestprueba6', 'PostTestController@posttestPrueba6')->name('/posttestprueba6');
+Route::post('/posttestprueba7', 'PostTestController@posttestPrueba7')->name('/posttestprueba7');
+Route::post('/posttestprueba8', 'PostTestController@posttestPrueba8')->name('/posttestprueba8');
+Route::post('/posttestprueba9', 'PostTestController@posttestPrueba9')->name('/posttestprueba9');
+Route::post('/posttestprueba10', 'PostTestController@posttestPrueba10')->name('/posttestprueba10');
+Route::post('/posttestprueba11', 'PostTestController@posttestPrueba11')->name('/posttestprueba11');
+Route::post('/posttestprueba12', 'PostTestController@posttestPrueba12')->name('/posttestprueba12');
 
-Route::get('/posttestprueba4', 'PostTestController@posttestPrueba4')->name('/posttestprueba4');
+// preguntas de cierre 
+Route::post('/preguntascierreposttest', 'PostTestController@preguntasCierre')->name('/preguntascierreposttest');
+Route::get('/preguntascierreposttest1', 'PostTestController@preguntasCierre1')->name('/preguntascierreposttest1');
+Route::get('/preguntascierreposttest2', 'PostTestController@preguntasCierre2')->name('/preguntascierreposttest2');
+Route::get('/preguntascierreposttest3', 'PostTestController@preguntasCierre3')->name('/preguntascierreposttest3');
+Route::get('/preguntascierreposttest4', 'PostTestController@preguntasCierre4')->name('/preguntascierreposttest4');
 
-Route::get('/posttestprueba5', 'PostTestController@posttestPrueba5')->name('/posttestprueba5');
-
-Route::get('/posttestprueba6', 'PostTestController@posttestPrueba6')->name('/posttestprueba6');
-
-Route::get('/posttestprueba7', 'PostTestController@posttestPrueba7')->name('/posttestprueba7');
-
-Route::get('/posttestprueba8', 'PostTestController@posttestPrueba8')->name('/posttestprueba8');
-
-Route::get('/posttestprueba9', 'PostTestController@posttestPrueba9')->name('/posttestprueba9');
-
-Route::get('/posttestprueba10', 'PostTestController@posttestPrueba10')->name('/posttestprueba10');
-
-Route::get('/posttestprueba11', 'PostTestController@posttestPrueba11')->name('/posttestprueba11');
-
-Route::get('/posttestprueba12', 'PostTestController@posttestPrueba12')->name('/posttestprueba12');
 // Rutas actividades 
-
 Route::get('/actividades', 'ActivityController@index')->name('/actividades');
 
 Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');
@@ -114,7 +117,7 @@ Route::get('/cuidador-dashboard/{id}', 'HomeController@dashboardInfante')->name(
 
 // Escalas de resiliencia EP2 
 
-Route::get('/escalap2', 'CustomControllers\EscalaEP2Controller@index')->name('/escalap2');
+Route::get('/escalap2/{id}', 'CustomControllers\EscalaEP2Controller@escalaEp2ByNino')->name('/escalap2');
 
 Route::post('/escalap2-datos-anexos', 'CustomControllers\EscalaEP2Controller@actualizarDatosAnexosEscalaEP2')->name('/escalap2-datos-anexos');
 

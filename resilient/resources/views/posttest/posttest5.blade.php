@@ -7,7 +7,8 @@ Pretest 1
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="POST" action="{{route('/posttestprueba2')}}">
+        {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -21,26 +22,26 @@ Pretest 1
                     <div class="col-sm-9">
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option1" checked="">
-                                    <span>a. En la niñez.</span>
+                                    <input type="radio" name="optionsRadios" value="1" required>
+                                    <span>a. En la niñez</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option1">
-                                    <span>b. En la adolescencia.</span>
+                                    <input type="radio" name="optionsRadios" value="2">
+                                    <span>b. En la adolescencia</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option2">
-                                    <span>c. Adultez.</span>
+                                    <input type="radio" name="optionsRadios" value="3">
+                                    <span>c. Adultez</span>
                                 </label>
                             </div>
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="option3">
-                                    <span>d.  Cualquier etapa.</span>
+                                    <input type="radio" name="optionsRadios" value="4">
+                                    <span>d.  Cualquier etapa</span>
                                 </label>
                             </div>
                         </div>
@@ -55,7 +56,7 @@ Pretest 1
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/posttestprueba2')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 

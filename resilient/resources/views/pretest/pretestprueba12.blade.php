@@ -7,7 +7,8 @@ Pretest 12
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="POST" action="{{route('/pretestfinal')}}">
+        {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -30,8 +31,8 @@ Pretest 12
             <li class="tile">
               <a class="tile-content ink-reaction">
                 {!! Form::select('pregunta15', [
-                  'falso' => 'falso',
-                 'verdadero' => 'verdadero',
+                  '0' => 'falso',
+                  '1' => 'verdadero',
                  ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
 
                 <div class="tile-text">
@@ -48,8 +49,8 @@ crianza y las creencias acerca de la crianza.
            <li class="tile">
                 <a class="tile-content ink-reaction">
                   {!! Form::select('pregunta16', [
-                    'falso' => 'falso',
-                 'verdadero' => 'verdadero',
+                    '0' => 'falso',
+                  '1' => 'verdadero',
                    ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
 
                   <div class="tile-text">
@@ -67,8 +68,8 @@ crianza y las creencias acerca de la crianza.
              <li class="tile">
                     <a class="tile-content ink-reaction">
                       {!! Form::select('pregunta17', [
-                        'falso' => 'falso',
-                 'verdadero' => 'verdadero',
+                        '0' => 'falso',
+                        '1' => 'verdadero',
                        ], null, [ 'class' =>  'pull-right form-control', 'style' => 'width: 20%', 'required']) !!}
 
                       <div class="tile-text">
@@ -97,7 +98,7 @@ estas causan las acciones de sus hijos
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href=""> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Finalizar</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" > <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Finalizar</button></a>
                     </div>
               </div>
 

@@ -28,4 +28,8 @@ class Cuidador extends Model
         return $this->belongsTo('App\EstadoCivil','Id_EstadoCivil');
     }
 
+    public function nacionalidad(){
+        return $this->belongsTo('App\Nacionalidad','Id_Nacionalidad');
+    }    
+
 }

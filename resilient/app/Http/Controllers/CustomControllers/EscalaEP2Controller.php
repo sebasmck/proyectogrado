@@ -8,19 +8,34 @@ use App\EscalaEP2Enunciado;
 use App\EscalaEP2Respuesta;
 use Illuminate\Http\Request;
 use App\Cuidador;
+use App\Infante;
+use App\AcudienteInfante;
 use App\Http\Controllers\Controller;
 
 class EscalaEP2Controller extends Controller
 {
-     public function index()
+     public function escalaEp2ByNino($idInfante)
      {
          $id_usuario = auth()->id();
-         $acudiente = Cuidador::where('id_usuario', $id_usuario)->with('sexo','escolaridad','ocupacion','estadoCivil')->get();
+         $acudiente = Cuidador::where('id_usuario', $id_usuario)->with('sexo','escolaridad','ocupacion','estadoCivil','nacionalidad')->get();
          if(array_has($acudiente,'0')){
             $acudiente = $acudiente[0];
          }
+
+        $acudiente_infante = AcudienteInfante::where('Id_Acudiente',$acudiente->Id_Acudiente)->where('Id_Infante',$idInfante)->get();
+
+        if(array_has($acudiente_infante,'0')){
+            $acudiente_infante = $acudiente_infante[0];
+         }
+
+         $acudiente_infante->relacionInfante;
+
+        $infante = Infante::find($idInfante);
+
+        $differenceDates = getDiffDates($infante->FechaDeNacimiento_Infante);
         
-        return view('escalaP2.escalaParentabilidad', ['acudiente' => $acudiente]);
+        return view('escalaP2.escalaParentabilidad', ['acudiente' => $acudiente,'infante' => $infante,'acudienteInfante' => $acudiente_infante
+        ,'infante_edad' => $differenceDates]);
      }
 
      public function create()
@@ -136,6 +151,7 @@ class EscalaEP2Controller extends Controller
         $datosAnexos->total_personas_vec = $request->input('habitantes');
         $datosAnexos->total_personas_m18 = $request->input('habitantes18');
         $datosAnexos->numero_hijos = $request->input('hijos');
+        $datosAnexos->edad = $request->has('edad')?$request->input('edad'):$acudiente->edad;
 
         $datosAnexos->save();
 
