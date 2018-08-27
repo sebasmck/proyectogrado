@@ -42,6 +42,13 @@ Escala
             <hr>
 
 
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3" style="text-align:right;padding-right:23px;color:red;">En desacuerdo</div>
+<div class="col-sm-3" style="text-align:right;padding-right:40px;color:green;">En acuerdo</div>
+</div>
+
 <table class="table table-striped">
 <thead>
     <tr>

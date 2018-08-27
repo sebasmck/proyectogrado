@@ -130,6 +130,9 @@ Route::post('/escalaWY-cuestionario', 'EscalaWYController@updateCuidador')->name
 Route::post('/escalaWY-cuestionario-calculate', 'EscalaWYController@calculateEscalaWY')->name('/escalaWY-cuestionario-calculate');
 
 
+//Ruta a home
+Route::get('/welcome','Auth\RegisterController@goToMain')->name('/welcome');
+
 
 
 
