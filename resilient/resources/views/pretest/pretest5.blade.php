@@ -22,7 +22,7 @@ Pretest 1
                     <div class="col-sm-9">
                             <div class="radio radio-styled">
                                 <label>
-                                    <input type="radio" name="optionsRadios" value="1" checked="true" required>
+                                    <input type="radio" name="optionsRadios" value="1"  required>
                                     <span>a. En la niñez</span>
                                 </label>
                             </div>

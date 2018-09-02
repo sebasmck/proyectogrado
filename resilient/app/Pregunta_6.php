@@ -12,15 +12,15 @@ class Pregunta_6 extends Model
 
     public function preguntas()
     {
-    	return $this->hasone('App\Preguntas','id_Preguntas','id');
+    	return $this->hasmany('App\Preguntas','id_Preguntas','id');
     }
 
     public function documento()
     {
-    	return $this->hasone('App\Documento','id_Documento','id');
+    	return $this->hasmany('App\Documento','id_Documento','id');
     }
     public function usuario()
     {
-    	return $this->hasone('App\User','id_usuario','id');
+    	return $this->hasmany('App\User','id_usuario','id');
     }
 }

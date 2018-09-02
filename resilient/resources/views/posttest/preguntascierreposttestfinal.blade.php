@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Post Test Final
+Pretest Final
 @endsection
 
 @section('content')
@@ -12,27 +12,26 @@ Post Test Final
             <div class="card">
 
                 <div class="card-head style-primary">
-                    <header>Post Test - Preguntas De Cierre</header>
+                    <header>Preguntas Cierre</header>
                 </div>
 
                 <div class="card-body floating-label"> 
-                <p style="text-align:center; text-justify: inter-word;">
-                     Vamos a ver qué tanto aprendiste durante este tiempo con nosotros. A continuación, encontrarás las actividades 
-                     sueltas y tendrás que arrastrarlas hasta la casilla que le corresponda.
-                </p>
-
+                
                </div>
                             
-               </div>
+                    </div>
                           
                     <br><br>
-                </div> {{-- card-body no padding --}}  
+                </div> {{-- card-body no padding --}}
 
+
+
+                    
             </div><!--end .card-body -->
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/preguntascierreposttest1')}}" > <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href=""> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Finalizar</button></a>
                     </div>
               </div>
 
@@ -46,19 +45,12 @@ Post Test Final
 {{--  @section('addjs')
 
 <script>
-
         var tl = new TimelineLite();
     
          avatar = $('.avatar');
         //  content = $('.content-card');
-
-
-
-        
         // tl.to(title, 1.5, {y:10});
         // tl.from(card1, .3, {left:100, opacity:0});
-        
-    
-    </script>
+</script>
 
 @endsection  --}}

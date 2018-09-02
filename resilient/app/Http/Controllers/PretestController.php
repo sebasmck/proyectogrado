@@ -159,9 +159,8 @@ class PretestController extends Controller
         $pregunta5->save();
         return view('pretest.pretestprueba3');
     }
-
-    public function pretestPrueba4(Request $request){
-
+    public function pretestPrueba3Res(Request $request)
+    {
         $preguntas = 6;
         $documento = 1;
         $pregunta6 = new Pregunta_6();
@@ -184,6 +183,34 @@ class PretestController extends Controller
         
         $pregunta6->save();
 
+        $str = "";
+
+        if($pregunta6->Ignorar == 1 &&  $pregunta6->Libertad==1 && $pregunta6->Tecnica == 1 )
+        {
+            $str="Tienes un estilo de crianza de permisivo. Este estilo suele darles amplia libertad a tus hijos,
+             también opta por un bajo establecimiento de normas y límites.";
+        }
+        else if ($pregunta6->Gritar == 1 &&  $pregunta6->Golpear == 1 && $pregunta6->Amenazar== 1)
+        {
+            $str="Tienes un estilo de crianza autoritario. En este estilo se suelen usar castigos ante
+            comportamiento del niño/a, el enfoque está más en los comportamientos negativos, en
+            ocasiones se puede llegar a ser rígido, y usar castigo físico.";
+
+        }else if($pregunta6->Explicarle == 1 &&  $pregunta6->Razonar== 1 && $pregunta6->Reflexionar == 1)
+        {
+            $str="Tienes un estilo de crianza democrático. Este estilo se caracteriza porque los padres son
+            directivo y establecen normas claras y coherentes, pero al mismo tiempo toman en cuenta las
+            opiniones de sus hijos";
+        }
+        else 
+        {
+            $str="No tienes un estilo de crianza definido";
+        }
+
+        return view('pretest.pretestprueba3Res')->with('result' , $str);
+    }
+
+    public function pretestPrueba4(){
         return view('pretest.pretestprueba4');
     }
     

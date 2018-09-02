@@ -24,7 +24,7 @@ Cuestionario 2
                             <div class="col-sm-6">
                                 <div class="col-sm-9">
                                         <label class="radio-inline radio-styled">
-                                            <input id="si" type="radio" name="option" value="1" required="true" checked ="true"> <span>Si</span>
+                                            <input id="si" type="radio" name="option" value="1" required="true"> <span>Si</span>
                                         </label>
                                         <label class="radio-inline radio-styled">
                                             <input type="radio" name="option" value="2" id="no"><span>No</span>

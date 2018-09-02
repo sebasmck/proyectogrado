@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Documento;
 use App\Preguntas;
 use App\Pregunta1_2;
@@ -10,6 +11,10 @@ use App\Pregunta_3;
 use App\Pregunta_6;
 use App\Preguntas_15_16_17;
 use App\RespuestaSeleccionada;
+use App\Calificacion_Des;
+use App\Calificacion;
+use App\Pregunta_Si_No;
+use App\PreguntasCierre;
 
 class PostTestController extends Controller
 {
@@ -145,18 +150,16 @@ class PostTestController extends Controller
          $pregunta5->save();
         return view('posttest.posttestprueba3');
     }
-
-    public function posttestPrueba4(Request $request){
+     
+    public function postTestPrueba3Res(Request $request)
+    {   
         $preguntas = 6;
         $documento = 2;
         $pregunta6 = new Pregunta_6();
         $usuario = auth()->id();
-
         $pregunta6->id_Documento = $documento;
         $pregunta6->id_Pregunta = $preguntas;
         $pregunta6->id_usuario = $usuario;
-
-
         $pregunta6->Ignorar = $request->has('ignorar')?$request->input('ignorar'):'0';
         $pregunta6->Golpear = $request->has('golpear')?$request->input('golpear'):'0';
         $pregunta6->Explicarle = $request->has('explicarle')?$request->input('explicarle'):'0';
@@ -166,11 +169,38 @@ class PostTestController extends Controller
         $pregunta6->Gritar = $request->has('grita')?$request->input('grita'):'0';
         $pregunta6->Tecnica = $request->has('no')?$request->input('no'):'0';        
         $pregunta6->Reflexionar = $request->has('reflexionar')?$request->input('reflexionar'):'0';
-        
         $pregunta6->save();
+
+        $str = "";
+
+        if($pregunta6->Ignorar == 1 &&  $pregunta6->Libertad==1 && $pregunta6->Tecnica == 1 )
+        {
+            $str="Tienes un estilo de crianza de permisivo. Este estilo suele darles amplia libertad a tus hijos,
+             también opta por un bajo establecimiento de normas y límites.";
+        }
+        else if ($pregunta6->Gritar == 1 &&  $pregunta6->Golpear ==1 && $pregunta6->Amenazar==1)
+        {
+            $str="Tienes un estilo de crianza autoritario. En este estilo se suelen usar castigos ante
+            comportamiento del niño/a, el enfoque está más en los comportamientos negativos, en
+            ocasiones se puede llegar a ser rígido, y usar castigo físico.";
+
+        }else if($pregunta6->Explicarle == 1 &&  $pregunta6->Razonar==1 && $pregunta6->Reflexionar ==1)
+        {
+            $str="Tienes un estilo de crianza democrático. Este estilo se caracteriza porque los padres son
+            directivo y establecen normas claras y coherentes, pero al mismo tiempo toman en cuenta las
+            opiniones de sus hijos";
+        }
+        else 
+        {
+            $str="No tienes un estilo de crianza definido";
+        }
+        return view ('posttest.posttestprueba3res')->with('result' , $str);
+    }
+
+    public function posttestPrueba4(){
         return view('posttest.posttestprueba4');
     }
-    
+
     public function posttestPrueba5(Request $request)
     {
           // pregunta 7      
@@ -333,18 +363,94 @@ class PostTestController extends Controller
         return view('posttest.preguntascierreposttest');
     }
 
-    public function preguntasCierre1(){
+
+
+    public function preguntasCierre1()
+    {
         return view('posttest.preguntascierreposttest1');
     }
 
-    public function preguntasCierre2(){
+    public function preguntasCierre2(Request $request)
+    {
+        $calificacion = new Calificacion ();  
+        $preguntaCierreCalificacion = 1 ;
+        $usuario = auth()->id();
+        //insertar calificacion puntaje 
+        $calificacion->id_PreguntaCierre = $preguntaCierreCalificacion; 
+        $calificacion->id_usuario =$usuario; 
+        $calificacion->puntaje = $request->input('myCheckbox1');
+        $calificacion->save();
+        //insertar calificacion con descripción
+        $calificacionDes = new Calificacion_Des ();  
+        $preguntaCierreCalificacion2 = 2 ;
+        $calificacionDes->id_PreguntaCierre = $preguntaCierreCalificacion2; 
+        $calificacionDes->id_usuario =$usuario; 
+        $calificacionDes->descripcion = $request->input('textarea13');
+        $calificacionDes->save();
         return view('posttest.preguntascierreposttest2');
     }
-    public function preguntasCierre3(){
+
+    public function preguntasCierre3(Request $request)
+    {
+
+        $calificacion = new Calificacion ();  
+        $preguntaCierreCalificacion = 3 ;
+        $usuario = auth()->id();
+        //insertar calificacion puntaje 
+        $calificacion->id_PreguntaCierre = $preguntaCierreCalificacion; 
+        $calificacion->id_usuario =$usuario; 
+        $calificacion->puntaje = $request->input('myCheckbox1');
+        $calificacion->save();
+        //insertar calificacion con descripción
+        $calificacionDes = new Calificacion_Des ();  
+        $preguntaCierreCalificacion2 = 4 ;
+        $calificacionDes->id_PreguntaCierre = $preguntaCierreCalificacion2; 
+        $calificacionDes->id_usuario =$usuario; 
+        $calificacionDes->descripcion = $request->input('textarea13');
+        $calificacionDes->save();
         return view('posttest.preguntascierreposttest3');
     }
-    public function preguntasCierre4(){
+    public function preguntasCierre4(Request $request)
+    {
+        $usuario = auth()->id();
+        //primera pregunta 
+        $preguntaSiNo1 = new Pregunta_Si_No();
+        $preguntaCierreCalificacion = 5 ;
+        $preguntaSiNo1 ->id_PreguntaCierre = $preguntaCierreCalificacion;
+        $preguntaSiNo1->id_usuario =$usuario; 
+        $preguntaSiNo1->descripcion =$request->input('textarea13'); 
+        $preguntaSiNo1->valorVerdad =$request->input('myCheckbox1'); 
+        $preguntaSiNo1->save();
+        //segunda pregunta
+        $preguntaSiNo2 = new Pregunta_Si_No();
+        $preguntaCierreCalificacion2 = 6 ;
+        $preguntaSiNo2->id_PreguntaCierre = $preguntaCierreCalificacion2;
+        $preguntaSiNo2->id_usuario =$usuario; 
+        $preguntaSiNo2->descripcion =$request->input('textarea2'); 
+        $preguntaSiNo2->valorVerdad =$request->input('myCheckbox2'); 
+        $preguntaSiNo2->save();
         return view('posttest.preguntascierreposttest4');
+    }
+
+    public function preguntasCierreFinal(Request $request)
+    {
+        $calificacion = new Calificacion ();  
+        $preguntaCierreCalificacion = 7;
+        $usuario = auth()->id();
+        //insertar calificacion puntaje 
+        $calificacion->id_PreguntaCierre = $preguntaCierreCalificacion; 
+        $calificacion->id_usuario =$usuario; 
+        $calificacion->puntaje = $request->input('myCheckbox1');
+        $calificacion->save();
+
+        $calificacion2 = new Calificacion ();  
+        $preguntaCierreCalificacion2 = 8 ;
+        //insertar calificacion puntaje 
+        $calificacion2->id_PreguntaCierre = $preguntaCierreCalificacion2; 
+        $calificacion2->id_usuario =$usuario; 
+        $calificacion2->puntaje = $request->input('myCheckbox2');
+        $calificacion2->save();
+        return view('posttest.preguntascierreposttestfinal');
     }
 
 }

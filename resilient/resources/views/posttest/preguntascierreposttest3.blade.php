@@ -7,12 +7,12 @@ Post Test Cierre 3
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="POST" action="{{route('/preguntascierreposttest4')}}">
         {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
-                <header> Post Test - Preguntas De Cierre 3 </header>
+                <header> Post Test - Preguntas De Cierre  </header>
                 </div>
 
                 <div class="card-body floating-label">
@@ -21,8 +21,17 @@ Post Test Cierre 3
                     </p> 
                      <div style="margin-left:10%;" class="row">
                         <br>
-                        <div class="col-sm-2"><img src="{{asset('posttest/si.png')}}" alt=""><br> </div>
-                        <div class="col-sm-2"><img src="{{asset('posttest/no.png')}}" alt=""></div>
+
+                        <div class="col-sm-2">
+                         <input type="radio" id="a" name="myCheckbox1" required value="1"/>
+                         <label for="a"><img src="{{asset('posttest/si.png')}}" /></label>
+                          <br></div>
+                         <div class="col-sm-2" >
+                         <input type="radio" id="b" name="myCheckbox1" value="0"/>
+                         <label for="b"><img src="{{asset('posttest/no.png')}}" /></label> 
+                        </div>
+
+
 
                         <div class="col-sm-8" >
                                     <label for="">
@@ -44,14 +53,21 @@ Post Test Cierre 3
            </p> 
         <div style="margin-left:10%;" class="row">
            <br>
-                <div class="col-sm-2"><img src="{{asset('posttest/si.png')}}" alt=""><br> </div>
-                <div class="col-sm-2"><img src="{{asset('posttest/no.png')}}" alt=""></div>
+                         <div class="col-sm-2">
+                         <input type="radio" id="ab" name="myCheckbox2" required value="1" />
+                         <label for="ab"><img src="{{asset('posttest/si.png')}}" /></label>
+                          <br></div>
+                         <div class="col-sm-2" >
+                         <input type="radio" id="bc" name="myCheckbox2" value="0"/>
+                         <label for="bc"><img src="{{asset('posttest/no.png')}}" /></label> 
+                        </div>
+
              <div class="col-sm-8" >
                 <label for="">
                 ¿POR QUÉ? 
                 </label>
                 <br>
-                <textarea name="textarea2" id="textarea2" class="form-control" rows="3" placeholder="" required style="border:solid 1px blue;"></textarea><div class="form-control-line"></div>
+                <textarea name="textarea2" id="textarea2" class="form-control" rows="3" placeholder="" required style="border:solid 1px blue;" ></textarea><div class="form-control-line"></div>
              </div>  
                
     </div> {{-- card-body no padding --}}
@@ -61,7 +77,7 @@ Post Test Cierre 3
 
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction" > <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                  <a style="btn btn-flat btn-primary ink-reaction" > <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                   </div>
             </div>
 
