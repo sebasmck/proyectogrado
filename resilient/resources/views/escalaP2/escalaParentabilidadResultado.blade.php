@@ -12,7 +12,20 @@
         </div>
 
         <div class="card-body">
+            <div class="container-fluid">
+                @foreach($zonas as $zona)
+                    <div class="row">
+                        <div class="col-3 col-md-3 col-sm-3">
+                            <h5>{{$zona->nombre_zonaep2}}</h5>
+                        </div>
+                        <div class="col-2 col-md-2 col-sm-2">
+                            <span class="badge badge-secondary" style="background-color: {{$zona->color_zonaep2}}">&nbsp;</span>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
             <canvas class="card-img-top" id="myChart"></canvas>
+            <hr />
             <div class="accordion" id="accordionExample">
                 @for($i = 0 ; $i < sizeof($detalleCalificacion); $i++)
                     <div class="card">
