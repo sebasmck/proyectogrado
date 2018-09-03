@@ -123,6 +123,7 @@ Route::post('/escalap2-datos-anexos', 'CustomControllers\EscalaEP2Controller@act
 
 Route::post('/guardar-escalap2-cuestionario', 'CustomControllers\EscalaEP2Controller@guardarEscala')->name('/guardar-escalap2-cuestionario');
 
+Route::get('/resultados-escalap2/{id}','CustomControllers\EscalaEP2Controller@goResultadosEscala')->name('/resultados-escalap2');
 
 //Cuestionario Escala WY
 
