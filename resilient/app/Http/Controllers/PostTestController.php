@@ -15,6 +15,7 @@ use App\Calificacion_Des;
 use App\Calificacion;
 use App\Pregunta_Si_No;
 use App\PreguntasCierre;
+use App\RespuestaPregunta;
 
 class PostTestController extends Controller
 {
@@ -363,6 +364,19 @@ class PostTestController extends Controller
         return view('posttest.preguntascierreposttest');
     }
 
+    public function respuestasPostest()
+    {
+        //$res = RespuestaPregunta::where('ValorDeVerdad', 1)->get();
+
+        $array = [4,5,7,8,9,10,11,12,13,14,15,16,17];
+
+        $res= DB::table('respuestapregunta')
+            ->join('preguntas', 'respuestapregunta.id_pregunta', '=', 'preguntas.id')
+            ->select('respuestapregunta.*', 'preguntas.Enunciado')->where('ValorDeVerdad', 1)->orderBy('preguntas.id')
+            ->get();
+
+        return view('posttest.respuestaposttest')->with('result' , $res) -> with('num',$array);
+    }
 
 
     public function preguntasCierre1()
