@@ -7,12 +7,12 @@ Post Test Cierre 2
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="POST" action="{{route('/preguntascierreposttest3')}}">
         {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
-                <header> Post Test - Preguntas De Cierre 2 </header>
+                <header> Post Test - Preguntas De Cierre  </header>
                 </div>
 
                 <div class="card-body floating-label">
@@ -22,21 +22,43 @@ Post Test Cierre 2
 
                      <div style="margin-left:10%;" class="row">
                         <br>
+                        <div class="col-sm-2">
+                         <input type="radio" id="a" name="myCheckbox1" required value="1"/>
+                         <label for="a"><img src="{{asset('posttest/estre1.png')}}" /></label>
+                        <!--<img src="{{asset('posttest/Calificacion1.jpg')}}" alt="">-->
+                        <br> </div>
 
-                        <div class="col-sm-2"><img src="{{asset('posttest/estre1.png')}}" alt=""><br> </div>
-                        <div class="col-sm-2"><img src="{{asset('posttest/estre2.png')}}" alt=""></div>
-                        <div class="col-sm-2"><img src="{{asset('posttest/estre3.png')}}" alt=""></div>
-                        <div class="col-sm-2"><img src="{{asset('posttest/estre4.png')}}" alt=""> </div>      
-                        <div class="col-sm-2"><img src="{{asset('posttest/estre5.png')}}" alt=""></div>
-     
+                         <div class="col-sm-2" >
+                         <input type="radio" id="b" name="myCheckbox1" value="2"/>
+                         <label for="b"><img src="{{asset('posttest/estre2.png')}}" /></label>
+                        <!--<img src="{{asset('posttest/Calificacion2.jpg')}}" alt=""> --> 
+                        </div>
+
+                         <div class="col-sm-2">
+                          <input type="radio" id="c" name="myCheckbox1" value="3"/>
+                          <label for="c"><img src="{{asset('posttest/estre3.png')}}" /></label>
+                         <!--<img src="{{asset('posttest/Calificacion3.jpg')}}" alt="">--> 
+                        </div>
+
+                         <div class="col-sm-2">
+                        <input type="radio" id="d" name="myCheckbox1" value="4"/>
+                         <label for="d"><img src="{{asset('posttest/estre4.png')}}" /></label>
+                        <!--<img src="{{asset('posttest/Calificacion4.jpg')}}" alt="">--> 
+                        </div>    
+
+                         <div class="col-sm-2">
+                        <input type="radio" id="e" name="myCheckbox1" value="5"/>
+                         <label for="e"><img src="{{asset('posttest/estre5.png')}}" /></label>
+                        <!--<img src="{{asset('posttest/Calificacion5.jpg')}}" alt="">--> 
+                        </div>
                     </div>
 
                     <br><br>
 
                     <div class="col-sm-8" >
-                                    <label for="">
+                           <p style="text-align:left; text-justify: inter-word;">
                                     ¿Fue clara para ti la información brindada a través de este programa?
-                                    </label>
+                           </p>
                                     <br>
                                     <textarea name="textarea13" id="textarea13" class="form-control" rows="3" placeholder="" required style="border:solid 1px blue;"></textarea><div class="form-control-line"></div>
                     </div>
@@ -49,7 +71,7 @@ Post Test Cierre 2
 
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction" > <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                  <a style="btn btn-flat btn-primary ink-reaction" > <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                   </div>
             </div>
 

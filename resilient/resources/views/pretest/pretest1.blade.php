@@ -21,7 +21,7 @@ Cuestionario 1
                         <div class="col-sm-6">
                                 <div class="col-sm-9">
                                         <label class="radio-inline radio-styled">
-                                            <input id="si" type="radio" name="opcion" value="1" checked ="true" required="true"><span>Si</span>
+                                            <input id="si" type="radio" name="opcion" value="1" required="true"><span>Si</span>
                                         </label>
 
                                         <label class="radio-inline radio-styled">
@@ -47,7 +47,7 @@ Cuestionario 1
                                     </label>
                                     <br><br>
                                     <textarea name="textarea2" id="textarea2" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>
-                              </div>
+                                </div>
                                  
 
                             </div>

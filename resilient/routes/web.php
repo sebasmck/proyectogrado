@@ -50,8 +50,9 @@ Route::get('/pretestprueba1', 'PretestController@pretestPrueba1')->name('/pretes
 Route::post('/pretestprueba2', 'PretestController@pretestPrueba2')->name('/pretestprueba2');
 
 Route::post('/pretestprueba3', 'PretestController@pretestPrueba3')->name('/pretestprueba3');
+Route::post('/pretestprueba3res', 'PretestController@pretestPrueba3Res')->name('/pretestprueba3res');
 
-Route::post('/pretestprueba4', 'PretestController@pretestPrueba4')->name('/pretestprueba4');
+Route::get('/pretestprueba4', 'PretestController@pretestPrueba4')->name('/pretestprueba4');
 
 Route::post('/pretestprueba5', 'PretestController@pretestPrueba5')->name('/pretestprueba5');
 
@@ -68,6 +69,8 @@ Route::post('/pretestprueba10', 'PretestController@pretestPrueba10')->name('/pre
 Route::post('/pretestprueba11', 'PretestController@pretestPrueba11')->name('/pretestprueba11');
 
 Route::post('/pretestprueba12', 'PretestController@pretestPrueba12')->name('/pretestprueba12');
+
+// en el pretest final hay que poner algun comentario 
 
 Route::post('/pretestfinal', 'PretestController@pretestFinalizado')->name('/pretestfinal');
 
@@ -87,7 +90,9 @@ Route::post('/posttest5', 'PostTestController@posttest5')->name('/posttest5');
 Route::post('/posttestprueba1', 'PostTestController@posttestPrueba1')->name('/posttestprueba1');
 Route::post('/posttestprueba2', 'PostTestController@posttestPrueba2')->name('/posttestprueba2');
 Route::post('/posttestprueba3', 'PostTestController@posttestPrueba3')->name('/posttestprueba3');
-Route::post('/posttestprueba4', 'PostTestController@posttestPrueba4')->name('/posttestprueba4');
+
+Route::post('/posttestprueba3res', 'PostTestController@posttestPrueba3Res')->name('/posttestprueba3res');
+Route::get('/posttestprueba4', 'PostTestController@posttestPrueba4')->name('/posttestprueba4');
 Route::post('/posttestprueba5', 'PostTestController@posttestPrueba5')->name('/posttestprueba5');
 Route::post('/posttestprueba6', 'PostTestController@posttestPrueba6')->name('/posttestprueba6');
 Route::post('/posttestprueba7', 'PostTestController@posttestPrueba7')->name('/posttestprueba7');
@@ -100,9 +105,10 @@ Route::post('/posttestprueba12', 'PostTestController@posttestPrueba12')->name('/
 // preguntas de cierre 
 Route::post('/preguntascierreposttest', 'PostTestController@preguntasCierre')->name('/preguntascierreposttest');
 Route::get('/preguntascierreposttest1', 'PostTestController@preguntasCierre1')->name('/preguntascierreposttest1');
-Route::get('/preguntascierreposttest2', 'PostTestController@preguntasCierre2')->name('/preguntascierreposttest2');
-Route::get('/preguntascierreposttest3', 'PostTestController@preguntasCierre3')->name('/preguntascierreposttest3');
-Route::get('/preguntascierreposttest4', 'PostTestController@preguntasCierre4')->name('/preguntascierreposttest4');
+Route::post('/preguntascierreposttest2', 'PostTestController@preguntasCierre2')->name('/preguntascierreposttest2');
+Route::post('/preguntascierreposttest3', 'PostTestController@preguntasCierre3')->name('/preguntascierreposttest3');
+Route::post('/preguntascierreposttest4', 'PostTestController@preguntasCierre4')->name('/preguntascierreposttest4');
+Route::post('/preguntascierreposttestfinal', 'PostTestController@preguntasCierreFinal')->name('/preguntascierreposttestfinal');
 
 // Rutas actividades 
 Route::get('/actividades', 'ActivityController@index')->name('/actividades');
