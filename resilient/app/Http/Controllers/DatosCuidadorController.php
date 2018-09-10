@@ -65,19 +65,22 @@ class DatosCuidadorController extends Controller
         $cuidador->Correo_Acudiente = $req->input('Correo_Acudiente');
         $cuidador->Id_TipoDocumento = $req->input('Id_TipoDocumento');
         $cuidador->NumeroDocumento_Acudiente = $req->input('NumeroDocumento_Acudiente');
-        $cuidador->Id_Cuidador = $req->input('Id_RelacionInfante');
+        
+        // Failing
+        // $cuidador->Id_Cuidador = $req->input('Id_RelacionInfante');
+        // $cuidador->Id_Area = $req->input('Id_Area');
+        // $cuidador->Id_NivelSocioEconomico = $req->input('Id_NivelSocioEconomico');        
+        
         $cuidador->OtroRelacionInfante = $req->input('OtroRelacionInfante');
         
-        // checkboxes
+        // // checkboxes
         $cuidador->Padre = $req->has('Padre')?$req->input('Padre'):'0';
         $cuidador->Madre = $req->has('Madre')?$req->input('Madre'):'0';
         $cuidador->Abuelo = $req->has('Abuelo')?$req->input('Abuelo'):'0';
         $cuidador->Hermano = $req->has('Hermano')?$req->input('Hermano'):'0';
         $cuidador->Tio = $req->has('Tio')?$req->input('Tio'):'0';
-
         $cuidador->Otro_Cuidador = $req->input('Otro_Cuidador');
 
-        // 
         $cuidador->Id_Sexo = $req->input('Id_Sexo');
         // $cuidador->FechaDeNacimiento = $req->input('FechaDeNacimiento');
         $cuidador->Id_EstadoCivil = $req->input('Id_EstadoCivil');
@@ -85,14 +88,13 @@ class DatosCuidadorController extends Controller
         // $cuidador->Otro_Escolaridad = $req->input('Otro_Escolaridad');
         $cuidador->Id_Ocupacion = $req->input('Id_Ocupacion');
         // $cuidador->Otro_Ocupacion = $req->input('Otro_Ocupacion');
-
-        $cuidador->Id_Area = $req->input('Id_Area');
-        $cuidador->Id_NivelSocioEconomico = $req->input('Id_NivelSocioEconomico');        
-        // $cuidador->Id_Ciudad = $req->input('');
+        $cuidador->id_usuario = 5;
+        $cuidador->Id_Nacionalidad = 2;
+        $cuidador->num_hijos = 1;
 
         $cuidador->save();
 
-        return redirect()->route('');
+        return redirect()->back();
     }
 
     /**
