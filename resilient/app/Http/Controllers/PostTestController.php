@@ -466,5 +466,8 @@ class PostTestController extends Controller
         $calificacion2->save();
         return view('posttest.preguntascierreposttestfinal');
     }
-
+    public function paraActividad ()
+    {
+        return view('PracticaElSentidoDelHumor1');
+    }
 }

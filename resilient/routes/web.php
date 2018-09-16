@@ -144,5 +144,9 @@ Route::post('/escalaWY-cuestionario-calculate', 'EscalaWYController@calculateEsc
 Route::get('/welcome','Auth\RegisterController@goToMain')->name('/welcome');
 
 
+// rutas para actividad PRACTICA EL SENTIDO DEL HUMOR 
+Route::get('/PracticaSentido', 'PostTestController@paraActividad')->name('/PracticaSentido');
+
+
 
 
