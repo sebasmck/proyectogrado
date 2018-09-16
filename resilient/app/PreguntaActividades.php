@@ -10,7 +10,7 @@ class PreguntaActividades extends Model
 
     protected $primaryKey = "Id_Pregunta";
 
-    protected $timestamps = false;
+    public $timestamps = false;
 
     public function opcionPreguntaActividad(){
         return $this->hasMany('App/OpcionPreguntaActividad','Id_Pregunta');

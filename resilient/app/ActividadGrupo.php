@@ -10,7 +10,7 @@ class ActividadGrupo extends Model
 
     protected $primaryKey = "Id_Actividad_Grupo";
 
-    protected $timestamps = false;
+    public $timestamps = false;
 
     function grupoPoblacional (){
         $this->belongsTo('App/GrupoPoblacional','Id_Grupo_Poblacional');

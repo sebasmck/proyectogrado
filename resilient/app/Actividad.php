@@ -10,7 +10,7 @@ class Actividad extends Model
 
     protected $primaryKey = "Id_Actividad";
 
-    protected $timestamps = false;
+    public $timestamps = false;
 
     public function preguntaActividades(){
         return $this->hasMany('App/PreguntaActividades','Id_Actividad','Id_Actividad');
@@ -22,5 +22,9 @@ class Actividad extends Model
 
     public function actividadesGrupos(){
         return $this->hasMany('App/ActividadGrupo','Id_Actividad','Id_Actividad');
+    }
+
+    public  function actividadGrupo(){
+        return $this->belongsTo('App/ActividadGrupo','Id_Actividad','Id_Actividad');
     }
 }

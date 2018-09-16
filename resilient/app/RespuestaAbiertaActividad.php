@@ -10,5 +10,5 @@ class RespuestaAbiertaActividad extends Model
 
     protected $primaryKey = "id_RespuestaAbierta";
 
-    protected $timestamps = false;
+    public $timestamps = false;
 }

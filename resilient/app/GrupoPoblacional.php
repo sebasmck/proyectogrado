@@ -8,7 +8,7 @@ class GrupoPoblacional extends Model
 {
     protected $table = "grupo_poblacional";
     protected $primaryKey = "Id_Grupo_Poblacional";
-    protected $timestamps = false;
+    public $timestamps = false;
 
     function actividadGrupo(){
         $this->hasMany('App/ActividadGrupo','Id_Grupo_Poblacional','Id_Grupo_Poblacional');
