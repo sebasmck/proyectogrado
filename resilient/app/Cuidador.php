@@ -12,4 +12,24 @@ class Cuidador extends Model
 
     public $timestamps = false;
 
+    public function sexo(){
+        return $this->belongsTo('App\Sexo','Id_Sexo');
+    }
+
+    public function escolaridad(){
+        return $this->belongsTo('App\Escolaridad','Id_Escolaridad');
+    }
+
+    public function ocupacion(){
+        return $this->belongsTo('App\Ocupacion','Id_Ocupacion');
+    }
+
+    public function estadoCivil(){
+        return $this->belongsTo('App\EstadoCivil','Id_EstadoCivil');
+    }
+
+    public function nacionalidad(){
+        return $this->belongsTo('App\Nacionalidad','Id_Nacionalidad');
+    }    
+
 }

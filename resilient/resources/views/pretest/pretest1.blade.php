@@ -7,7 +7,8 @@ Cuestionario 1
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="POST" action="{{route('/pretest2')}}">
+        {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -20,29 +21,37 @@ Cuestionario 1
                         <div class="col-sm-6">
                                 <div class="col-sm-9">
                                         <label class="radio-inline radio-styled">
-                                            <input type="radio" name="inlineRadioOptions" value="option1"><span>Si</span>
+                                            <input id="si" type="radio" name="opcion" value="1" required="true"><span>Si</span>
                                         </label>
+
                                         <label class="radio-inline radio-styled">
-                                            <input type="radio" name="inlineRadioOptions" value="option2"><span>No</span>
+                                            <input type="radio" name="opcion" value="2" id="no"><span>No</span>
                                         </label>
                                     </div>
                         </div>
                     </div>
                     <br>
                     <div class="row">
-                            <div class="col-sm-8">
-                                    <label for="">
-                                            Aunque no sepas qué es resiliencia quisiéramos que nos dijeras ¿qué crees o entidades
-                                            de este término?
+                            <div class="col-sm-8"  id="casoSi" style="display:none;">
+                                    <label for="" >
+                                           Cuéntanos qué entiendes por resiliencia
                                     </label>
                                     <br><br>
-                                    <legend>
-                                    <textarea name="textarea13" id="textarea13" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>
+                                   
+                                    <textarea name="textarea1" id="textarea" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>
+                               </div> 
+
+                                   <div class="col-sm-8" id="casoNo" style="display:none;">
+                                    <label for="">
+                                         De acuerdo, ¿Qué crees o entiendes de este término?
+                                    </label>
+                                    <br><br>
+                                    <textarea name="textarea2" id="textarea2" class="form-control" rows="3" placeholder=""></textarea><div class="form-control-line"></div>
+                                </div>
+                                 
+
                             </div>
                             
-                    </div>
-
-                    
                 </div> {{-- card-body no padding --}}
 
                      <div class="col-sm-4">
@@ -53,7 +62,7 @@ Cuestionario 1
               
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/pretest2')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                     </div>
               </div>
 
@@ -63,10 +72,18 @@ Cuestionario 1
     </div>
 
 @endsection
-
-{{--  @section('addjs')
+ @section('addjs')
 
 <script>
+
+         $("#si").on( "click", function() {
+            $('#casoSi').show(); //muestro mediante id
+            $('#casoNo').hide();
+         });
+        $("#no").on( "click", function() {
+            $('#casoNo').show(); //oculto mediante id
+            $('#casoSi').hide(); //muestro mediante clase
+        });
 
         var tl = new TimelineLite();
     
@@ -82,4 +99,4 @@ Cuestionario 1
     
     </script>
 
-@endsection  --}}
+@endsection  

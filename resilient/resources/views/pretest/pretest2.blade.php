@@ -15,9 +15,7 @@ Cuestionario 2
                 </div>
 
                 <div class="card-body floating-label">
-                    <p><b> YA QUE DISTE UNA RESPUESTA, QUEREMOS CONTARTE 
-                        QUE ES LA RESILIENCIA Y QUE ASÍ PUEDAS COMPARARLO 
-                        CON LO QUE ESCRIBISTE. </b></p>
+                    <p><b> MUY BIEN, AHORA TE VAMOS A CONTAR BREVEMENTE QUÉ ES RESILIENCIA PARA QUE PUEDAS TENER MAYOR CONOCIMIENTO </b></p>
                     <br>
                     <div class="row">
                                     <br>
@@ -27,8 +25,7 @@ Cuestionario 2
                                                     <header>Resiliencia</header>
                                                 </div><!--end .card-head -->
                                                 <div class="card-body">
-                                                    <p>Se ha definido como la capacidad que tienen las persosas para 
-                                                        sobrepasar un evento adverso, o situación estresante. 
+                                                    <p>Se ha definido como la capacidad que tienen la personas para sobrepasar un evento adverso, o situación estresante.
                                                     </p>
                                                 </div><!--end .card-body -->
                                             </div><!--end .card -->
