@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-PRACTICA EL SENTIDO DEL HUMOR 
+Logros Obtenidos 
 @endsection
 
 @section('content')
@@ -11,14 +11,13 @@ PRACTICA EL SENTIDO DEL HUMOR
             <div class="card">
 
                 <div class="card-head style-primary">
-                   <header> PRACTICA EL SENTIDO DEL HUMOR  </header>
+                   <header> Logros Obtenidos </header>
                 </div>
 
                 <div class="card-body floating-label">
-                  <!-- <img class="pull-right" src="{{asset('img/avatarPost.png')}}" alt="avatar">--> 
+
                 </div> {{-- card-body no padding --}}
             </div><!--end .card-body -->
-
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
                   <a style="btn btn-flat btn-primary ink-reaction" href=""> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>

@@ -145,8 +145,11 @@ Route::get('/welcome','Auth\RegisterController@goToMain')->name('/welcome');
 
 
 // rutas para actividad PRACTICA EL SENTIDO DEL HUMOR 
-Route::get('/PracticaSentido', 'PostTestController@paraActividad')->name('/PracticaSentido');
-
+Route::get('/PracticaSentido', 'ActivityController@paraActividadPracticaHumor')->name('/PracticaSentido');
+Route::get('/PracticaSentido2', 'ActivityController@paraActividadPracticaHumor2')->name('/PracticaSentido2');
+Route::get('/PracticaSentido3', 'ActivityController@paraActividadPracticaHumor3')->name('/PracticaSentido3');
+Route::get('/PracticaSentido4', 'ActivityController@paraActividadPracticaHumor4')->name('/PracticaSentido4');
+Route::get('/PracticaSentido5', 'ActivityController@paraActividadPracticaHumor5')->name('/PracticaSentido5');
 
 
 
