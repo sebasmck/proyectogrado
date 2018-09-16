@@ -10,5 +10,5 @@ class RespuestaMultipleActividad extends Model
 
     protected $primaryKey = "id_RespuestaMultiple";
 
-    protected $timestamps = false;
+    public $timestamps = false;
 }

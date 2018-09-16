@@ -8,7 +8,7 @@ class OpcionPreguntaActividad extends Model
 {
     protected $table = "opcionpreguntaactividad";
 
-    protected $timestamps = false;
+    public $timestamps = false;
 
     public function preguntaActividades(){
         return $this->belongsTo('App/PreguntaActividades','Id_Pregunta');

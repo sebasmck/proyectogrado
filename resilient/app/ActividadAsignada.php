@@ -10,7 +10,7 @@ class ActividadAsignada extends Model
 
     protected $primaryKey = "Id";
 
-    protected $timestamps = false;
+    public $timestamps = false;
 
     public function acudienteInfante(){
         return $this->belongsTo('App/AcudienteInfante','id_RelacionAcudienteInfante');
