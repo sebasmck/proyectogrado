@@ -2,21 +2,35 @@
 
 namespace App\Http\Controllers;
 
+use App\Actividad;
 use Illuminate\Http\Request;
 
 class ActivityController extends Controller
 {
-    public function index()
-    {
-    	return view('admin.Actividades');
+
+    public function actividad(Request $request,$id){
+        $actividad  = Actividad::where('Id_Actividad',$id)->get();
+        return  $actividad;
     }
 
-    public function yourCharacter()
+    public function paraActividadPracticaHumor()
     {
-    	return view('admin.Actividades2');
+        return view('activities.2-11-meses.Actividad_PracticandoHumor.PracticaElSentidoDelHumor1');
     }
-
-    public function actividad1(){
-        return view ('activities.2anos_2anos11meses.intro_activity1');
+    public function paraActividadPracticaHumor2()
+    {
+        return view('activities.2-11-meses.Actividad_PracticandoHumor.PracticaElSentidoDelHumor2');
+    }
+    public function paraActividadPracticaHumor3()
+    {
+        return view('activities.2-11-meses.Actividad_PracticandoHumor.PracticaElSentidoDelHumor3');
+    }
+    public function paraActividadPracticaHumor4()
+    {
+        return view('activities.2-11-meses.Actividad_PracticandoHumor.PracticaElSentidoDelHumor4');
+    }
+    public function paraActividadPracticaHumor5()
+    {
+        return view('activities.2-11-meses.Actividad_PracticandoHumor.PracticaElSentidoDelHumor5');
     }
 }

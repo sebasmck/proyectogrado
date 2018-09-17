@@ -114,11 +114,11 @@ Route::post('/preguntascierreposttest4', 'PostTestController@preguntasCierre4')-
 Route::post('/preguntascierreposttestfinal', 'PostTestController@preguntasCierreFinal')->name('/preguntascierreposttestfinal');
 
 // Rutas actividades 
-Route::get('/actividades', 'ActivityController@index')->name('/actividades');
+Route::get('/actividades/{id}', 'ActivityController@actividad')->name('/actividades');
 
-Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');
+//Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');
 
-Route::get('/actividad1', 'ActivityController@actividad1')->name('actividad1');
+//Route::get('/actividad1', 'ActivityController@actividad1')->name('actividad1');
 
 Route::get('/cuidador-infantes', 'HomeController@traerInfantes')->name('/cuidador-infantes');
 
@@ -127,11 +127,8 @@ Route::get('/cuidador-dashboard/{id}', 'HomeController@dashboardInfante')->name(
 // Escalas de resiliencia EP2 
 
 Route::get('/escalap2/{id}', 'CustomControllers\EscalaEP2Controller@escalaEp2ByNino')->name('/escalap2');
-
 Route::post('/escalap2-datos-anexos', 'CustomControllers\EscalaEP2Controller@actualizarDatosAnexosEscalaEP2')->name('/escalap2-datos-anexos');
-
 Route::post('/guardar-escalap2-cuestionario', 'CustomControllers\EscalaEP2Controller@guardarEscala')->name('/guardar-escalap2-cuestionario');
-
 Route::get('/resultados-escalap2/{id}','CustomControllers\EscalaEP2Controller@goResultadosEscala')->name('/resultados-escalap2');
 
 //Cuestionario Escala WY
@@ -146,6 +143,13 @@ Route::post('/escalaWY-cuestionario-calculate', 'EscalaWYController@calculateEsc
 //Ruta a home
 Route::get('/welcome','Auth\RegisterController@goToMain')->name('/welcome');
 
+
+// rutas para actividad PRACTICA EL SENTIDO DEL HUMOR 
+Route::get('/PracticaSentido', 'ActivityController@paraActividadPracticaHumor')->name('/PracticaSentido');
+Route::get('/PracticaSentido2', 'ActivityController@paraActividadPracticaHumor2')->name('/PracticaSentido2');
+Route::get('/PracticaSentido3', 'ActivityController@paraActividadPracticaHumor3')->name('/PracticaSentido3');
+Route::get('/PracticaSentido4', 'ActivityController@paraActividadPracticaHumor4')->name('/PracticaSentido4');
+Route::get('/PracticaSentido5', 'ActivityController@paraActividadPracticaHumor5')->name('/PracticaSentido5');
 
 
 
