@@ -114,7 +114,7 @@ Route::post('/preguntascierreposttest4', 'PostTestController@preguntasCierre4')-
 Route::post('/preguntascierreposttestfinal', 'PostTestController@preguntasCierreFinal')->name('/preguntascierreposttestfinal');
 
 // Rutas actividades 
-Route::get('/actividades/{id}', 'ActivityController@actividad')->name('/actividades');
+Route::get('/actividades/{id}', 'ActivityController@index')->name('/actividades');
 
 //Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');
 

@@ -13,18 +13,18 @@ class Actividad extends Model
     public $timestamps = false;
 
     public function preguntaActividades(){
-        return $this->hasMany('App/PreguntaActividades','Id_Actividad','Id_Actividad');
+        return $this->hasMany('App\PreguntaActividades','Id_Actividad','Id_Actividad');
     }
 
     public function actividadesAsignadas(){
-        return $this->hasMany('App/ActividadAsignada','Id_Actividad','Id_Actividad');
+        return $this->hasMany('App\ActividadAsignada','Id_Actividad','Id_Actividad');
     }
 
     public function actividadesGrupos(){
-        return $this->hasMany('App/ActividadGrupo','Id_Actividad','Id_Actividad');
+        return $this->hasMany('App\ActividadGrupo','Id_Actividad','Id_Actividad');
     }
 
     public  function actividadGrupo(){
-        return $this->belongsTo('App/ActividadGrupo','Id_Actividad','Id_Actividad');
+        return $this->belongsTo('App\ActividadGrupo','Id_Actividad','Id_Actividad');
     }
 }
