@@ -139,17 +139,16 @@ Route::post('/escalaWY-cuestionario', 'EscalaWYController@updateCuidador')->name
 
 Route::post('/escalaWY-cuestionario-calculate', 'EscalaWYController@calculateEscalaWY')->name('/escalaWY-cuestionario-calculate');
 
-
 //Ruta a home
 Route::get('/welcome','Auth\RegisterController@goToMain')->name('/welcome');
 
-
+// prueba a intro actividad practica el sentido del humor
+Route::get('/IntroActividadPractica', 'ActivityController@practicaSentidoDescripcion')->name('/IntroActividadPractica');
 // rutas para actividad PRACTICA EL SENTIDO DEL HUMOR 
 Route::get('/PracticaSentido', 'ActivityController@paraActividadPracticaHumor')->name('/PracticaSentido');
 Route::get('/PracticaSentido2', 'ActivityController@paraActividadPracticaHumor2')->name('/PracticaSentido2');
 Route::get('/PracticaSentido3', 'ActivityController@paraActividadPracticaHumor3')->name('/PracticaSentido3');
 Route::get('/PracticaSentido4', 'ActivityController@paraActividadPracticaHumor4')->name('/PracticaSentido4');
 Route::get('/PracticaSentido5', 'ActivityController@paraActividadPracticaHumor5')->name('/PracticaSentido5');
-
-
-
+Route::post('/logrosObtenidosPracticaSentido', 'ActivityController@paraActividadPracticaLogos')->name('/logrosObtenidosPracticaSentido');
+Route::get('/PracticaSentido6', 'ActivityController@paraActividadPracticaCulminada')->name('/PracticaSentido6');

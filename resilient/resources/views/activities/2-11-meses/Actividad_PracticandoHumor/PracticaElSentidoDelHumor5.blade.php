@@ -1,13 +1,14 @@
 @extends('partials.layout')
 
 @section('title')
-PRACTICA EL SENTIDO DEL HUMOR CD
+PRACTICA EL SENTIDO DEL HUMOR 
 @endsection
 
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="POST" action="{{route('/logrosObtenidosPracticaSentido')}}">
+        {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -38,7 +39,7 @@ PRACTICA EL SENTIDO DEL HUMOR CD
             </div><!--end .card-body -->
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction" href=""> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                  <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                   </div>
             </div>
 
