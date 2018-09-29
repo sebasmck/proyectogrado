@@ -114,7 +114,11 @@ Route::post('/preguntascierreposttest4', 'PostTestController@preguntasCierre4')-
 Route::post('/preguntascierreposttestfinal', 'PostTestController@preguntasCierreFinal')->name('/preguntascierreposttestfinal');
 
 // Rutas actividades 
-Route::get('/actividades/{id}', 'ActivityController@actividad')->name('/actividades');
+Route::get('/actividades/{id}', 'ActivityController@index')->name('/actividades');
+Route::post('/actividades-componentes','ActivityController@goToUrl')->name('/actividades-componentes');
+Route::get('/actividades-aprendamosresiliencia', 'ActivityController@aprendamosDeResiliencia')->name('/actividades-aprendamosresiliencia');
+Route::get('/actividades-aprendamos-resiliencia-3', 'ActivityController@ellaEsEdithGrotberg')->name('/actividades-aprendamos-resiliencia-3');
+Route::get('/actividades-aprendamos-resiliencia-4', 'ActivityController@queSabesResiliencia')->name('/actividades-aprendamos-resiliencia-4');
 
 //Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');
 
