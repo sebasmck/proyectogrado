@@ -151,4 +151,9 @@ Route::get('/PracticaSentido3', 'ActivityController@paraActividadPracticaHumor3'
 Route::get('/PracticaSentido4', 'ActivityController@paraActividadPracticaHumor4')->name('/PracticaSentido4');
 Route::get('/PracticaSentido5', 'ActivityController@paraActividadPracticaHumor5')->name('/PracticaSentido5');
 Route::post('/logrosObtenidosPracticaSentido', 'ActivityController@paraActividadPracticaLogos')->name('/logrosObtenidosPracticaSentido');
-Route::get('/PracticaSentido6', 'ActivityController@paraActividadPracticaCulminada')->name('/PracticaSentido6');
+Route::Post('/PracticaSentido6', 'ActivityController@paraActividadPracticaCulminada')->name('/PracticaSentido6');
+// Rutas para actividad Creando Confianza
+Route::get('/IntroCreandoConfianza', 'ActivityController@creandoConfianzaDesc')->name('/IntroCreandoConfianza');
+Route::get('/CreandoConfianza1', 'ActivityController@creandoConfianza1')->name('/CreandoConfianza1');
+Route::get('/CreandoConfianza2', 'ActivityController@creandoConfianza2')->name('/CreandoConfianza2');
+Route::get('/CreandoConfianza3', 'ActivityController@creandoConfianza3')->name('/CreandoConfianza3');

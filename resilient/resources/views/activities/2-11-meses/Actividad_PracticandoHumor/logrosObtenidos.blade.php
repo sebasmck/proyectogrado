@@ -4,7 +4,7 @@ Logros Obtenidos
 @endsection
 @section('content')
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="POST" action="{{route('/PracticaSentido6')}}">
         {{csrf_field()}}
             <div class="card">
 
@@ -29,19 +29,19 @@ Logros Obtenidos
                            <tr>
                            <td>No he aprendido mucho y eso me frustra</th>
                            <td><input type="radio" name="si/No2" value="1" required> Si</td>
-                           <td><input type="radio" name="si/No2" value="1"> No</td>
+                           <td><input type="radio" name="si/No2" value="0"> No</td>
                            </tr> 
 
                            <tr>
                            <td>Lo que he aprendido lo he aplicado a la crianza de mi hijo/a <br></th>
                            <td><input type="radio" name="si/No3" value="1" required> Si</td>
-                           <td><input type="radio" name="si/No3" value="1"> No</td>
+                           <td><input type="radio" name="si/No3" value="0"> No</td>
                            </tr>
 
                            <tr>
                            <td>He aprendido, pero no lo he aplicado en la crianza de mi hijo/a <br></td>
                            <td><input type="radio" name="si/No4" value="1" required> Si</td>
-                           <td><input type="radio" name="si/No4" value="1"> No</td>
+                           <td><input type="radio" name="si/No4" value="0"> No</td>
                            </tr> 
 
                         </table>
@@ -50,7 +50,7 @@ Logros Obtenidos
             </div><!--end .card-body -->
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/PracticaSentido6')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                  <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                   </div>
             </div>
 
