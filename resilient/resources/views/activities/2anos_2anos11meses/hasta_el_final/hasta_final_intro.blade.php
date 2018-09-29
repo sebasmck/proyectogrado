@@ -7,7 +7,7 @@ Hasta el final
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
- <form class="form" method="POST" action="{{route('/test1_actividad_real') }}">
+ <form class="form" method="GET" action="{{route('/HastaFinal2') }}">
 {{csrf_field()}}
 <div class="card">
          
@@ -41,6 +41,7 @@ Hasta el final
                                             mismo ayudara a impulsarlo a hacer cosas por sí mismo poco a poco con menos ayuda de
                                             algún adulto.
                                            </label>
+
                                              </div>
                                         </div>
                                     </div>                       

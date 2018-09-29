@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" id="initialContent">
     <div class="row justify-content-center">
        
                 <img style="width:300px;height:300px;text-align:center;" src="{{asset('img/logo.png')}}">
@@ -254,7 +254,7 @@
  y de igual forma exprésale frases como “sabía que lo podrías hacer” “te felicito hijo”
 
 <div style="text-align:center;" id="imgFadeInChildren">
-<img style="width:250px;height:250px;" src="https://cdn.pixabay.com/photo/2016/04/01/09/47/boy-1299574_960_720.png"/>
+<img style="width:250px;height:250px;" src="https://escolapt.files.wordpress.com/2017/01/alumnos.png"/>
 </div>
 
 </div>
@@ -262,7 +262,7 @@
       <div class="modal-footer">
         <span class="pull-right">
         <!-- SI acepta sigue el flujo normal de la aplicación-->
-          <button id="btnStartStepActivity" type="button" class="btn btn-primary" data-dismiss="modal">
+          <button id="btnStartDevelopActivity" type="button" class="btn btn-primary" data-dismiss="modal">
             Siguiente
           </button> 
         </span>
@@ -273,9 +273,59 @@
 <!-- Fin del modal de Inicio de primera actividad Quinto Paso-->
 
 
+<!-- Comienzo del modal de Inicio Realizacion tareas-->
+<div class="modal fade" id="startActivityDevelopModal" 
+     tabindex="-1" role="dialog" 
+     aria-labelledby="favoritesModalLabel"
+     aria-hidden="true" data-backdrop="static" data-keyboard="false"
+     data-show="true">
+
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+       
+        <h4 class="modal-title" 
+        id="favoritesModalLabel">Realiza tareas</h4>
+      </div>
+      <div class="modal-body">
+
+<div>
+<p>A continuación, encontrarás tres actividades para colorear, recortar, delinear y de hacer 
+bolas de papel (3 archivos adjuntos para descargar). Para la realización de estas actividades,
+ es necesario desarrollar destrezas con un poco de dificultad. El objetivo es que busques 
+ un espacio con tu hijo y realices por los menos una de estas con tu compañía y supervisión. </p>
+ 
+<p>Explícale de que se trata cada una de las actividades y que tú le vas a ayudar para comenzar.</p>
+
+<p>Durante el proceso, observa detalladamente la reacción de este y al mismo tiempo puedes
+ aplicar las siguientes frases <b>“te felicito hijo” “si tienes dudas me puedes preguntar” “sé que 
+ lo puedes hacer” “tú eres capaz” “sigue intentándolo”</b></p>
+
+<p><a id="image1" href="/download/test1.png">Click aquí para descargar primera tarea</a></p>
+<p><a style="display:none;" id="image2" href="/download/test2.png">Click aquí para descargar segunda tarea</a></p>
+<p><a style="display:none;" id="image3" href="/download/img12.jpg">Click aquí para descargar tercera tarea</a></p>
+
+
+</div>
+      </div>
+      <div class="modal-footer">
+        <span class="pull-right">
+        <!-- SI acepta sigue el flujo normal de la aplicación-->
+          <button id="btnEndStepActivity" type="button" class="btn btn-primary" data-dismiss="modal" disabled>
+            He realizado las tareas propuestas
+          </button> 
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin del modal de Inicio Realizacion tareas-->
+
+
 @endsection
 
 @section('addjs')
+
 <script>
 $(document).ready(function(){
 
@@ -319,6 +369,29 @@ $(document).ready(function(){
             $("#imgFadeInChildren").fadeIn(4000);
          });
      });
+
+
+$("#btnStartDevelopActivity").click(function(){
+    $('#startActivityDevelopModal').modal('toggle')
+     });
+
+$("#image1").click(function(){
+     $("#image2").fadeIn(2000);
+});
+
+$("#image2").click(function(){
+    $("#image3").fadeIn(2000);
+});
+
+$("#image3").click(function(){
+    $("#btnEndStepActivity").prop('disabled', false);
+});
+
+$("#btnEndStepActivity").click(function(){
+     $("#initialContent").fadeOut("slow" , function(){
+      window.location="{{URL::to('/HastaFinal3')}}";
+     });
+});
 
 
 });

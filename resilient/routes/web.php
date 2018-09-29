@@ -152,4 +152,10 @@ Route::get('/PracticaSentido4', 'ActivityController@paraActividadPracticaHumor4'
 Route::get('/PracticaSentido5', 'ActivityController@paraActividadPracticaHumor5')->name('/PracticaSentido5');
 
 
+// rutas para actividad HASTA EL FINAL
+Route::get('/HastaFinal', 'ActivityController@paraActividadHastaElFinal')->name('/HastaFinal');
+Route::get('/HastaFinal2', 'ActivityController@paraActividadHastaElFinal2')->name('/HastaFinal2');
+Route::get('/HastaFinal3', 'ActivityController@paraActividadHastaElFinal3')->name('/HastaFinal3');
+Route::get('/download/{file}', 'ActivityController@downloadImage')->name('/download');
+
 

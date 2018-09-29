@@ -141,13 +141,4 @@ class EscalaWYController extends Controller{
       return  view('escalaWY.escalaWYResult')->with('result' , $str)->with('img', $img);  
     }
 
-public function tesstActivi(){
-  return view('activities.2anos_2anos11meses.hasta_el_final.hasta_final_intro');
-}
-
-public function tesstActivi2(){
-  return view('activities.2anos_2anos11meses.hasta_el_final.hasta_final_actividad');
-}
-
-
 }
