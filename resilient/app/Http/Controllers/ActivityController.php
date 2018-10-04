@@ -115,18 +115,37 @@ class ActivityController extends Controller
         return view('activities.2-11-meses.Creando_Confianza.CreandoConfianza3');
     }
 
+    public function creandoConfianzaLogros(Request $request)
+    {
+        return view('activities.2-11-meses.Creando_Confianza.LogrosObtenidos');
+    }
+    public function creandoConfianzaCulminacion(Request $request)
+    {
+
+        $LogrosActividad = new LogrosActividad (); 
+        $NumActividad = 2; //Numero en base de datos tabla Actividad  
+        $RelacionInfante = null ; // Por el momento enviar vacio  
+        $LogrosActividad ->Aprendido = $request->input('si/No1');
+        $LogrosActividad ->NoAprendido = $request->input('si/No2');
+        $LogrosActividad ->AplicadoCrianza = $request->input('si/No3');
+        $LogrosActividad ->NoAplicadoCrianza = $request->input('si/No4');
+        $LogrosActividad ->id_AcudienteInfante = $RelacionInfante;
+        $LogrosActividad ->id_Actividad = $NumActividad; 
+        $LogrosActividad ->save();
+        return view('activities.2-11-meses.Creando_Confianza.CreandoConfianzaFinal');
+    }
+
+
     public function paraActividadHastaElFinal(){
         return view('activities.2anos_2anos11meses.hasta_el_final.hasta_final_intro');
     }
-      
+    
     public function paraActividadHastaElFinal2(){
         return view('activities.2anos_2anos11meses.hasta_el_final.hasta_final_actividad');
     }
-
     public function paraActividadHastaElFinal3(){
         return view('activities.2anos_2anos11meses.hasta_el_final.hasta_final_actividad_2');
     }
-
     public function downloadImage($file){
         $pathtoFile = public_path().'//img/'.$file;
         return response()->download($pathtoFile);

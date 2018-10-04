@@ -161,6 +161,9 @@ Route::get('/IntroCreandoConfianza', 'ActivityController@creandoConfianzaDesc')-
 Route::get('/CreandoConfianza1', 'ActivityController@creandoConfianza1')->name('/CreandoConfianza1');
 Route::get('/CreandoConfianza2', 'ActivityController@creandoConfianza2')->name('/CreandoConfianza2');
 Route::get('/CreandoConfianza3', 'ActivityController@creandoConfianza3')->name('/CreandoConfianza3');
+// Funcionalidades
+Route::post('/CreandoConfianzaLogros', 'ActivityController@creandoConfianzaLogros')->name('/CreandoConfianzaLogros');
+Route::post('/CreandoConfianzaCulminacion', 'ActivityController@creandoConfianzaCulminacion')->name('/CreandoConfianzaCulminacion');
 
 
 // rutas para actividad HASTA EL FINAL
