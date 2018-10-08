@@ -39,7 +39,7 @@ class DatosNinoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
