@@ -109,7 +109,7 @@ Creando Confianza 2
 
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction"  href=""> <button type="button"  class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                  <a style="btn btn-flat btn-primary ink-reaction"  href="{{route('/CreandoConfianza3')}}"> <button type="button"  class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                   </div>
             </div>
         </div><!--end .card -->
