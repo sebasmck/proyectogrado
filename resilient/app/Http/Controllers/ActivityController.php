@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Actividad;
 use App\RespuestaAbiertaActividad;
-use App\LogrosActividad;  
+use App\LogrosActividad;
+use App\RespuestaMultipleActividad;  
+
 use Illuminate\Http\Request;
 
 
@@ -117,13 +119,20 @@ class ActivityController extends Controller
 
     public function creandoConfianzaLogros(Request $request)
     {
+        $respuestaMultiple = new RespuestaMultipleActividad();
+        $pregunta = 4; 
+        $RelacionInfante = null ; // Por el momento enviar vacio  
+        $respuestaMultiple ->Seleccionada = $request->input('optionsRadios');
+        $respuestaMultiple->Id_Pregunta = $pregunta;
+        $respuestaMultiple->id_RelacionAcudienteInfante = $RelacionInfante; 
+        $respuestaMultiple->save();
         return view('activities.2-11-meses.Creando_Confianza.LogrosObtenidos');
     }
     public function creandoConfianzaCulminacion(Request $request)
     {
 
         $LogrosActividad = new LogrosActividad (); 
-        $NumActividad = 2; //Numero en base de datos tabla Actividad  
+        $NumActividad = 4; //Numero en base de datos tabla Actividad  
         $RelacionInfante = null ; // Por el momento enviar vacio  
         $LogrosActividad ->Aprendido = $request->input('si/No1');
         $LogrosActividad ->NoAprendido = $request->input('si/No2');
@@ -134,8 +143,6 @@ class ActivityController extends Controller
         $LogrosActividad ->save();
         return view('activities.2-11-meses.Creando_Confianza.CreandoConfianzaFinal');
     }
-
-
     public function paraActividadHastaElFinal(){
         return view('activities.2anos_2anos11meses.hasta_el_final.hasta_final_intro');
     }
