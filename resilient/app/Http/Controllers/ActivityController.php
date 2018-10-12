@@ -157,4 +157,25 @@ class ActivityController extends Controller
         $pathtoFile = public_path().'//img/'.$file;
         return response()->download($pathtoFile);
     }
+
+    // Activity: Cualidades Niños Resilientes
+
+
+    public function cnr_intro(){
+        return view('activities.2-3anos.intro_cnr');
+    }
+
+    public function cnr1(){
+        return view('activities.2-3anos.cnr1');
+    }
+
+    public function cnr2(){
+        return view('activities.2-3anos.cnr2');
+    }
+
+    public function cnr3(){
+        return view('activities.2-3anos.cnr3');
+    }
+
+
 }
