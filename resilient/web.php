@@ -108,6 +108,16 @@ Route::get('/cuidador-infantes', 'HomeController@traerInfantes')->name('/cuidado
 
 Route::get('/cuidador-dashboard/{id}', 'HomeController@dashboardInfante')->name('/cuidador-dashboard');
 
+
+Route::get('/cnr_intro', 'ActivityController@cnr_intro')->name('/cnr_intro');
+
+Route::get('/cnr1', 'ActivityController@cnr1')->name('/cnr1');
+
+Route::get('/cnr2', 'ActivityController@cnr2')->name('/cnr2');
+
+Route::get('/cnr3', 'ActivityController@cnr3')->name('/cnr3');
+
+
 // Escalas de resiliencia EP2 
 
 Route::get('/escalap2', 'HomeController@goEscala')->name('/escalap2');
@@ -123,11 +133,4 @@ Route::get('/datos-escala', 'EscalaWYController@index')->name('/datos-escala');
 
 Route::post('/escalaWY-cuestionario', 'EscalaWYController@updateCuidador')->name('/escalaWY-cuestionario');
 
-Route::get('/cnr_intro', 'ActivityController@cnr_intro')->name('/cnr_intro');
-
-Route::get('/cnr1', 'ActivityController@cnr1')->name('/cnr1');
-
-Route::get('/cnr2', 'ActivityController@cnr2')->name('/cnr2');
-
-Route::get('/cnr3', 'ActivityController@cnr3')->name('/cnr3');
 

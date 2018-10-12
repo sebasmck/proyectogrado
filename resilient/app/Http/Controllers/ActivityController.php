@@ -15,6 +15,27 @@ class ActivityController extends Controller
     const URL_APRENDAMOS_DE_RESILIENCIA_ = "activities.2-11-meses.aprendamos_resiliencia.aprendamos_resiliencia";
     const URL_ACTIVIDAD_1_PRENDIENDO_MOTORES = "activities.2-11-meses.aprendamos_resiliencia.prendiendo_motores";
 
+
+    // Activity: Cualidades Niños Resilientes
+
+
+    public function cnr_intro(){
+        return view('activities.2-3anos.intro_cnr');
+    }
+
+    public function cnr1(){
+        return view('activities.2-3anos.cnr1');
+    }
+
+    public function cnr2(){
+        return view('activities.2-3anos.cnr2');
+    }
+
+    public function cnr3(){
+        return view('activities.2-3anos.cnr3');
+    }
+
+
     public function index($id)
     {
         $actividad = Actividad::with('preguntaActividades.opcionPreguntaActividad')->where('Id_Actividad', $id)->first();
@@ -156,25 +177,6 @@ class ActivityController extends Controller
     public function downloadImage($file){
         $pathtoFile = public_path().'//img/'.$file;
         return response()->download($pathtoFile);
-    }
-
-    // Activity: Cualidades Niños Resilientes
-
-
-    public function cnr_intro(){
-        return view('activities.2-3anos.intro_cnr');
-    }
-
-    public function cnr1(){
-        return view('activities.2-3anos.cnr1');
-    }
-
-    public function cnr2(){
-        return view('activities.2-3anos.cnr2');
-    }
-
-    public function cnr3(){
-        return view('activities.2-3anos.cnr3');
     }
 
 

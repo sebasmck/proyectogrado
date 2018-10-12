@@ -173,3 +173,8 @@ Route::get('/HastaFinal3', 'ActivityController@paraActividadHastaElFinal3')->nam
 Route::get('/download/{file}', 'ActivityController@downloadImage')->name('/download');
 
 
+
+Route::get('/cnr_intro', 'ActivityController@cnr_intro')->name('/cnr_intro');
+Route::get('/cnr1', 'ActivityController@cnr1')->name('/cnr1');
+Route::get('/cnr2', 'ActivityController@cnr2')->name('/cnr2');
+Route::get('/cnr3', 'ActivityController@cnr3')->name('/cnr3');
