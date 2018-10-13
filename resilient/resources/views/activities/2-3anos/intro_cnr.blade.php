@@ -863,8 +863,8 @@ button:hover {
                     <div class="card">
                         <div class="card-header" id="heading1">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                <b> Descripción Actividad</b>
+                                <button style="width:200px;" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                 <b> Descripción Actividad </b> 
                                 </button>
                             </h5>
                         </div>
