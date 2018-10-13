@@ -13,11 +13,11 @@ class ActivityController extends Controller
     const URL_APRENDAMOS_DE_RESILIENCIA_ = "activities.2-11-meses.aprendamos_resiliencia.aprendamos_resiliencia";
     const URL_ACTIVIDAD_1_PRENDIENDO_MOTORES = "activities.2-11-meses.aprendamos_resiliencia.prendiendo_motores";
 
-    public function index($id)
+    public function aprendamosResilienciaIntro()
     {
-        $actividad = Actividad::with('preguntaActividades.opcionPreguntaActividad')->where('Id_Actividad', $id)->first();
-        return view($actividad->View_Actividad, ['Actividad' => $actividad]);
+        return view("activities.2-11-meses.aprendamos_resiliencia.intro_aprendamos_resiliencia");
     }
+
     public function actividad(Request $request,$id){
         $actividad  = Actividad::where('Id_Actividad',$id)->get();
         return  $actividad;
@@ -32,6 +32,14 @@ class ActivityController extends Controller
 
         return view(self::URL_ACTIVIDAD_1_PRENDIENDO_MOTORES);
     }
+
+    // Actividad 1
+
+    public function index(){
+        $actividad = Actividad::with('preguntaActividades.opcionPreguntaActividad')->where('Id_Actividad', 1)->first();
+        return view("activities.2-11-meses.aprendamos_resiliencia.aprendamos_resiliencia", ['Actividad' => $actividad]);
+    }
+
     public function aprendamosDeResiliencia(){
         return view("activities.2-11-meses.aprendamos_resiliencia.prendiendo_motores");
     }
@@ -42,6 +50,41 @@ class ActivityController extends Controller
 
     public function  queSabesResiliencia(){
         return view("activities.2-11-meses.aprendamos_resiliencia.que_sabes_resiliencia");
+    }
+
+    public function queEsResiliencia(){
+        return view("activities.2-11-meses.aprendamos_resiliencia.que_es_resiliencia");
+    }
+
+    public function escogerDefinicionResiliencia(){
+        return view("activities.2-11-meses.aprendamos_resiliencia.definicion_resiliencia");
+    }
+
+    public function  verbalizacioneDeGrotberg(){
+        return view("activities.2-11-meses.aprendamos_resiliencia.verbalizaciones_grotberg");
+    }
+
+    public  function resilienciaEnLaCrianza(){
+        return view("activities.2-11-meses.aprendamos_resiliencia.resiliencia_en_la_crianza");
+    }
+
+    public function resiliencialogros(){
+        return view("activities.2-11-meses.aprendamos_resiliencia.logrosObtenidos");
+    }
+
+    public function guardarLogros($id, Request $request)
+    {
+        $LogrosActividad = new LogrosActividad ();
+        $NumActividad = $id; //Numero en base de datos tabla Actividad
+        $RelacionInfante = null ; // Por el momento enviar vacio
+        $LogrosActividad ->Aprendido = $request->input('si/No1');
+        $LogrosActividad ->NoAprendido = $request->input('si/No2');
+        $LogrosActividad ->AplicadoCrianza = $request->input('si/No3');
+        $LogrosActividad ->NoAplicadoCrianza = $request->input('si/No4');
+        $LogrosActividad ->id_AcudienteInfante = $RelacionInfante;
+        $LogrosActividad ->id_Actividad = $NumActividad;
+        $LogrosActividad ->save();
+        $this->index();
     }
 
     //Actividad Practica Sentido Del Humor

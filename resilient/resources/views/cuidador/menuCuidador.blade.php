@@ -15,19 +15,7 @@ Home
             <div class='card' >
                 <div  class="card-body">
 
-                    <div class="row"> 
-
-                             <div class="col-md-6"> 
-                                <div class="card ">
-
-                                 <a href="">
-                                    <div class="card-body small-padding text-center">
-                                        <img style="width:100%;height:300px" src="{{ asset('img/Cuidador.jpg') }}" alt=""> Ir A Perfil
-                                    </div>
-                                </a>
-                                </div>
-                            </div>
-
+                    <div class="row">
                             <div class="col-md-6">  
                              <div class="card ">
                               <a href="{{ route('/cuidador-infantes') }}"><div class="card-body small-padding text-center ">
@@ -40,7 +28,7 @@ Home
 
                     </div>
 
-                    <div class="row">   
+                  <!--  <div class="row">
                              <div class="col-md-6">
                                  <div class="card"> 
                                <a href=""> 
@@ -64,7 +52,7 @@ Home
         
                     
 
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
