@@ -172,4 +172,16 @@ Route::get('/HastaFinal2', 'ActivityController@paraActividadHastaElFinal2')->nam
 Route::get('/HastaFinal3', 'ActivityController@paraActividadHastaElFinal3')->name('/HastaFinal3');
 Route::get('/download/{file}', 'ActivityController@downloadImage')->name('/download');
 
+// Rutas para actividad FORMANDO NIÑOS RESILIENTES
+Route::get('/IntroFormandoNResilientes', 'ActivityController@formandoNinosResDesc')->name('/IntroFormandoNResilientes');
+Route::get('/FormandoNR1', 'ActivityController@formandoNinosRes1')->name('/FormandoNR1');
+Route::get('/FormandoNR2', 'ActivityController@formandoNinosRes2')->name('/FormandoNR2');
+Route::get('/FormandoNR3', 'ActivityController@formandoNinosRes3')->name('/FormandoNR3');
+Route::get('/FormandoNR4', 'ActivityController@formandoNinosRes4')->name('/FormandoNR4');
+Route::get('/FormandoNR5', 'ActivityController@formandoNinosRes5')->name('/FormandoNR5');
+Route::get('/FormandoNR6', 'ActivityController@formandoNinosRes6')->name('/FormandoNR6');
+Route::get('/FormandoNR7', 'ActivityController@formandoNinosResLogros')->name('/FormandoNR7');
+Route::Post('/FormandoNR8', 'ActivityController@formandoNinosResFinal')->name('/FormandoNR8');
 
+// Rutas para Actividad UN TESORO ESCONDIDO. "SOY CAPAZ DE… Y ME AMO COMO SOY”
+Route::get('/IntroTesoroEscondido', 'ActivityController@formandoNinosResDesc')->name('/IntroTesoroEscondido');

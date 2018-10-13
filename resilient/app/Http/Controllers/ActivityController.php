@@ -157,4 +157,63 @@ class ActivityController extends Controller
         $pathtoFile = public_path().'//img/'.$file;
         return response()->download($pathtoFile);
     }
+    
+     //Actividad Formando niños resilientes 
+     public function formandoNinosResDesc()
+     {
+         return view('activities.2-11-meses.FormandoNinosR.intro_actividadFormandoNR');
+     }
+     public function formandoNinosRes1()
+     {
+         return view('activities.2-11-meses.FormandoNinosR.FormandoNR1');
+     }
+
+     public function formandoNinosRes2()
+     {
+         return view('activities.2-11-meses.FormandoNinosR.FormandoNR2');
+     }
+
+     public function formandoNinosRes3()
+     {
+         return view('activities.2-11-meses.FormandoNinosR.FormandoNR3');
+     }
+     public function formandoNinosRes4()
+     {
+         return view('activities.2-11-meses.FormandoNinosR.FormandoNR4');
+     }
+     public function formandoNinosRes5()
+     {
+         return view('activities.2-11-meses.FormandoNinosR.FormandoNR5');
+     }
+
+     public function formandoNinosRes6()
+     {
+         return view('activities.2-11-meses.FormandoNinosR.FormandoNR6');
+     }
+     public function formandoNinosResLogros()
+     {
+         return view('activities.2-11-meses.FormandoNinosR.logrosObtenidos');
+     }
+
+     public function formandoNinosResFinal(Request $request)
+     {
+        $LogrosActividad = new LogrosActividad (); 
+        $NumActividad = 5; //Numero en base de datos tabla Actividad  
+        $RelacionInfante = null ; // Por el momento enviar vacio  
+        $LogrosActividad ->Aprendido = $request->input('si/No1');
+        $LogrosActividad ->NoAprendido = $request->input('si/No2');
+        $LogrosActividad ->AplicadoCrianza = $request->input('si/No3');
+        $LogrosActividad ->NoAplicadoCrianza = $request->input('si/No4');
+        $LogrosActividad ->id_AcudienteInfante = $RelacionInfante;
+        $LogrosActividad ->id_Actividad = $NumActividad; 
+        $LogrosActividad ->save();
+         return view('activities.2-11-meses.FormandoNinosR.FormandoNRFinal');
+     }
+
+     // Actividad UN TESORO ESCONDIDO. "SOY CAPAZ DE… Y ME AMO COMO SOY”
+     public function tesoroEscondidoDesc()
+     {
+         return view('activities.2-11-meses.FormandoNinosR.intro_actividadFormandoNR');
+     }
+
 }
