@@ -113,12 +113,23 @@ Route::post('/preguntascierreposttest3', 'PostTestController@preguntasCierre3')-
 Route::post('/preguntascierreposttest4', 'PostTestController@preguntasCierre4')->name('/preguntascierreposttest4');
 Route::post('/preguntascierreposttestfinal', 'PostTestController@preguntasCierreFinal')->name('/preguntascierreposttestfinal');
 
-// Rutas actividades 
-Route::get('/actividades/{id}', 'ActivityController@index')->name('/actividades');
+
+//logros
+Route::post('/guardar-logros/{id}', 'ActivityController@guardarLogros')->name('/guardar-logros');
+
+// Rutas actividades
+Route::get('/actividad-intro-1', 'ActivityController@aprendamosResilienciaIntro')->name('/actividad-intro-1');
 Route::post('/actividades-componentes','ActivityController@goToUrl')->name('/actividades-componentes');
+Route::get('/actividades-aprendamos-resiliencia-1', 'ActivityController@index')->name('/actividades-aprendamos-resiliencia-1');
 Route::get('/actividades-aprendamosresiliencia', 'ActivityController@aprendamosDeResiliencia')->name('/actividades-aprendamosresiliencia');
 Route::get('/actividades-aprendamos-resiliencia-3', 'ActivityController@ellaEsEdithGrotberg')->name('/actividades-aprendamos-resiliencia-3');
 Route::get('/actividades-aprendamos-resiliencia-4', 'ActivityController@queSabesResiliencia')->name('/actividades-aprendamos-resiliencia-4');
+Route::get('/actividades-aprendamos-resiliencia-5', 'ActivityController@queEsResiliencia')->name('/actividades-aprendamos-resiliencia-5');
+Route::get('/actividades-aprendamos-resiliencia-6', 'ActivityController@escogerDefinicionResiliencia')->name('/actividades-aprendamos-resiliencia-6');
+Route::get('/actividades-aprendamos-resiliencia-7', 'ActivityController@verbalizacioneDeGrotberg')->name('/actividades-aprendamos-resiliencia-7');
+Route::get('/actividades-aprendamos-resiliencia-8', 'ActivityController@resilienciaEnLaCrianza')->name('/actividades-aprendamos-resiliencia-8');
+Route::get('/logros', 'ActivityController@resiliencialogros')->name('/logros');
+
 
 //Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');
 
