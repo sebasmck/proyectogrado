@@ -211,6 +211,15 @@ Route::get('/cnr_logrosObtenidos', 'ActivityController@cnr_logrosObtenidos')->na
 
 // Rutas para Actividad UN TESORO ESCONDIDO. "SOY CAPAZ DE… Y ME AMO COMO SOY”
 Route::get('/IntroTesoroEscondido', 'ActivityController@formandoNinosResDesc')->name('/IntroTesoroEscondido');
+// Rutas para Actividad COMO LOROS
+Route::get('/IntroComoLoros', 'ActivityController@comoLorosDesc')->name('/IntroComoLoros');
+// Rutas para Actividad NIÑOS RESILIENTES
+Route::get('/IntroNinosResilientes', 'ActivityController@ninosResilientesDesc')->name('/IntroNinosResilientes');
+Route::get('/NinosResilientes1', 'ActivityController@ninosResilientes1')->name('/NinosResilientes1');
+Route::get('/NinosResilientes2', 'ActivityController@ninosResilientes2')->name('/NinosResilientes2');
+Route::get('/NinosResilientes3', 'ActivityController@ninosResilientes3')->name('/NinosResilientes3');
+Route::get('/NinosResilientes4', 'ActivityController@ninosResilientes4')->name('/NinosResilientes4');
+
 // Ruta actividad digno de carino 
 Route::get('/DignoCarinoIntro' , 'ActivityController@paraDignoDecarino')->name('/DignoCarinoIntro');
 Route::get('/DignoCarino' , 'ActivityController@paraDignoDecarino2')->name('/DignoCarino');
