@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Intro Actividad Cualidades niños resilientes
+Intro Actividad Practica Sentido Del Humor
 @endsection
 
 @section('addcss')
@@ -10,6 +10,26 @@ Intro Actividad Cualidades niños resilientes
         box-sizing: border-box;
     }
 
+/* html, 
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: #eae4df;
+}
+
+body {
+ display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+} */
 
 .stage {
   width: 400px;
@@ -817,7 +837,7 @@ button:hover {
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="title animated lightSpeedIn" style="font-family: 'Raleway', sans-serif; font-size: 40px;" >
-                Actividad: Cualidades niños resilientes 
+                Actividad Aprendamos de resiliencia
             </div>
         </div> 
         
@@ -839,7 +859,7 @@ button:hover {
                                 <tbody>
                                     <tr>
                                         <td>Procesos psicosociales</td>
-                                        <td>Creencia acerca de la crianza</td>
+                                        <td>Creencias sobre de la crianza</td>
                                     </tr>
                                     <tr>
                                         <td>Competencias de padres y/o cuidadores</td>
@@ -847,11 +867,11 @@ button:hover {
                                     </tr>
                                     <tr>
                                         <td>Rasgos resilientes</td>
-                                        <td>Vínculo Afectivo</td>
+                                        <td>Vínculo afectivo</td>
                                     </tr>
                                     <tr>
                                         <td>Semana</td>
-                                        <td>5</td>
+                                        <td>1</td>
                                     </tr>
                                 <tr>
                                 </tbody>
@@ -863,26 +883,18 @@ button:hover {
                     <div class="card">
                         <div class="card-header" id="heading1">
                             <h5 class="mb-0">
-                                <button style="width:200px;" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                 <b> Descripción Actividad </b> 
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                <b> Descripción Actividad</b>
                                 </button>
                             </h5>
                         </div>
                         <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordionExample">
                             <div class="card-body" >
                             <label> 
-                            <p style="text-align:justify; text-justify: inter-word; color:black;">
-                                
-                                La semana 5 está centrada en fomentar las características de resiliencia en los niños. 
-                                El objetivo es que como cuidador entiendas cómo funciona la resiliencia, sea más fácil 
-                                fomentarla y puedas seguir desarrollando las actividades de las siguientes semanas. 
-
-                                <br>
-
-
-
-
-                            </p></label>
+                               <p style="text-align:justify; text-justify: inter-word; color:black;">
+                                 Bienvenido al programa de pautas de Crianza Resilientes para padres. Este programa se desarrolla en el transcurso de ocho semanas en las cuales se realizará una serie de actividades que fomentan habilidades resilientes aplicadas en el proceso de crianza de tu niño o niña quien finalmente será el más beneficiado.
+                                 El objetivo de esta actividad es que se conozca sobre la resiliencia y si ya se sabe un poco sobre ella, fortalecer los conocimientos y así los puedas poner en práctica.
+                               </p></label>
                             </div>
                         </div>
                     </div>
@@ -937,7 +949,7 @@ button:hover {
                 
                 <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/cnr1')}}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/actividades-aprendamos-resiliencia-1')}}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
                     </div>
                 </div><!--end .card-actionbar -->
             </div>

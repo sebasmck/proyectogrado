@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Actividad;
+use App\Cuidador;
 use App\RespuestaAbiertaActividad;
 use App\LogrosActividad;
 use App\RespuestaMultipleActividad;  
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 
 class ActivityController extends Controller
@@ -16,11 +18,9 @@ class ActivityController extends Controller
     const URL_ACTIVIDAD_1_PRENDIENDO_MOTORES = "activities.2-11-meses.aprendamos_resiliencia.prendiendo_motores";
 
 
-    // Activity: Cualidades Niños Resilientes
-
-
-    public function cnr_intro(){
-        return view('activities.2-3anos.intro_cnr');
+        public function aprendamosResilienciaIntro()
+    {
+        return view("activities.2-11-meses.aprendamos_resiliencia.intro_aprendamos_resiliencia");
     }
 
     public function cnr1(){
@@ -56,6 +56,14 @@ class ActivityController extends Controller
 
         return view(self::URL_ACTIVIDAD_1_PRENDIENDO_MOTORES);
     }
+
+    // Actividad 1
+
+    public function index(){
+        $actividad = Actividad::with('preguntaActividades.opcionPreguntaActividad')->where('Id_Actividad', 1)->first();
+        return view("activities.2-11-meses.aprendamos_resiliencia.aprendamos_resiliencia", ['Actividad' => $actividad]);
+    }
+
     public function aprendamosDeResiliencia(){
         return view("activities.2-11-meses.aprendamos_resiliencia.prendiendo_motores");
     }
@@ -66,6 +74,41 @@ class ActivityController extends Controller
 
     public function  queSabesResiliencia(){
         return view("activities.2-11-meses.aprendamos_resiliencia.que_sabes_resiliencia");
+    }
+
+    public function queEsResiliencia(){
+        return view("activities.2-11-meses.aprendamos_resiliencia.que_es_resiliencia");
+    }
+
+    public function escogerDefinicionResiliencia(){
+        return view("activities.2-11-meses.aprendamos_resiliencia.definicion_resiliencia");
+    }
+
+    public function  verbalizacioneDeGrotberg(){
+        return view("activities.2-11-meses.aprendamos_resiliencia.verbalizaciones_grotberg");
+    }
+
+    public  function resilienciaEnLaCrianza(){
+        return view("activities.2-11-meses.aprendamos_resiliencia.resiliencia_en_la_crianza");
+    }
+
+    public function resiliencialogros(){
+        return view("activities.2-11-meses.aprendamos_resiliencia.logrosObtenidos");
+    }
+
+    public function guardarLogros($id, Request $request)
+    {
+        $LogrosActividad = new LogrosActividad ();
+        $NumActividad = $id; //Numero en base de datos tabla Actividad
+        $RelacionInfante = null ; // Por el momento enviar vacio
+        $LogrosActividad ->Aprendido = $request->input('si/No1');
+        $LogrosActividad ->NoAprendido = $request->input('si/No2');
+        $LogrosActividad ->AplicadoCrianza = $request->input('si/No3');
+        $LogrosActividad ->NoAplicadoCrianza = $request->input('si/No4');
+        $LogrosActividad ->id_AcudienteInfante = $RelacionInfante;
+        $LogrosActividad ->id_Actividad = $NumActividad;
+        $LogrosActividad ->save();
+        $this->index();
     }
 
     //Actividad Practica Sentido Del Humor
@@ -165,6 +208,7 @@ class ActivityController extends Controller
         $LogrosActividad ->save();
         return view('activities.2-11-meses.Creando_Confianza.CreandoConfianzaFinal');
     }
+    //Actividad hasta el final
     public function paraActividadHastaElFinal(){
         return view('activities.2anos_2anos11meses.hasta_el_final.hasta_final_intro');
     }
@@ -249,6 +293,7 @@ class ActivityController extends Controller
      {
          return view('activities.3-11-meses.NinosResilientes.intro_NinosResilientes');
      }
+     // Activity: Cualidades Niños Resilientes
 
      public function ninosResilientes1()
      {
@@ -269,4 +314,83 @@ class ActivityController extends Controller
          return view('activities.3-11-meses.NinosResilientes.NinosResilientes4');
      }
 
+
+    public function cnr_intro(){
+        return view('activities.2-3anos.intro_cnr');
+    }
+
+    public function cnr1(){
+        return view('activities.2-3anos.cnr1');
+    }
+
+    public function cnr2(){
+        return view('activities.2-3anos.cnr2');
+    }
+
+    public function cnr3(){
+        return view('activities.2-3anos.cnr3');
+    }
+
+    public function cnr4(){
+        return view('activities.2-3anos.cnr4');
+    }
+
+    
+
+
+    
+    //Actividad elije lo que mas te guste
+    public function loQueMasTeGuste(){
+        return view('activities.2-11-meses.Mas_Te_Guste.intro_actividad_mas_te_guste');
+    }
+
+    public function loQueMasTeGuste2(){
+        return view('activities.2-11-meses.Mas_Te_Guste.actividad_mas_te_guste');
+    }
+
+    public function loQueMasTeGuste3(){
+        return view('activities.2-11-meses.Mas_Te_Guste.actividad_mas_te_guste_2');
+    }
+
+    //Subir y bajar archivos via FTP
+    public function ftpTest(){
+        $pathFiles = 'module_table_bottom.png';
+        
+        $file = Storage::disk('ftp')->download($pathFiles);
+        return $file;
+    }
+
+    public function ftpUpImagesActivityLoQueMasTGuste(Request $request){
+        $id_usuario = auth()->id();
+        $acudiente = Cuidador::where('id_usuario', $id_usuario)->value('Id_Acudiente');
+
+        $pathFiles = 'Images/ActivityMasTGuste/'.$acudiente;
+        var_dump($acudiente);
+
+        for($i=1;$i<10;$i++){
+        
+            $file = $request->file('fileToUpload'.$i);
+            Storage::disk('ftp')->put($pathFiles , $file);
+        }
+
+        return $request;
+    }
+     
+    //Actividad elije lo que mas te guste
+    public function paraDignoDecarino(){
+        return view('activities.2-11-meses.Digno_De_Carino.intro_digno_de_carino');
+    }
+
+    public function paraDignoDecarino2(){
+        return view('activities.2-11-meses.Digno_De_Carino.digno_de_carino');
+    }
+
+    public function paraDignoDecarino3(){
+        return view('activities.2-11-meses.Digno_De_Carino.digno_de_carino_3');
+    }
+
+    //Actividad el Mimo
+    public function paraElmimo(){
+        return view('activities.2-11-meses.El_mimo.intro_el_mimo');
+    }
 }

@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Intro Actividad Cualidades niños resilientes
+Intro Actividad Digno de cariño
 @endsection
 
 @section('addcss')
@@ -10,6 +10,26 @@ Intro Actividad Cualidades niños resilientes
         box-sizing: border-box;
     }
 
+/* html, 
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: #eae4df;
+}
+
+body {
+ display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+} */
 
 .stage {
   width: 400px;
@@ -817,7 +837,7 @@ button:hover {
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="title animated lightSpeedIn" style="font-family: 'Raleway', sans-serif; font-size: 40px;" >
-                Actividad: Cualidades niños resilientes 
+                Actividad digno de cariño
             </div>
         </div> 
         
@@ -839,19 +859,19 @@ button:hover {
                                 <tbody>
                                     <tr>
                                         <td>Procesos psicosociales</td>
-                                        <td>Creencia acerca de la crianza</td>
+                                        <td>Practica De Crianza</td>
                                     </tr>
                                     <tr>
                                         <td>Competencias de padres y/o cuidadores</td>
-                                        <td>Aporte Educativo</td>
+                                        <td>Aporte afectivo y cuidado</td>
                                     </tr>
                                     <tr>
                                         <td>Rasgos resilientes</td>
-                                        <td>Vínculo Afectivo</td>
+                                        <td>Autonomía</td>
                                     </tr>
                                     <tr>
                                         <td>Semana</td>
-                                        <td>5</td>
+                                        <td>3</td>
                                     </tr>
                                 <tr>
                                 </tbody>
@@ -863,26 +883,26 @@ button:hover {
                     <div class="card">
                         <div class="card-header" id="heading1">
                             <h5 class="mb-0">
-                                <button style="width:200px;" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                 <b> Descripción Actividad </b> 
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                <b> Descripción Actividad</b>
                                 </button>
                             </h5>
                         </div>
                         <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordionExample">
                             <div class="card-body" >
                             <label> 
-                            <p style="text-align:justify; text-justify: inter-word; color:black;">
-                                
-                                La semana 5 está centrada en fomentar las características de resiliencia en los niños. 
-                                El objetivo es que como cuidador entiendas cómo funciona la resiliencia, sea más fácil 
-                                fomentarla y puedas seguir desarrollando las actividades de las siguientes semanas. 
+                               <p style="text-align:justify; text-justify: inter-word; color:black;">
+                               A medida que los niños y niñas crecen aprenden a identificar las muestras de cariño como lo son las expresiones 
+                               faciales de la madre al nacer respondiendo con sonrisas, con gritos de felicidad o buscando la proximidad física.
 
-                                <br>
+                               Algunas veces como cuidadores y por la etapa en la que se encuentran la niña o el niño se olvida como expresarle 
+                               el amor al punto de avergonzarse por solo decir un “te quiero”. 
 
+                               El objetivo de la actividad de esta semana es implementar nuevas técnicas para darle a los niños y niñas todo
+                               el cariño que se merecen y hacerle sentir una persona que es digna de aprecio y cariño. Por eso se te invita a
+                               realizar la siguiente actividad.
 
-
-
-                            </p></label>
+                                </p></label>
                             </div>
                         </div>
                     </div>
@@ -937,7 +957,7 @@ button:hover {
                 
                 <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/cnr1')}}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/DignoCarino')}}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
                     </div>
                 </div><!--end .card-actionbar -->
             </div>

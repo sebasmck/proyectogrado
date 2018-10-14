@@ -113,12 +113,23 @@ Route::post('/preguntascierreposttest3', 'PostTestController@preguntasCierre3')-
 Route::post('/preguntascierreposttest4', 'PostTestController@preguntasCierre4')->name('/preguntascierreposttest4');
 Route::post('/preguntascierreposttestfinal', 'PostTestController@preguntasCierreFinal')->name('/preguntascierreposttestfinal');
 
-// Rutas actividades 
-Route::get('/actividades/{id}', 'ActivityController@index')->name('/actividades');
+
+//logros
+Route::post('/guardar-logros/{id}', 'ActivityController@guardarLogros')->name('/guardar-logros');
+
+// Rutas actividades
+Route::get('/actividad-intro-1', 'ActivityController@aprendamosResilienciaIntro')->name('/actividad-intro-1');
 Route::post('/actividades-componentes','ActivityController@goToUrl')->name('/actividades-componentes');
+Route::get('/actividades-aprendamos-resiliencia-1', 'ActivityController@index')->name('/actividades-aprendamos-resiliencia-1');
 Route::get('/actividades-aprendamosresiliencia', 'ActivityController@aprendamosDeResiliencia')->name('/actividades-aprendamosresiliencia');
 Route::get('/actividades-aprendamos-resiliencia-3', 'ActivityController@ellaEsEdithGrotberg')->name('/actividades-aprendamos-resiliencia-3');
 Route::get('/actividades-aprendamos-resiliencia-4', 'ActivityController@queSabesResiliencia')->name('/actividades-aprendamos-resiliencia-4');
+Route::get('/actividades-aprendamos-resiliencia-5', 'ActivityController@queEsResiliencia')->name('/actividades-aprendamos-resiliencia-5');
+Route::get('/actividades-aprendamos-resiliencia-6', 'ActivityController@escogerDefinicionResiliencia')->name('/actividades-aprendamos-resiliencia-6');
+Route::get('/actividades-aprendamos-resiliencia-7', 'ActivityController@verbalizacioneDeGrotberg')->name('/actividades-aprendamos-resiliencia-7');
+Route::get('/actividades-aprendamos-resiliencia-8', 'ActivityController@resilienciaEnLaCrianza')->name('/actividades-aprendamos-resiliencia-8');
+Route::get('/logros', 'ActivityController@resiliencialogros')->name('/logros');
+
 
 //Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');
 
@@ -182,12 +193,21 @@ Route::get('/FormandoNR5', 'ActivityController@formandoNinosRes5')->name('/Forma
 Route::get('/FormandoNR6', 'ActivityController@formandoNinosRes6')->name('/FormandoNR6');
 Route::get('/FormandoNR7', 'ActivityController@formandoNinosResLogros')->name('/FormandoNR7');
 Route::Post('/FormandoNR8', 'ActivityController@formandoNinosResFinal')->name('/FormandoNR8');
+// Descarga y subir archivos via ftp 
+Route::get('/testFtp' , 'ActivityController@ftpTest')->name('/testFtp');
+Route::post('/ftpUpImagesActivityLoQueMasTGuste' , 'ActivityController@ftpUpImagesActivityLoQueMasTGuste')->name('/ftpUpImagesActivityLoQueMasTGuste');
 
+// Ruta actividad elije lo que mas te guste
+Route::get('/MasTeGuste' , 'ActivityController@loQueMasTeGuste')->name('/MasTeGuste');
+Route::get('/MasTeGuste2' , 'ActivityController@loQueMasTeGuste2')->name('/MasTeGuste2');
+Route::get('/MasTeGuste3' , 'ActivityController@loQueMasTeGuste3')->name('/MasTeGuste3');
 
 Route::get('/cnr_intro', 'ActivityController@cnr_intro')->name('/cnr_intro');
 Route::get('/cnr1', 'ActivityController@cnr1')->name('/cnr1');
 Route::get('/cnr2', 'ActivityController@cnr2')->name('/cnr2');
 Route::get('/cnr3', 'ActivityController@cnr3')->name('/cnr3');
+Route::get('/cnr3', 'ActivityController@cnr4')->name('/cnr4');
+// Route::get('/cnr3', 'ActivityController@cnr3')->name('/cnr3');
 
 // Rutas para Actividad UN TESORO ESCONDIDO. "SOY CAPAZ DE… Y ME AMO COMO SOY”
 Route::get('/IntroTesoroEscondido', 'ActivityController@formandoNinosResDesc')->name('/IntroTesoroEscondido');
@@ -199,3 +219,12 @@ Route::get('/NinosResilientes1', 'ActivityController@ninosResilientes1')->name('
 Route::get('/NinosResilientes2', 'ActivityController@ninosResilientes2')->name('/NinosResilientes2');
 Route::get('/NinosResilientes3', 'ActivityController@ninosResilientes3')->name('/NinosResilientes3');
 Route::get('/NinosResilientes4', 'ActivityController@ninosResilientes4')->name('/NinosResilientes4');
+
+// Ruta actividad digno de carino 
+Route::get('/DignoCarinoIntro' , 'ActivityController@paraDignoDecarino')->name('/DignoCarinoIntro');
+Route::get('/DignoCarino' , 'ActivityController@paraDignoDecarino2')->name('/DignoCarino');
+Route::get('/DignoCarino2' , 'ActivityController@paraDignoDecarino3')->name('/DignoCarino2');
+
+//Ruta actividad el Mimo
+Route::get('/ElmimoIntro' , 'ActivityController@paraElmimo')->name('/ElmimoIntro');
+
