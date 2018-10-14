@@ -23,13 +23,13 @@ CUALIDADES NIÑOS RESILIENTES
 
                 <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;">
                     <label>
-                        <p style="text-align:justify; text-justify: inter-word;"> Cuando presto atención es cuando
-                            entiendo yo: </p>
+                        <p style="text-align:justify; text-justify: inter-word;"> <b> Ven a ver el siguiente video </b> </p>
                     </label>
                 </div>
 
 
                 <div class="col-md-8">
+                
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/DAkLbUwoqMo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
 

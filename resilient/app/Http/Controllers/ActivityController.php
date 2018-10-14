@@ -23,24 +23,12 @@ class ActivityController extends Controller
         return view("activities.2-11-meses.aprendamos_resiliencia.intro_aprendamos_resiliencia");
     }
 
-    public function cnr1(){
-        return view('activities.2-3anos.cnr1');
-    }
-
-    public function cnr2(){
-        return view('activities.2-3anos.cnr2');
-    }
-
-    public function cnr3(){
-        return view('activities.2-3anos.cnr3');
-    }
-
-
-    public function index($id)
-    {
-        $actividad = Actividad::with('preguntaActividades.opcionPreguntaActividad')->where('Id_Actividad', $id)->first();
-        return view($actividad->View_Actividad, ['Actividad' => $actividad]);
-    }
+   
+    // public function index($id)
+    // {
+    //     $actividad = Actividad::with('preguntaActividades.opcionPreguntaActividad')->where('Id_Actividad', $id)->first();
+    //     return view($actividad->View_Actividad, ['Actividad' => $actividad]);
+    // }
 
     public function actividad(Request $request,$id){
         $actividad  = Actividad::where('Id_Actividad',$id)->get();
@@ -315,30 +303,6 @@ class ActivityController extends Controller
      }
 
 
-    public function cnr_intro(){
-        return view('activities.2-3anos.intro_cnr');
-    }
-
-    public function cnr1(){
-        return view('activities.2-3anos.cnr1');
-    }
-
-    public function cnr2(){
-        return view('activities.2-3anos.cnr2');
-    }
-
-    public function cnr3(){
-        return view('activities.2-3anos.cnr3');
-    }
-
-    public function cnr4(){
-        return view('activities.2-3anos.cnr4');
-    }
-
-    public function cnr_logrosObtenidos(){
-        return view('activities.2-3anos.cnr_logrosObtenidos');
-    }
-
     //Actividad elije lo que mas te guste
     public function loQueMasTeGuste(){
         return view('activities.2-11-meses.Mas_Te_Guste.intro_actividad_mas_te_guste');
@@ -393,4 +357,38 @@ class ActivityController extends Controller
     public function paraElmimo(){
         return view('activities.2-11-meses.El_mimo.intro_el_mimo');
     }
+
+
+// Actividad cualidades ninos resilientes
+
+    public function cnr_intro(){
+        return view('activities.2-3anos.intro_cnr');
+    }
+
+    public function cnr1(){
+        return view('activities.2-3anos.cnr1');
+    }
+
+    public function cnr2(){
+        return view('activities.2-3anos.cnr2');
+    }
+
+    public function cnr3(){
+        return view('activities.2-3anos.cnr3');
+    }
+
+    public function cnr4(){
+        return view('activities.2-3anos.cnr4');
+    }
+
+    public function cnr_logrosObtenidos(){
+        return view('activities.2-3anos.cnr_logrosObtenidos');
+    }
+
+    public function CulminadoActividadCnr(){
+        return view('activities.2-3anos.CulminadoActividadCnr');
+    }
+
+
+
 }

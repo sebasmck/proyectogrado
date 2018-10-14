@@ -7,36 +7,74 @@ CUALIDADES NIÑOS RESILIENTES
 @section('addcss')
 
 <style>
-    .objects {
-        display:inline-table;
-        background-color: #FFF3CC;
-        border: #DFBC6A 1px solid;
-        width: 150px; 
-        height: 30px;
-        margin: 10px;
-        padding: 8px;
-        font-size: 12px;
-        text-align: center;
-        box-shadow: 2px 2px 2px #999;
-        cursor: move;
-    }
-    #drop_zone {
-        background-color: #EEE; 
-        border: #999 1px solid;
-        width: 280px; 
-        height: 700px;
-        padding: 8px;
-        font-size: 18px;
-    }
 
-    .row, b{
-        margin-bottom: 30px;
-    }
+    ul {
+  list-style-type: none;
+}
 
-    #qualities{
-        margin-right: 25px;
-    }
-    </style>
+li {
+  display: inline-block;
+}
+
+input[type="checkbox"][id^="cb"] {
+  display: none;
+}
+
+label {
+  border: 1px solid #fff;
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+
+label::before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+label img {
+  height: 100px;
+  width: 150px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked + label {
+  border-color: #ddd;
+}
+
+:checked + label::before {
+  content: "✓";
+  background-color: grey;
+  transform: scale(1);
+}
+
+:checked + label img {
+  transform: scale(0.9);
+  box-shadow: 0 0 5px #333;
+  z-index: -1;
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(0.9); }
+
+
+</style>
 
 @endsection
 
@@ -52,47 +90,52 @@ CUALIDADES NIÑOS RESILIENTES
 
             <div class="card-body floating-label">
 
-            <div class="row">
-                <div class="col-md-12">
-                    A continuación, encontrarás la lista de cualidades 
-                    resilientes que encontraste en el video. Aunque en 
-                    el video se presentan en un orden y se sabe que cada 
-                    una asume un papel fundamental se quiere que tú 
-                    realices tu propia lista de cualidades resilientes 
-                    en niños.
-
+                <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;">
+                    <label>
+                        <p style="text-align:justify; text-justify: inter-word;"> <b>
+                                Ahora que realizaste el listado de las características
+                                de los niños resilientes, se te invita a seleccionar 3
+                                de las características que te gustaría implementar en
+                                esta semana: </b> </p>
+                    </label>
+                </div>
+                <br>
+                <div>
+                    <ul>
+                        <li><input type="checkbox" id="cb1" />
+                            <label class="grow" for="cb1"><img src="{{asset('ActividadCnr/cnr_1.png')}}" /></label>
+                        </li>
+                        <li><input type="checkbox" id="cb2" />
+                            <label class="grow" for="cb2"><img src="{{asset('ActividadCnr/cnr_2.png')}}" /></label>
+                        </li>
+                        <li><input type="checkbox" id="cb3" />
+                            <label class="grow" for="cb3"><img src="{{asset('ActividadCnr/cnr_3.png')}}" /></label>
+                        </li>
+                        <li><input type="checkbox" id="cb4" />
+                            <label class="grow" for="cb4"><img src="{{asset('ActividadCnr/cnr_4.png')}}" /></label>
+                        </li>
+                        <li><input type="checkbox" id="cb5" />
+                            <label class="grow" for="cb5"><img src="{{asset('ActividadCnr/cnr_5.png')}}" /></label>
+                        </li>
+                        <li><input type="checkbox" id="cb6" />
+                            <label class="grow" for="cb6"><img src="{{asset('ActividadCnr/cnr_6.png')}}" /></label>
+                        </li>
+                        <li><input type="checkbox" id="cb7" />
+                            <label class="grow" for="cb7"><img src="{{asset('ActividadCnr/cnr_7.png')}}" /></label>
+                        </li>
+                        <li><input type="checkbox" id="cb8" />
+                            <label class="grow" for="cb8"><img src="{{asset('ActividadCnr/cnr_8.png')}}" /></label>
+                        </li>
+                        <li><input type="checkbox" id="cb9" />
+                            <label class="grow" for="cb9"><img src="{{asset('ActividadCnr/cnr_9.png')}}" /></label>
+                        </li>
+                        <li><input type="checkbox" id="cb10" />
+                            <label class="grow" for="cb10"><img src="{{asset('ActividadCnr/cnr_10.png')}}" /></label>
+                        </li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="col-md-7">
-                <div id="drop_zone" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)" ></div>
-            </div>
-               
-            <div class="col-md-5">
-
-               <div id="qualities">
-                    <b>Cualidades resilientes</b>
-                    <hr>
-    
-                    <div id="object1" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Lazos fuertes</div>
-                    <div id="object2" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Ser buenos amigos</div>
-                    <div id="object3" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Responsabilidad con sus actividades</div>
-                    <div id="object4" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Responsabilidad propia</div>
-                    <div id="object5" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Alegria y buen humor</div>
-                    <div id="object7" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Apoyo de padres</div>
-                    <div id="object8" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Desarrollo de su caracter</div>
-                    <div id="object9" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Comportamiento en social</div>
-                    <div id="object10" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Trabajo comunitario</div>
-                    <div id="object11" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Resaltar puntos fuertes</div>
-               </div> 
-                
-            </div>
-
-                <!-- <hr>
-                <button onclick="readDropZone()">Get Object Data</button> -->
-
-            </div>
-
+            <!--end .card -->
 
             <div class="card-actionbar">
                 <div class="card-actionbar-row">
@@ -105,50 +148,12 @@ CUALIDADES NIÑOS RESILIENTES
 </div>
 
 @endsection
-
-@section('addjs')
-
+{{-- @section('addjs')
 <script>
-
-function _(id){
-   return document.getElementById(id);	
-}
-
-var droppedIn = false;
-
-function drag_start(event) {
-    // _('app_status').innerHTML = "Dragging the "+event.target.getAttribute('id');
-    document.getElementsByClassName("objects").innerHTML = "Dragging the "+event.target.getAttribute('id');
-    event.dataTransfer.dropEffect = "move";
-    event.dataTransfer.setData("text", event.target.getAttribute('id') );
-}
-function drag_enter(event) {
-    document.getElementsByClassName("objects").innerHTML = "You are dragging over the "+event.target.getAttribute('id');
-}
-function drag_leave(event) {
-    document.getElementsByClassName("objects").innerHTML = "You left the "+event.target.getAttribute('id');
-}
-function drag_drop(event) {
-    event.preventDefault(); /* Prevent undesirable default behavior while dropping */
-    var elem_id = event.dataTransfer.getData("text");
-    event.target.appendChild( _(elem_id) );
-    document.getElementsByClassName("objects").innerHTML = "Dropped "+elem_id+" into the "+event.target.getAttribute('id');
-    _(elem_id).removeAttribute("draggable");
-    _(elem_id).style.cursor = "default";
-    droppedIn = true;
-}
-function drag_end(event) {
-    if(droppedIn == false){
-        _('app_status').innerHTML = "You let the "+event.target.getAttribute('id')+" go.";
-    }
-	droppedIn = false;
-}
-function readDropZone(){
-    for(var i=0; i < _("drop_zone").children.length; i++){
-        alert(_("drop_zone").children[i].id+" is in the drop zone");
-    }
-    /* Run Ajax request to pass any data to your server */
-}
-
+    var tl = new TimelineLite();
+    avatar = $('.avatar');
+        //  content = $('.content-card');
+        // tl.to(title, 1.5, {y:10});
+        // tl.from(card1, .3, {left:100, opacity:0});  
 </script>
-@endsection
+@endsection --}}

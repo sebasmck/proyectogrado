@@ -208,6 +208,7 @@ Route::get('/cnr2', 'ActivityController@cnr2')->name('/cnr2');
 Route::get('/cnr3', 'ActivityController@cnr3')->name('/cnr3');
 Route::get('/cnr4', 'ActivityController@cnr4')->name('/cnr4');
 Route::get('/cnr_logrosObtenidos', 'ActivityController@cnr_logrosObtenidos')->name('/cnr_logrosObtenidos');
+Route::get('/cnr_culminado', "ActivityController@CulminadoActividadCnr")->name('/cnr_culminado');
 
 // Rutas para Actividad UN TESORO ESCONDIDO. "SOY CAPAZ DE… Y ME AMO COMO SOY”
 Route::get('/IntroTesoroEscondido', 'ActivityController@formandoNinosResDesc')->name('/IntroTesoroEscondido');

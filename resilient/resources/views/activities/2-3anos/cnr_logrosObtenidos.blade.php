@@ -4,7 +4,7 @@ Logros Obtenidos
 @endsection
 @section('content')
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form" method="POST" action="{{route('/FormandoNR8')}}">
+        {{--  <form class="form" method="POST" action="{{route('/cnr_culminado')}}">  --}}
         {{csrf_field()}}
             <div class="card">
 
@@ -56,7 +56,14 @@ Logros Obtenidos
 
         </div><!--end .card -->
             
-        </form>
+        {{--  </form>  --}}
+
+        <div class="card-actionbar">
+                <div class="card-actionbar-row">
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/cnr_culminado')}}"> <button type="button"
+                            class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                </div>
+            </div>
     </div>
 
 @endsection

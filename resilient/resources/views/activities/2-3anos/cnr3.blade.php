@@ -4,6 +4,42 @@
 CUALIDADES NIÑOS RESILIENTES
 @endsection
 
+@section('addcss')
+
+<style>
+    .objects {
+        display:inline-table;
+        background-color: #FFF3CC;
+        border: #DFBC6A 1px solid;
+        width: 150px; 
+        height: 30px;
+        margin: 10px;
+        padding: 8px;
+        font-size: 12px;
+        text-align: center;
+        box-shadow: 2px 2px 2px #999;
+        cursor: move;
+    }
+    #drop_zone {
+        background-color: #EEE; 
+        border: #999 1px solid;
+        width: 280px; 
+        height: 700px;
+        padding: 8px;
+        font-size: 18px;
+    }
+
+    .row, b{
+        margin-bottom: 30px;
+    }
+
+    #qualities{
+        margin-right: 25px;
+    }
+    </style>
+
+@endsection
+
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
@@ -16,65 +52,47 @@ CUALIDADES NIÑOS RESILIENTES
 
             <div class="card-body floating-label">
 
-                <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:#008efd;">
-                    <p style="text-align:center; text-justify: inter-word;"><b>Desarrollo Actividad</b></p>
-                    <img class="pull-right" src="{{asset('img/avatar.png')}}" alt="avatar">
+            <div class="row">
+                <div class="col-md-12">
+                    A continuación, encontrarás la lista de cualidades 
+                    resilientes que encontraste en el video. Aunque en 
+                    el video se presentan en un orden y se sabe que cada 
+                    una asume un papel fundamental se quiere que tú 
+                    realices tu propia lista de cualidades resilientes 
+                    en niños.
+
                 </div>
+            </div>
 
-                <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;">
-                    <label>
-                        <p style="text-align:justify; text-justify: inter-word;"> Cuando presto atención es cuando
-                            entiendo yo: </p>
-                    </label>
-                </div>
+            <div class="col-md-7">
+                <div id="drop_zone" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)" ></div>
+            </div>
+               
+            <div class="col-md-5">
 
+               <div id="qualities">
+                    <b>Cualidades resilientes</b>
+                    <hr>
+    
+                    <div id="object1" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Lazos fuertes</div>
+                    <div id="object2" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Ser buenos amigos</div>
+                    <div id="object3" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Responsabilidad con sus actividades</div>
+                    <div id="object4" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Responsabilidad propia</div>
+                    <div id="object5" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Alegria y buen humor</div>
+                    <div id="object7" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Apoyo de padres</div>
+                    <div id="object8" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Desarrollo de su caracter</div>
+                    <div id="object9" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Comportamiento en social</div>
+                    <div id="object10" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Trabajo comunitario</div>
+                    <div id="object11" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Resaltar puntos fuertes</div>
+               </div> 
+                
+            </div>
 
-                <div class="col-md-8">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/DAkLbUwoqMo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-
-                <div>
-
-                    <div>
-
-                        <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;">
-                            <!--Acordion 1 empieza -->
-                            {{-- <div class="accordion" id="accordionExample">
-                                <div class="card">
-                                    <div class="card-header" id="heading1">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                                data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                                <b> Nota Importante Actividad</b>
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            <label>
-                                                <p style="text-align:justify; text-justify: inter-word; color:black;">
-                                                    A continuación, encontraras 3 situaciones en donde utilizará cada
-                                                    uno de los materiales solicitados.
-                                                    Con ellos te pediremos que generes situaciones específicas en donde
-                                                    podremos enseñarle a tu niño o niña
-                                                    cómo reírse de las desventuras.
-                                                </p>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> --}}
-                            <!--Acordion 1 Finaliza -->
-
-                        </div>
-
-                    </div> {{-- card-body no padding --}}
-                </div>
-                <!--end .card-body -->
-
+                <!-- <hr>
+                <button onclick="readDropZone()">Get Object Data</button> -->
 
             </div>
-            <!--end .card -->
+
 
             <div class="card-actionbar">
                 <div class="card-actionbar-row">
@@ -87,12 +105,50 @@ CUALIDADES NIÑOS RESILIENTES
 </div>
 
 @endsection
-{{-- @section('addjs')
+
+@section('addjs')
+
 <script>
-    var tl = new TimelineLite();
-    avatar = $('.avatar');
-        //  content = $('.content-card');
-        // tl.to(title, 1.5, {y:10});
-        // tl.from(card1, .3, {left:100, opacity:0});  
+
+function _(id){
+   return document.getElementById(id);	
+}
+
+var droppedIn = false;
+
+function drag_start(event) {
+    // _('app_status').innerHTML = "Dragging the "+event.target.getAttribute('id');
+    document.getElementsByClassName("objects").innerHTML = "Dragging the "+event.target.getAttribute('id');
+    event.dataTransfer.dropEffect = "move";
+    event.dataTransfer.setData("text", event.target.getAttribute('id') );
+}
+function drag_enter(event) {
+    document.getElementsByClassName("objects").innerHTML = "You are dragging over the "+event.target.getAttribute('id');
+}
+function drag_leave(event) {
+    document.getElementsByClassName("objects").innerHTML = "You left the "+event.target.getAttribute('id');
+}
+function drag_drop(event) {
+    event.preventDefault(); /* Prevent undesirable default behavior while dropping */
+    var elem_id = event.dataTransfer.getData("text");
+    event.target.appendChild( _(elem_id) );
+    document.getElementsByClassName("objects").innerHTML = "Dropped "+elem_id+" into the "+event.target.getAttribute('id');
+    _(elem_id).removeAttribute("draggable");
+    _(elem_id).style.cursor = "default";
+    droppedIn = true;
+}
+function drag_end(event) {
+    if(droppedIn == false){
+        _('app_status').innerHTML = "You let the "+event.target.getAttribute('id')+" go.";
+    }
+	droppedIn = false;
+}
+function readDropZone(){
+    for(var i=0; i < _("drop_zone").children.length; i++){
+        alert(_("drop_zone").children[i].id+" is in the drop zone");
+    }
+    /* Run Ajax request to pass any data to your server */
+}
+
 </script>
-@endsection --}}
+@endsection
