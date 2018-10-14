@@ -362,33 +362,33 @@ class ActivityController extends Controller
 // Actividad cualidades ninos resilientes
 
     public function cnr_intro(){
-        return view('activities.2-3anos.intro_cnr');
+        return view('activities.2-3anos.cnr.intro_cnr');
     }
 
     public function cnr1(){
-        return view('activities.2-3anos.cnr1');
+        return view('activities.2-3anos.cnr.cnr1');
     }
 
     public function cnr2(){
-        return view('activities.2-3anos.cnr2');
+        return view('activities.2-3anos.cnr.cnr2');
     }
 
     public function cnr3(){
-        return view('activities.2-3anos.cnr3');
+        return view('activities.2-3anos.cnr.cnr3');
     }
 
     public function cnr4(){
-        return view('activities.2-3anos.cnr4');
+        return view('activities.2-3anos.cnr.cnr4');
     }
 
     public function cnr_logrosObtenidos(){
-        return view('activities.2-3anos.cnr_logrosObtenidos');
+        return view('activities.2-3anos.cnr.cnr_logrosObtenidos');
     }
 
     public function CulminadoActividadCnr(){
-        return view('activities.2-3anos.CulminadoActividadCnr');
+        return view('activities.2-3anos.cnr.CulminadoActividadCnr');
     }
-
+    
 
 
 }
