@@ -287,10 +287,10 @@ class ActivityController extends Controller
         return view('activities.2-3anos.cnr4');
     }
 
-    
+    public function cnr_logrosObtenidos(){
+        return view('activities.2-3anos.cnr_logrosObtenidos');
+    }
 
-
-    
     //Actividad elije lo que mas te guste
     public function loQueMasTeGuste(){
         return view('activities.2-11-meses.Mas_Te_Guste.intro_actividad_mas_te_guste');
