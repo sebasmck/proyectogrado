@@ -388,6 +388,39 @@ class ActivityController extends Controller
     public function CulminadoActividadCnr(){
         return view('activities.2-3anos.cnr.CulminadoActividadCnr');
     }
+
+
+    // Actividad Las emociones de mis padres
+
+    public function lenp_intro(){
+        return view('activities.2-3anos.lenp.intro_lenp');
+    }
+
+    public function lenp1(){
+        return view('activities.2-3anos.lenp.lenp1');
+    }
+
+    public function lenp2(){
+        return view('activities.2-3anos.lenp.lenp2');
+    }
+
+    public function lenp3(){
+        return view('activities.2-3anos.lenp.lenp3');
+    }
+
+    public function lenp4(){
+        return view('activities.2-3anos.lenp.lenp4');
+    }
+
+    public function lenp_logrosObtenidos(){
+        return view('activities.2-3anos.lenp.lenp_logrosObtenidos');
+    }
+
+    public function CulminadoActividadLenp(){
+        return view('activities.2-3anos.lenp.CulminadoActividadLenp');
+    }
+
+
     
 
 
