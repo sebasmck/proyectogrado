@@ -193,7 +193,14 @@ Route::get('/FormandoNR5', 'ActivityController@formandoNinosRes5')->name('/Forma
 Route::get('/FormandoNR6', 'ActivityController@formandoNinosRes6')->name('/FormandoNR6');
 Route::get('/FormandoNR7', 'ActivityController@formandoNinosResLogros')->name('/FormandoNR7');
 Route::Post('/FormandoNR8', 'ActivityController@formandoNinosResFinal')->name('/FormandoNR8');
+// Descarga y subir archivos via ftp 
+Route::get('/testFtp' , 'ActivityController@ftpTest')->name('/testFtp');
+Route::post('/ftpUpImagesActivityLoQueMasTGuste' , 'ActivityController@ftpUpImagesActivityLoQueMasTGuste')->name('/ftpUpImagesActivityLoQueMasTGuste');
 
+// Ruta actividad elije lo que mas te guste
+Route::get('/MasTeGuste' , 'ActivityController@loQueMasTeGuste')->name('/MasTeGuste');
+Route::get('/MasTeGuste2' , 'ActivityController@loQueMasTeGuste2')->name('/MasTeGuste2');
+Route::get('/MasTeGuste3' , 'ActivityController@loQueMasTeGuste3')->name('/MasTeGuste3');
 
 Route::get('/cnr_intro', 'ActivityController@cnr_intro')->name('/cnr_intro');
 Route::get('/cnr1', 'ActivityController@cnr1')->name('/cnr1');
@@ -204,3 +211,11 @@ Route::get('/cnr3', 'ActivityController@cnr4')->name('/cnr4');
 
 // Rutas para Actividad UN TESORO ESCONDIDO. "SOY CAPAZ DE… Y ME AMO COMO SOY”
 Route::get('/IntroTesoroEscondido', 'ActivityController@formandoNinosResDesc')->name('/IntroTesoroEscondido');
+// Ruta actividad digno de carino 
+Route::get('/DignoCarinoIntro' , 'ActivityController@paraDignoDecarino')->name('/DignoCarinoIntro');
+Route::get('/DignoCarino' , 'ActivityController@paraDignoDecarino2')->name('/DignoCarino');
+Route::get('/DignoCarino2' , 'ActivityController@paraDignoDecarino3')->name('/DignoCarino2');
+
+//Ruta actividad el Mimo
+Route::get('/ElmimoIntro' , 'ActivityController@paraElmimo')->name('/ElmimoIntro');
+

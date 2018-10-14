@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Actividad;
+use App\Cuidador;
 use App\RespuestaAbiertaActividad;
 use App\LogrosActividad;
 use App\RespuestaMultipleActividad;  
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 
 class ActivityController extends Controller
@@ -187,6 +189,7 @@ class ActivityController extends Controller
         $LogrosActividad ->save();
         return view('activities.2-11-meses.Creando_Confianza.CreandoConfianzaFinal');
     }
+    //Actividad hasta el final
     public function paraActividadHastaElFinal(){
         return view('activities.2anos_2anos11meses.hasta_el_final.hasta_final_intro');
     }
@@ -287,4 +290,59 @@ class ActivityController extends Controller
     
 
 
+    
+    //Actividad elije lo que mas te guste
+    public function loQueMasTeGuste(){
+        return view('activities.2-11-meses.Mas_Te_Guste.intro_actividad_mas_te_guste');
+    }
+
+    public function loQueMasTeGuste2(){
+        return view('activities.2-11-meses.Mas_Te_Guste.actividad_mas_te_guste');
+    }
+
+    public function loQueMasTeGuste3(){
+        return view('activities.2-11-meses.Mas_Te_Guste.actividad_mas_te_guste_2');
+    }
+
+    //Subir y bajar archivos via FTP
+    public function ftpTest(){
+        $pathFiles = 'module_table_bottom.png';
+        
+        $file = Storage::disk('ftp')->download($pathFiles);
+        return $file;
+    }
+
+    public function ftpUpImagesActivityLoQueMasTGuste(Request $request){
+        $id_usuario = auth()->id();
+        $acudiente = Cuidador::where('id_usuario', $id_usuario)->value('Id_Acudiente');
+
+        $pathFiles = 'Images/ActivityMasTGuste/'.$acudiente;
+        var_dump($acudiente);
+
+        for($i=1;$i<10;$i++){
+        
+            $file = $request->file('fileToUpload'.$i);
+            Storage::disk('ftp')->put($pathFiles , $file);
+        }
+
+        return $request;
+    }
+     
+    //Actividad elije lo que mas te guste
+    public function paraDignoDecarino(){
+        return view('activities.2-11-meses.Digno_De_Carino.intro_digno_de_carino');
+    }
+
+    public function paraDignoDecarino2(){
+        return view('activities.2-11-meses.Digno_De_Carino.digno_de_carino');
+    }
+
+    public function paraDignoDecarino3(){
+        return view('activities.2-11-meses.Digno_De_Carino.digno_de_carino_3');
+    }
+
+    //Actividad el Mimo
+    public function paraElmimo(){
+        return view('activities.2-11-meses.El_mimo.intro_el_mimo');
+    }
 }

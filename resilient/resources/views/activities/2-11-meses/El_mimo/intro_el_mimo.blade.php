@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Intro Hasta el final
+Intro Actividad el mimo
 @endsection
 
 @section('addcss')
@@ -837,7 +837,7 @@ button:hover {
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="title animated lightSpeedIn" style="font-family: 'Raleway', sans-serif; font-size: 40px;" >
-                Actividad hasta el final
+                Actividad El mimo
             </div>
         </div> 
         
@@ -863,15 +863,15 @@ button:hover {
                                     </tr>
                                     <tr>
                                         <td>Competencias de padres y/o cuidadores</td>
-                                        <td>Aporte afectivo y cuidado</td>
+                                        <td>Aporte Educativo </td>
                                     </tr>
                                     <tr>
                                         <td>Rasgos resilientes</td>
-                                        <td>Autonomía y solución de problemas</td>
+                                        <td>Vínculo Afectivo</td>
                                     </tr>
                                     <tr>
                                         <td>Semana</td>
-                                        <td>8</td>
+                                        <td>4</td>
                                     </tr>
                                 <tr>
                                 </tbody>
@@ -892,15 +892,14 @@ button:hover {
                             <div class="card-body" >
                             <label> 
                                <p style="text-align:justify; text-justify: inter-word; color:black;">
-                               Los niños empiezan a desarrollar la autonomía con mayor fuerza.
-                                             Este cambio se genera cuando los niños o niñas insisten en hacer
-                                             las cosas por sí mismos, muestra insistencia en conseguir lo que desea, 
-                                             avisa cuando tiene necesidades fisiológicas, ayuda en las actividades de 
-                                             la casa, empieza a comer solo o a vestirse solo. Pero de igual forma frente
-                                             a algunas situaciones puede hacer berrinches al frustrarse o impacientarse.
-                                             Es por esto, por lo que esta semana se trabajará en algunas destrezas para 
-                                             ayudar a los niños y niñas a impulsar su autonomía
-                                             y así poder resolver problemas “hasta el final” con menos ayuda de algún adulto.
+                               En estas edades los niños son como esponjas, observan todo lo que está a su alrededor, imitan las
+                               acciones que ven en los adultos y aprenden a cómo reaccionar ante tales circunstancias. Son pequeños 
+                               “MIMOS” que imitan comportamientos de quienes confía. Como los mimos se asustará cuando las personas
+                               remedadas se asustan y se alegrarán cuando las personas lo hacen.  
+
+                               De igual forma, cada una de las acciones que realizan padres e hijos en el día a día, son muy importantes, 
+                               es por esto que se quiere fomentar el vínculo afectivo, debido a que en estas edades permite aprendizaje y 
+                               fortalece a los niños en su desarrollo.
                                 </p></label>
                             </div>
                         </div>
@@ -909,8 +908,6 @@ button:hover {
                 </div><!--end .card-actionbar -->
             </div>
         </div>
-
-
 
         <div class="col-md-5">
             <div class="card">
@@ -958,7 +955,7 @@ button:hover {
                 
                 <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/HastaFinal2') }}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/DignoCarino')}}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
                     </div>
                 </div><!--end .card-actionbar -->
             </div>
