@@ -208,7 +208,7 @@ Route::get('/cnr2', 'ActivityController@cnr2')->name('/cnr2');
 Route::get('/cnr3', 'ActivityController@cnr3')->name('/cnr3');
 Route::get('/cnr4', 'ActivityController@cnr4')->name('/cnr4');
 Route::get('/cnr_logrosObtenidos', 'ActivityController@cnr_logrosObtenidos')->name('/cnr_logrosObtenidos');
-Route::post('/cnr_culminado', "ActivityController@CulminadoActividadCnr")->name('/cnr_culminado');
+Route::get('/cnr_culminado', "ActivityController@CulminadoActividadCnr")->name('/cnr_culminado');
 
 // Rutas para Actividad UN TESORO ESCONDIDO. "SOY CAPAZ DE… Y ME AMO COMO SOY”
 Route::get('/IntroTesoroEscondido', 'ActivityController@formandoNinosResDesc')->name('/IntroTesoroEscondido');
@@ -236,5 +236,16 @@ Route::get('/lenp1', 'ActivityController@lenp1')->name('/lenp1');
 Route::get('/lenp2', 'ActivityController@lenp2')->name('/lenp2');
 Route::get('/lenp3', 'ActivityController@lenp3')->name('/lenp3');
 Route::get('/lenp4', 'ActivityController@lenp4')->name('/lenp4');
+Route::get('/lenp5', 'ActivityController@lenp5')->name('/lenp5');
 Route::get('/lenp_logrosObtenidos', 'ActivityController@lenp_logrosObtenidos')->name('/lenp_logrosObtenidos');
-Route::post('/lenp_culminado', "ActivityController@CulminadoActividadLenp")->name('/lenp_culminado');
+Route::get('/lenp_culminado', "ActivityController@CulminadoActividadLenp")->name('/lenp_culminado');
+
+
+// Ruta actividad Seguir y seguir intentandoRoute::get('/cnr_intro', 'ActivityController@cnr_intro')->name('/cnr_intro');
+
+Route::get('/cnr1', 'ActivityController@cnr1')->name('/cnr1');
+Route::get('/cnr2', 'ActivityController@cnr2')->name('/cnr2');
+Route::get('/cnr3', 'ActivityController@cnr3')->name('/cnr3');
+Route::get('/cnr4', 'ActivityController@cnr4')->name('/cnr4');
+Route::get('/cnr_logrosObtenidos', 'ActivityController@cnr_logrosObtenidos')->name('/cnr_logrosObtenidos');
+Route::get('/cnr_culminado', "ActivityController@CulminadoActividadCnr")->name('/cnr_culminado');

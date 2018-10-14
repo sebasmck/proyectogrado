@@ -412,6 +412,10 @@ class ActivityController extends Controller
         return view('activities.2-3anos.lenp.lenp4');
     }
 
+    public function lenp5(){
+        return view('activities.2-3anos.lenp.lenp5');
+    }
+
     public function lenp_logrosObtenidos(){
         return view('activities.2-3anos.lenp.lenp_logrosObtenidos');
     }

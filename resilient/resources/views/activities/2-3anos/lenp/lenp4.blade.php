@@ -8,71 +8,13 @@ CUALIDADES NIÑOS RESILIENTES
 
 <style>
 
-    ul {
-  list-style-type: none;
+ li{
+    list-style-type: none;
+ }
+
+textarea{
+    margin-top: 20px;
 }
-
-li {
-  display: inline-block;
-}
-
-input[type="checkbox"][id^="cb"] {
-  display: none;
-}
-
-label {
-  border: 1px solid #fff;
-  padding: 10px;
-  display: block;
-  position: relative;
-  margin: 10px;
-  cursor: pointer;
-}
-
-label::before {
-  background-color: white;
-  color: white;
-  content: " ";
-  display: block;
-  border-radius: 50%;
-  border: 1px solid grey;
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  width: 25px;
-  height: 25px;
-  text-align: center;
-  line-height: 28px;
-  transition-duration: 0.4s;
-  transform: scale(0);
-}
-
-label img {
-  height: 100px;
-  width: 150px;
-  transition-duration: 0.2s;
-  transform-origin: 50% 50%;
-}
-
-:checked + label {
-  border-color: #ddd;
-}
-
-:checked + label::before {
-  content: "✓";
-  background-color: grey;
-  transform: scale(1);
-}
-
-:checked + label img {
-  transform: scale(0.9);
-  box-shadow: 0 0 5px #333;
-  z-index: -1;
-}
-
-.grow { transition: all .2s ease-in-out; }
-.grow:hover { transform: scale(0.9); }
-
 
 </style>
 
@@ -85,62 +27,64 @@ label img {
         <div class="card">
 
             <div class="card-head style-primary">
-                <header> CUALIDADES NIÑOS RESILIENTES </header>
+                <header> LAS EMOCIONES DE NUESTROS PADRES /CUIDADORES
+                    </header>
             </div>
 
             <div class="card-body floating-label">
 
                 <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;">
-                    <label>
+
                         <p style="text-align:justify; text-justify: inter-word;"> <b>
-                                Ahora que realizaste el listado de las características
-                                de los niños resilientes, se te invita a seleccionar 3
-                                de las características que te gustaría implementar en
-                                esta semana: </b> </p>
-                    </label>
+                                ¡Buen trabajo!, gracias a esta actividad se pueden diferenciar las características de
+                                cada una de las emociones las cuales tienen diferentes reacciones fisiológicas como
+                                verbales.
+                                Ahora que con la ayuda de la película conoces cada una de las emociones y sus
+                                características puedes describir en que situaciones aparece cada uno de los personajes
+                                en el niño y también en ti.
+                                A continuación, se te invita a describir las situaciones, lugares o personas en donde
+                                logres identificar las emociones de tus niños:
+                            </b> </p>
+                            
                 </div>
                 <br>
                 <div>
-                    <ul>
-                        <li><input type="checkbox" id="cb1" />
-                            <label class="grow" for="cb1"><img src="{{asset('ActividadCnr/cnr_1.png')}}" /></label>
-                        </li>
-                        <li><input type="checkbox" id="cb2" />
-                            <label class="grow" for="cb2"><img src="{{asset('ActividadCnr/cnr_2.png')}}" /></label>
-                        </li>
-                        <li><input type="checkbox" id="cb3" />
-                            <label class="grow" for="cb3"><img src="{{asset('ActividadCnr/cnr_3.png')}}" /></label>
-                        </li>
-                        <li><input type="checkbox" id="cb4" />
-                            <label class="grow" for="cb4"><img src="{{asset('ActividadCnr/cnr_4.png')}}" /></label>
-                        </li>
-                        <li><input type="checkbox" id="cb5" />
-                            <label class="grow" for="cb5"><img src="{{asset('ActividadCnr/cnr_5.png')}}" /></label>
-                        </li>
-                        <li><input type="checkbox" id="cb6" />
-                            <label class="grow" for="cb6"><img src="{{asset('ActividadCnr/cnr_6.png')}}" /></label>
-                        </li>
-                        <li><input type="checkbox" id="cb7" />
-                            <label class="grow" for="cb7"><img src="{{asset('ActividadCnr/cnr_7.png')}}" /></label>
-                        </li>
-                        <li><input type="checkbox" id="cb8" />
-                            <label class="grow" for="cb8"><img src="{{asset('ActividadCnr/cnr_8.png')}}" /></label>
-                        </li>
-                        <li><input type="checkbox" id="cb9" />
-                            <label class="grow" for="cb9"><img src="{{asset('ActividadCnr/cnr_9.png')}}" /></label>
-                        </li>
-                        <li><input type="checkbox" id="cb10" />
-                            <label class="grow" for="cb10"><img src="{{asset('ActividadCnr/cnr_10.png')}}" /></label>
-                        </li>
-                    </ul>
+                    <div class="row">
+                            <div class="col-md-3">
+                                    <li><img src="{{asset('ActividadLenp/lenp1.png')}}" style="width:150px; height:auto;" alt="lenp1"></li>
+                            </div>
+                            <div class="col-md-3">
+                                    <li><img src="{{asset('ActividadLenp/lenp2.png')}}" style="width:150px; height:auto;" alt="lenp1"></li>
+                            </div>
+                            <div class="col-md-3">
+                                    <li><img src="{{asset('ActividadLenp/lenp3.png')}}" style="width:150px; height:auto;" alt="lenp1"></li>
+                            </div>
+                            <div class="col-md-3">
+                                    <li><img src="{{asset('ActividadLenp/lenp4.png')}}" style="width:150px; height:auto;" alt="lenp1"></li>
+                            </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-3">
+                                <textarea rows="14"></textarea>
+                            </div>
+                            <div class="col-md-3">
+                                <textarea rows="14"></textarea>
+                            </div>
+                            <div class="col-md-3">
+                                    <textarea rows="14"></textarea>
+                            </div>
+                            <div class="col-md-3">
+                                    <textarea rows="14"></textarea>
+                            </div>
+                    </div>
                 </div>
             </div>
             <!--end .card -->
 
             <div class="card-actionbar">
                 <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/cnr_logrosObtenidos')}}"> <button type="button"
-                            class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/lenp5')}}"> <button
+                            type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                 </div>
             </div>
 

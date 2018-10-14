@@ -24,7 +24,7 @@ CUALIDADES NIÑOS RESILIENTES
         background-color: #EEE; 
         border: #999 1px solid;
         width: 280px; 
-        height: 200px;
+        height: 250px;
         padding: 8px;
         font-size: 18px;
     }
@@ -53,7 +53,8 @@ CUALIDADES NIÑOS RESILIENTES
         <div class="card">
 
             <div class="card-head style-primary">
-                <header> CUALIDADES NIÑOS RESILIENTES </header>
+                <header> LAS EMOCIONES DE NUESTROS PADRES /CUIDADORES
+ </header>
             </div>
 
             <div class="card-body floating-label">
@@ -80,6 +81,14 @@ CUALIDADES NIÑOS RESILIENTES
                 <div class="actContainer">
                     <img src="{{asset('ActividadLenp/lenp2.png')}}" style="width:100px; height:auto;" alt="lenp1">
                     <div id="drop_zone" class="pull-right" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)" ></div>
+                </div>
+                <div class="actContainer">
+                        <img src="{{asset('ActividadLenp/lenp3.png')}}" style="width:100px; height:auto;" alt="lenp1">
+                        <div id="drop_zone" class="pull-right" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)" ></div>
+                </div>
+                <div class="actContainer">
+                        <img src="{{asset('ActividadLenp/lenp4.png')}}" style="width:100px; height:auto;" alt="lenp1">
+                        <div id="drop_zone" class="pull-right" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)" ></div>
                 </div>
                 
             </div>
@@ -118,7 +127,7 @@ CUALIDADES NIÑOS RESILIENTES
 
             <div class="card-actionbar">
                 <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/cnr4')}}"> <button type="button"
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/lenp4')}}"> <button type="button"
                             class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                 </div>
             </div>
