@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Intro Hasta el final
+Intro Actividad Digno de cariño
 @endsection
 
 @section('addcss')
@@ -837,7 +837,7 @@ button:hover {
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="title animated lightSpeedIn" style="font-family: 'Raleway', sans-serif; font-size: 40px;" >
-                Actividad hasta el final
+                Actividad digno de cariño
             </div>
         </div> 
         
@@ -867,11 +867,11 @@ button:hover {
                                     </tr>
                                     <tr>
                                         <td>Rasgos resilientes</td>
-                                        <td>Autonomía y solución de problemas</td>
+                                        <td>Autonomía</td>
                                     </tr>
                                     <tr>
                                         <td>Semana</td>
-                                        <td>8</td>
+                                        <td>3</td>
                                     </tr>
                                 <tr>
                                 </tbody>
@@ -892,15 +892,16 @@ button:hover {
                             <div class="card-body" >
                             <label> 
                                <p style="text-align:justify; text-justify: inter-word; color:black;">
-                               Los niños empiezan a desarrollar la autonomía con mayor fuerza.
-                                             Este cambio se genera cuando los niños o niñas insisten en hacer
-                                             las cosas por sí mismos, muestra insistencia en conseguir lo que desea, 
-                                             avisa cuando tiene necesidades fisiológicas, ayuda en las actividades de 
-                                             la casa, empieza a comer solo o a vestirse solo. Pero de igual forma frente
-                                             a algunas situaciones puede hacer berrinches al frustrarse o impacientarse.
-                                             Es por esto, por lo que esta semana se trabajará en algunas destrezas para 
-                                             ayudar a los niños y niñas a impulsar su autonomía
-                                             y así poder resolver problemas “hasta el final” con menos ayuda de algún adulto.
+                               A medida que los niños y niñas crecen aprenden a identificar las muestras de cariño como lo son las expresiones 
+                               faciales de la madre al nacer respondiendo con sonrisas, con gritos de felicidad o buscando la proximidad física.
+
+                               Algunas veces como cuidadores y por la etapa en la que se encuentran la niña o el niño se olvida como expresarle 
+                               el amor al punto de avergonzarse por solo decir un “te quiero”. 
+
+                               El objetivo de la actividad de esta semana es implementar nuevas técnicas para darle a los niños y niñas todo
+                               el cariño que se merecen y hacerle sentir una persona que es digna de aprecio y cariño. Por eso se te invita a
+                               realizar la siguiente actividad.
+
                                 </p></label>
                             </div>
                         </div>
@@ -909,8 +910,6 @@ button:hover {
                 </div><!--end .card-actionbar -->
             </div>
         </div>
-
-
 
         <div class="col-md-5">
             <div class="card">
@@ -958,7 +957,7 @@ button:hover {
                 
                 <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/HastaFinal2') }}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/DignoCarino')}}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
                     </div>
                 </div><!--end .card-actionbar -->
             </div>

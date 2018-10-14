@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Intro Hasta el final
+Intro Actividad Elije lo que más te guste
 @endsection
 
 @section('addcss')
@@ -837,7 +837,7 @@ button:hover {
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="title animated lightSpeedIn" style="font-family: 'Raleway', sans-serif; font-size: 40px;" >
-                Actividad hasta el final
+                Actividad elije lo que más te guste
             </div>
         </div> 
         
@@ -863,15 +863,15 @@ button:hover {
                                     </tr>
                                     <tr>
                                         <td>Competencias de padres y/o cuidadores</td>
-                                        <td>Aporte afectivo y cuidado</td>
+                                        <td>Aporte educativo</td>
                                     </tr>
                                     <tr>
                                         <td>Rasgos resilientes</td>
-                                        <td>Autonomía y solución de problemas</td>
+                                        <td>Confianza</td>
                                     </tr>
                                     <tr>
                                         <td>Semana</td>
-                                        <td>8</td>
+                                        <td>7</td>
                                     </tr>
                                 <tr>
                                 </tbody>
@@ -892,15 +892,12 @@ button:hover {
                             <div class="card-body" >
                             <label> 
                                <p style="text-align:justify; text-justify: inter-word; color:black;">
-                               Los niños empiezan a desarrollar la autonomía con mayor fuerza.
-                                             Este cambio se genera cuando los niños o niñas insisten en hacer
-                                             las cosas por sí mismos, muestra insistencia en conseguir lo que desea, 
-                                             avisa cuando tiene necesidades fisiológicas, ayuda en las actividades de 
-                                             la casa, empieza a comer solo o a vestirse solo. Pero de igual forma frente
-                                             a algunas situaciones puede hacer berrinches al frustrarse o impacientarse.
-                                             Es por esto, por lo que esta semana se trabajará en algunas destrezas para 
-                                             ayudar a los niños y niñas a impulsar su autonomía
-                                             y así poder resolver problemas “hasta el final” con menos ayuda de algún adulto.
+                               La primera infancia es un ciclo vital del ser humano, en esta etapa se consolidan aprendizajes 
+                               como la justicia, la tolerancia, el respeto, la dignidad, la participación, entre otras y en la
+                                adquisición de este aprendizaje la familia es fundamental, pues permite encontrar logros propios
+                                y a través de esto generar la autoestima. La toma de decisiones que se evidencian en el niño desde
+                                que es recién nacido da cuenta de las prácticas que usan los padres para favorecer en los niños
+                                y niñas la elección.
                                 </p></label>
                             </div>
                         </div>
@@ -909,8 +906,6 @@ button:hover {
                 </div><!--end .card-actionbar -->
             </div>
         </div>
-
-
 
         <div class="col-md-5">
             <div class="card">
@@ -958,7 +953,7 @@ button:hover {
                 
                 <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/HastaFinal2') }}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/PracticaSentido')}}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
                     </div>
                 </div><!--end .card-actionbar -->
             </div>

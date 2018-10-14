@@ -28,17 +28,17 @@
       <div class="modal-body">
 
 <div>
-   <p> A continuación, encontrarás ejemplos de situaciones en las que tu niño o niña se enfrenta diariamente.
-    Lo que se requiere es que intencionalmente se modifique por tu parte el grado de dificultad y con esto 
-    te estaremos dando la oportunidad de aplicar destrezas para impulsar la autonomía en tu niño. 
-    ¡¡Recuerda!!  estas actividades están dadas para que se implementen en cualquier espacio durante
-    tu rutina o la de tu hijo, así que puedes escoger y utilizar los elementos que tienes a la mano para
-    cumplir con esta.</p>
+   <p> A continuación, encontrarás ejemplos de situaciones en las que tú niño o niña, 
+   se enfrenta diariamente. Lo que se requiere es que intencionalmente se modifique por
+    tu parte el grado de dificultad y con esto le brindaras la oportunidad de aplicar
+     destrezas para impulsar la autonomía en tu niño. ¡Recuerda!  Estas actividades
+      están dadas para que se implementen en cualquier espacio durante tu rutina o la de tu hijo, 
+   así que puedes escoger y utilizar los elementos que tienes a la mano para cumplir con esta.</p>
 
-    </p>Apagar la luz, alcanzar las cosas del comedor, alcanzar un juguete a una altura, recoger
-    todos los objetos para llevarlos a otro lado, poder ver por la ventana más alta, todas 
-    estas actividades aquí descritas enfrentan a nuestro niño a un problema a resolver. Para 
-    realizar la actividad realiza los siguientes pasos:</p>
+    </p>Apagar la luz, alcanzar las cosas del comedor, alcanzar un juguete a una altura, recoger 
+     todos los objetos para llevarlos a otro lado, poder ver por la ventana más alta, todas estas
+     actividades aquí descritas enfrentan al niño a un problema a resolver. Para realizar la 
+     actividad realiza los siguientes pasos:</p>
 </div>
 
 
@@ -301,8 +301,8 @@ bolas de papel (3 archivos adjuntos para descargar). Para la realización de est
  aplicar las siguientes frases <b>“te felicito hijo” “si tienes dudas me puedes preguntar” “sé que 
  lo puedes hacer” “tú eres capaz” “sigue intentándolo”</b></p>
 
-<p><a id="image1" href="/download/test1.png">Click aquí para descargar primera tarea</a></p>
-<p><a style="display:none;" id="image2" href="/download/test2.png">Click aquí para descargar segunda tarea</a></p>
+<p><a id="image1" href="/download/hastaFinal.JPG">Click aquí para descargar primera tarea</a></p>
+<p><a style="display:none;" id="image2" href="/download/hastaFinal2.JPG">Click aquí para descargar segunda tarea</a></p>
 <p><a style="display:none;" id="image3" href="/download/img12.jpg">Click aquí para descargar tercera tarea</a></p>
 
 
@@ -379,11 +379,8 @@ $("#image1").click(function(){
      $("#image2").fadeIn(2000);
 });
 
-$("#image2").click(function(){
-    $("#image3").fadeIn(2000);
-});
 
-$("#image3").click(function(){
+$("#image2").click(function(){
     $("#btnEndStepActivity").prop('disabled', false);
 });
 

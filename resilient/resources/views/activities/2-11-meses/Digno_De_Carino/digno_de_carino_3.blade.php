@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Hasta el final
+Digno de carino
 @endsection
 
 @section('content')
@@ -11,19 +11,19 @@ Hasta el final
 {{csrf_field()}}
 <div class="card">
 <div class="card-head style-primary">
-                    <header>Logros obtenidos</header>
+                    <header>Logros obtenidos - Un poco de imaginación...</header>
                 </div>
  <div class="card-body floating-label">
+ 
+ <!--inicio -->
   <div class="row">
-
-        
 
                  <div class="row">
                                    <div class="col-sm-7">
                                         <div class="form-group">
                                         <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 20px;color:gray;" >
                                             <label> 
-                                            ¿Cuál fue la reacción de tu hijo al decirle estas frases?
+                                            ¿Que otro recurso como el post-it o papeles adhesivos podrías utilizar para expresar cariño a tus hijos?
                                            </label>
 
                                              </div>
@@ -31,10 +31,13 @@ Hasta el final
                                     </div> 
 
                                     <div class="col-sm-4">
-                                    <textarea class="form-control" rows="4" cols="30"></textarea>
+                                    <textarea rows="4" cols="30" required="true"></textarea>
                                     </div>
                  </div>
 </div>
+<!-- fin-->
+
+
                 <br />
               
                 <div class="row">
@@ -45,7 +48,7 @@ Hasta el final
              <div class="form-group">
              <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 20px;color:gray;" >
                  <label> 
-                 ¿Cómo te sentiste al decirle estas palabras a tu hijo?
+                 ¿pondrías en práctica estas y otras actividades para demostrarle cariño a tus hijos?   
                 </label>
 
                   </div>
@@ -53,20 +56,27 @@ Hasta el final
          </div> 
 
          <div class="col-sm-4">
-         <textarea class="form-control" rows="4" cols="30"></textarea>
+         <label class="radio-inline radio-styled">
+                                            <input type="radio" id="s" name="check" value="2" required="true"><span>Si</span>
+                                        </label>
+                                        <label class="radio-inline radio-styled">
+                                            <input type="radio" id="n" name="check" value="2"><span>No</span>
+                                        </label>
          </div>
 </div>
 <br/>
 </div>
 
-                <div class="row">
+
+
+                <div class="row" id="visualice" style="display:none;">
 
 <div class="row">
         <div class="col-sm-7">
              <div class="form-group">
              <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 20px;color:gray;" >
                  <label> 
-                 ¿Implementarías estas frases en otras actividades de tu hijo?
+                 ¿Cuales?
                 </label>
 
                   </div>
@@ -74,12 +84,12 @@ Hasta el final
          </div> 
 
          <div class="col-sm-4">
-         <textarea class="form-control" rows="4" cols="30"></textarea>
+         <textarea id="textAreaCual" rows="4" cols="30"></textarea>
          </div>
 </div>
 </div>
 
-              
+              <br/>
 
 <div class="card-actionbar">
                 <div class="card-actionbar-row">
@@ -96,7 +106,19 @@ Hasta el final
 
 <script>
 
+$(document).ready(function(){
+  
+  $("#s").click(function(){
+      $("#visualice").fadeIn();
+      $("#textAreaCual").prop('required', true);
+  });
+  
+  $("#n").click(function(){
+      $("#visualice").fadeOut();
+      $("#textAreaCual").prop('required', false);
+  });
 
+});
 
 </script>
 
