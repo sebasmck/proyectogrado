@@ -41,6 +41,7 @@ class ActivityController extends Controller
         $actividad = Actividad::with('preguntaActividades.opcionPreguntaActividad')->where('Id_Actividad', $id)->first();
         return view($actividad->View_Actividad, ['Actividad' => $actividad]);
     }
+
     public function actividad(Request $request,$id){
         $actividad  = Actividad::where('Id_Actividad',$id)->get();
         return  $actividad;
@@ -236,7 +237,36 @@ class ActivityController extends Controller
      {
          return view('activities.2-11-meses.FormandoNinosR.intro_actividadFormandoNR');
      }
+     // Rutas para Actividad COMO LOROS
+     public function comoLorosDesc()
+     {
+         return view('activities.3-11-meses.ComoLoros.intro_ComoLoros');
+     }
 
+    // Rutas para Actividad NIÑOS RESILIENTES
 
+     public function ninosResilientesDesc()
+     {
+         return view('activities.3-11-meses.NinosResilientes.intro_NinosResilientes');
+     }
+
+     public function ninosResilientes1()
+     {
+         return view('activities.3-11-meses.NinosResilientes.NinosResilientes1');
+     }
+
+     public function ninosResilientes2()
+     {
+         return view('activities.3-11-meses.NinosResilientes.NinosResilientes2');
+     }
+
+     public function ninosResilientes3()
+     {
+         return view('activities.3-11-meses.NinosResilientes.NinosResilientes3');
+     }
+     public function ninosResilientes4()
+     {
+         return view('activities.3-11-meses.NinosResilientes.NinosResilientes4');
+     }
 
 }
