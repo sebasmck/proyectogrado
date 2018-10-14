@@ -25,7 +25,7 @@ PRACTICA EL SENTIDO DEL HUMOR JC
 
                  <div class="title">
                     <p style="text-align:center;"> 
-                     <img src="{{asset('ActividadPruebaHumor/Ejercicio5.png')}}"  alt="Logo" id="logo">
+                     <img src="{{asset('ActividadPruebaHumor/Ejercicio5.png')}}"  alt="Logo" id="logo" width="90%">
                     </p> 
                   </div>  
 
