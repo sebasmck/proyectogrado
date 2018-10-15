@@ -59,7 +59,7 @@ SEGUIR Y SEGUIR INTENTANDO
         <div class="card">
 
             <div class="card-head style-primary">
-                <header> CUALIDADES NIÑOS RESILIENTES </header>
+                <header> SEGUIR Y SEGUIR INTENTANDO </header>
             </div>
 
             <div class="card-body floating-label">
@@ -69,7 +69,6 @@ SEGUIR Y SEGUIR INTENTANDO
                         <p style="text-align:justify; text-justify: inter-word;"> <b> Da clic de manera organizada
                                 (de 1 a 4) según las sensaciones que experimentaste cuando realizaste los cuatro
                                 ejercicios anteriores.
-                            </b> </p>
                     </label>
                 </div>
 

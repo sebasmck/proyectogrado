@@ -252,3 +252,14 @@ Route::get('/ssi_logrosObtenidos', 'ActivityController@ssi_logrosObtenidos')->na
 Route::get('/ssi_culminado', "ActivityController@CulminadoActividadSsi")->name('/ssi_culminado');
 
 
+// Ruta actividad cosas de grande
+
+Route::get('/cdg_intro', 'ActivityController@cdg_intro')->name('/cdg_intro');
+Route::get('/cdg1', 'ActivityController@cdg1')->name('/cdg1');
+Route::get('/cdg2', 'ActivityController@cdg2')->name('/cdg2');
+Route::get('/cdg3', 'ActivityController@cdg3')->name('/cdg3');
+Route::get('/cdg4', 'ActivityController@cdg4')->name('/cdg4');
+Route::get('/cdg_logrosObtenidos', 'ActivityController@cdg_logrosObtenidos')->name('/cdg_logrosObtenidos');
+Route::get('/cdg_culminado', "ActivityController@CulminadoActividadCdg")->name('/cdg_culminado');
+
+

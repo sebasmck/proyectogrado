@@ -1,7 +1,8 @@
 @extends('partials.layout')
 
 @section('title')
-CUALIDADES NIÑOS RESILIENTES
+SEGUIR Y SEGUIR INTENTANDO
+
 @endsection
 
 @section('addcss')
@@ -16,7 +17,7 @@ CUALIDADES NIÑOS RESILIENTES
         <div class="card">
 
             <div class="card-head style-primary">
-                <header> CUALIDADES NIÑOS RESILIENTES </header>
+                <header> SEGUIR Y SEGUIR INTENTANDO </header>
             </div>
 
             <div class="card-body floating-label">
@@ -32,6 +33,7 @@ CUALIDADES NIÑOS RESILIENTES
 
                 <div class="col-md-5">
 
+                    PENDING
 
                 </div>
 
@@ -43,7 +45,7 @@ CUALIDADES NIÑOS RESILIENTES
 
             <div class="card-actionbar">
                 <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/ssi4')}}"> <button type="button"
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/ssi_logrosObtenidos')}}"> <button type="button"
                             class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                 </div>
             </div>
