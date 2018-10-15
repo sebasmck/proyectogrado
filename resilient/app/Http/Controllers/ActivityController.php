@@ -424,7 +424,35 @@ class ActivityController extends Controller
         return view('activities.2-3anos.lenp.CulminadoActividadLenp');
     }
 
+    // Actividad SSI
 
+    public function ssi_intro(){
+        return view('activities.2-3anos.ssi.intro_ssi');
+    }
+
+    public function ssi1(){
+        return view('activities.2-3anos.ssi.ssi1');
+    }
+
+    public function ssi2(){
+        return view('activities.2-3anos.ssi.ssi2');
+    }
+
+    public function ssi3(){
+        return view('activities.2-3anos.ssi.ssi3');
+    }
+
+    public function ssi4(){
+        return view('activities.2-3anos.ssi.ssi4');
+    }
+
+    public function ssi_logrosObtenidos(){
+        return view('activities.2-3anos.ssi.ssi_logrosObtenidos');
+    }
+
+    public function CulminadoActividadSsi(){
+        return view('activities.2-3anos.ssi.CulminadoActividadSsi');
+    }
     
 
 

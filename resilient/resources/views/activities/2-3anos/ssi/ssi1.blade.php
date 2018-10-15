@@ -1,129 +1,178 @@
 @extends('partials.layout')
 
 @section('title')
-CUALIDADES NIÑOS RESILIENTES
+SEGUIR Y SEGUIR INTENTANDO
+@endsection
+
+@section('addcss')
+<style>
+
+    .activity{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
+
+    .row{
+        margin-bottom: 35px;
+    }
+
+    .options{
+    display: block;
+    margin-left: 35%;
+    margin-right: auto;
+    margin-top: 25px;
+    width: 50%;
+    }
+
+</style>
 @endsection
 
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
-            <div class="card">
+    <form class="form">
+        <div class="card">
 
-                <div class="card-head style-primary">
-                   <header> CUALIDADES NIÑOS RESILIENTES  </header>
+            <div class="card-head style-primary">
+                <header> SEGUIR Y SEGUIR INTENTANDO </header>
+            </div>
+
+            <div class="card-body floating-label">
+
+
+
+                <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;">
+                    <label>
+                        <p style="text-align:justify; text-justify: inter-word;"> Resuelve las siguientes actividades y
+                            responde al final de cada una, cuál de las respuestas es la correcta.
+                        </p>
+                    </label>
                 </div>
 
-                <div class="card-body floating-label">
 
-                 <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:#008efd;" > 
-                       <p style="text-align:center; text-justify: inter-word;"><b>Desarrollo Actividad</b></p>  
-                       <img class="pull-right" src="{{asset('img/avatar.png')}}" alt="avatar">
-                  </div>
-
-                  <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;" > 
-                  <label>  <p style="text-align:justify; text-justify: inter-word;"> Cuando presto atención es cuando entiendo yo: </p></label>
-                  </div>
-
-                  
-                    <div class="col-md-8">
-                        <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;" > 
-                            <label>  <p style="text-align:justify; text-justify: inter-word;">
-                                1. Practica este ejercicio de preferencia en una silla, 
-                                en una postura cómoda, con la columna recta y sin cruzar las piernas.
-                            </p></label>
-                        </div>
-
-                        <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;" > 
-                            <label>  <p style="text-align:justify; text-justify: inter-word;">
-                                2. Tensa los músculos de los pies, junta los talones, luego las pantorrillas,
-                                 las rodillas, aprieta también la parte superior de las piernas.
-                            </p></label>
-                        </div>
-
-                        <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;" > 
-                            <label>  <p style="text-align:justify; text-justify: inter-word;">
-                                3. Tensa los glúteos, el estómago, el pecho, los hombros.
-                            </p></label>
-                        </div>
-
-                        <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;" > 
-                            <label>  <p style="text-align:justify; text-justify: inter-word;">
-                                5. Tensa los músculos del cuello, aprieta tu mandíbula, 
-                                tensa el rostro, cerrando los ojos, frunciendo tu ceño, 
-                                hasta el cuero cabelludo
-                            </p></label>
-                        </div>
-
-                        <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;" > 
-                            <label>  <p style="text-align:justify; text-justify: inter-word;">
-                                6. Una vez que éste todo tu cuerpo en tensión, toma aire, 
-                                mantenlo por diez segundos y mientras cuentas tensas al 
-                                máximo todo el cuerpo.
-                            </p></label>
-                        </div>
-
-                        <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;" > 
-                            <label>  <p style="text-align:justify; text-justify: inter-word;">
-                                7. Después de diez segundos exhala el aire aflojando totalmente el cuerpo
-                            </p></label>
-                        </div>
-
-                    </div> 
-
-                  <div>
-
-                  <div>
-
-                  <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;" >
-                   <!--Acordion 1 empieza -->
-                  {{-- <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="heading1">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                <b> Nota Importante Actividad</b>
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordionExample">
-                            <div class="card-body" >
-                            <label> 
-                               <p style="text-align:justify; text-justify: inter-word; color:black;">
-                                  A continuación, encontraras 3 situaciones en donde utilizará cada uno de los materiales solicitados.
-                                  Con ellos te pediremos que generes situaciones específicas en donde podremos enseñarle a tu niño o niña 
-                                  cómo reírse de las desventuras.
-                                </p></label>
+                <div class="col-md-12">
+                    <div style="margin-top:45px;" class="row">
+                        <img class="activity" src="{{asset('ActividadSsi/ssi1.png')}}" alt="ssi1">
+                        <div class="options">
+                            <div class="col-sm-9">
+                                <label class="radio-inline radio-styled">
+                                    <input type="radio" name="ssi1" value=""><span>A</span>
+                                </label>
+                                <label class="radio-inline radio-styled">
+                                    <input type="radio" name="ssi1" value=""><span>B</span>
+                                </label>
+                                <label class="radio-inline radio-styled">
+                                    <input type="radio" name="ssi1" value=""><span>C</span>
+                                </label>
+                                <label class="radio-inline radio-styled">
+                                    <input type="radio" name="ssi1" value=""><span>D</span>
+                                </label>
+                                <label class="radio-inline radio-styled">
+                                    <input type="radio" name="ssi1" value=""><span>E</span>
+                                </label>
                             </div>
                         </div>
                     </div>
-                </div> --}}
-                <!--Acordion 1 Finaliza -->
+                    <hr>
+                    <div class="row">
+                        <img class="activity" src="{{asset('ActividadSsi/ssi2.png')}}" alt="ssi1">
+                        <div class="options">
+                                <div class="col-sm-9">
+                                    <label class="radio-inline radio-styled">
+                                        <input type="radio" name="ssi2" value="option1"><span>A</span>
+                                    </label>
+                                    <label class="radio-inline radio-styled">
+                                        <input type="radio" name="ssi2" value="option2"><span>B</span>
+                                    </label>
+                                    <label class="radio-inline radio-styled">
+                                        <input type="radio" name="ssi2" value="option3"><span>C</span>
+                                    </label>
+                                    <label class="radio-inline radio-styled">
+                                        <input type="radio" name="ssi2" value="option3"><span>D</span>
+                                    </label>
+                                    <label class="radio-inline radio-styled">
+                                        <input type="radio" name="ssi2" value="option3"><span>E</span>
+                                    </label>
+                                </div>
+                            </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <img class="activity" src="{{asset('ActividadSsi/ssi3.png')}}" alt="ssi1">
+                        <div class="options">
+                                <div class="col-sm-9">
+                                    <label class="radio-inline radio-styled">
+                                        <input type="radio" name="ssi3" value="option1"><span>A</span>
+                                    </label>
+                                    <label class="radio-inline radio-styled">
+                                        <input type="radio" name="ssi3" value="option2"><span>B</span>
+                                    </label>
+                                    <label class="radio-inline radio-styled">
+                                        <input type="radio" name="ssi3" value="option3"><span>C</span>
+                                    </label>
+                                    <label class="radio-inline radio-styled">
+                                        <input type="radio" name="ssi3" value="option3"><span>D</span>
+                                    </label>
+                                    <label class="radio-inline radio-styled">
+                                        <input type="radio" name="ssi3" value="option3"><span>E</span>
+                                    </label>
+                                </div>
+                            </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <img class="activity" src="{{asset('ActividadSsi/ssi4.png')}}" alt="ssi1">
+                        <div class="options">
+                                <div class="col-sm-9">
+                                    <label class="radio-inline radio-styled">
+                                        <input type="radio" name="ssi4" value="option1"><span>A</span>
+                                    </label>
+                                    <label class="radio-inline radio-styled">
+                                        <input type="radio" name="ssi4" value="option2"><span>B</span>
+                                    </label>
+                                    <label class="radio-inline radio-styled">
+                                        <input type="radio" name="ssi4" value="option3"><span>C</span>
+                                    </label>
+                                    <label class="radio-inline radio-styled">
+                                        <input type="radio" name="ssi4" value="option3"><span>D</span>
+                                    </label>
+                                    <label class="radio-inline radio-styled">
+                                        <input type="radio" name="ssi4" value="option3"><span>E</span>
+                                    </label>
+                                </div>
+                            </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <div>
+
+                </div>
+                <!--end .card-body -->
+
 
             </div>
+            <!--end .card -->
 
-                </div> {{-- card-body no padding --}}
-            </div><!--end .card-body -->
-            
-
-        </div><!--end .card -->
-
-        <div class="card-actionbar">
-            <div class="card-actionbar-row">
-            <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/cnr2')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+            <div class="card-actionbar">
+                <div class="card-actionbar-row">
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/ssi2')}}"> <button type="button"
+                            class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                </div>
             </div>
-      </div>
-            
-        </form>
-    </div>
+
+    </form>
+</div>
 
 @endsection
-{{--  @section('addjs')
+{{-- @section('addjs')
 <script>
-        var tl = new TimelineLite();
-        avatar = $('.avatar');
+    var tl = new TimelineLite();
+    avatar = $('.avatar');
         //  content = $('.content-card');
         // tl.to(title, 1.5, {y:10});
         // tl.from(card1, .3, {left:100, opacity:0});  
 </script>
-@endsection  --}}
+@endsection --}}
