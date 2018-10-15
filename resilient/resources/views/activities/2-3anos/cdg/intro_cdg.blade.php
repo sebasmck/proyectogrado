@@ -1,12 +1,12 @@
 @extends('partials.layout')
 
 @section('title')
-Intro Actividad Cualidades niños resilientes
+COSASS DE GRANDE
 @endsection
 
 @section('addcss')
-    <style>
-    * {
+<style>
+  * {
         box-sizing: border-box;
     }
 
@@ -809,149 +809,157 @@ button:hover {
 @endsection
 
 @section('content')
-<link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
 
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="title animated lightSpeedIn" style="font-family: 'Raleway', sans-serif; font-size: 40px;" >
-                Actividad: Cualidades niños resilientes 
-            </div>
-        </div> 
-        
-
-        <div class="col-md-7">
-            <div class="card">
-                <div class="card-head">
-                    <header> <center> <b> Aspectos Actividad </b> </center></header>
-                </div>
-                <div class="card-body text-default-light">
-                   
-                        <table class="container">
-                                <thead>
-                                    <tr>
-                                        <th><h1>Competencia</h1></th>
-                                        <th><h1>Detalle</h1></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Procesos psicosociales</td>
-                                        <td>Creencia acerca de la crianza</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Competencias de padres y/o cuidadores</td>
-                                        <td>Aporte Educativo</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Rasgos resilientes</td>
-                                        <td>Vínculo Afectivo</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Semana</td>
-                                        <td>5</td>
-                                    </tr>
-                                <tr>
-                                </tbody>
-                            </table>
-
-                </div><!--end .card-body -->
-                <div class="card-body floating-label" style="text-align:justify;">
-                <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="heading1">
-                            <h5 class="mb-0">
-                                <button style="width:200px;" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                 <b> Descripción Actividad </b> 
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordionExample">
-                            <div class="card-body" >
-                            <label> 
-                            <p style="text-align:justify; text-justify: inter-word; color:black;">
-                                
-                                La semana 5 está centrada en fomentar las características de resiliencia en los niños. 
-                                El objetivo es que como cuidador entiendas cómo funciona la resiliencia, sea más fácil 
-                                fomentarla y puedas seguir desarrollando las actividades de las siguientes semanas. 
-
-                                <br>
-
-
-
-
-                            </p></label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div><!--end .card-actionbar -->
-            </div>
-        </div>
-
-        <div class="col-md-5">
-            <div class="card">
-                <div class="card-body text-default-light">
-                    
-                        <div class="stage">
-                                <div class="table"></div>
-                                <div class="pc"></div>
-                                <div class="cup"></div>
-                                <div class="cup-cover"></div>
-                                <div class="clock">
-                                  <div class="marker-top"></div>
-                                  <div class="marker-right"></div>
-                                  <div class="marker-bottom"></div>
-                                  <div class="marker-left"></div>
-                                  <div class="pointer-min"></div>
-                                  <div class="pointer-hour"></div>
-                                  <div class="pointer"></div>
-                                </div>
-                                <div class="guy">
-                                  <div class="hat">
-                                    <div class="hat-hair"></div>
-                                    <div class="hat-close"></div>
-                                  </div>
-                                  <div class="hair-left"></div>
-                                  <div class="hair-middle"></div>
-                                  <div class="hair-right"></div>
-                                  <div class="ear-left"></div>
-                                  <div class="ear-right"></div>
-                                  <div class="face">
-                                    <div class="eye"></div>
-                                    <div class="eye"></div>
-                                    <div class="nose"></div>
-                                    <div class="mouth"></div>
-                                  </div>
-                                  <div class="neck"></div>
-                                  <div class="body"></div>
-                                </div>
-                                <div class="book one"></div>
-                                <div class="book two"></div>
-                                <div class="book three"></div>
-                              </div>
-
-                </div><!--end .card-body -->
-                
-                <div class="card-actionbar">
-                    <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/cnr1')}}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
-                    </div>
-                </div><!--end .card-actionbar -->
-            </div>
-        </div>
-            
-            
-                
-        
-        
-        
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <div class="title animated lightSpeedIn" style="font-family: 'Raleway', sans-serif; font-size: 40px;">
+        Actividad: Cosas de grande
+      </div>
     </div>
+
+
+    <div class="col-md-7">
+      <div class="card">
+        <div class="card-head">
+          <header>
+            <center> <b> Aspectos Actividad </b> </center>
+          </header>
+        </div>
+        <div class="card-body text-default-light">
+
+          <table class="container">
+            <thead>
+              <tr>
+                <th>
+                  <h1>Competencia</h1>
+                </th>
+                <th>
+                  <h1>Detalle</h1>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Procesos psicosociales</td>
+                <td>Práctica de Crianza</td>
+              </tr>
+              <tr>
+                <td>Competencias de padres y/o cuidadores</td>
+                <td>Aporte Protector</td>
+              </tr>
+              <tr>
+                <td>Rasgos resilientes</td>
+                <td>Autonomía y Confianza </td>
+              </tr>
+              <tr>
+                <td>Semana</td>
+                <td>2</td>
+              </tr>
+              <tr>
+            </tbody>
+          </table>
+
+        </div>
+        <!--end .card-body -->
+        <div class="card-body floating-label" style="text-align:justify;">
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="heading1">
+                <h5 class="mb-0">
+                  <button style="width:200px;" class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                    <b> Descripción Actividad </b>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordionExample">
+                <div class="card-body">
+                  <label>
+                    <p style="text-align:justify; text-justify: inter-word; color:black;">
+                      En esta edad tu niño o niña siente gran curiosidad por el mundo que lo rodea, sus habilidades
+                      tanto físicas como mentales le ayudan a explorar con más facilidad aquello que es desconocido
+                      para él. Como modelos los cuidadores tienen una gran responsabilidad, pues son el ejemplo y la
+                      guía de cómo afrontar cada una de las situaciones que se presenta la vida.
+                      La autonomía de los niños o niñas incrementa cuando se ayuda a superar errores sin ser
+                      ridiculizado, criticado o avergonzado. Ellos responden imitando las acciones de los cuidadores y
+                      respuestas al ambiente. Esta actividad tiene como objetivo estimular la autonomía de tu niño o
+                      niña y qué mejor forma de hacerlo que involucrándose en actividades de grandes.
+                    </p>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end .card-actionbar -->
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <div class="card">
+        <div class="card-body text-default-light">
+
+          <div class="stage">
+            <div class="table"></div>
+            <div class="pc"></div>
+            <div class="cup"></div>
+            <div class="cup-cover"></div>
+            <div class="clock">
+              <div class="marker-top"></div>
+              <div class="marker-right"></div>
+              <div class="marker-bottom"></div>
+              <div class="marker-left"></div>
+              <div class="pointer-min"></div>
+              <div class="pointer-hour"></div>
+              <div class="pointer"></div>
+            </div>
+            <div class="guy">
+              <div class="hat">
+                <div class="hat-hair"></div>
+                <div class="hat-close"></div>
+              </div>
+              <div class="hair-left"></div>
+              <div class="hair-middle"></div>
+              <div class="hair-right"></div>
+              <div class="ear-left"></div>
+              <div class="ear-right"></div>
+              <div class="face">
+                <div class="eye"></div>
+                <div class="eye"></div>
+                <div class="nose"></div>
+                <div class="mouth"></div>
+              </div>
+              <div class="neck"></div>
+              <div class="body"></div>
+            </div>
+            <div class="book one"></div>
+            <div class="book two"></div>
+            <div class="book three"></div>
+          </div>
+
+        </div>
+        <!--end .card-body -->
+
+        <div class="card-actionbar">
+          <div class="card-actionbar-row">
+            <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/cdg1')}}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
+          </div>
+        </div>
+        <!--end .card-actionbar -->
+      </div>
+    </div>
+
+
+
+
+
+
+  </div>
 </div>
-    </div>
+</div>
 </div>
 
 @endsection
-

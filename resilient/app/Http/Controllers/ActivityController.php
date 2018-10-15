@@ -462,19 +462,19 @@ class ActivityController extends Controller
     }
 
     public function cdg1(){
-        return view('activities.2-3anos.cdg.cnr1');
+        return view('activities.2-3anos.cdg.cdg1');
     }
 
     public function cdg2(){
-        return view('activities.2-3anos.cdg.cnr2');
+        return view('activities.2-3anos.cdg.cdg2');
     }
 
     public function cdg3(){
-        return view('activities.2-3anos.cdg.cnr3');
+        return view('activities.2-3anos.cdg.cdg3');
     }
 
     public function cdg4(){
-        return view('activities.2-3anos.cdg.cnr4');
+        return view('activities.2-3anos.cdg.cdg4');
     }
 
     public function cdg_logrosObtenidos(){
