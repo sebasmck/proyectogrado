@@ -16,7 +16,7 @@ li {
   display: inline-block;
 }
 
-input[type="checkbox"][id^="cb"] {
+input[type="radio"][id^="cb"] {
   display: none;
 }
 

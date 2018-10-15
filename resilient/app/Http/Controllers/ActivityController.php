@@ -267,13 +267,60 @@ class ActivityController extends Controller
      // Actividad UN TESORO ESCONDIDO. "SOY CAPAZ DE… Y ME AMO COMO SOY”
      public function tesoroEscondidoDesc()
      {
-         return view('activities.2-11-meses.FormandoNinosR.intro_actividadFormandoNR');
+         return view('activities.2-11-meses.TesoroEscondido.intro_actividadTesoroEscondido');
      }
+
+     public function tesoroEscondido1()
+     {
+         return view('activities.2-11-meses.TesoroEscondido.TesoroEscondido1');
+     }
+
+     public function tesoroEscondido2()
+     {
+         return view('activities.2-11-meses.TesoroEscondido.TesoroEscondido2');
+     }
+
+     public function tesoroEscondidoLogros()
+     {
+         return view('activities.2-11-meses.TesoroEscondido.logrosObtenidos');
+     }
+
+     public function tesoroEscondidoCulminacion()
+     {
+         return view('activities.2-11-meses.TesoroEscondido.CulminadoTesoroEscondido');
+     }
+
      // Rutas para Actividad COMO LOROS
      public function comoLorosDesc()
      {
          return view('activities.3-11-meses.ComoLoros.intro_ComoLoros');
      }
+     public function comoLoros1()
+     {
+         return view('activities.3-11-meses.ComoLoros.ComoLoros1');
+     }
+     public function comoLoros2()
+     {
+         return view('activities.3-11-meses.ComoLoros.ComoLoros2');
+     }
+     public function comoLoros3()
+     {
+         return view('activities.3-11-meses.ComoLoros.ComoLoros3');
+     }
+     public function comoLoros4()
+     {
+         return view('activities.3-11-meses.ComoLoros.ComoLoros4');
+     }
+     public function comoLorosLogros()
+     {
+         return view('activities.3-11-meses.ComoLoros.LogrosObtenidos');
+     }
+     public function comoLorosCulminacion()
+     {
+         return view('activities.3-11-meses.ComoLoros.CulminadoComoLoros');
+     }
+     
+     
 
     // Rutas para Actividad NIÑOS RESILIENTES
 
@@ -281,7 +328,6 @@ class ActivityController extends Controller
      {
          return view('activities.3-11-meses.NinosResilientes.intro_NinosResilientes');
      }
-     // Activity: Cualidades Niños Resilientes
 
      public function ninosResilientes1()
      {
@@ -301,7 +347,14 @@ class ActivityController extends Controller
      {
          return view('activities.3-11-meses.NinosResilientes.NinosResilientes4');
      }
-
+     public function ninosResilientesLogros()
+     {
+        return view('activities.3-11-meses.NinosResilientes.LogrosObtenidos');
+     }
+     public function ninosResilientesCulminacion()
+     {
+        return view('activities.3-11-meses.NinosResilientes.CulminadoNinosR');
+     }
 
     //Actividad elije lo que mas te guste
     public function loQueMasTeGuste(){
@@ -337,6 +390,16 @@ class ActivityController extends Controller
             Storage::disk('ftp')->put($pathFiles , $file);
         }
 
+        return $request;
+    }
+
+    public function ftpUpFilesActivityNinosResilientes(Request $request){
+        $id_usuario = auth()->id();
+        $acudiente = Cuidador::where('id_usuario', $id_usuario)->value('Id_Acudiente');
+        $pathFiles = 'Files/ActivityNinosResilientes/'.$acudiente;
+        var_dump($acudiente);
+        $file = $request->file('fileToUpload'.$i);
+        Storage::disk('ftp')->put($pathFiles , $file);
         return $request;
     }
      

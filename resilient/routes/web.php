@@ -211,15 +211,33 @@ Route::get('/cnr_logrosObtenidos', 'ActivityController@cnr_logrosObtenidos')->na
 Route::get('/cnr_culminado', "ActivityController@CulminadoActividadCnr")->name('/cnr_culminado');
 
 // Rutas para Actividad UN TESORO ESCONDIDO. "SOY CAPAZ DE… Y ME AMO COMO SOY”
-Route::get('/IntroTesoroEscondido', 'ActivityController@formandoNinosResDesc')->name('/IntroTesoroEscondido');
+Route::get('/IntroTesoroEscondido', 'ActivityController@tesoroEscondidoDesc')->name('/IntroTesoroEscondido');
+Route::get('/TesoroEscondido1', 'ActivityController@tesoroEscondido1')->name('/TesoroEscondido1');
+Route::get('/TesoroEscondido2', 'ActivityController@tesoroEscondido2')->name('/TesoroEscondido2');
+Route::get('/TesoroEscondido3', 'ActivityController@tesoroEscondidoLogros')->name('/TesoroEscondido3');
+Route::get('/TesoroEscondido4', 'ActivityController@tesoroEscondidoCulminacion')->name('/TesoroEscondido4');
+
 // Rutas para Actividad COMO LOROS
 Route::get('/IntroComoLoros', 'ActivityController@comoLorosDesc')->name('/IntroComoLoros');
+Route::get('/ComoLoros1', 'ActivityController@comoLoros1')->name('/ComoLoros1');
+Route::get('/ComoLoros2', 'ActivityController@comoLoros2')->name('/ComoLoros2');
+Route::get('/ComoLoros3', 'ActivityController@comoLoros3')->name('/ComoLoros3');
+Route::get('/ComoLoros4', 'ActivityController@comoLoros4')->name('/ComoLoros4');
+Route::get('/ComoLoros4', 'ActivityController@comoLoros4')->name('/ComoLoros4');
+Route::get('/ComoLoros5', 'ActivityController@comoLorosLogros')->name('/ComoLoros5');
+Route::get('/ComoLoros6', 'ActivityController@comoLorosCulminacion')->name('/ComoLoros6');
+
+
 // Rutas para Actividad NIÑOS RESILIENTES
 Route::get('/IntroNinosResilientes', 'ActivityController@ninosResilientesDesc')->name('/IntroNinosResilientes');
 Route::get('/NinosResilientes1', 'ActivityController@ninosResilientes1')->name('/NinosResilientes1');
 Route::get('/NinosResilientes2', 'ActivityController@ninosResilientes2')->name('/NinosResilientes2');
 Route::get('/NinosResilientes3', 'ActivityController@ninosResilientes3')->name('/NinosResilientes3');
 Route::get('/NinosResilientes4', 'ActivityController@ninosResilientes4')->name('/NinosResilientes4');
+
+Route::get('/NinosResilientes5', 'ActivityController@ninosResilientesLogros')->name('/NinosResilientes5');
+Route::get('/NinosResilientes6', 'ActivityController@ninosResilientesCulminacion')->name('/NinosResilientes6');
+
 
 // Ruta actividad digno de carino 
 Route::get('/DignoCarinoIntro' , 'ActivityController@paraDignoDecarino')->name('/DignoCarinoIntro');
@@ -241,8 +259,8 @@ Route::get('/lenp_logrosObtenidos', 'ActivityController@lenp_logrosObtenidos')->
 Route::get('/lenp_culminado', "ActivityController@CulminadoActividadLenp")->name('/lenp_culminado');
 
 
-// Ruta actividad Seguir y seguir intentandoRoute::get('/cnr_intro', 'ActivityController@cnr_intro')->name('/cnr_intro');
-
+// Ruta actividad Seguir y seguir intentando
+Route::get('/cnr_intro', 'ActivityController@cnr_intro')->name('/cnr_intro');
 Route::get('/cnr1', 'ActivityController@cnr1')->name('/cnr1');
 Route::get('/cnr2', 'ActivityController@cnr2')->name('/cnr2');
 Route::get('/cnr3', 'ActivityController@cnr3')->name('/cnr3');

@@ -39,7 +39,7 @@ NIÑOS RESILIENTES 2
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/3LiRupHOecY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
                 <div class="modal-footer">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="">
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{ route('/NinosResilientes3')}}" >
                          <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Continuar</button>
                     </a>
 

@@ -9,7 +9,7 @@ Logros Obtenidos
             <div class="card">
 
                 <div class="card-head style-primary">
-                   <header> Logros Obtenidos - Niños Resilientes </header>
+                   <header> Logros Obtenidos - Como Loros </header>
                 </div>
 
                 <div class="card-body floating-label">
@@ -50,7 +50,7 @@ Logros Obtenidos
             </div><!--end .card-body -->
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction"   href="{{route('/NinosResilientes6')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                  <a style="btn btn-flat btn-primary ink-reaction"   href="{{route('/ComoLoros6')}}" > <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                   </div>
             </div>
 
