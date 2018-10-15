@@ -260,10 +260,24 @@ Route::get('/lenp_culminado', "ActivityController@CulminadoActividadLenp")->name
 
 
 // Ruta actividad Seguir y seguir intentando
-Route::get('/cnr_intro', 'ActivityController@cnr_intro')->name('/cnr_intro');
-Route::get('/cnr1', 'ActivityController@cnr1')->name('/cnr1');
-Route::get('/cnr2', 'ActivityController@cnr2')->name('/cnr2');
-Route::get('/cnr3', 'ActivityController@cnr3')->name('/cnr3');
-Route::get('/cnr4', 'ActivityController@cnr4')->name('/cnr4');
-Route::get('/cnr_logrosObtenidos', 'ActivityController@cnr_logrosObtenidos')->name('/cnr_logrosObtenidos');
-Route::get('/cnr_culminado', "ActivityController@CulminadoActividadCnr")->name('/cnr_culminado');
+
+Route::get('/ssi_intro', 'ActivityController@ssi_intro')->name('/ssi_intro');
+Route::get('/ssi1', 'ActivityController@ssi1')->name('/ssi1');
+Route::get('/ssi2', 'ActivityController@ssi2')->name('/ssi2');
+Route::get('/ssi3', 'ActivityController@ssi3')->name('/ssi3');
+Route::get('/ssi4', 'ActivityController@ssi4')->name('/ssi4');
+Route::get('/ssi_logrosObtenidos', 'ActivityController@ssi_logrosObtenidos')->name('/ssi_logrosObtenidos');
+Route::get('/ssi_culminado', "ActivityController@CulminadoActividadSsi")->name('/ssi_culminado');
+
+
+// Ruta actividad cosas de grande
+
+Route::get('/cdg_intro', 'ActivityController@cdg_intro')->name('/cdg_intro');
+Route::get('/cdg1', 'ActivityController@cdg1')->name('/cdg1');
+Route::get('/cdg2', 'ActivityController@cdg2')->name('/cdg2');
+Route::get('/cdg3', 'ActivityController@cdg3')->name('/cdg3');
+Route::get('/cdg4', 'ActivityController@cdg4')->name('/cdg4');
+Route::get('/cdg_logrosObtenidos', 'ActivityController@cdg_logrosObtenidos')->name('/cdg_logrosObtenidos');
+Route::get('/cdg_culminado', "ActivityController@CulminadoActividadCdg")->name('/cdg_culminado');
+
+

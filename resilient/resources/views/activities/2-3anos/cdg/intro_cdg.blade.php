@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Intro Actividad Cualidades niños resilientes
+COSASS DE GRANDE
 @endsection
 
 @section('addcss')
@@ -816,7 +816,7 @@ button:hover {
   <div class="row justify-content-center">
     <div class="col-md-12">
       <div class="title animated lightSpeedIn" style="font-family: 'Raleway', sans-serif; font-size: 40px;">
-        Actividad: Seguir y seguir intentado
+        Actividad: Cosas de grande
       </div>
     </div>
 
@@ -844,19 +844,19 @@ button:hover {
             <tbody>
               <tr>
                 <td>Procesos psicosociales</td>
-                <td>Prácticas de crianza</td>
+                <td>Práctica de Crianza</td>
               </tr>
               <tr>
                 <td>Competencias de padres y/o cuidadores</td>
-                <td>La promoción de la resiliencia</td>
+                <td>Aporte Protector</td>
               </tr>
               <tr>
                 <td>Rasgos resilientes</td>
-                <td>Confianza</td>
+                <td>Autonomía y Confianza </td>
               </tr>
               <tr>
                 <td>Semana</td>
-                <td>8</td>
+                <td>2</td>
               </tr>
               <tr>
             </tbody>
@@ -879,17 +879,14 @@ button:hover {
                 <div class="card-body">
                   <label>
                     <p style="text-align:justify; text-justify: inter-word; color:black;">
-                      El ser humano en ocasiones se ve obligado a enfrentarse a situaciones con algún grado de
-                      dificultad en las diferentes áreas como la social, la académica, la laboral, etc. Los niños por
-                      su parte también experimentan estos escenarios de acuerdo a su contexto y necesidades. Lo cierto,
-                      es que para cualquier persona, sin ahondar en la edad, las experiencias proveen al individuo de
-                      aprendizaje. Es por esto, que al hablar de pautas de crianza resiliente, los cuidadores deben
-                      proveer a los niños y niñas de confianza en sí mismos para lograr resolver las problemáticas de
-                      su cotidianidad, es decir permitirles intentar nuevamente las actividades que desempeñan hasta
-                      lograr el objetivo, ello debe estar acompañado de verbalizaciones dirigidas a la motivación por
-                      ejemplo: decirle "yo sé que lo puedes hacer" fomentando autonomía y habilidades propias o "yo
-                      estoy aquí, contigo" refuerza el vínculo y la confianza en la relación padres e hijos.
-                      <br>
+                      En esta edad tu niño o niña siente gran curiosidad por el mundo que lo rodea, sus habilidades
+                      tanto físicas como mentales le ayudan a explorar con más facilidad aquello que es desconocido
+                      para él. Como modelos los cuidadores tienen una gran responsabilidad, pues son el ejemplo y la
+                      guía de cómo afrontar cada una de las situaciones que se presenta la vida.
+                      La autonomía de los niños o niñas incrementa cuando se ayuda a superar errores sin ser
+                      ridiculizado, criticado o avergonzado. Ellos responden imitando las acciones de los cuidadores y
+                      respuestas al ambiente. Esta actividad tiene como objetivo estimular la autonomía de tu niño o
+                      niña y qué mejor forma de hacerlo que involucrándose en actividades de grandes.
                     </p>
                   </label>
                 </div>
@@ -948,7 +945,7 @@ button:hover {
 
         <div class="card-actionbar">
           <div class="card-actionbar-row">
-            <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/ssi1')}}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
+            <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/cdg1')}}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
           </div>
         </div>
         <!--end .card-actionbar -->
