@@ -9,7 +9,7 @@ Logros Obtenidos
             <div class="card">
 
                 <div class="card-head style-primary">
-                   <header> Logros Obtenidos - Cualidades Niños Resilientes </header>
+                   <header> Logros Obtenidos - Cosas de grande </header>
                 </div>
 
                 <div class="card-body floating-label">
@@ -60,7 +60,7 @@ Logros Obtenidos
 
         <div class="card-actionbar">
                 <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/cnr_culminado')}}"> <button type="button"
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/cdg_culminado')}}"> <button type="button"
                             class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                 </div>
             </div>

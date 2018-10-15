@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-CUALIDADES NIÑOS RESILIENTES
+COSAS DE GRANDE
 @endsection
 
 @section('addcss')
@@ -47,56 +47,38 @@ CUALIDADES NIÑOS RESILIENTES
         <div class="card">
 
             <div class="card-head style-primary">
-                <header> CUALIDADES NIÑOS RESILIENTES </header>
+                <header> COSAS DE GRANDE </header>
             </div>
 
             <div class="card-body floating-label">
+                <p>ANTES </p> <br>
+                <ol>
+                    <li>Invita a tu hijo a realizar la actividad</li>
+                    <li>Explícale los elementos que se involucran en cada una de ellas</li>
+                    <li>Explícale su utilidad o el por qué se debe realizar</li>
+                </ol> <br>
+                <b>DURANTE</b>
+                <ol>
+                    <li>Empieza tu realizando la actividad</li>
+                    <li>Explícale paso por paso como esta se debe realizar y que cuidados se deben tener</li>
+                    <li>Recuerda tener paciencia, el objetivo es fomentar una actividad como experiencia de
+                         aprendizaje, no crear un mal rato en el niño</li>
+                </ol> <br>
+                <b>DESPUES</b>
+                <ol>
+                    <li> Felicítalo por el esfuerzo que implementos para realizar la actividad</li>
+                    <li> Felicítalo por el esfuerzo que implementos para realizar la actividad</li>
+                    <li>Si no pudo culminar la actividad, no lo regañes, dile que seguirán 
+                        practicando y que poco a poco irá aprendiendo de igual forma, que lo 
+                        vas a seguir invitar otras actividades como estas</li>
+                </ol> 
 
-            <div class="row">
-                <div class="col-md-12">
-                    A continuación, encontrarás la lista de cualidades 
-                    resilientes que encontraste en el video. Aunque en 
-                    el video se presentan en un orden y se sabe que cada 
-                    una asume un papel fundamental se quiere que tú 
-                    realices tu propia lista de cualidades resilientes 
-                    en niños.
-
-                </div>
-            </div>
-
-            <div class="col-md-7">
-                <div id="drop_zone" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)" ></div>
-            </div>
-               
-            <div class="col-md-5">
-
-               <div id="qualities">
-                    <b>Cualidades resilientes</b>
-                    <hr>
-    
-                    <div id="object1" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Lazos fuertes</div>
-                    <div id="object2" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Ser buenos amigos</div>
-                    <div id="object3" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Responsabilidad con sus actividades</div>
-                    <div id="object4" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Responsabilidad propia</div>
-                    <div id="object5" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Alegria y buen humor</div>
-                    <div id="object7" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Apoyo de padres</div>
-                    <div id="object8" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Desarrollo de su caracter</div>
-                    <div id="object9" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Comportamiento en social</div>
-                    <div id="object10" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Trabajo comunitario</div>
-                    <div id="object11" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">Resaltar puntos fuertes</div>
-               </div> 
+                
                 
             </div>
-
-                <!-- <hr>
-                <button onclick="readDropZone()">Get Object Data</button> -->
-
-            </div>
-
-
             <div class="card-actionbar">
                 <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/cnr4')}}"> <button type="button"
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/cdg_logrosObtenidos')}}"> <button type="button"
                             class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                 </div>
             </div>
@@ -110,45 +92,45 @@ CUALIDADES NIÑOS RESILIENTES
 
 <script>
 
-function _(id){
-   return document.getElementById(id);	
-}
-
-var droppedIn = false;
-
-function drag_start(event) {
-    // _('app_status').innerHTML = "Dragging the "+event.target.getAttribute('id');
-    document.getElementsByClassName("objects").innerHTML = "Dragging the "+event.target.getAttribute('id');
-    event.dataTransfer.dropEffect = "move";
-    event.dataTransfer.setData("text", event.target.getAttribute('id') );
-}
-function drag_enter(event) {
-    document.getElementsByClassName("objects").innerHTML = "You are dragging over the "+event.target.getAttribute('id');
-}
-function drag_leave(event) {
-    document.getElementsByClassName("objects").innerHTML = "You left the "+event.target.getAttribute('id');
-}
-function drag_drop(event) {
-    event.preventDefault(); /* Prevent undesirable default behavior while dropping */
-    var elem_id = event.dataTransfer.getData("text");
-    event.target.appendChild( _(elem_id) );
-    document.getElementsByClassName("objects").innerHTML = "Dropped "+elem_id+" into the "+event.target.getAttribute('id');
-    _(elem_id).removeAttribute("draggable");
-    _(elem_id).style.cursor = "default";
-    droppedIn = true;
-}
-function drag_end(event) {
-    if(droppedIn == false){
-        _('app_status').innerHTML = "You let the "+event.target.getAttribute('id')+" go.";
+    function _(id) {
+        return document.getElementById(id);
     }
-	droppedIn = false;
-}
-function readDropZone(){
-    for(var i=0; i < _("drop_zone").children.length; i++){
-        alert(_("drop_zone").children[i].id+" is in the drop zone");
+
+    var droppedIn = false;
+
+    function drag_start(event) {
+        // _('app_status').innerHTML = "Dragging the "+event.target.getAttribute('id');
+        document.getElementsByClassName("objects").innerHTML = "Dragging the " + event.target.getAttribute('id');
+        event.dataTransfer.dropEffect = "move";
+        event.dataTransfer.setData("text", event.target.getAttribute('id'));
     }
-    /* Run Ajax request to pass any data to your server */
-}
+    function drag_enter(event) {
+        document.getElementsByClassName("objects").innerHTML = "You are dragging over the " + event.target.getAttribute('id');
+    }
+    function drag_leave(event) {
+        document.getElementsByClassName("objects").innerHTML = "You left the " + event.target.getAttribute('id');
+    }
+    function drag_drop(event) {
+        event.preventDefault(); /* Prevent undesirable default behavior while dropping */
+        var elem_id = event.dataTransfer.getData("text");
+        event.target.appendChild(_(elem_id));
+        document.getElementsByClassName("objects").innerHTML = "Dropped " + elem_id + " into the " + event.target.getAttribute('id');
+        _(elem_id).removeAttribute("draggable");
+        _(elem_id).style.cursor = "default";
+        droppedIn = true;
+    }
+    function drag_end(event) {
+        if (droppedIn == false) {
+            _('app_status').innerHTML = "You let the " + event.target.getAttribute('id') + " go.";
+        }
+        droppedIn = false;
+    }
+    function readDropZone() {
+        for (var i = 0; i < _("drop_zone").children.length; i++) {
+            alert(_("drop_zone").children[i].id + " is in the drop zone");
+        }
+        /* Run Ajax request to pass any data to your server */
+    }
 
 </script>
 @endsection
