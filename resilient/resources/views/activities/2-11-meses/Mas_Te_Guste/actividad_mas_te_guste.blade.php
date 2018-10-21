@@ -106,7 +106,7 @@
         id="favoritesModalLabel">Aprendiendo a emprender</h4>
       </div>
       <div class="modal-body">
-      
+      <div id="scrolleable" style="overflow: scroll; height: 400px;">
 <div style="text-align:center;">
 <p><b>1. </b>identifica tres actividades de diversión entre tu hijo y tú por medio de
  alguna de estas opciones. (Cocinar, pintar con temperas un pliego de papel, pensar y
@@ -123,13 +123,13 @@ los pasos para dar cumplimiento a los objetivos.</p>
 
 <img style="width:200px;height:200px;text-align:center;display:none;" id="imgFadeEx" src="{{asset('img/EjemploActividad.JPG')}}">
 
-
+</div>
 </div>
       </div>
       <div class="modal-footer">
         <span class="pull-right">
         <!-- SI acepta sigue el flujo normal de la aplicación-->
-          <button id="btnStartThirdStepActivity" type="button" class="btn btn-primary" data-dismiss="modal">
+         <button id="btnStartThirdStepActivity" type="button" class="btn btn-primary" data-dismiss="modal">
             Siguiente
           </button> 
         </span>
@@ -161,6 +161,12 @@ $(document).ready(function(){
     $('#startActivityFirstSecondStepModal').modal('toggle');
     $("#imgFadeEx").fadeIn(3500);
      });
+
+     $("#btnStartThirdStepActivity").click(function(){
+     $("#initialContent").fadeOut("slow" , function(){
+      window.location="{{URL::to('/MasTeGuste3')}}";
+     });
+});
 
 
 });

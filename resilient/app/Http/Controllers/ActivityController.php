@@ -37,8 +37,6 @@ class ActivityController extends Controller
         return view('activities.2-3anos.cnr3');
     }
 
-
-    public function index($id)
     public function aprendamosResilienciaIntro()
     {
         return view("activities.2-11-meses.aprendamos_resiliencia.intro_aprendamos_resiliencia");
@@ -221,6 +219,24 @@ class ActivityController extends Controller
     public function paraActividadHastaElFinal3(){
         return view('activities.2anos_2anos11meses.hasta_el_final.hasta_final_actividad_2');
     }
+    public function paraActividadHastaElFinal4(){
+        return view('activities.2anos_2anos11meses.hasta_el_final.logros_obtenidos');
+    }
+    public function paraActividadHastaElFinalCulminacion(Request $request)
+    {
+        $LogrosActividad = new LogrosActividad (); 
+        $NumActividad = 3; //Numero en base de datos tabla Actividad  
+        $RelacionInfante = null ; // Por el momento enviar vacio  
+        $LogrosActividad ->Aprendido = $request->input('si/No1');
+        $LogrosActividad ->NoAprendido = $request->input('si/No2');
+        $LogrosActividad ->AplicadoCrianza = $request->input('si/No3');
+        $LogrosActividad ->NoAplicadoCrianza = $request->input('si/No4');
+        $LogrosActividad ->id_AcudienteInfante = $RelacionInfante;
+        $LogrosActividad ->id_Actividad = $NumActividad; 
+        $LogrosActividad ->save();
+        return view('activities.2-11-meses.Creando_Confianza.CreandoConfianzaFinal');
+    }
+
     public function downloadImage($file){
         $pathtoFile = public_path().'//img/'.$file;
         return response()->download($pathtoFile);
@@ -313,7 +329,7 @@ class ActivityController extends Controller
         $acudiente = Cuidador::where('id_usuario', $id_usuario)->value('Id_Acudiente');
 
         $pathFiles = 'Images/ActivityMasTGuste/'.$acudiente;
-        var_dump($acudiente);
+        //var_dump($acudiente);
 
         for($i=1;$i<10;$i++){
         
@@ -321,10 +337,24 @@ class ActivityController extends Controller
             Storage::disk('ftp')->put($pathFiles , $file);
         }
 
-        return $request;
+        return view('activities.2-11-meses.Mas_Te_Guste.logros_obtenidos');
     }
+
+    public function loQueMasTeGusteCulminacion(Request $request) {
+        $LogrosActividad = new LogrosActividad (); 
+        $NumActividad = 7; //Numero en base de datos tabla Actividad  
+        $RelacionInfante = null ; // Por el momento enviar vacio  
+        $LogrosActividad ->Aprendido = $request->input('si/No1');
+        $LogrosActividad ->NoAprendido = $request->input('si/No2');
+        $LogrosActividad ->AplicadoCrianza = $request->input('si/No3');
+        $LogrosActividad ->NoAplicadoCrianza = $request->input('si/No4');
+        $LogrosActividad ->id_AcudienteInfante = $RelacionInfante;
+        $LogrosActividad ->id_Actividad = $NumActividad; 
+        $LogrosActividad ->save();
+         return view('activities.2-11-meses.FormandoNinosR.FormandoNRFinal');
+     }
      
-    //Actividad elije lo que mas te guste
+    //Actividad digno de carino
     public function paraDignoDecarino(){
         return view('activities.2-11-meses.Digno_De_Carino.intro_digno_de_carino');
     }
@@ -336,9 +366,46 @@ class ActivityController extends Controller
     public function paraDignoDecarino3(){
         return view('activities.2-11-meses.Digno_De_Carino.digno_de_carino_3');
     }
-
+   
     //Actividad el Mimo
     public function paraElmimo(){
         return view('activities.2-11-meses.El_mimo.intro_el_mimo');
     }
+ 
+    public function paraElmimo2(){
+        return view('activities.2-11-meses.El_mimo.el_mimo');
+    }
+
+    public function paraElmimo3(){
+        return view('activities.2-11-meses.El_mimo.el_mimo_2');
+    }
+
+    //Actividad fuerte y grande
+    public function paraFuerteYGrande(){
+        return view('activities.2-11-meses.Grande_fuerte.intro_grande_fuerte');
+    }
+    public function paraFuerteYGrande2(){
+        return view('activities.2-11-meses.Grande_fuerte.grande_fuerte');
+    }
+    public function paraFuerteYGrande3(){
+        return view('activities.2-11-meses.Grande_fuerte.grande_fuerte_2');
+    }
+    public function paraFuerteYGrande4(){
+        return view('activities.2-11-meses.Grande_fuerte.grande_fuerte_3');
+    }
+
+    //Actividad respirar pensar actuar
+    public function paraPensarActuar(){
+        return view('activities.2-11-meses.Respirar_pensar_actuar.intro_respirar_actuar');
+    }
+
+    public function paraPensarActuar1(){
+        return view('activities.2-11-meses.Respirar_pensar_actuar.respirar_actuar');
+    }
+
+    public function paraPensarActuar2(){
+        return view('activities.2-11-meses.Respirar_pensar_actuar.respirar_actuar_2');
+    }
+
+
 }

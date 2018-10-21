@@ -1,170 +1,143 @@
-@extends('layouts.app')
+@extends('partials.layout')
+
+@section('title')
+El mimo
+@endsection
 
 @section('content')
-<div class="container" id="initialContent">
-    <div class="row justify-content-center">
-       
-                <img style="width:300px;height:300px;text-align:center;" src="{{asset('img/logo.png')}}">
-     
+<form action="{{route('/Elmimo2') }}" method="get" enctype="multipart/form-data">
+<div class="col-lg-offset-2 col-md-8">
 
-    </div>
+<div class="card">
+<div class="card-head style-primary">
+                    <header>Aprendiendo a emprender</header>
+                </div>
+ <div class="card-body floating-label">
+  <div class="row">
+
+        
+
+                 <div class="row">
+                                   <div class="col-sm-12">
+                                        <div class="form-group">
+                                        <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 20px;" >
+                                            <label> 
+                                            <p>En primer lugar, encontrarás cuatro situaciones cotidianas del día a día, por favor escoge cuatro,
+para cuatro días con el fin de fomentar cada una de las situaciones.
+Arrastra cada una de las situaciones al día que escogiste, así en el transcurso de la semana la
+explicación de la situación te aparecerá.</p>
+                                            </label>
+
+                                             </div>
+                                        </div>
+                                    </div> 
+                 </div>
 </div>
+                <br />
+              
+                <div class="row">
 
 
-<!-- Comienzo del modal de Inicio Actividad-->
-<div class="modal fade" id="startActivityModal" 
-     tabindex="-1" role="dialog" 
-     aria-labelledby="favoritesModalLabel"
-     aria-hidden="true" data-backdrop="static" data-keyboard="false"
-     data-show="true">
-
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-       
-        <h4 class="modal-title" 
-        id="favoritesModalLabel">Tu hijo el mimo</h4>
-      </div>
-      <div class="modal-body">
-
-<div style="text-align:center;">
-   <p> Tal vez tu niño no necesite gorro negro, pintarse la cara o utilizar guantes blancos, 
-   sin embargo, en esta edad es igual que un mimo, imita a las personas que tiene a su alrededor.
-</p>
+<div class="row">
+        <div class="col-sm-12">
+             <div class="form-group">
+             <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 20px;color:gray;" >
     
-   <div>
-   <img style="display:none;" id="imagen1" src="{{asset('img/mimo1.JPG')}}" />
-  </div>
+           
+{{ csrf_field() }}
+<table class="table table-striped">
+  <tr>
+  <th>Actividad</th>
+  <th>Descripción</th>
+  <th>Fecha</th>
+  </tr>
+  <tr>
+  <td> <img width="191" height="136" style="display:none;" id="imagen3" src="{{asset('img/mimo3.JPG')}}" /> </td>
+  <td> <p><b>Saludar</b> Imitar los gestos de comportamientos
+   al saludar. </p> </td>
+   <td> 
 
+    <input placeholder="DD/MM/YYYY" required type="date" class="form-control">
+  
+  
+   </td>
+  </tr>
+
+  <tr>
+  <td> <img width="191" height="136" style="display:none;" id="imagen4" src="{{asset('img/mimo4.JPG')}}" /></td>
+  <td> <p><b>Felicidad al éxito</b> Imita las expresiones de felicidad al lograrlo
+                                    ¡Excelente! ¡Muy bien! ¡Lo lograste! </p> </td>
+  <td>
+  <input placeholder="DD/MM/YYYY" required type="date" class="form-control">
+  </td>
+  </tr>
+
+  <tr>
+  <td> <img  width="191" height="136" style="display:none;" id="imagen5" src="{{asset('img/mimo5.JPG')}}" /></td>
+  <td><p><b>Expresión frente al fracaso</b> Imitar regar unas pinturas, aunque fracases
+                                            Reaccionar ante el error y buscar una solución </p></td>
+  <td>
+  <input placeholder="DD/MM/YYYY" required type="date" class="form-control">
+  </td>
+  </tr>
+
+  <tr>
+  <td> <img width="191" height="136" style="display:none;" id="imagen6" src="{{asset('img/mimo6.JPG')}}" /></td>
+  <td> <p><b>Actuar frente a los errores</b> Imita una emoción cuando se rompe algo valioso,
+                                            busca repararlo (Cuando se rompe una porcelana o un
+                                            libro muy preciado)</p></td>
+  <td>
+  <input placeholder="DD/MM/YYYY" required type="date" class="form-control">
+  </td>
+  </tr>
+
+
+
+
+
+
+  </table>
+
+
+    <!--<input type="submit" value="Upload Image" name="submit"-->
+                  </div>
+             </div>
+         </div> 
+
+</div>
+<br/>
 </div>
 
 
-      </div>
-      <div class="modal-footer">
+              
 
-        <span class="pull-right">
-        <!-- SI acepta sigue el flujo normal de la aplicación-->
-          <button id="btnStartActivity" type="button" class="btn btn-primary" data-dismiss="modal">
-            Siguiente
-          </button>
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Fin del modal de Inicio de actividad-->
-<!-- Comienzo del modal de Inicio de primera Actividad-->
-<div class="modal fade" id="startActivityFirstModal" 
-     tabindex="-1" role="dialog" 
-     aria-labelledby="favoritesModalLabel"
-     aria-hidden="true" data-backdrop="static" data-keyboard="false"
-     data-show="true">
-
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-       
-        <h4 class="modal-title" 
-        id="favoritesModalLabel">Aprendiendo a emprender</h4>
-      </div>
-      <div class="modal-body">
-
-<div style="text-align:center;">
-
- <p> <iframe style="display:none;" id="video2" width="560" height="315" src="https://www.youtube.com/embed/Rj6UtCq-8-8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
-
+<div class="card-actionbar">
+                <div class="card-actionbar-row">
+                <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                    </div>
+            </div>
 </div>
 
 
-      </div>
-      <div class="modal-footer">
-
-        <span class="pull-right">
-        <!-- SI acepta sigue el flujo normal de la aplicación-->
-          <button id="btnStartSecondStepActivity" type="button" class="btn btn-primary" data-dismiss="modal">
-            Siguiente
-          </button>
-        </span>
-      </div>
-    </div>
-  </div>
 </div>
-<!-- Fin del modal de Inicio de primera actividad-->
 
-
-
-<!-- Comienzo del modal de Inicio de primera Actividad Segundo Paso-->
-<div class="modal fade" id="startActivityFirstSecondStepModal" 
-     tabindex="-1" role="dialog" 
-     aria-labelledby="favoritesModalLabel"
-     aria-hidden="true" data-backdrop="static" data-keyboard="false"
-     data-show="true">
-
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-       
-        <h4 class="modal-title" 
-        id="favoritesModalLabel">Aprendiendo a emprender</h4>
-      </div>
-      <div class="modal-body">
-      
-<div style="text-align:center;">
-<p><b>1. </b>identifica tres actividades de diversión entre tu hijo y tú por medio de
- alguna de estas opciones. (Cocinar, pintar con temperas un pliego de papel, pensar y
- elegir un juego de los niños, vestir un muñeco con diferentes prendas de vestir).</p> 
-
-<p><b>2. </b>Identifica junto con tu hijo cuáles son los objetivos de la actividad y define 
-los pasos para dar cumplimiento a los objetivos.</p>
-
-<p><b>¡Alienta a tu hijo a tomar las decisiones!</b></p>
-<p><b>3. </b>Al terminar, sube fotografías a estos cuadros según corresponda el paso a paso
- que eligió tu hijo en la actividad y cuál fue el resultado de la tarea. Mira a continuación
- un ejemplo:</p>
-
-
-<img style="width:200px;height:200px;text-align:center;display:none;" id="imgFadeEx" src="{{asset('img/EjemploActividad.JPG')}}">
-
-
-</div>
-      </div>
-      <div class="modal-footer">
-        <span class="pull-right">
-        <!-- SI acepta sigue el flujo normal de la aplicación-->
-          <button id="btnStartThirdStepActivity" type="button" class="btn btn-primary" data-dismiss="modal">
-            Siguiente
-          </button> 
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Fin del modal de Inicio de primera actividad segundo Paso-->
-
-
+</form>
 @endsection
 
 @section('addjs')
 
 <script>
 $(document).ready(function(){
+ 
 
-      $('#startActivityModal').modal('toggle');
-
-      $("#imagen1").fadeIn(2000); 
-       
-   $("#btnStartActivity").click(function(){
-     $('#startActivityFirstModal').modal('toggle');
-     $("#video2").fadeIn(2000);
-   });
-
-
-   $("#btnStartSecondStepActivity").click(function(){
-    $('#startActivityFirstSecondStepModal').modal('toggle');
-    $("#imgFadeEx").fadeIn(3500);
-     });
+     $("#imagen3").fadeIn(1500);
+     $("#imagen4").fadeIn(1500);
+     $("#imagen5").fadeIn(1500);
+     $("#imagen6").fadeIn(1500);
 
 
 });
+ 
 </script>
+
 @endsection
