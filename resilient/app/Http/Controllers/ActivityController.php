@@ -42,6 +42,13 @@ class ActivityController extends Controller
         return view("activities.2-11-meses.aprendamos_resiliencia.intro_aprendamos_resiliencia");
     }
 
+   
+    // public function index($id)
+    // {
+    //     $actividad = Actividad::with('preguntaActividades.opcionPreguntaActividad')->where('Id_Actividad', $id)->first();
+    //     return view($actividad->View_Actividad, ['Actividad' => $actividad]);
+    // }
+
     public function actividad(Request $request,$id){
         $actividad  = Actividad::where('Id_Actividad',$id)->get();
         return  $actividad;
@@ -299,10 +306,40 @@ class ActivityController extends Controller
      {
          return view('activities.2-11-meses.FormandoNinosR.intro_actividadFormandoNR');
      }
+     // Rutas para Actividad COMO LOROS
+     public function comoLorosDesc()
+     {
+         return view('activities.3-11-meses.ComoLoros.intro_ComoLoros');
+     }
+
+    // Rutas para Actividad NIÑOS RESILIENTES
+
+     public function ninosResilientesDesc()
+     {
+         return view('activities.3-11-meses.NinosResilientes.intro_NinosResilientes');
+     }
+     // Activity: Cualidades Niños Resilientes
+
+     public function ninosResilientes1()
+     {
+         return view('activities.3-11-meses.NinosResilientes.NinosResilientes1');
+     }
+
+     public function ninosResilientes2()
+     {
+         return view('activities.3-11-meses.NinosResilientes.NinosResilientes2');
+     }
+
+     public function ninosResilientes3()
+     {
+         return view('activities.3-11-meses.NinosResilientes.NinosResilientes3');
+     }
+     public function ninosResilientes4()
+     {
+         return view('activities.3-11-meses.NinosResilientes.NinosResilientes4');
+     }
 
 
-
-    
     //Actividad elije lo que mas te guste
     public function loQueMasTeGuste(){
         return view('activities.2-11-meses.Mas_Te_Guste.intro_actividad_mas_te_guste');
@@ -406,6 +443,136 @@ class ActivityController extends Controller
     public function paraPensarActuar2(){
         return view('activities.2-11-meses.Respirar_pensar_actuar.respirar_actuar_2');
     }
+
+
+
+
+// Actividad cualidades ninos resilientes
+
+    public function cnr_intro(){
+        return view('activities.2-3anos.cnr.intro_cnr');
+    }
+
+    public function cnr1(){
+        return view('activities.2-3anos.cnr.cnr1');
+    }
+
+    public function cnr2(){
+        return view('activities.2-3anos.cnr.cnr2');
+    }
+
+    public function cnr3(){
+        return view('activities.2-3anos.cnr.cnr3');
+    }
+
+    public function cnr4(){
+        return view('activities.2-3anos.cnr.cnr4');
+    }
+
+    public function cnr_logrosObtenidos(){
+        return view('activities.2-3anos.cnr.cnr_logrosObtenidos');
+    }
+
+    public function CulminadoActividadCnr(){
+        return view('activities.2-3anos.cnr.CulminadoActividadCnr');
+    }
+
+
+    // Actividad Las emociones de mis padres
+
+    public function lenp_intro(){
+        return view('activities.2-3anos.lenp.intro_lenp');
+    }
+
+    public function lenp1(){
+        return view('activities.2-3anos.lenp.lenp1');
+    }
+
+    public function lenp2(){
+        return view('activities.2-3anos.lenp.lenp2');
+    }
+
+    public function lenp3(){
+        return view('activities.2-3anos.lenp.lenp3');
+    }
+
+    public function lenp4(){
+        return view('activities.2-3anos.lenp.lenp4');
+    }
+
+    public function lenp5(){
+        return view('activities.2-3anos.lenp.lenp5');
+    }
+
+    public function lenp_logrosObtenidos(){
+        return view('activities.2-3anos.lenp.lenp_logrosObtenidos');
+    }
+
+    public function CulminadoActividadLenp(){
+        return view('activities.2-3anos.lenp.CulminadoActividadLenp');
+    }
+
+    // Actividad SSI
+
+    public function ssi_intro(){
+        return view('activities.2-3anos.ssi.intro_ssi');
+    }
+
+    public function ssi1(){
+        return view('activities.2-3anos.ssi.ssi1');
+    }
+
+    public function ssi2(){
+        return view('activities.2-3anos.ssi.ssi2');
+    }
+
+    public function ssi3(){
+        return view('activities.2-3anos.ssi.ssi3');
+    }
+
+    public function ssi4(){
+        return view('activities.2-3anos.ssi.ssi4');
+    }
+
+    public function ssi_logrosObtenidos(){
+        return view('activities.2-3anos.ssi.ssi_logrosObtenidos');
+    }
+
+    public function CulminadoActividadSsi(){
+        return view('activities.2-3anos.ssi.CulminadoActividadSsi');
+    }
+
+
+    // Actividad cdg
+
+    public function cdg_intro(){
+        return view('activities.2-3anos.cdg.intro_cdg');
+    }
+
+    public function cdg1(){
+        return view('activities.2-3anos.cdg.cdg1');
+    }
+
+    public function cdg2(){
+        return view('activities.2-3anos.cdg.cdg2');
+    }
+
+    public function cdg3(){
+        return view('activities.2-3anos.cdg.cdg3');
+    }
+
+    public function cdg4(){
+        return view('activities.2-3anos.cdg.cdg4');
+    }
+
+    public function cdg_logrosObtenidos(){
+        return view('activities.2-3anos.cdg.cdg_logrosObtenidos');
+    }
+
+    public function CulminadoActividadCdg(){
+        return view('activities.2-3anos.cdg.CulminadoActividadCdg');
+    }
+    
 
 
 }

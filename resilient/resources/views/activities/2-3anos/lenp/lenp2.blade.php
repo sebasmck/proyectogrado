@@ -11,7 +11,8 @@ CUALIDADES NIÑOS RESILIENTES
         <div class="card">
 
             <div class="card-head style-primary">
-                <header> CUALIDADES NIÑOS RESILIENTES </header>
+                <header> LAS EMOCIONES DE NUESTROS PADRES /CUIDADORES
+ </header>
             </div>
 
             <div class="card-body floating-label">
@@ -23,14 +24,14 @@ CUALIDADES NIÑOS RESILIENTES
 
                 <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;">
                     <label>
-                        <p style="text-align:justify; text-justify: inter-word;"> Cuando presto atención es cuando
-                            entiendo yo: </p>
+                        <p style="text-align:justify; text-justify: inter-word;"> <b> Ven a ver el siguiente video </b> </p>
                     </label>
                 </div>
 
 
                 <div class="col-md-8">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/DAkLbUwoqMo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/h_8oX8739Ys" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
 
                 <div>
@@ -78,7 +79,7 @@ CUALIDADES NIÑOS RESILIENTES
 
             <div class="card-actionbar">
                 <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/cnr3')}}"> <button type="button"
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/lenp3')}}"> <button type="button"
                             class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                 </div>
             </div>
