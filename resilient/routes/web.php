@@ -115,7 +115,7 @@ Route::post('/preguntascierreposttestfinal', 'PostTestController@preguntasCierre
 
 
 //logros
-Route::post('/guardar-logros/{id}', 'ActivityController@guardarLogros')->name('/guardar-logros');
+Route::post('/guardar-logros', 'ActivityController@guardarLogros')->name('/guardar-logros');
 
 // Rutas actividades
 Route::get('/actividad-intro-1', 'ActivityController@aprendamosResilienciaIntro')->name('/actividad-intro-1');
@@ -130,6 +130,48 @@ Route::get('/actividades-aprendamos-resiliencia-7', 'ActivityController@verbaliz
 Route::get('/actividades-aprendamos-resiliencia-8', 'ActivityController@resilienciaEnLaCrianza')->name('/actividades-aprendamos-resiliencia-8');
 Route::get('/logros', 'ActivityController@resiliencialogros')->name('/logros');
 
+
+
+Route::prefix('actividades')->group(function () {
+
+    // Actividad aterrizando el concepto de resiliencia
+
+    Route::get('/aterrizando-el-concepto-resiliencia-1', 'ActivityController@intro_acdr')->name('/aterrizando-el-concepto-resiliencia-1');
+    Route::get('/aterrizando-el-concepto-resiliencia-2', 'ActivityController@cuandoPrestoAtencion_acdr')->name('/aterrizando-el-concepto-resiliencia-2');
+    Route::get('/aterrizando-el-concepto-resiliencia-3', 'ActivityController@resilienciaEnLaVidaReal_acdr')->name('/aterrizando-el-concepto-resiliencia-3');
+    Route::get('/aterrizando-el-concepto-resiliencia-4', 'ActivityController@monitoreoElComportamiento_acdr')->name('/aterrizando-el-concepto-resiliencia-4');
+    Route::get('/aterrizando-el-concepto-resiliencia-5', 'ActivityController@logros_acdr' )->name('/aterrizando-el-concepto-resiliencia-5');
+
+
+    // Actividad gafas de las emociones
+
+    Route::get('/gafas-de-las-emociones-1', 'ActivityController@intro_gdle')->name('/gafas-de-las-emociones-1');
+    Route::get('/gafas-de-las-emociones-2', 'ActivityController@videosDescriptivos_gdle')->name('/gafas-de-las-emociones-2');
+    Route::get('/gafas-de-las-emociones-3', 'ActivityController@relacionVideosHijo_gdle')->name('/gafas-de-las-emociones-3');
+    Route::get('/gafas-de-las-emociones-4', 'ActivityController@logros_gdle')->name('/gafas-de-las-emociones-4');
+
+
+    // Actividad papito escultor
+
+    Route::get('/papito-escultor-1', 'ActivityController@intro_pe')->name('/papito-escultor-1');
+    Route::get('/papito-escultor-2', 'ActivityController@cuandoPrestoAtencion_pe')->name('/papito-escultor-2');
+    Route::get('/papito-escultor-3', 'ActivityController@encuentraAlgo_pe')->name('/papito-escultor-3');
+    Route::get('/papito-escultor-4', 'ActivityController@yoYMiManera_pe')->name('/papito-escultor-4');
+    Route::get('/papito-escultor-5', 'ActivityController@tareas_pe')->name('/papito-escultor-5');
+    Route::get('/papito-escultor-6', 'ActivityController@logros_pe')->name('/papito-escultor-6');
+
+    // Actividad dia del elogio
+
+    Route::get('/dia-del-elogio-1   ', 'ActivityController@intro_dde')->name('/dia-del-elogio-1');
+    Route::get('/dia-del-elogio-2', 'ActivityController@cuandoPrestoAtencion_dde')->name('/dia-del-elogio-2');
+    Route::get('/dia-del-elogio-3', 'ActivityController@paraQueDeboElogiar_dde')->name('/dia-del-elogio-3');
+    Route::get('/dia-del-elogio-4', 'ActivityController@aprendeEstrategias_dde')->name('/dia-del-elogio-4');
+    Route::get('/dia-del-elogio-5', 'ActivityController@recuerdaEstrategias_dde')->name('/dia-del-elogio-5');
+    Route::get('/dia-del-elogio-6', 'ActivityController@practicaRefuerzo_dde')->name('/dia-del-elogio-6');
+    Route::get('/dia-del-elogio-7', 'ActivityController@ojosAbiertosYTactoDispuesto_dde')->name('/dia-del-elogio-7');
+    Route::get('/dia-del-elogio-8', 'ActivityController@tarea_dde')->name('/dia-del-elogio-8');
+    Route::get('/dia-del-elogio-9', 'ActivityController@logros_dde')->name('/dia-del-elogio-9');
+});
 
 //Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');
 

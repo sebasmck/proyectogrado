@@ -4,12 +4,12 @@ Logros Obtenidos
 @endsection
 @section('content')
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form" method="post" action="{{route('/guardar-logros/1')}}">
+        <form class="form" method="POST" action="{{route('/guardar-logros',['id'=> 2])}}">
         {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
-                   <header> Logros Obtenidos - Practica Sentido </header>
+                   <header> Logros Obtenidos - Gafas de las emociones </header>
                 </div>
 
                 <div class="card-body floating-label">
@@ -21,7 +21,7 @@ Logros Obtenidos
                            </tr> 
 
                            <tr>
-                           <td> He aprendido lo suficiente y me siento feliz</p></td>
+                           <td> He aprendido lo suficiente y me siento feliz</td>
                            <td> <input type="radio" name="si/No1" value="1" required> Si <br></td>
                            <td> <input type="radio" name="si/No1" value="0"> No <br> </td>
                            </tr> 
