@@ -123,7 +123,7 @@ UN TESORO ESCONDIDO.
                         </label>
                  </div>
 
-                 <div style="display: none">
+                 <div >
                     <div  style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;">
                         <p style="text-align:justify; text-justify: inter-word;">Al abrir el candado del baúl encontraras tres objetos
                              que hacen referencia al tesoro que está dentro, elige cuál de estos elementos 
