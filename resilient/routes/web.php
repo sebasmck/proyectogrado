@@ -181,6 +181,8 @@ Route::post('/CreandoConfianzaCulminacion', 'ActivityController@creandoConfianza
 Route::get('/HastaFinal', 'ActivityController@paraActividadHastaElFinal')->name('/HastaFinal');
 Route::get('/HastaFinal2', 'ActivityController@paraActividadHastaElFinal2')->name('/HastaFinal2');
 Route::get('/HastaFinal3', 'ActivityController@paraActividadHastaElFinal3')->name('/HastaFinal3');
+Route::get('/HastaFinal4', 'ActivityController@paraActividadHastaElFinal4')->name('/HastaFinal4');
+Route::post('/HastaFinalCulminacion', 'ActivityController@paraActividadHastaElFinalCulminacion')->name('/HastaFinalCulminacion');
 Route::get('/download/{file}', 'ActivityController@downloadImage')->name('/download');
 
 // Rutas para actividad FORMANDO NIÑOS RESILIENTES
@@ -195,8 +197,9 @@ Route::get('/FormandoNR7', 'ActivityController@formandoNinosResLogros')->name('/
 Route::Post('/FormandoNR8', 'ActivityController@formandoNinosResFinal')->name('/FormandoNR8');
 // Descarga y subir archivos via ftp 
 Route::get('/testFtp' , 'ActivityController@ftpTest')->name('/testFtp');
-Route::post('/ftpUpImagesActivityLoQueMasTGuste' , 'ActivityController@ftpUpImagesActivityLoQueMasTGuste')->name('/ftpUpImagesActivityLoQueMasTGuste');
 
+//Subir imagenes y retornar vista
+Route::post('/ftpUpImagesActivityLoQueMasTGuste' , 'ActivityController@ftpUpImagesActivityLoQueMasTGuste')->name('/ftpUpImagesActivityLoQueMasTGuste');
 // Ruta actividad elije lo que mas te guste
 Route::get('/MasTeGuste' , 'ActivityController@loQueMasTeGuste')->name('/MasTeGuste');
 Route::get('/MasTeGuste2' , 'ActivityController@loQueMasTeGuste2')->name('/MasTeGuste2');
@@ -246,6 +249,20 @@ Route::get('/DignoCarino2' , 'ActivityController@paraDignoDecarino3')->name('/Di
 
 //Ruta actividad el Mimo
 Route::get('/ElmimoIntro' , 'ActivityController@paraElmimo')->name('/ElmimoIntro');
+Route::get('/Elmimo' , 'ActivityController@paraElmimo2')->name('/Elmimo');
+Route::get('/Elmimo2' , 'ActivityController@paraElmimo3')->name('/Elmimo2');
+
+//Ruta actividad grande y fuerte
+Route::get('/GrandeYFIntro' , 'ActivityController@paraFuerteYGrande')->name('/GrandeYFIntro');
+Route::get('/GrandeYF' , 'ActivityController@paraFuerteYGrande2')->name('/GrandeYF');
+Route::get('/GrandeYF2' , 'ActivityController@paraFuerteYGrande3')->name('/GrandeYF2');
+Route::get('/GrandeYF3' , 'ActivityController@paraFuerteYGrande4')->name('/GrandeYF3');
+
+//Ruta actividad respirar pensar, actuar
+Route::get('/RespirarActuarIntro' , 'ActivityController@paraPensarActuar')->name('/RespirarActuarIntro');
+Route::get('/RespirarActuar' , 'ActivityController@paraPensarActuar1')->name('/RespirarActuar');
+Route::get('/RespirarActuar1' , 'ActivityController@paraPensarActuar2')->name('/RespirarActuar1');
+//Route::get('/RespirarActuarLogrosObtenidos' , 'ActivityController@paraFuerteYGrande4')->name('/RespirarActuarLogrosObtenidos);
 
 // Ruta actividad las emociones de mis padres
 

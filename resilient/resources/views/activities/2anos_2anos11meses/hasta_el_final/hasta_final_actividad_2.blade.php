@@ -7,7 +7,7 @@ Hasta el final
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
- <form class="form" method="GET" action="{{route('/HastaFinal2') }}">
+ <form class="form" method="GET" action="{{route('/HastaFinal4') }}">
 {{csrf_field()}}
 <div class="card">
 <div class="card-head style-primary">

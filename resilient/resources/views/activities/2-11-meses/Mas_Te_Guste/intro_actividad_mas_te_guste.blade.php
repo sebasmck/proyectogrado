@@ -953,7 +953,7 @@ button:hover {
                 
                 <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/PracticaSentido')}}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/MasTeGuste2')}}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
                     </div>
                 </div><!--end .card-actionbar -->
             </div>

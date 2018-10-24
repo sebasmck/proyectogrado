@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Intro Actividad el mimo
+Intro Grande y fuerte
 @endsection
 
 @section('addcss')
@@ -837,7 +837,7 @@ button:hover {
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="title animated lightSpeedIn" style="font-family: 'Raleway', sans-serif; font-size: 40px;" >
-                Actividad El mimo
+                Actividad Grande y fuerte
             </div>
         </div> 
         
@@ -863,15 +863,15 @@ button:hover {
                                     </tr>
                                     <tr>
                                         <td>Competencias de padres y/o cuidadores</td>
-                                        <td>Aporte Educativo </td>
+                                        <td>Aporte educativo, promoción de la resiliencia </td>
                                     </tr>
                                     <tr>
                                         <td>Rasgos resilientes</td>
-                                        <td>Vínculo Afectivo</td>
+                                        <td>independencia</td>
                                     </tr>
                                     <tr>
                                         <td>Semana</td>
-                                        <td>4</td>
+                                        <td>7</td>
                                     </tr>
                                 <tr>
                                 </tbody>
@@ -892,14 +892,9 @@ button:hover {
                             <div class="card-body" >
                             <label> 
                                <p style="text-align:justify; text-justify: inter-word; color:black;">
-                               En estas edades los niños son como esponjas, observan todo lo que está a su alrededor, imitan las
-                               acciones que ven en los adultos y aprenden a cómo reaccionar ante tales circunstancias. Son pequeños 
-                               “MIMOS” que imitan comportamientos de quienes confía. Como los mimos se asustará cuando las personas
-                               remedadas se asustan y se alegrarán cuando las personas lo hacen.  
-
-                               De igual forma, cada una de las acciones que realizan padres e hijos en el día a día, son muy importantes, 
-                               es por esto que se quiere fomentar el vínculo afectivo, debido a que en estas edades permite aprendizaje y 
-                               fortalece a los niños en su desarrollo.
+                               Grande y fuerte es una actividad que sensibiliza a los cuidadores frente a las
+                               capacidades de los niños y niñas según su edad cronológica y los invita a dejarlas
+                               participar de estas.
                                 </p></label>
                             </div>
                         </div>
@@ -955,7 +950,7 @@ button:hover {
                 
                 <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/Elmimo')}}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/GrandeYF')}}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
                     </div>
                 </div><!--end .card-actionbar -->
             </div>
