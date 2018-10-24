@@ -11,25 +11,28 @@ CUALIDADES NIÑOS RESILIENTES
             <div class="card">
 
                 <div class="card-head style-primary">
-                   <header> CUALIDADES NIÑOS RESILIENTES  </header>
+                   <header> LAS EMOCIONES DE NUESTROS PADRES /CUIDADORES </header>
                 </div>
 
                 <div class="card-body floating-label">
-
-                 <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:#008efd;" > 
-                       <p style="text-align:center; text-justify: inter-word;"><b>Desarrollo Actividad</b></p>  
-                       <img class="pull-right" src="{{asset('img/avatar.png')}}" alt="avatar">
-                  </div>
-
-                  <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;" > 
-                  <label>  <p style="text-align:justify; text-justify: inter-word;"> Cuando presto atención es cuando entiendo yo: </p></label>
-                  </div>
-
-                  
+                     
                     <div class="col-md-8">
-                            <object data="https://www.youtube.com/watch?v=DAkLbUwoqMo"
-                            width="560" height="315"></object>
+                        <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;" > 
+                            <p style="text-align:center; text-justify: inter-word;"><b>Desarrollo Actividad</b></p>
+                            <label>  <p style="text-align:justify; text-justify: inter-word;">
+                                    Para la realización de esta actividad debes buscar un espacio 
+                                    un día de esta semana para ver la película INTENSAMENTE (Inside Out) 
+                                    saprovecha este espacio para introducir el tema de las emociones en tu niño.  
+                            </p></label>
+                        </div>
+
                     </div> 
+
+                    <div class="col-md-4">
+                            <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:#008efd;" >   
+                                    <img class="pull-right" style="height:200px; width:auto;" src="{{asset('ActividadLenp/insideOut.png')}}" alt="avatar">
+                               </div>
+                     </div> 
 
                   <div>
 
@@ -70,7 +73,7 @@ CUALIDADES NIÑOS RESILIENTES
 
         <div class="card-actionbar">
             <div class="card-actionbar-row">
-            <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/cnr2')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+            <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/lenp2')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
             </div>
       </div>
             

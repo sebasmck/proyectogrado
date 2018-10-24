@@ -121,9 +121,9 @@
 
 			</script>
 
-		<script type="text/javascript">
+		{{--  <script type="text/javascript">
     			$(".date").datepicker({format: 'dd/mm/yyyy'});
-		</script>  
+		</script>    --}}
 
 
 		{{-- <script type="text/javascript">

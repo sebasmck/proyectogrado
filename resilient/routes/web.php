@@ -223,6 +223,8 @@ Route::post('/CreandoConfianzaCulminacion', 'ActivityController@creandoConfianza
 Route::get('/HastaFinal', 'ActivityController@paraActividadHastaElFinal')->name('/HastaFinal');
 Route::get('/HastaFinal2', 'ActivityController@paraActividadHastaElFinal2')->name('/HastaFinal2');
 Route::get('/HastaFinal3', 'ActivityController@paraActividadHastaElFinal3')->name('/HastaFinal3');
+Route::get('/HastaFinal4', 'ActivityController@paraActividadHastaElFinal4')->name('/HastaFinal4');
+Route::post('/HastaFinalCulminacion', 'ActivityController@paraActividadHastaElFinalCulminacion')->name('/HastaFinalCulminacion');
 Route::get('/download/{file}', 'ActivityController@downloadImage')->name('/download');
 
 // Rutas para actividad FORMANDO NIÑOS RESILIENTES
@@ -235,12 +237,88 @@ Route::get('/FormandoNR5', 'ActivityController@formandoNinosRes5')->name('/Forma
 Route::get('/FormandoNR6', 'ActivityController@formandoNinosRes6')->name('/FormandoNR6');
 Route::get('/FormandoNR7', 'ActivityController@formandoNinosResLogros')->name('/FormandoNR7');
 Route::Post('/FormandoNR8', 'ActivityController@formandoNinosResFinal')->name('/FormandoNR8');
+// Descarga y subir archivos via ftp 
+Route::get('/testFtp' , 'ActivityController@ftpTest')->name('/testFtp');
 
+//Subir imagenes y retornar vista
+Route::post('/ftpUpImagesActivityLoQueMasTGuste' , 'ActivityController@ftpUpImagesActivityLoQueMasTGuste')->name('/ftpUpImagesActivityLoQueMasTGuste');
+// Ruta actividad elije lo que mas te guste
+Route::get('/MasTeGuste' , 'ActivityController@loQueMasTeGuste')->name('/MasTeGuste');
+Route::get('/MasTeGuste2' , 'ActivityController@loQueMasTeGuste2')->name('/MasTeGuste2');
+Route::get('/MasTeGuste3' , 'ActivityController@loQueMasTeGuste3')->name('/MasTeGuste3');
 
 Route::get('/cnr_intro', 'ActivityController@cnr_intro')->name('/cnr_intro');
 Route::get('/cnr1', 'ActivityController@cnr1')->name('/cnr1');
 Route::get('/cnr2', 'ActivityController@cnr2')->name('/cnr2');
 Route::get('/cnr3', 'ActivityController@cnr3')->name('/cnr3');
+Route::get('/cnr4', 'ActivityController@cnr4')->name('/cnr4');
+Route::get('/cnr_logrosObtenidos', 'ActivityController@cnr_logrosObtenidos')->name('/cnr_logrosObtenidos');
+Route::get('/cnr_culminado', "ActivityController@CulminadoActividadCnr")->name('/cnr_culminado');
 
 // Rutas para Actividad UN TESORO ESCONDIDO. "SOY CAPAZ DE… Y ME AMO COMO SOY”
 Route::get('/IntroTesoroEscondido', 'ActivityController@formandoNinosResDesc')->name('/IntroTesoroEscondido');
+// Rutas para Actividad COMO LOROS
+Route::get('/IntroComoLoros', 'ActivityController@comoLorosDesc')->name('/IntroComoLoros');
+// Rutas para Actividad NIÑOS RESILIENTES
+Route::get('/IntroNinosResilientes', 'ActivityController@ninosResilientesDesc')->name('/IntroNinosResilientes');
+Route::get('/NinosResilientes1', 'ActivityController@ninosResilientes1')->name('/NinosResilientes1');
+Route::get('/NinosResilientes2', 'ActivityController@ninosResilientes2')->name('/NinosResilientes2');
+Route::get('/NinosResilientes3', 'ActivityController@ninosResilientes3')->name('/NinosResilientes3');
+Route::get('/NinosResilientes4', 'ActivityController@ninosResilientes4')->name('/NinosResilientes4');
+
+// Ruta actividad digno de carino 
+Route::get('/DignoCarinoIntro' , 'ActivityController@paraDignoDecarino')->name('/DignoCarinoIntro');
+Route::get('/DignoCarino' , 'ActivityController@paraDignoDecarino2')->name('/DignoCarino');
+Route::get('/DignoCarino2' , 'ActivityController@paraDignoDecarino3')->name('/DignoCarino2');
+
+//Ruta actividad el Mimo
+Route::get('/ElmimoIntro' , 'ActivityController@paraElmimo')->name('/ElmimoIntro');
+Route::get('/Elmimo' , 'ActivityController@paraElmimo2')->name('/Elmimo');
+Route::get('/Elmimo2' , 'ActivityController@paraElmimo3')->name('/Elmimo2');
+
+//Ruta actividad grande y fuerte
+Route::get('/GrandeYFIntro' , 'ActivityController@paraFuerteYGrande')->name('/GrandeYFIntro');
+Route::get('/GrandeYF' , 'ActivityController@paraFuerteYGrande2')->name('/GrandeYF');
+Route::get('/GrandeYF2' , 'ActivityController@paraFuerteYGrande3')->name('/GrandeYF2');
+Route::get('/GrandeYF3' , 'ActivityController@paraFuerteYGrande4')->name('/GrandeYF3');
+
+//Ruta actividad respirar pensar, actuar
+Route::get('/RespirarActuarIntro' , 'ActivityController@paraPensarActuar')->name('/RespirarActuarIntro');
+Route::get('/RespirarActuar' , 'ActivityController@paraPensarActuar1')->name('/RespirarActuar');
+Route::get('/RespirarActuar1' , 'ActivityController@paraPensarActuar2')->name('/RespirarActuar1');
+//Route::get('/RespirarActuarLogrosObtenidos' , 'ActivityController@paraFuerteYGrande4')->name('/RespirarActuarLogrosObtenidos);
+
+// Ruta actividad las emociones de mis padres
+
+Route::get('/lenp_intro', 'ActivityController@lenp_intro')->name('/lenp_intro');
+Route::get('/lenp1', 'ActivityController@lenp1')->name('/lenp1');
+Route::get('/lenp2', 'ActivityController@lenp2')->name('/lenp2');
+Route::get('/lenp3', 'ActivityController@lenp3')->name('/lenp3');
+Route::get('/lenp4', 'ActivityController@lenp4')->name('/lenp4');
+Route::get('/lenp5', 'ActivityController@lenp5')->name('/lenp5');
+Route::get('/lenp_logrosObtenidos', 'ActivityController@lenp_logrosObtenidos')->name('/lenp_logrosObtenidos');
+Route::get('/lenp_culminado', "ActivityController@CulminadoActividadLenp")->name('/lenp_culminado');
+
+
+// Ruta actividad Seguir y seguir intentando
+
+Route::get('/ssi_intro', 'ActivityController@ssi_intro')->name('/ssi_intro');
+Route::get('/ssi1', 'ActivityController@ssi1')->name('/ssi1');
+Route::get('/ssi2', 'ActivityController@ssi2')->name('/ssi2');
+Route::get('/ssi3', 'ActivityController@ssi3')->name('/ssi3');
+Route::get('/ssi4', 'ActivityController@ssi4')->name('/ssi4');
+Route::get('/ssi_logrosObtenidos', 'ActivityController@ssi_logrosObtenidos')->name('/ssi_logrosObtenidos');
+Route::get('/ssi_culminado', "ActivityController@CulminadoActividadSsi")->name('/ssi_culminado');
+
+
+// Ruta actividad cosas de grande
+
+Route::get('/cdg_intro', 'ActivityController@cdg_intro')->name('/cdg_intro');
+Route::get('/cdg1', 'ActivityController@cdg1')->name('/cdg1');
+Route::get('/cdg2', 'ActivityController@cdg2')->name('/cdg2');
+Route::get('/cdg3', 'ActivityController@cdg3')->name('/cdg3');
+Route::get('/cdg4', 'ActivityController@cdg4')->name('/cdg4');
+Route::get('/cdg_logrosObtenidos', 'ActivityController@cdg_logrosObtenidos')->name('/cdg_logrosObtenidos');
+Route::get('/cdg_culminado', "ActivityController@CulminadoActividadCdg")->name('/cdg_culminado');
+
+

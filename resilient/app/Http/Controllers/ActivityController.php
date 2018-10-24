@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Actividad;
+use App\Cuidador;
 use App\RespuestaAbiertaActividad;
 use App\LogrosActividad;
 use App\RespuestaMultipleActividad;  
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 
 class ActivityController extends Controller
@@ -48,6 +50,13 @@ class ActivityController extends Controller
     {
         return view("activities.2-11-meses.aprendamos_resiliencia.intro_aprendamos_resiliencia");
     }
+
+   
+    // public function index($id)
+    // {
+    //     $actividad = Actividad::with('preguntaActividades.opcionPreguntaActividad')->where('Id_Actividad', $id)->first();
+    //     return view($actividad->View_Actividad, ['Actividad' => $actividad]);
+    // }
 
     public function actividad(Request $request,$id){
         $actividad  = Actividad::where('Id_Actividad',$id)->get();
@@ -322,6 +331,7 @@ class ActivityController extends Controller
         $LogrosActividad ->save();
         return view('activities.2-11-meses.Creando_Confianza.CreandoConfianzaFinal');
     }
+    //Actividad hasta el final
     public function paraActividadHastaElFinal(){
         return view('activities.2anos_2anos11meses.hasta_el_final.hasta_final_intro');
     }
@@ -332,6 +342,24 @@ class ActivityController extends Controller
     public function paraActividadHastaElFinal3(){
         return view('activities.2anos_2anos11meses.hasta_el_final.hasta_final_actividad_2');
     }
+    public function paraActividadHastaElFinal4(){
+        return view('activities.2anos_2anos11meses.hasta_el_final.logros_obtenidos');
+    }
+    public function paraActividadHastaElFinalCulminacion(Request $request)
+    {
+        $LogrosActividad = new LogrosActividad (); 
+        $NumActividad = 3; //Numero en base de datos tabla Actividad  
+        $RelacionInfante = null ; // Por el momento enviar vacio  
+        $LogrosActividad ->Aprendido = $request->input('si/No1');
+        $LogrosActividad ->NoAprendido = $request->input('si/No2');
+        $LogrosActividad ->AplicadoCrianza = $request->input('si/No3');
+        $LogrosActividad ->NoAplicadoCrianza = $request->input('si/No4');
+        $LogrosActividad ->id_AcudienteInfante = $RelacionInfante;
+        $LogrosActividad ->id_Actividad = $NumActividad; 
+        $LogrosActividad ->save();
+        return view('activities.2-11-meses.Creando_Confianza.CreandoConfianzaFinal');
+    }
+
     public function downloadImage($file){
         $pathtoFile = public_path().'//img/'.$file;
         return response()->download($pathtoFile);
@@ -394,7 +422,273 @@ class ActivityController extends Controller
      {
          return view('activities.2-11-meses.FormandoNinosR.intro_actividadFormandoNR');
      }
+     // Rutas para Actividad COMO LOROS
+     public function comoLorosDesc()
+     {
+         return view('activities.3-11-meses.ComoLoros.intro_ComoLoros');
+     }
 
+    // Rutas para Actividad NIÑOS RESILIENTES
+
+     public function ninosResilientesDesc()
+     {
+         return view('activities.3-11-meses.NinosResilientes.intro_NinosResilientes');
+     }
+     // Activity: Cualidades Niños Resilientes
+
+     public function ninosResilientes1()
+     {
+         return view('activities.3-11-meses.NinosResilientes.NinosResilientes1');
+     }
+
+     public function ninosResilientes2()
+     {
+         return view('activities.3-11-meses.NinosResilientes.NinosResilientes2');
+     }
+
+     public function ninosResilientes3()
+     {
+         return view('activities.3-11-meses.NinosResilientes.NinosResilientes3');
+     }
+     public function ninosResilientes4()
+     {
+         return view('activities.3-11-meses.NinosResilientes.NinosResilientes4');
+     }
+
+
+    //Actividad elije lo que mas te guste
+    public function loQueMasTeGuste(){
+        return view('activities.2-11-meses.Mas_Te_Guste.intro_actividad_mas_te_guste');
+    }
+
+    public function loQueMasTeGuste2(){
+        return view('activities.2-11-meses.Mas_Te_Guste.actividad_mas_te_guste');
+    }
+
+    public function loQueMasTeGuste3(){
+        return view('activities.2-11-meses.Mas_Te_Guste.actividad_mas_te_guste_2');
+    }
+
+    //Subir y bajar archivos via FTP
+    public function ftpTest(){
+        $pathFiles = 'module_table_bottom.png';
+        
+        $file = Storage::disk('ftp')->download($pathFiles);
+        return $file;
+    }
+
+    public function ftpUpImagesActivityLoQueMasTGuste(Request $request){
+        $id_usuario = auth()->id();
+        $acudiente = Cuidador::where('id_usuario', $id_usuario)->value('Id_Acudiente');
+
+        $pathFiles = 'Images/ActivityMasTGuste/'.$acudiente;
+        //var_dump($acudiente);
+
+        for($i=1;$i<10;$i++){
+        
+            $file = $request->file('fileToUpload'.$i);
+            Storage::disk('ftp')->put($pathFiles , $file);
+        }
+
+        return view('activities.2-11-meses.Mas_Te_Guste.logros_obtenidos');
+    }
+
+    public function loQueMasTeGusteCulminacion(Request $request) {
+        $LogrosActividad = new LogrosActividad (); 
+        $NumActividad = 7; //Numero en base de datos tabla Actividad  
+        $RelacionInfante = null ; // Por el momento enviar vacio  
+        $LogrosActividad ->Aprendido = $request->input('si/No1');
+        $LogrosActividad ->NoAprendido = $request->input('si/No2');
+        $LogrosActividad ->AplicadoCrianza = $request->input('si/No3');
+        $LogrosActividad ->NoAplicadoCrianza = $request->input('si/No4');
+        $LogrosActividad ->id_AcudienteInfante = $RelacionInfante;
+        $LogrosActividad ->id_Actividad = $NumActividad; 
+        $LogrosActividad ->save();
+         return view('activities.2-11-meses.FormandoNinosR.FormandoNRFinal');
+     }
+     
+    //Actividad digno de carino
+    public function paraDignoDecarino(){
+        return view('activities.2-11-meses.Digno_De_Carino.intro_digno_de_carino');
+    }
+
+    public function paraDignoDecarino2(){
+        return view('activities.2-11-meses.Digno_De_Carino.digno_de_carino');
+    }
+
+    public function paraDignoDecarino3(){
+        return view('activities.2-11-meses.Digno_De_Carino.digno_de_carino_3');
+    }
+   
+    //Actividad el Mimo
+    public function paraElmimo(){
+        return view('activities.2-11-meses.El_mimo.intro_el_mimo');
+    }
+ 
+    public function paraElmimo2(){
+        return view('activities.2-11-meses.El_mimo.el_mimo');
+    }
+
+    public function paraElmimo3(){
+        return view('activities.2-11-meses.El_mimo.el_mimo_2');
+    }
+
+    //Actividad fuerte y grande
+    public function paraFuerteYGrande(){
+        return view('activities.2-11-meses.Grande_fuerte.intro_grande_fuerte');
+    }
+    public function paraFuerteYGrande2(){
+        return view('activities.2-11-meses.Grande_fuerte.grande_fuerte');
+    }
+    public function paraFuerteYGrande3(){
+        return view('activities.2-11-meses.Grande_fuerte.grande_fuerte_2');
+    }
+    public function paraFuerteYGrande4(){
+        return view('activities.2-11-meses.Grande_fuerte.grande_fuerte_3');
+    }
+
+    //Actividad respirar pensar actuar
+    public function paraPensarActuar(){
+        return view('activities.2-11-meses.Respirar_pensar_actuar.intro_respirar_actuar');
+    }
+
+    public function paraPensarActuar1(){
+        return view('activities.2-11-meses.Respirar_pensar_actuar.respirar_actuar');
+    }
+
+    public function paraPensarActuar2(){
+        return view('activities.2-11-meses.Respirar_pensar_actuar.respirar_actuar_2');
+    }
+
+
+
+
+// Actividad cualidades ninos resilientes
+
+    public function cnr_intro(){
+        return view('activities.2-3anos.cnr.intro_cnr');
+    }
+
+    public function cnr1(){
+        return view('activities.2-3anos.cnr.cnr1');
+    }
+
+    public function cnr2(){
+        return view('activities.2-3anos.cnr.cnr2');
+    }
+
+    public function cnr3(){
+        return view('activities.2-3anos.cnr.cnr3');
+    }
+
+    public function cnr4(){
+        return view('activities.2-3anos.cnr.cnr4');
+    }
+
+    public function cnr_logrosObtenidos(){
+        return view('activities.2-3anos.cnr.cnr_logrosObtenidos');
+    }
+
+    public function CulminadoActividadCnr(){
+        return view('activities.2-3anos.cnr.CulminadoActividadCnr');
+    }
+
+
+    // Actividad Las emociones de mis padres
+
+    public function lenp_intro(){
+        return view('activities.2-3anos.lenp.intro_lenp');
+    }
+
+    public function lenp1(){
+        return view('activities.2-3anos.lenp.lenp1');
+    }
+
+    public function lenp2(){
+        return view('activities.2-3anos.lenp.lenp2');
+    }
+
+    public function lenp3(){
+        return view('activities.2-3anos.lenp.lenp3');
+    }
+
+    public function lenp4(){
+        return view('activities.2-3anos.lenp.lenp4');
+    }
+
+    public function lenp5(){
+        return view('activities.2-3anos.lenp.lenp5');
+    }
+
+    public function lenp_logrosObtenidos(){
+        return view('activities.2-3anos.lenp.lenp_logrosObtenidos');
+    }
+
+    public function CulminadoActividadLenp(){
+        return view('activities.2-3anos.lenp.CulminadoActividadLenp');
+    }
+
+    // Actividad SSI
+
+    public function ssi_intro(){
+        return view('activities.2-3anos.ssi.intro_ssi');
+    }
+
+    public function ssi1(){
+        return view('activities.2-3anos.ssi.ssi1');
+    }
+
+    public function ssi2(){
+        return view('activities.2-3anos.ssi.ssi2');
+    }
+
+    public function ssi3(){
+        return view('activities.2-3anos.ssi.ssi3');
+    }
+
+    public function ssi4(){
+        return view('activities.2-3anos.ssi.ssi4');
+    }
+
+    public function ssi_logrosObtenidos(){
+        return view('activities.2-3anos.ssi.ssi_logrosObtenidos');
+    }
+
+    public function CulminadoActividadSsi(){
+        return view('activities.2-3anos.ssi.CulminadoActividadSsi');
+    }
+
+
+    // Actividad cdg
+
+    public function cdg_intro(){
+        return view('activities.2-3anos.cdg.intro_cdg');
+    }
+
+    public function cdg1(){
+        return view('activities.2-3anos.cdg.cdg1');
+    }
+
+    public function cdg2(){
+        return view('activities.2-3anos.cdg.cdg2');
+    }
+
+    public function cdg3(){
+        return view('activities.2-3anos.cdg.cdg3');
+    }
+
+    public function cdg4(){
+        return view('activities.2-3anos.cdg.cdg4');
+    }
+
+    public function cdg_logrosObtenidos(){
+        return view('activities.2-3anos.cdg.cdg_logrosObtenidos');
+    }
+
+    public function CulminadoActividadCdg(){
+        return view('activities.2-3anos.cdg.CulminadoActividadCdg');
+    }
+    
 
 
 }
