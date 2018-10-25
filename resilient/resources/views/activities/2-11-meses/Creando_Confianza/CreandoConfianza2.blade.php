@@ -109,7 +109,7 @@ Creando Confianza 2
 
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction"  href="{{route('/CreandoConfianza3')}}"> <button type="button"  class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                  <a style="btn btn-flat btn-primary ink-reaction"  href="{{route('/CreandoConfianza3')}}"> <button type="button" id="boton" style="display:none" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                   </div>
             </div>
         </div><!--end .card -->
@@ -157,6 +157,10 @@ $(function () {
                             {
                                contadorDisplay ++;  
                             }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
+                            }
 
                         }
                         $('#E'+ (contadorDisplay + 1)).show();
@@ -182,6 +186,10 @@ $(function () {
                             {
                                contadorDisplay ++;  
                             }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
+                            }
                         }
                         $('#E'+ (contadorDisplay + 1)).show();
                     }
@@ -205,6 +213,10 @@ $(function () {
                             if(displays == "block")
                             {
                                contadorDisplay ++;  
+                            }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
                             }
                         }
                         $('#E'+ (contadorDisplay + 1)).show();
@@ -230,6 +242,10 @@ $(function () {
                             {
                                 contadorDisplay ++;  
                             }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
+                            }
                         }
                         $('#E'+ (contadorDisplay + 1)).show();
                     }
@@ -253,6 +269,10 @@ $(function () {
                             if(displays == "block")
                             {
                                 contadorDisplay ++;  
+                            }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
                             }
 
                         }
@@ -279,6 +299,10 @@ $(function () {
                             {
                                 contadorDisplay ++;  
                             }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
+                            }
                         }
                         $('#E'+ (contadorDisplay + 1)).show();
                     }
@@ -302,6 +326,10 @@ $(function () {
                             if(displays == "block")
                             {
                                 contadorDisplay ++;  
+                            }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
                             }
                         }
                         $('#E'+ (contadorDisplay + 1)).show();
@@ -327,6 +355,10 @@ $(function () {
                             {
                                 contadorDisplay ++;  
                             }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
+                            }
                         }
                         $('#E'+ (contadorDisplay + 1)).show();
                     }
@@ -351,6 +383,10 @@ $(function () {
                             {
                                 contadorDisplay ++;  
                             }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
+                            }
                         }
                         $('#E'+ (contadorDisplay + 1)).show();
                     }
@@ -374,6 +410,10 @@ $(function () {
                             if(displays == "block")
                             {
                                 contadorDisplay ++;  
+                            }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
                             }
                         }
                         $('#E'+ (contadorDisplay + 1)).show();

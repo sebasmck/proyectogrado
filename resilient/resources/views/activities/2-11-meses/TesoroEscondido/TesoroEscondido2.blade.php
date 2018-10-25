@@ -105,12 +105,12 @@ label img {
                         <label class="grow" for="cb1"> <img src="{{asset('ActividadTesoroEscondido/c1.png')}}" name="llave1" alt="avatar" > 
                       </label>
 
-                      <input type="radio" id="cb1" name="optionsRadios" value="1"/>
-                        <label class="grow" for="cb1"> <img src="{{asset('ActividadTesoroEscondido/c3s.png')}}" name="llave1" alt="avatar" > 
+                      <input type="radio" id="cb2" name="optionsRadios" value="1"/>
+                        <label class="grow" for="cb2"> <img src="{{asset('ActividadTesoroEscondido/c3s.png')}}" name="llave1" alt="avatar" > 
                       </label>
 
-                      <input type="radio" id="cb1" name="optionsRadios" value="1"/>
-                        <label class="grow" for="cb1"> <img src="{{asset('ActividadTesoroEscondido/c3.png')}}" name="llave1" alt="avatar"> 
+                      <input type="radio" id="cb3" name="optionsRadios" value="1"/>
+                        <label class="grow" for="cb3"> <img src="{{asset('ActividadTesoroEscondido/c3.png')}}" name="llave1" alt="avatar"> 
                       </label>
                  </div>
 
@@ -126,7 +126,7 @@ label img {
 
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/TesoroEscondido3')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                  <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/TesoroEscondido3')}}"> <button type="button" id="botonS"class="btn btn-default ink-reaction btn-primary-dark" style="display:none">Siguiente</button></a>
                   </div>
             </div>
 
@@ -136,12 +136,14 @@ label img {
     </div>
 
 @endsection
-{{--  @section('addjs')
+
+@section('addjs')
 <script>
-        var tl = new TimelineLite();
-        avatar = $('.avatar');
-        //  content = $('.content-card');
-        // tl.to(title, 1.5, {y:10});
-        // tl.from(card1, .3, {left:100, opacity:0});  
+      $('#cb2').on('change', function() 
+      {
+      $('#botonS').show();
+      $("#cb1").attr('disabled', true);
+      $("#cb3").attr('disabled', true);
+      });    
 </script>
-@endsection  --}}
+@endsection  

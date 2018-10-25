@@ -18,29 +18,7 @@ class ActivityController extends Controller
     const URL_ACTIVIDAD_1_PRENDIENDO_MOTORES = "activities.2-11-meses.aprendamos_resiliencia.prendiendo_motores";
 
 
-    // Activity: Cualidades Niños Resilientes
-
-
-    public function cnr_intro(){
-        return view('activities.2-3anos.intro_cnr');
-    }
-
-    public function cnr1(){
-        return view('activities.2-3anos.cnr1');
-    }
-
-    public function cnr2(){
-        return view('activities.2-3anos.cnr2');
-    }
-
-    public function cnr3(){
-        return view('activities.2-3anos.cnr3');
-    }
-
-    public function aprendamosResilienciaIntro()
-    {
-        return view("activities.2-11-meses.aprendamos_resiliencia.intro_aprendamos_resiliencia");
-    }
+  
 
    
     // public function index($id)

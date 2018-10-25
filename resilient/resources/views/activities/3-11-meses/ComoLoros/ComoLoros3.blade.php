@@ -7,7 +7,9 @@ Como Loros 3
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form id="formulario" class="form" method="GET" action="{{route('/ComoLoros4')}}">
+
+            {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -35,23 +37,23 @@ Como Loros 3
 
                         <tr>
                         <td> ¡Ash me tiene molesto todo esto!</p></td>
-                        <td><input type="radio" name="p1" value="1" required> Enojo</td>
-                        <td><input type="radio" name="p1" value="2"> Frustuación</td>
-                        <td><input type="radio" name="p1" value="3"> Tristeza </td>
+                        <td><input type="radio" id="Epr1" name="p1" value="1" required> Enojo</td>
+                        <td><input type="radio" id="Fpr1" name="p1" value="2"> Frustuación</td>
+                        <td><input type="radio" id="Tpr1" name="p1" value="3"> Tristeza </td>
                         </tr> 
 
                         <tr>
                         <td>¡No me gusta que me regañen!</th>
-                        <td><input type="radio" name="p2" value="1" required> Enojo</td>
-                        <td><input type="radio" name="p2" value="2"> Frustuación</td>
-                        <td><input type="radio" name="p2" value="3"> Tristeza </td>
+                        <td><input type="radio" id="Epr2" name="p2" value="1" required> Enojo</td>
+                        <td><input type="radio" id="Fpr2" name="p2" value="2"> Frustuación</td>
+                        <td><input type="radio" id="Tpr2" name="p2" value="3"> Tristeza </td>
                         </tr> 
 
                         <tr>
                         <td>Este programa de televisión es muy aburridor. <br></th>
-                            <td><input type="radio" name="p3" value="1" required> Enojo</td>
-                            <td><input type="radio" name="p3" value="2"> Frustuación</td>
-                            <td><input type="radio" name="p3" value="3"> Tristeza </td>
+                            <td><input type="radio"  id="Epr3" name="p3" value="1" required> Enojo</td>
+                            <td><input type="radio"  id="Fpr3" name="p3" value="2"> Frustuación</td>
+                            <td><input type="radio"  id="Tpr3" name="p3" value="3"> Tristeza </td>
                         </tr>
 
                      </table>
@@ -63,7 +65,7 @@ Como Loros 3
 
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/ComoLoros4')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                <button id="btnsiguienteCL4" type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button>
                   </div>
             </div>
 
@@ -78,15 +80,24 @@ Como Loros 3
         <script scr="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 		<script>
-			$(document).ready(function() {
-				$('#example').DataTable();
-			} );
+
+	   $(document).ready(function(){
+
+            $("#btnsiguienteCL4").click(function()
+            {
+              if ($('#Epr1').is(":checked") == true && $('#Tpr2').is(":checked") == true && $('#Fpr3').is(":checked") == true ) 
+              {
+                   
+              }
+              else 
+              {
+                event.preventDefault();  
+                alert("las opciones seleccionadas no son correctas");   
+              }  
+            });
+
+			$('#example').DataTable();
+
+        } );
 		</script>
-        <script>
-            $(document).ready( function () {
-                $('#example').DataTable();
-            } );    
-        </script>
-
-
 @endsection  

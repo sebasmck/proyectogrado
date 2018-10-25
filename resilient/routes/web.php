@@ -107,6 +107,9 @@ Route::get('/respuestaposttest', 'PostTestController@respuestasPostest')->name('
 
 // preguntas de cierre 
 Route::post('/preguntascierreposttest', 'PostTestController@preguntasCierre')->name('/preguntascierreposttest');
+
+//Route::get('/preguntascierreposttest', 'PostTestController@preguntasCierrePrueba')->name('/preguntascierreposttest');
+
 Route::get('/preguntascierreposttest1', 'PostTestController@preguntasCierre1')->name('/preguntascierreposttest1');
 Route::post('/preguntascierreposttest2', 'PostTestController@preguntasCierre2')->name('/preguntascierreposttest2');
 Route::post('/preguntascierreposttest3', 'PostTestController@preguntasCierre3')->name('/preguntascierreposttest3');

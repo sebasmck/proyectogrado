@@ -28,11 +28,11 @@ Como Loros 2
                    </div>
 
                    <div align="center">
-                    <img  src="{{asset('ActividadComoLoros/Tecnica1.png')}}" alt="tecnica1">
+                    <img  src="{{asset('ActividadComoLoros/Tecnica1.png')}}" alt="tecnica1" width="50%">
                    </div>
 
                    <div align="center">
-                    <img src="{{asset('ActividadComoLoros/Tecnica2.png')}}" alt="tecnica2">
+                    <img src="{{asset('ActividadComoLoros/Tecnica2.png')}}" alt="tecnica2" width="50%">
                    </div>
                    
 

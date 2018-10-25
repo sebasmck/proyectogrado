@@ -364,6 +364,11 @@ class PostTestController extends Controller
         return view('posttest.preguntascierreposttest');
     }
 
+   public function preguntasCierrePrueba ()
+   {
+    return view('posttest.preguntascierreposttest');
+   }
+
     public function respuestasPostest()
     {
         //$res = RespuestaPregunta::where('ValorDeVerdad', 1)->get();

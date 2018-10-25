@@ -123,7 +123,7 @@ UN TESORO ESCONDIDO.
                         </label>
                  </div>
 
-                 <div >
+                 <div id="Parte2" style="display:none">
                     <div  style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;">
                         <p style="text-align:justify; text-justify: inter-word;">Al abrir el candado del baúl encontraras tres objetos
                              que hacen referencia al tesoro que está dentro, elige cuál de estos elementos 
@@ -145,7 +145,7 @@ UN TESORO ESCONDIDO.
 
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/TesoroEscondido2')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                  <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/TesoroEscondido2')}}"> <button type="button" id="botonS" class="btn btn-default ink-reaction btn-primary-dark" style="display:none">Siguiente</button></a>
                   </div>
             </div>
 
@@ -155,12 +155,21 @@ UN TESORO ESCONDIDO.
     </div>
 
 @endsection
-{{--  @section('addjs')
+@section('addjs')
 <script>
-        var tl = new TimelineLite();
-        avatar = $('.avatar');
-        //  content = $('.content-card');
-        // tl.to(title, 1.5, {y:10});
-        // tl.from(card1, .3, {left:100, opacity:0});  
+         
+  $('#cb2').on('change', function() 
+  {
+      $('#Parte2').show();
+      $("#cb1").attr('disabled', true);
+      $("#cb3").attr('disabled', true);
+  });   
+
+  $('#cb5').on('change', function() 
+  {
+    $("#cb4").attr('disabled', true);
+    $('#botonS').show();
+  });   
+
 </script>
-@endsection  --}}
+@endsection 

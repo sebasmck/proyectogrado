@@ -31,13 +31,28 @@ Formando NR
                   
                         <script>
                                 var words = ['AFECTO', 'EDUCACION', 'AUTONOMIA', 'CONFIANZA', 'SOCIALIZACION'];
+
                                 // start a word find game
                                 var gamePuzzle = wordfindgame.create(words, '#puzzle', '#words');
                                 // create just a puzzle, without filling in the blanks and print to console
+                                
                                 var puzzle = wordfind.newPuzzle(
                                   words, 
-                                  {height: 18, width:18, fillBlanks: false} );
-                                wordfind.print(puzzle);      
+                                  {height: 24, width:24, fillBlanks: false} );
+                                  wordfind.print(puzzle);  
+                                
+                                
+
+                                setInterval( function () 
+                                {  
+                                    console.log("imprimiendo"); 
+                                    if ($('#puzzle').hasClass('puzzle-complete')) 
+                                    {
+                                        $("#boton").show(); 
+                                    } 
+
+
+                                }, 1000 );    
                         </script>
                   
 
@@ -46,7 +61,7 @@ Formando NR
             </div><!--end .card-body -->
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/FormandoNR3')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                  <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/FormandoNR3')}}"> <button id="boton" style="display:none" type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                   </div>
             </div>
 

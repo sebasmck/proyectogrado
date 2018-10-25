@@ -25,7 +25,7 @@ Formando Niños Resilientes 6
                     <p style="text-align:left; text-justify: inter-word;">
                             Realizas algunas actividades junto a tu hijo. Ten en cuenta que a mayores espacios de interacción entre tu hijo y tú,
                             podrás fortalecer el vínculo afectivo. Si no compartes muchos de los espacios, por favor esfuérzate un poco más
-                             por compartir escenarios con tu él, ustedes lo necesitan. </p>
+                             por compartir escenarios con él, ustedes lo necesitan. </p>
                   </div> 
 
                   

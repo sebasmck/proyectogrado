@@ -4,7 +4,7 @@ Logros Obtenidos
 @endsection
 @section('content')
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="GET" action="{{route('/ComoLoros6')}}">
         {{csrf_field()}}
             <div class="card">
 
@@ -50,7 +50,7 @@ Logros Obtenidos
             </div><!--end .card-body -->
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction"   href="{{route('/ComoLoros6')}}" > <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                  <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                   </div>
             </div>
 
