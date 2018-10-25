@@ -5,21 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59d37bb8-ea7e-4e9b-becc-69575c17a798" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadAprendamosResiliencia/correct-green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadAprendamosResiliencia/verbalizaciones_grotberg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadAprendamosResiliencia/wrong-red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/definicion_resiliencia.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/intro_aprendamos_resiliencia.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/logrosObtenidos.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/que_es_resiliencia.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/resiliencia_en_la_crianza.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/verbalizaciones_grotberg.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadDiaDelElogio/001_elogio_a_mi_nino.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadDiaDelElogio/002_corazon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadDiaDelElogio/003_corazon_lleno.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadGafasDeLasEmociones/001_gafas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadGafasDeLasEmociones/002_gafas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadGafasDeLasEmociones/003_gafas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadGafasDeLasEmociones/004_gafas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadGafasDeLasEmociones/005_aprove.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadGafasDeLasEmociones/006_deny.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadMonitoreoElComportamiento/001_ninollorando.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadMonitoreoElComportamiento/002_leerconnino.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadMonitoreoElComportamiento/003_ninosaislado.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadMonitoreoElComportamiento/004_ninoconpadre.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadPapitoEscultor/001_intro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadPapitoEscultor/002_corazon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadPapitoEscultor/003_collage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadPapitoEscultor/004_blue_ballon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadPapitoEscultor/006_green_ballon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadPapitoEscultor/007_red_ballon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadPapitoEscultor/008_yellow_ballon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/public/ActividadPapitoEscultor/009_etiqueta.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aterrizando_el_concepto_resiliencia/cuando_presto_atencion_entiendo_yo.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aterrizando_el_concepto_resiliencia/intro.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aterrizando_el_concepto_resiliencia/logrosObtenidos.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aterrizando_el_concepto_resiliencia/monitoreo_el_comportamiento.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aterrizando_el_concepto_resiliencia/resiliencia_en_la_vida_real.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/gafas_de_las_emociones/intro.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/gafas_de_las_emociones/logrosObtenidos.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/gafas_de_las_emociones/relacion_videos_hijo.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/gafas_de_las_emociones/videos_descriptivos.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/aprende_estrategias.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/cuando_presto_atencion_entiendo_yo.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/intro.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/logrosObtenidos.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/para_que_debo_elogiar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/cuando_presto_atencion.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/encuentra_algo.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/intro.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/logrosObtenidos.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/tareas.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/yo_y_mi_manera_de_ser.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resilient/app/Http/Controllers/ActivityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/resilient/app/Http/Controllers/ActivityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resilient/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/resilient/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/que_sabes_resiliencia.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/que_sabes_resiliencia.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resilient/resources/views/cuidador/cuidador-infantes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resilient/resources/views/cuidador/cuidador-infantes.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resilient/resources/views/cuidador/menuCuidador.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resilient/resources/views/cuidador/menuCuidador.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/logrosObtenidos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/logrosObtenidos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/verbalizaciones_grotberg.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/verbalizaciones_grotberg.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resilient/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/resilient/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -88,41 +118,50 @@
         <counts>
           <entry key="bootstrap-LICENSE" value="2" />
           <entry key="css" value="3" />
+          <entry key="env" value="3" />
           <entry key="md" value="1" />
-          <entry key="php" value="58" />
+          <entry key="php" value="166" />
+          <entry key="png" value="1" />
           <entry key="ts" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="41" />
+          <entry key=".env file" value="3" />
+          <entry key="Blade" value="136" />
           <entry key="CSS" value="3" />
+          <entry key="Image" value="1" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="17" />
+          <entry key="PHP" value="30" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="7670" />
+          <entry key="env" value="4" />
+          <entry key="php" value="27932" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="5919" />
-          <entry key="PHP" value="1751" />
+          <entry key=".env file" value="4" />
+          <entry key="Blade" value="22724" />
+          <entry key="PHP" value="5208" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.32" value="1" />
-          <entry key="project.open.time.40" value="1" />
+          <entry key="project.open.time.40" value="3" />
           <entry key="project.open.time.42" value="1" />
-          <entry key="project.open.time.50" value="1" />
+          <entry key="project.open.time.44" value="3" />
+          <entry key="project.open.time.50" value="2" />
           <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.53" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
     </session>
@@ -130,31 +169,69 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resilient/app/Http/Controllers/Auth/LoginController.php">
+        <entry file="file://$PROJECT_DIR$/resilient/app/Http/Controllers/ActivityController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+            <state relative-caret-position="331">
+              <caret line="155" column="42" selection-start-line="155" selection-start-column="20" selection-end-line="155" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resilient/app/Http/Middleware/RedirectIfAuthenticated.php">
+        <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/para_que_debo_elogiar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+            <state relative-caret-position="765">
+              <caret line="66" column="106" lean-forward="true" selection-start-line="66" selection-start-column="106" selection-end-line="66" selection-end-column="106" />
               <folding>
-                <element signature="e#39#52#0#PHP" expanded="true" />
+                <element signature="e#3975#4015#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/cuando_presto_atencion_entiendo_yo.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="17" selection-end-line="44" selection-end-column="11" />
+              <folding>
+                <element signature="e#1173#1198#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resilient/resources/views/cuidador/cuidador-infantes.blade.php">
+        <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/aprende_estrategias.blade.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/yo_y_mi_manera_de_ser.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+            <state relative-caret-position="244">
+              <caret line="96" column="40" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/intro.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="754">
+              <caret line="929" column="92" lean-forward="true" selection-start-line="929" selection-start-column="92" selection-end-line="929" selection-end-column="92" />
+              <folding>
+                <element signature="e#20238#20297#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aterrizando_el_concepto_resiliencia/cuando_presto_atencion_entiendo_yo.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -162,22 +239,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resilient/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="23" column="25" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resilient/resources/views/admin/Actividades.blade.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resilient/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+            <state relative-caret-position="390">
+              <caret line="167" column="78" selection-start-line="167" selection-start-column="56" selection-end-line="167" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -191,6 +254,9 @@
       <find>example</find>
       <find>user</find>
       <find>user()</find>
+      <find>aprendamos</find>
+      <find>index</find>
+      <find>globoNumber</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -199,17 +265,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resilient/app/EscalaEP2Calificacion.php" />
-        <option value="$PROJECT_DIR$/resilient/app/EscalaEP2Competencia.php" />
-        <option value="$PROJECT_DIR$/resilient/app/EscalaEP2Respuesta.php" />
-        <option value="$PROJECT_DIR$/resilient/app/EscalaEP2DetalleCalificacion.php" />
-        <option value="$PROJECT_DIR$/resilient/app/Http/Controllers/CustomControllers/EscalaEP2Controller.php" />
-        <option value="$PROJECT_DIR$/resilient/app/EscalaEP2RubricaCalificacion.php" />
-        <option value="$PROJECT_DIR$/resilient/resources/views/escalaP2/escalaParentabilidadResultado.blade.php" />
-        <option value="$PROJECT_DIR$/resilient/app/Helpers/UtilsHelper.php" />
-        <option value="$PROJECT_DIR$/resilient/helpers/date_helper.php" />
-        <option value="$PROJECT_DIR$/resilient/app/Helpers/DateHelper.php" />
-        <option value="$PROJECT_DIR$/resilient/app/ActividadAsignada.php" />
         <option value="$PROJECT_DIR$/resilient/app/ActividadGrupo.php" />
         <option value="$PROJECT_DIR$/resilient/app/OpcionPreguntaActividad.php" />
         <option value="$PROJECT_DIR$/resilient/app/GrupoPoblacional.php" />
@@ -220,7 +275,6 @@
         <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprediendo_de_resiliencia.blade.php" />
         <option value="$PROJECT_DIR$/resilient/app/Actividad.php" />
         <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia.blade.php" />
-        <option value="$PROJECT_DIR$/resilient/.env" />
         <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/aprendamos_resiliencia.blade.php" />
         <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/prendiendo_motores.blade.php" />
         <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/ella_es_edith_grotberg.blade.php" />
@@ -232,14 +286,36 @@
         <option value="$PROJECT_DIR$/resilient/resources/views/escalaWY/escalaWYDatosIniciales.blade.php" />
         <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/intro_aprendiamos_resiliencia.blade.php" />
         <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/intro_aprendamos_resiliencia.blade.php" />
-        <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/verbalizaciones_grotberg.blade.php" />
         <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/resiliencia_en_la_crianza.blade.php" />
-        <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/logrosObtenidos.blade.php" />
-        <option value="$PROJECT_DIR$/resilient/app/Http/Controllers/ActivityController.php" />
-        <option value="$PROJECT_DIR$/resilient/routes/web.php" />
         <option value="$PROJECT_DIR$/resilient/app/Http/Middleware/RedirectIfAuthenticated.php" />
         <option value="$PROJECT_DIR$/resilient/resources/views/cuidador/menuCuidador.blade.php" />
         <option value="$PROJECT_DIR$/resilient/resources/views/cuidador/cuidador-infantes.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aterrizando_el_concepto_resiliencia/intro.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aterrizando_el_concepto_resiliencia/resiliencia_en_la_vida_real.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/logrosObtenidos.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aterrizando_el_concepto_resiliencia/cuando_presto_atencion_entiendo_yo.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aterrizando_el_concepto_resiliencia/monitoreo_el_comportamiento.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/gafas-de-las-emociones/intro.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/gafas-de-las-emociones/logrosObtenidos.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/gafas_de_las_emociones/intro.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/gafas_de_las_emociones/relacion_videos_hijo.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/gafas_de_las_emociones/logrosObtenidos.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aterrizando_el_concepto_resiliencia/logrosObtenidos.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/gafas_de_las_emociones/videos_descriptivos.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/logrosObtenidos.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/cuando_presto_atencion.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/encuentra_algo.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/tareas.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/yo_y_mi_manera_de_ser.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/intro.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/verbalizaciones_grotberg.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/logrosObtenidos.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/intro.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/.env" />
+        <option value="$PROJECT_DIR$/resilient/app/Http/Controllers/ActivityController.php" />
+        <option value="$PROJECT_DIR$/resilient/routes/web.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/cuando_presto_atencion_entiendo_yo.blade.php" />
+        <option value="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/para_que_debo_elogiar.blade.php" />
       </list>
     </option>
   </component>
@@ -353,6 +429,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -393,7 +470,7 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="activities" type="462c0819:PsiDirectoryNode" />
-              <item name="2-11-meses" type="462c0819:PsiDirectoryNode" />
+              <item name="3-11-meses" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="proyectogrado" type="b2602c69:ProjectViewProjectNode" />
@@ -402,20 +479,13 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="activities" type="462c0819:PsiDirectoryNode" />
-              <item name="2-11-meses" type="462c0819:PsiDirectoryNode" />
-              <item name="aprendamos_resiliencia" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="proyectogrado" type="b2602c69:ProjectViewProjectNode" />
-              <item name="proyectogrado" type="462c0819:PsiDirectoryNode" />
-              <item name="resilient" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="3-11-meses" type="462c0819:PsiDirectoryNode" />
+              <item name="dia_del_elogio" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -432,11 +502,11 @@
       <recent name="C:\wamp\www\proyectogrado\resilient\resources\views\activities\2-11-meses\aprendamos_resiliencia" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia" />
-      <recent name="$PROJECT_DIR$/resilient/public/ActividadAprendamosResiliencia" />
-      <recent name="C:\wamp\www\proyectogrado\resilient\resources\views\activities\2-11-meses\aprendamos_resiliencia" />
-      <recent name="C:\wamp\www\proyectogrado\resilient\public\img" />
-      <recent name="C:\wamp\www\proyectogrado\resilient\resources\views\activities\2-11-meses" />
+      <recent name="$PROJECT_DIR$/resilient/public/ActividadDiaDelElogio" />
+      <recent name="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio" />
+      <recent name="$PROJECT_DIR$/resilient/resources/views/activities/shared_views" />
+      <recent name="$PROJECT_DIR$/resilient/public/ActividadPapitoEscultor" />
+      <recent name="$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -475,20 +545,27 @@
       <workItem from="1539183855016" duration="21073000" />
       <workItem from="1539309566875" duration="5319000" />
       <workItem from="1539406009152" duration="483000" />
+      <workItem from="1539459430060" duration="10799000" />
+      <workItem from="1539472475390" duration="610000" />
+      <workItem from="1539523874762" duration="1420000" />
+      <workItem from="1539608195952" duration="54224000" />
+      <workItem from="1539690878848" duration="6905000" />
+      <workItem from="1539741123169" duration="4261000" />
+      <workItem from="1539874437937" duration="15411000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118162000" />
+    <option name="totallyTimeSpent" value="211792000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26950747" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21748754" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32972974" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -497,13 +574,34 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32907802" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.88353413" weight="0.9647391" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.88353413" visible="true" weight="0.16216215" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.11732153" side_tool="true" weight="0.25621623" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24966533" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28278914" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32972974" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32907802" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.88353413" weight="0.16216215" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.11732153" side_tool="true" weight="0.25621623" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24966533" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -512,149 +610,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resilient/app/PreguntaActividades.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/app/Http/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/app/Http/Controllers/DatosCuidadorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-816" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/app/Actividad.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/escalaP2/escalaParentabilidadResultado.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="31" lean-forward="true" selection-start-line="7" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2anos_2anos11meses/intro_activity1.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-527">
-          <caret line="131" column="20" lean-forward="true" selection-start-line="131" selection-start-column="20" selection-end-line="131" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/moduloActividades.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/cuidador/dashboardInfante.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/assets/images/nube.PNG">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/app/Http/Controllers/CustomControllers/GenericActivityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/app/Http/Controllers/CustomControllers/EscalaEP2Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/prendiendo_motores.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="82" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/Actividad_PracticandoHumor/PracticaElSentidoDelHumor1.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-878" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/Actividad_PracticandoHumor/PracticaElSentidoDelHumor5.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-353" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/Actividad_PracticandoHumor/intro_actividadPractica.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13943" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/Actividad_PracticandoHumor/CulminadoActividadPractica.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-189" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/Creando_Confianza/CreandoConfianza1.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-384" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/Creando_Confianza/CreandoConfianza3.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-462" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2anos_2anos11meses/hasta_el_final/hasta_final_actividad.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4557" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/Creando_Confianza/CreandoConfianzaFinal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/que_sabes_resiliencia.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="93" selection-start-line="9" selection-start-column="93" selection-end-line="9" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/public/css/theme-1/materialadmin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/public/css/theme-1/material-design-LICENSE.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-270" />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/public/css/theme-1/bootstrap-LICENSE">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/resilient/public/css/app.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -662,27 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/definicion_resiliencia.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="15" column="55" lean-forward="true" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/aprendamos_resiliencia.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/ella_es_edith_grotberg.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -726,13 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/verbalizaciones_grotberg.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="157" column="34" lean-forward="true" selection-start-line="157" selection-start-column="34" selection-end-line="157" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resilient/resources/views/escalaWY/escalaWYDatosIniciales.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -743,24 +670,10 @@
     <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/Actividad_PracticandoHumor/logrosObtenidos.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/logrosObtenidos.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/resiliencia_en_la_crianza.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/app/Http/Controllers/ActivityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="74" column="33" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -778,33 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/app/Http/Middleware/RedirectIfAuthenticated.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-          <folding>
-            <element signature="e#39#52#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/admin/Actividades.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/resilient/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -814,10 +700,258 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resilient/resources/views/cuidador/cuidador-infantes.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+        <state relative-caret-position="45">
+          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="23" selection-end-column="6" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/app/Http/Middleware/RedirectIfAuthenticated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/logrosObtenidos.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/admin/Actividades.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/gafas_de_las_emociones/intro.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="951" column="219" lean-forward="true" selection-start-line="951" selection-start-column="20" selection-end-line="951" selection-end-column="219" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aterrizando_el_concepto_resiliencia/intro.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1013">
+          <caret line="951" column="122" selection-start-line="951" selection-start-column="122" selection-end-line="951" selection-end-column="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aterrizando_el_concepto_resiliencia/resiliencia_en_la_vida_real.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aterrizando_el_concepto_resiliencia/monitoreo_el_comportamiento.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/ella_es_edith_grotberg.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/definicion_resiliencia.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="25" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aterrizando_el_concepto_resiliencia/logrosObtenidos.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="82" selection-start-line="11" selection-start-column="82" selection-end-line="11" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/gafas_de_las_emociones/logrosObtenidos.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="76" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/logrosObtenidos.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/cuando_presto_atencion.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="37" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/aprendamos_resiliencia.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/tareas.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/verbalizaciones_grotberg.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/intro.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13515">
+          <caret line="901" column="28" selection-start-line="901" selection-start-column="28" selection-end-line="901" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/shared_views/logrosObtenidos.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/shared_views/intro.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="895" column="167" lean-forward="true" selection-start-line="894" selection-start-column="31" selection-end-line="895" selection-end-column="167" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/app/Http/Controllers/CustomControllers/GenericActivityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding>
+            <element signature="e#58#76#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/encuentra_algo.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aterrizando_el_concepto_resiliencia/cuando_presto_atencion_entiendo_yo.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/intro.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="929" column="92" lean-forward="true" selection-start-line="929" selection-start-column="92" selection-end-line="929" selection-end-column="92" />
+          <folding>
+            <element signature="e#20238#20297#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/config/cache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/logrosObtenidos.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/public/ActividadDiaDelElogio/002_corazon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/gafas_de_las_emociones/videos_descriptivos.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-690">
+          <caret line="152" column="17" lean-forward="true" selection-start-line="152" selection-start-column="17" selection-end-line="152" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/gafas_de_las_emociones/relacion_videos_hijo.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-87">
+          <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/papito_escultor/yo_y_mi_manera_de_ser.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="96" column="40" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/cuando_presto_atencion_entiendo_yo.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-end-line="44" selection-end-column="11" />
+          <folding>
+            <element signature="e#1173#1198#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="167" column="78" selection-start-line="167" selection-start-column="56" selection-end-line="167" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/app/Http/Controllers/ActivityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="155" column="42" selection-start-line="155" selection-start-column="20" selection-end-line="155" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/para_que_debo_elogiar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="66" column="106" lean-forward="true" selection-start-line="66" selection-start-column="106" selection-end-line="66" selection-end-column="106" />
+          <folding>
+            <element signature="e#3975#4015#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/aprende_estrategias.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
