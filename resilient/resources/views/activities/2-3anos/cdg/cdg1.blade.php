@@ -40,7 +40,7 @@ COSAS DE GRANDE
 
             <div class="card-actionbar">
                 <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/cnr2')}}"> <button type="button"
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/cdg2')}}"> <button type="button"
                             class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                 </div>
             </div>
