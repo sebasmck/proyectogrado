@@ -26,23 +26,12 @@ class ActivityController extends Controller
     const URL_ACTIVITIE_PE = self::URL_ACTIVITIES_3_11_MESES."papito_escultor.";
     const URL_ACTIVITIE_DDE = self::URL_ACTIVITIES_3_11_MESES."dia_del_elogio.";
 
-    // Activity: Cualidades Niños Resilientes
 
+    public function goToActivities(){
 
-    public function cnr_intro(){
-        return view('activities.2-3anos.intro_cnr');
-    }
+        $activities = Actividad::all();
 
-    public function cnr1(){
-        return view('activities.2-3anos.cnr1');
-    }
-
-    public function cnr2(){
-        return view('activities.2-3anos.cnr2');
-    }
-
-    public function cnr3(){
-        return view('activities.2-3anos.cnr3');
+        return view('activities.moduloActividades', ['activities' => $activities]);
     }
 
 
@@ -61,6 +50,11 @@ class ActivityController extends Controller
     public function actividad(Request $request,$id){
         $actividad  = Actividad::where('Id_Actividad',$id)->get();
         return  $actividad;
+    }
+
+    public function getActivity($id){
+        $actividad  = Actividad::where('Id_Actividad',$id)->first();
+        return view($actividad->View_Actividad);
     }
 
     public function saveActivity()

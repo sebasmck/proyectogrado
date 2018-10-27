@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Auth\RedireccionadorRolController;
 use Illuminate\Http\Request;
 use App\Cuidador;
 use App\TipoDoc;
@@ -58,7 +59,6 @@ class DatosCuidadorController extends Controller
     {
 
         $cuidador = new Cuidador;
-        $user = new User;
 
         $cuidador->Nombre_Acudiente = $req->input('Nombre_Acudiente');
         $cuidador->Apellido_Acudiente = $req->input('Apellido_Acudiente');
@@ -88,13 +88,17 @@ class DatosCuidadorController extends Controller
         // $cuidador->Otro_Escolaridad = $req->input('Otro_Escolaridad');
         $cuidador->Id_Ocupacion = $req->input('Id_Ocupacion');
         // $cuidador->Otro_Ocupacion = $req->input('Otro_Ocupacion');
-        $cuidador->id_usuario = 5;
+        $cuidador->id_usuario = auth()->id();
         $cuidador->Id_Nacionalidad = 2;
         $cuidador->num_hijos = 1;
 
         $cuidador->save();
 
-        return redirect()->back();
+        $user = User::find(auth()->id());
+        $user->id_estado = 2; //REGISTRO_COMPLETO
+        $user->save();
+
+        return RedireccionadorRolController::redirectTo();
     }
 
     /**

@@ -2,6 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\AcudienteInfante;
+use App\Helpers\DateHelper;
+use App\Http\Controllers\Auth\RedireccionadorRolController;
+use App\Infante;
+use App\RelacionInfante;
+use App\User;
 use Illuminate\Http\Request;
 
 class DatosNinoController extends Controller
@@ -39,7 +45,35 @@ class DatosNinoController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $infante = new Infante();
+
+        $infante->Nombre_Infante = $request->input("firstname");
+        $infante->Apellido_Infante = $request->input("lastname");
+        $infante->FechaDeNacimiento_Infante =  new \DateTime($request->input("fechanacimiento"));
+        $infante->Edad_Infante = $request->input("edad");
+        $infante->Id_Sexo = $request->input("sexo");
+
+        $infante->save();
+
+        $user = User::find(auth()->id());
+
+        $acudienteinfante = new AcudienteInfante();
+        $acudienteinfante->Id_Acudiente = $user->cuidador->Id_Acudiente;
+        $acudienteinfante->Id_Infante = $infante->Id_Infante;
+        $acudienteinfante->Id_RelacionInfante = 1;
+
+        $acudienteinfante->save();
+
+        return $this->datosnino2();
+    }
+
+    public function storeSecond(){
+
+        $user = User::find(auth()->id());
+        $user->id_estado = 3;
+        $user->save();
+
+       return  RedireccionadorRolController::redirectTo();
     }
 
     /**

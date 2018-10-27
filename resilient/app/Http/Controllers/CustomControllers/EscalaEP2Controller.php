@@ -11,6 +11,8 @@ use App\EscalaEP2Calificacion;
 use App\EscalaEP2Competencia;
 use App\EscalaEP2RubricaCalificacion;
 use App\EscalaEP2Zona;
+use App\Http\Controllers\Auth\RedireccionadorRolController;
+use App\User;
 use Illuminate\Http\Request;
 use App\Cuidador;
 use App\Infante;
@@ -234,6 +236,14 @@ class EscalaEP2Controller extends Controller
             'competencias' => $competencias,
             'detalleCalificacion' => $detalleCalificacion]);
 
+    }
+
+    public function finalizarEscala(){
+        $user = User::find(auth()->id());
+        $user->id_estado = 6;
+        $user->save();
+
+        return RedireccionadorRolController::redirectTo();
     }
 
 }

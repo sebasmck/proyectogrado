@@ -44,6 +44,9 @@
                     </div>
                 @endfor
             </div>
+            <div>
+                <button type="button" class="btn btn-primary"><a href="{{ route('/finalizar-escalap2') }}">Finalizar</a></button>
+            </div>
         </div>
     </div>
 </div>

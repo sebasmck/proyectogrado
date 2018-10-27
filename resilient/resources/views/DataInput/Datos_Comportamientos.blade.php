@@ -7,7 +7,7 @@ Datos Niño
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="get" action="{{ route('/datosninostoresecond') }}">
             <div class="card">
                 <div class="card-head style-primary">
                     <header>Ingresa los datos del niño</header>
