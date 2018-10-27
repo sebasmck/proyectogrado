@@ -30,6 +30,10 @@ class Cuidador extends Model
 
     public function nacionalidad(){
         return $this->belongsTo('App\Nacionalidad','Id_Nacionalidad');
-    }    
+    }
+
+    public function acudienteInfante(){
+        return $this->hasMany('App\AcudienteInfante','Id_Acudiente','Id_Acudiente');
+    }
 
 }

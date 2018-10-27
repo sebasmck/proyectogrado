@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Auth\RedireccionadorRolController;
+use App\User;
 use Illuminate\Http\Request;
 use App\EscalaResilienciaWY;
 use App\Cuidador;
@@ -139,6 +141,14 @@ class EscalaWYController extends Controller{
       $escalaA->save();
 
       return  view('escalaWY.escalaWYResult')->with('result' , $str)->with('img', $img);  
+    }
+
+    public function finalizarEscala(){
+        $user = User::find(auth()->id());
+        $user->id_estado = 7;
+        $user->save();
+
+        return RedireccionadorRolController::redirectTo();
     }
 
 }

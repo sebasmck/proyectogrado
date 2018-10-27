@@ -35,7 +35,9 @@ Escala
             
         
 </div>
-
+    <div class="text-right small-padding">
+        <button type="button" class="btn btn-primary"><a href="{{ route('/finalizar-escalawy') }}">Finalizar</a></button>
+    </div>
 
 </div>
 </form>

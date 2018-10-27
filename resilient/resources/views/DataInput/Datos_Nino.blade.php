@@ -7,7 +7,9 @@ Datos Niño
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form method="post" class="form" action="{{ route('datosninos.store') }}">
+            @csrf
+
             <div class="card">
                 <div class="card-head style-primary">
                     <header>Ingresa los datos del niño/a</header>
@@ -18,15 +20,15 @@ Datos Niño
                             <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="Firstname2">
-                                            <label for="Firstname2">Nombres completos del niño/a
+                                            <input type="text" class="form-control" id="firstname" name="firstname">
+                                            <label for="firstname">Nombres completos del niño/a
 :                                                </label>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="Lastname2">
-                                            <label for="Lastname2">Apellidos completos del niño/a</label>
+                                            <input type="text" class="form-control" id="lastname" name="lastname">
+                                            <label for="lastname">Apellidos completos del niño/a</label>
                                         </div>
                                     </div>
                                 </div>
@@ -36,12 +38,12 @@ Datos Niño
 
                             <div class="col-sm-4">
                                     <div class="form-group">
-                                         <select id="select2" name="select2" class="form-control">
+                                         <select id="sexo" name="sexo" class="form-control">
                                                 <option value="">&nbsp;</option>
-                                                <option value="30">Hombre</option>
-                                                <option value="40">Mujer</option>
+                                                <option value="1">Hombre</option>
+                                                <option value="2">Mujer</option>
                                          </select>
-                                         <label for="select1">Sexo</label>
+                                         <label for="sexo">Sexo</label>
                                     </div>
                             </div>
 
@@ -49,7 +51,7 @@ Datos Niño
                                     <div class="form-group control-width-normal">
                                             <div class="input-group date" id="demo-date">
                                                 <div class="input-group-content">
-                                                    <input type="text" class="form-control">
+                                                    <input type="text" class="form-control" id="fechaNacimiento" name="fechanacimiento">
                                                     <label>Fecha de nacimiento</label>
                                                 </div>
                                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -58,8 +60,8 @@ Datos Niño
                             </div>
                             <div class="col-sm-4">
                                     <div class="form-group">
-                                            <input type="text" class="form-control" id="Lastname2">
-                                            <label for="Lastname2">Edad</label>
+                                            <input type="number" class="form-control" id="edad" name="edad">
+                                            <label for="edad">Edad</label>
                                         </div>
                             </div>
                     </div>

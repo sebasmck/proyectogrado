@@ -17,11 +17,11 @@ Home
 
                     <div class="row"> 
 
-                             <div class="col-md-6"> 
+                             <div class="col-md-6">
                                 <div class="card ">
 
-                                 <a href="">
-                                    <div class="card-body small-padding text-center">
+                                 <a href=" {{ route('/lista-actividades') }}">
+                                    <div class="card-body small-padding text-center" style="height: 350px">
                                         <img style="width:100%;height:300px" src="{{ $sour }}" alt=""> Ir A Actividades
                                     </div>
                                 </a>

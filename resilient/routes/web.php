@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('handleAuthentication', function (){
+    return \App\Http\Controllers\Auth\RedireccionadorRolController::redirectTo();
+})->middleware("auth");
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -27,7 +31,13 @@ Route::get('/menuCuidador', 'HomeController@mostrarMenuCuidador')->name('/menuCu
 
 Route::Resource('cuidador', 'DatosCuidadorController');
 
+Route::get('/datoscuidador', 'DatosCuidadorController@index')->name('/datoscuidador');
+
 Route::get('/datosnino', 'DatosNinoController@index')->name('/datosnino');
+
+Route::Resource('datosninos', 'DatosNinoController');
+
+Route::get('/datosninostoresecond', 'DatosNinoController@storeSecond')->name('/datosninostoresecond');
 
 Route::get('/datosnino2', 'DatosNinoController@datosnino2')->name('/datosnino2');
 
@@ -73,6 +83,10 @@ Route::post('/pretestprueba12', 'PretestController@pretestPrueba12')->name('/pre
 // en el pretest final hay que poner algun comentario 
 
 Route::post('/pretestfinal', 'PretestController@pretestFinalizado')->name('/pretestfinal');
+
+// pretest final redirección a escalas
+
+Route::get('/pretestcompletado', 'PretestController@pretestCompletado')->name('/pretestcompletado');
 
 
 //Rutas para el postest 
@@ -121,6 +135,14 @@ Route::post('/preguntascierreposttestfinal', 'PostTestController@preguntasCierre
 Route::post('/guardar-logros', 'ActivityController@guardarLogros')->name('/guardar-logros');
 
 // Rutas actividades
+
+Route::get('/lista-actividades','ActivityController@goToActivities')->name('/lista-actividades');
+Route::get('/get-activity-info/{id}', [
+    'as' => 'get-activity.id',
+    'uses' => 'ActivityController@getActivity'
+]);
+
+
 Route::get('/actividad-intro-1', 'ActivityController@aprendamosResilienciaIntro')->name('/actividad-intro-1');
 Route::post('/actividades-componentes','ActivityController@goToUrl')->name('/actividades-componentes');
 Route::get('/actividades-aprendamos-resiliencia-1', 'ActivityController@index')->name('/actividades-aprendamos-resiliencia-1');
@@ -186,10 +208,14 @@ Route::get('/cuidador-dashboard/{id}', 'HomeController@dashboardInfante')->name(
 
 // Escalas de resiliencia EP2 
 
-Route::get('/escalap2/{id}', 'CustomControllers\EscalaEP2Controller@escalaEp2ByNino')->name('/escalap2');
+Route::get('/escalap2/{id}',[
+    'as' => 'escalap2.id',
+    'uses' => 'CustomControllers\EscalaEP2Controller@escalaEp2ByNino'
+]);
 Route::post('/escalap2-datos-anexos', 'CustomControllers\EscalaEP2Controller@actualizarDatosAnexosEscalaEP2')->name('/escalap2-datos-anexos');
 Route::post('/guardar-escalap2-cuestionario', 'CustomControllers\EscalaEP2Controller@guardarEscala')->name('/guardar-escalap2-cuestionario');
 Route::get('/resultados-escalap2/{id}','CustomControllers\EscalaEP2Controller@goResultadosEscala')->name('/resultados-escalap2');
+Route::get('finalizar-escalap2','CustomControllers\EscalaEP2Controller@finalizarEscala')->name('/finalizar-escalap2');
 
 //Cuestionario Escala WY
 
@@ -198,6 +224,9 @@ Route::get('/datos-escala', 'EscalaWYController@index')->name('/datos-escala');
 Route::post('/escalaWY-cuestionario', 'EscalaWYController@updateCuidador')->name('/escalaWY-cuestionario');
 
 Route::post('/escalaWY-cuestionario-calculate', 'EscalaWYController@calculateEscalaWY')->name('/escalaWY-cuestionario-calculate');
+
+Route::get('/finalizar-escalawy', 'EscalaWYController@finalizarEscala')->name('/finalizar-escalawy');
+
 
 //Ruta a home
 Route::get('/welcome','Auth\RegisterController@goToMain')->name('/welcome');

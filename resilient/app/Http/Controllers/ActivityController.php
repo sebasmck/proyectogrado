@@ -29,6 +29,19 @@ class ActivityController extends Controller
     // Activity: Cualidades Niños Resilientes
   
 
+    public function goToActivities(){
+
+        $activities = Actividad::all();
+
+        return view('activities.moduloActividades', ['activities' => $activities]);
+    }
+
+
+    public function aprendamosResilienciaIntro()
+    {
+        return view("activities.2-11-meses.aprendamos_resiliencia.intro_aprendamos_resiliencia");
+    }
+
    
     // public function index($id)
     // {
@@ -39,6 +52,11 @@ class ActivityController extends Controller
     public function actividad(Request $request,$id){
         $actividad  = Actividad::where('Id_Actividad',$id)->get();
         return  $actividad;
+    }
+
+    public function getActivity($id){
+        $actividad  = Actividad::where('Id_Actividad',$id)->first();
+        return view($actividad->View_Actividad);
     }
 
     public function saveActivity()
