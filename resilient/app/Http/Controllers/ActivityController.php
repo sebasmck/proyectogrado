@@ -761,4 +761,35 @@ class ActivityController extends Controller
         return view('activities.2-3anos.lrj.CulminadoActividadLrj');
     }
 
+    // Actividad Ag
+
+    public function ag_intro(){
+        return view('activities.2-3anos.ag.intro_ag');
+    }
+
+    public function ag1(){
+        return view('activities.2-3anos.ag.ag1');
+    }
+
+    public function ag2(){
+        return view('activities.2-3anos.ag.ag2');
+    }
+
+    public function ag3(){
+        return view('activities.2-3anos.ag.ag3');
+    }
+
+    public function ag4(){
+        return view('activities.2-3anos.lrj.ag4');
+    }
+
+    public function ag_logrosObtenidos(){
+        return view('activities.2-3anos.ag.ag_logrosObtenidos');
+    }
+
+    public function CulminadoActividadAg(){
+        return view('activities.2-3anos.ag.CulminadoActividadAg');
+    }
+
+
 }

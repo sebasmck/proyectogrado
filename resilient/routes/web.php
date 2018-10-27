@@ -350,3 +350,10 @@ Route::get('/lrj2', 'ActivityController@lrj2')->name('/lrj2');
 Route::get('/lrj_logrosObtenidos', 'ActivityController@lrj_logrosObtenidos')->name('/lrj_logrosObtenidos');
 Route::get('/lrj_culminado', "ActivityController@CulminadoActividadLrj")->name('/lrj_culminado');
 
+// Ruta actividad arbol genialogico
+
+Route::get('/ag_intro', 'ActivityController@ag_intro')->name('/ag_intro');
+Route::get('/ag1', 'ActivityController@ag1')->name('/ag1');
+Route::get('/ag2', 'ActivityController@ag2')->name('/ag2');
+Route::get('/ag_logrosObtenidos', 'ActivityController@ag_logrosObtenidos')->name('/ag_logrosObtenidos');
+Route::get('/ag_culminado', "ActivityController@CulminadoActividadAg")->name('/ag_culminado');
