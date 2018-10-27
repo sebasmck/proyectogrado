@@ -347,8 +347,6 @@ Route::get('/cdg_culminado', "ActivityController@CulminadoActividadCdg")->name('
 Route::get('/lrj_intro', 'ActivityController@lrj_intro')->name('/lrj_intro');
 Route::get('/lrj1', 'ActivityController@lrj1')->name('/lrj1');
 Route::get('/lrj2', 'ActivityController@lrj2')->name('/lrj2');
-Route::get('/lrj3', 'ActivityController@lrj3')->name('/lrj3');
-Route::get('/lrj4', 'ActivityController@lrj4')->name('/lrj4');
 Route::get('/lrj_logrosObtenidos', 'ActivityController@lrj_logrosObtenidos')->name('/lrj_logrosObtenidos');
 Route::get('/lrj_culminado', "ActivityController@CulminadoActividadLrj")->name('/lrj_culminado');
 
