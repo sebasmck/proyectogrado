@@ -5,7 +5,7 @@ Grande y fuerte
 @endsection
 
 @section('content')
-<form action="{{route('/ftpUpImagesActivityLoQueMasTGuste') }}" method="get" enctype="multipart/form-data">
+<form action="{{route('/GrandeYF4') }}" method="get" enctype="multipart/form-data">
 {{ csrf_field() }}
 <div class="col-lg-offset-2 col-md-8">
 

@@ -25,7 +25,7 @@ números de la tabla use esta libreria. Ahí dejo el los links de la documentaci
 <link type="text/css" rel="stylesheet" href="{{asset('css/css-animations/animate.css')}}" />
 
 
-<form action="{{route('/GrandeYF3') }}" method="get" enctype="multipart/form-data">
+<form action="{{route('/RespirarActuar2') }}" method="get" enctype="multipart/form-data">
 {{ csrf_field() }}
 <div class="col-lg-offset-2 col-md-8">
 

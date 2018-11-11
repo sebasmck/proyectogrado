@@ -4,14 +4,14 @@ Logros Obtenidos
 @endsection
 @section('content')
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form" method="POST" action="{{route('/MasTeGuste4')}}">
+        <form class="form" method="POST" action="{{route('/RespirarActuarCulminacion')}}">
         {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
-                   <header> Logros Obtenidos - Elige el que más te guste </header>
+                   <header> Logros Obtenidos - Respirar pensar y actuar </header>
                 </div>
-
+ 
                 <div class="card-body floating-label">
                        
                         <table border ="black" id="example" class="display" >

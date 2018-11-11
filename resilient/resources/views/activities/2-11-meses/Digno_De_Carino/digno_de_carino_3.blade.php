@@ -7,7 +7,7 @@ Digno de carino
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
- <form class="form" method="GET" action="{{route('/HastaFinal2') }}">
+ <form class="form" method="POST" action="{{route('/DignoCarino3') }}">
 {{csrf_field()}}
 <div class="card">
 <div class="card-head style-primary">
@@ -15,6 +15,36 @@ Digno de carino
                 </div>
  <div class="card-body floating-label">
  
+
+ <!--inicio -->
+ <div class="row">
+
+<div class="row">
+                  <div class="col-sm-7">
+                       <div class="form-group">
+                       <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 20px;color:gray;" >
+                           <label> 
+                           Queremos saber cómo quedaron tus Post-it con las situaciones que te recomendamos, es por esto que a
+                           continuación encontraras un link donde podrás subir una foto de tus Post-it
+                          </label>
+
+                            </div>
+                       </div>
+                   </div> 
+
+                   <div class="col-sm-5">
+                   <div>
+                   <label id="labelpan9" class="btn btn-default btn-file" style="background-color:#0aa89e;color:white; color:white; border-radius: 25px;">
+                   Seleccionar Imagen <input type="file" name="fileToUpload9" style="display: none;" id="btnhid9">
+                   </div>
+                   <div>
+                  <button id="buttonPass9" style="color:black;display:none;background-color:gray;border-radius:15px;border: 2px solid gray;" disabled>Imagen ya seleccionada</button>
+                 </div>
+                   </div>
+</div>
+</div>
+<!-- fin-->
+
  <!--inicio -->
   <div class="row">
 
@@ -117,6 +147,11 @@ $(document).ready(function(){
       $("#visualice").fadeOut();
       $("#textAreaCual").prop('required', false);
   });
+
+  $('#btnhid9').change(function(){
+   $("#labelpan9").css("display","none");
+   $("#buttonPass9").fadeIn(1000);
+});
 
 });
 
