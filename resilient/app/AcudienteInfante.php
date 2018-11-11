@@ -10,6 +10,12 @@ class AcudienteInfante extends Model
 
     public $timestamps = false;
 
+    protected $casts = [
+        'Fecha_Inicial' => 'timestamp',
+        'Fecha_Final' => 'timestamp'
+    ];
+
+
     public function relacionInfante()
     {
         return $this->hasOne('App\RelacionInfante','Id_RelacionInfante','Id_Relacion_Acudiente_Infante');

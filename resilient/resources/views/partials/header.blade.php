@@ -92,7 +92,8 @@
 								<span class="profile-info">
 									
 									{{ auth()->user()->name }}
-									<small>Administrador</small>
+
+									<small>{{ auth()->user()->rol->name }}</small>
 								</span>
 							</a>
 							<ul class="dropdown-menu animation-dock">
