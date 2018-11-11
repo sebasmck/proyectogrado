@@ -7,7 +7,7 @@ Niños Resilientes 3
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="GET" action="{{route('/NinosResilientes4')}}">
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -36,7 +36,7 @@ Niños Resilientes 3
                             <div class="col-sm-2">
                                     <div class="radio radio-styled">
                                         <label>
-                                            <input type="radio" name="optionsRadios1" value="1"  >
+                                            <input type="radio" name="optionsRadios1" value="2"  >
                                             <span> En Desacuerdo</span>
                                         </label>
                                     </div>
@@ -60,7 +60,7 @@ Niños Resilientes 3
                                     <div class="col-sm-2">
                                             <div class="radio radio-styled">
                                                 <label>
-                                                    <input type="radio" name="optionsRadios2" value="1"  >
+                                                    <input type="radio" name="optionsRadios2" value="2"  >
                                                     <span> En Desacuerdo</span>
                                                 </label>
                                             </div>
@@ -86,7 +86,7 @@ Niños Resilientes 3
                                         <div class="col-sm-2">
                                                 <div class="radio radio-styled">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios3" value="1"  >
+                                                        <input type="radio" name="optionsRadios3" value="2"  >
                                                         <span> En Desacuerdo</span>
                                                     </label>
                                                 </div>
@@ -110,7 +110,7 @@ Niños Resilientes 3
                                             <div class="col-sm-2">
                                                     <div class="radio radio-styled">
                                                         <label>
-                                                            <input type="radio" name="optionsRadios4" value="1" >
+                                                            <input type="radio" name="optionsRadios4" value="2" >
                                                             <span> En Desacuerdo</span>
                                                         </label>
                                                     </div>
@@ -126,7 +126,7 @@ Niños Resilientes 3
 
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/NinosResilientes2')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                  <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                   </div>
             </div>
 

@@ -7,7 +7,7 @@ Pretest Final
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" action="{{ route("/pretestcompletado") }}">
         {{csrf_field()}}
             <div class="card">
 
@@ -31,7 +31,7 @@ Pretest Final
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href=""> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Finalizar</button></a>
+                        <button class="btn btn-default ink-reaction btn-primary-dark">Finalizar</button>
                     </div>
               </div>
 

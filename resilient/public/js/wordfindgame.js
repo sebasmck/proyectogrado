@@ -44,7 +44,7 @@
         // for each element in that row
         for (var j = 0, width = row.length; j < width; j++) {
             // append our button with the appropriate class
-            output += '<button class="puzzleSquare" x="' + j + '" y="' + i + '">';
+            output += '<button type="button" class="puzzleSquare" x="' + j + '" y="' + i + '">';
             output += row[j] || '&nbsp;';
             output += '</button>';
         }
@@ -224,9 +224,9 @@
 
         if (wordList.length === 0) {
           $('.puzzleSquare').addClass('complete');
+          $('#puzzle').addClass('puzzle-complete'); 
         }
       }
-
       // reset the turn
       $('.selected').removeClass('selected');
       startSquare = null;
@@ -323,6 +323,7 @@
             }
 
             $('.' + word).addClass('wordFound');
+        
           }
         }
 

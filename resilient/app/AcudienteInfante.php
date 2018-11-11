@@ -14,4 +14,9 @@ class AcudienteInfante extends Model
     {
         return $this->hasOne('App\RelacionInfante','Id_RelacionInfante','Id_Relacion_Acudiente_Infante');
     }
+
+    public function infante()
+    {
+        return $this->belongsTo('App\Infante','Id_Infante');
+    }
 }

@@ -30,7 +30,7 @@ NIÑOS RESILIENTES 2
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" style="display: inline">La Oveja Esquilada</h3>
+                    <h3 class="modal-title" style="display: inline">Los patitos feos</h3>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -39,7 +39,7 @@ NIÑOS RESILIENTES 2
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/3LiRupHOecY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
                 <div class="modal-footer">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="">
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{ route('/NinosResilientes3')}}" >
                          <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Continuar</button>
                     </a>
 

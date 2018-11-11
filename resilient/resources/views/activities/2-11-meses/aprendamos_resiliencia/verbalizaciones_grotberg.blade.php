@@ -43,6 +43,10 @@
         position: relative;
     }
 
+    .container-height{
+        height: 60px;
+    }
+
     .hitbox:before {
         display: block;
         content: "";
@@ -53,6 +57,7 @@
         bottom: 0;
         left: 0;
         right: 0;
+        min-height: 60px !important;
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: center;
@@ -77,8 +82,12 @@
 
     .dropzone:not(.container) .icon {
         width: 100%;
-        height: 100%;
+        height: 20px;
         margin: 0;
+    }
+
+    .dropzone {
+        min-height: 60px;
     }
 
     .container {
@@ -90,6 +99,10 @@
         width: 24%;
         margin: 0.5%;
         background-color: #1e8adf;
+    }
+
+    .paragraph-container {
+        height: 70px;
     }
 
 
@@ -132,54 +145,78 @@
                                 <div id="drag-yopuedo" class="icon" draggable="true" ondragstart="return start(event)" ondragend="return end(event)">“Yo puedo”</div>
                             </div>
                         </div>
+                    </div>
 
-                        <div id="dropzone-holder">
-                            <div class="col-sm-4 hitbox">
-                                <img class="answer hide" src="img/correct-green.png" />
-                                <div id="dropzone-1" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                        <div class="row">
+                            <div class="col-sm-12 container-height">
+                                <div id="dropzone-holder">
+
+                                    <div class="col-sm-4 hitbox">
+                                        <img class="answer hide" src="img/correct-green.png" />
+                                        <div id="dropzone-1" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-8" style="padding-top: 20px">
+                                        <p>
+                                            Personas que me ponen límites para que aprenda a evitar peligros o problemas.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-8">
-                                <p>
-                                    Personas que me ponen límites para que aprenda a evitar peligros o problemas.
-                                </p>
-                            </div>
-
-                        <div class="col-sm-4 hitbox">
-                            <img class="answer hide" src="img/correct-green.png" />
-                            <div id="dropzone-2" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
-                            </div>
-
                         </div>
-                            <div class="col-sm-8">
-                                <p>
-                                    Feliz cuando hago algo bueno para los demás y les demuestro mi afecto
-                                </p>
-                            </div>
 
+                        <div class="row">
+                            <div class="col-sm-12 container-height">
+                                <div id="dropzone-holder">
+                                    <div class="col-sm-4 hitbox">
+                                        <img class="answer hide" src="img/correct-green.png" />
+                                        <div id="dropzone-2" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                                        </div>
 
-                        <div class="col-sm-4 hitbox">
-                            <img class="answer hide" src="img/correct-green.png" />
-                            <div id="dropzone-3" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                                    </div>
+                                    <div class="col-sm-8" style="padding-top: 20px">
+                                        <p>
+                                            Feliz cuando hago algo bueno para los demás y les demuestro mi afecto
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                            <div class="col-sm-8">
-                                <p>
-                                    Buscar la manera de resolver mis problemas.
-                                </p>
-                            </div>
 
-
-
-                        <div class="col-sm-4 hitbox">
-                            <img class="answer hide" src="img/correct-green.png" />
-                            <div id="dropzone-4" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                        <div class="row">
+                            <div class="col-sm-12 container-height">
+                                <div id="dropzone-holder">
+                                    <div class="col-sm-4 hitbox">
+                                        <img class="answer hide" src="img/correct-green.png" />
+                                        <div id="dropzone-3" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8" style="padding-top: 20px">
+                                        <p>
+                                            Buscar la manera de resolver mis problemas.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                            <div class="col-sm-8">
-                                <p>
-                                    Seguro de que todo saldrá bien.
-                                </p>
+
+
+
+                        <div class="row">
+                            <div class="col-sm-12 container-height">
+                                <div id="dropzone-holder">
+                                    <div class="col-sm-4 hitbox">
+                                        <img class="answer hide" src="img/correct-green.png" />
+                                        <div id="dropzone-4" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8" style="padding-top: 20px">
+                                        <p>
+                                            Seguro de que todo saldrá bien.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 

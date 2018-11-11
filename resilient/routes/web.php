@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('handleAuthentication', function (){
+    return \App\Http\Controllers\Auth\RedireccionadorRolController::redirectTo();
+})->middleware("auth");
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -27,7 +31,13 @@ Route::get('/menuCuidador', 'HomeController@mostrarMenuCuidador')->name('/menuCu
 
 Route::Resource('cuidador', 'DatosCuidadorController');
 
+Route::get('/datoscuidador', 'DatosCuidadorController@index')->name('/datoscuidador');
+
 Route::get('/datosnino', 'DatosNinoController@index')->name('/datosnino');
+
+Route::Resource('datosninos', 'DatosNinoController');
+
+Route::get('/datosninostoresecond', 'DatosNinoController@storeSecond')->name('/datosninostoresecond');
 
 Route::get('/datosnino2', 'DatosNinoController@datosnino2')->name('/datosnino2');
 
@@ -74,6 +84,10 @@ Route::post('/pretestprueba12', 'PretestController@pretestPrueba12')->name('/pre
 
 Route::post('/pretestfinal', 'PretestController@pretestFinalizado')->name('/pretestfinal');
 
+// pretest final redirección a escalas
+
+Route::get('/pretestcompletado', 'PretestController@pretestCompletado')->name('/pretestcompletado');
+
 
 //Rutas para el postest 
 Route::get('/postest', 'PostTestController@index')->name('/postest');
@@ -107,6 +121,9 @@ Route::get('/respuestaposttest', 'PostTestController@respuestasPostest')->name('
 
 // preguntas de cierre 
 Route::post('/preguntascierreposttest', 'PostTestController@preguntasCierre')->name('/preguntascierreposttest');
+
+//Route::get('/preguntascierreposttest', 'PostTestController@preguntasCierrePrueba')->name('/preguntascierreposttest');
+
 Route::get('/preguntascierreposttest1', 'PostTestController@preguntasCierre1')->name('/preguntascierreposttest1');
 Route::post('/preguntascierreposttest2', 'PostTestController@preguntasCierre2')->name('/preguntascierreposttest2');
 Route::post('/preguntascierreposttest3', 'PostTestController@preguntasCierre3')->name('/preguntascierreposttest3');
@@ -115,9 +132,17 @@ Route::post('/preguntascierreposttestfinal', 'PostTestController@preguntasCierre
 
 
 //logros
-Route::post('/guardar-logros/{id}', 'ActivityController@guardarLogros')->name('/guardar-logros');
+Route::post('/guardar-logros', 'ActivityController@guardarLogros')->name('/guardar-logros');
 
 // Rutas actividades
+
+Route::get('/lista-actividades','ActivityController@goToActivities')->name('/lista-actividades');
+Route::get('/get-activity-info/{id}', [
+    'as' => 'get-activity.id',
+    'uses' => 'ActivityController@getActivity'
+]);
+
+
 Route::get('/actividad-intro-1', 'ActivityController@aprendamosResilienciaIntro')->name('/actividad-intro-1');
 Route::post('/actividades-componentes','ActivityController@goToUrl')->name('/actividades-componentes');
 Route::get('/actividades-aprendamos-resiliencia-1', 'ActivityController@index')->name('/actividades-aprendamos-resiliencia-1');
@@ -131,6 +156,48 @@ Route::get('/actividades-aprendamos-resiliencia-8', 'ActivityController@resilien
 Route::get('/logros', 'ActivityController@resiliencialogros')->name('/logros');
 
 
+
+Route::prefix('actividades')->group(function () {
+
+    // Actividad aterrizando el concepto de resiliencia
+
+    Route::get('/aterrizando-el-concepto-resiliencia-1', 'ActivityController@intro_acdr')->name('/aterrizando-el-concepto-resiliencia-1');
+    Route::get('/aterrizando-el-concepto-resiliencia-2', 'ActivityController@cuandoPrestoAtencion_acdr')->name('/aterrizando-el-concepto-resiliencia-2');
+    Route::get('/aterrizando-el-concepto-resiliencia-3', 'ActivityController@resilienciaEnLaVidaReal_acdr')->name('/aterrizando-el-concepto-resiliencia-3');
+    Route::get('/aterrizando-el-concepto-resiliencia-4', 'ActivityController@monitoreoElComportamiento_acdr')->name('/aterrizando-el-concepto-resiliencia-4');
+    Route::get('/aterrizando-el-concepto-resiliencia-5', 'ActivityController@logros_acdr' )->name('/aterrizando-el-concepto-resiliencia-5');
+
+
+    // Actividad gafas de las emociones
+
+    Route::get('/gafas-de-las-emociones-1', 'ActivityController@intro_gdle')->name('/gafas-de-las-emociones-1');
+    Route::get('/gafas-de-las-emociones-2', 'ActivityController@videosDescriptivos_gdle')->name('/gafas-de-las-emociones-2');
+    Route::get('/gafas-de-las-emociones-3', 'ActivityController@relacionVideosHijo_gdle')->name('/gafas-de-las-emociones-3');
+    Route::get('/gafas-de-las-emociones-4', 'ActivityController@logros_gdle')->name('/gafas-de-las-emociones-4');
+
+
+    // Actividad papito escultor
+
+    Route::get('/papito-escultor-1', 'ActivityController@intro_pe')->name('/papito-escultor-1');
+    Route::get('/papito-escultor-2', 'ActivityController@cuandoPrestoAtencion_pe')->name('/papito-escultor-2');
+    Route::get('/papito-escultor-3', 'ActivityController@encuentraAlgo_pe')->name('/papito-escultor-3');
+    Route::get('/papito-escultor-4', 'ActivityController@yoYMiManera_pe')->name('/papito-escultor-4');
+    Route::get('/papito-escultor-5', 'ActivityController@tareas_pe')->name('/papito-escultor-5');
+    Route::get('/papito-escultor-6', 'ActivityController@logros_pe')->name('/papito-escultor-6');
+
+    // Actividad dia del elogio
+
+    Route::get('/dia-del-elogio-1   ', 'ActivityController@intro_dde')->name('/dia-del-elogio-1');
+    Route::get('/dia-del-elogio-2', 'ActivityController@cuandoPrestoAtencion_dde')->name('/dia-del-elogio-2');
+    Route::get('/dia-del-elogio-3', 'ActivityController@paraQueDeboElogiar_dde')->name('/dia-del-elogio-3');
+    Route::get('/dia-del-elogio-4', 'ActivityController@aprendeEstrategias_dde')->name('/dia-del-elogio-4');
+    Route::get('/dia-del-elogio-5', 'ActivityController@recuerdaEstrategias_dde')->name('/dia-del-elogio-5');
+    Route::get('/dia-del-elogio-6', 'ActivityController@practicaRefuerzo_dde')->name('/dia-del-elogio-6');
+    Route::get('/dia-del-elogio-7', 'ActivityController@ojosAbiertosYTactoDispuesto_dde')->name('/dia-del-elogio-7');
+    Route::get('/dia-del-elogio-8', 'ActivityController@tarea_dde')->name('/dia-del-elogio-8');
+    Route::get('/dia-del-elogio-9', 'ActivityController@logros_dde')->name('/dia-del-elogio-9');
+});
+
 //Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');
 
 //Route::get('/actividad1', 'ActivityController@actividad1')->name('actividad1');
@@ -141,10 +208,14 @@ Route::get('/cuidador-dashboard/{id}', 'HomeController@dashboardInfante')->name(
 
 // Escalas de resiliencia EP2 
 
-Route::get('/escalap2/{id}', 'CustomControllers\EscalaEP2Controller@escalaEp2ByNino')->name('/escalap2');
+Route::get('/escalap2/{id}',[
+    'as' => 'escalap2.id',
+    'uses' => 'CustomControllers\EscalaEP2Controller@escalaEp2ByNino'
+]);
 Route::post('/escalap2-datos-anexos', 'CustomControllers\EscalaEP2Controller@actualizarDatosAnexosEscalaEP2')->name('/escalap2-datos-anexos');
 Route::post('/guardar-escalap2-cuestionario', 'CustomControllers\EscalaEP2Controller@guardarEscala')->name('/guardar-escalap2-cuestionario');
 Route::get('/resultados-escalap2/{id}','CustomControllers\EscalaEP2Controller@goResultadosEscala')->name('/resultados-escalap2');
+Route::get('finalizar-escalap2','CustomControllers\EscalaEP2Controller@finalizarEscala')->name('/finalizar-escalap2');
 
 //Cuestionario Escala WY
 
@@ -153,6 +224,9 @@ Route::get('/datos-escala', 'EscalaWYController@index')->name('/datos-escala');
 Route::post('/escalaWY-cuestionario', 'EscalaWYController@updateCuidador')->name('/escalaWY-cuestionario');
 
 Route::post('/escalaWY-cuestionario-calculate', 'EscalaWYController@calculateEscalaWY')->name('/escalaWY-cuestionario-calculate');
+
+Route::get('/finalizar-escalawy', 'EscalaWYController@finalizarEscala')->name('/finalizar-escalawy');
+
 
 //Ruta a home
 Route::get('/welcome','Auth\RegisterController@goToMain')->name('/welcome');
@@ -215,15 +289,33 @@ Route::get('/cnr_logrosObtenidos', 'ActivityController@cnr_logrosObtenidos')->na
 Route::get('/cnr_culminado', "ActivityController@CulminadoActividadCnr")->name('/cnr_culminado');
 
 // Rutas para Actividad UN TESORO ESCONDIDO. "SOY CAPAZ DE… Y ME AMO COMO SOY”
-Route::get('/IntroTesoroEscondido', 'ActivityController@formandoNinosResDesc')->name('/IntroTesoroEscondido');
+Route::get('/IntroTesoroEscondido', 'ActivityController@tesoroEscondidoDesc')->name('/IntroTesoroEscondido');
+Route::get('/TesoroEscondido1', 'ActivityController@tesoroEscondido1')->name('/TesoroEscondido1');
+Route::get('/TesoroEscondido2', 'ActivityController@tesoroEscondido2')->name('/TesoroEscondido2');
+Route::get('/TesoroEscondido3', 'ActivityController@tesoroEscondidoLogros')->name('/TesoroEscondido3');
+Route::get('/TesoroEscondido4', 'ActivityController@tesoroEscondidoCulminacion')->name('/TesoroEscondido4');
+
 // Rutas para Actividad COMO LOROS
 Route::get('/IntroComoLoros', 'ActivityController@comoLorosDesc')->name('/IntroComoLoros');
+Route::get('/ComoLoros1', 'ActivityController@comoLoros1')->name('/ComoLoros1');
+Route::get('/ComoLoros2', 'ActivityController@comoLoros2')->name('/ComoLoros2');
+Route::get('/ComoLoros3', 'ActivityController@comoLoros3')->name('/ComoLoros3');
+Route::get('/ComoLoros4', 'ActivityController@comoLoros4')->name('/ComoLoros4');
+Route::get('/ComoLoros4', 'ActivityController@comoLoros4')->name('/ComoLoros4');
+Route::get('/ComoLoros5', 'ActivityController@comoLorosLogros')->name('/ComoLoros5');
+Route::get('/ComoLoros6', 'ActivityController@comoLorosCulminacion')->name('/ComoLoros6');
+
+
 // Rutas para Actividad NIÑOS RESILIENTES
 Route::get('/IntroNinosResilientes', 'ActivityController@ninosResilientesDesc')->name('/IntroNinosResilientes');
 Route::get('/NinosResilientes1', 'ActivityController@ninosResilientes1')->name('/NinosResilientes1');
 Route::get('/NinosResilientes2', 'ActivityController@ninosResilientes2')->name('/NinosResilientes2');
 Route::get('/NinosResilientes3', 'ActivityController@ninosResilientes3')->name('/NinosResilientes3');
 Route::get('/NinosResilientes4', 'ActivityController@ninosResilientes4')->name('/NinosResilientes4');
+
+Route::get('/NinosResilientes5', 'ActivityController@ninosResilientesLogros')->name('/NinosResilientes5');
+Route::get('/NinosResilientes6', 'ActivityController@ninosResilientesCulminacion')->name('/NinosResilientes6');
+
 
 // Ruta actividad digno de carino 
 Route::get('/DignoCarinoIntro' , 'ActivityController@paraDignoDecarino')->name('/DignoCarinoIntro');
@@ -288,4 +380,18 @@ Route::get('/cdg4', 'ActivityController@cdg4')->name('/cdg4');
 Route::get('/cdg_logrosObtenidos', 'ActivityController@cdg_logrosObtenidos')->name('/cdg_logrosObtenidos');
 Route::get('/cdg_culminado', "ActivityController@CulminadoActividadCdg")->name('/cdg_culminado');
 
+// Ruta actividad las reglas de juego
 
+Route::get('/lrj_intro', 'ActivityController@lrj_intro')->name('/lrj_intro');
+Route::get('/lrj1', 'ActivityController@lrj1')->name('/lrj1');
+Route::get('/lrj2', 'ActivityController@lrj2')->name('/lrj2');
+Route::get('/lrj_logrosObtenidos', 'ActivityController@lrj_logrosObtenidos')->name('/lrj_logrosObtenidos');
+Route::get('/lrj_culminado', "ActivityController@CulminadoActividadLrj")->name('/lrj_culminado');
+
+// Ruta actividad arbol genialogico
+
+Route::get('/ag_intro', 'ActivityController@ag_intro')->name('/ag_intro');
+Route::get('/ag1', 'ActivityController@ag1')->name('/ag1');
+Route::get('/ag2', 'ActivityController@ag2')->name('/ag2');
+Route::get('/ag_logrosObtenidos', 'ActivityController@ag_logrosObtenidos')->name('/ag_logrosObtenidos');
+Route::get('/ag_culminado', "ActivityController@CulminadoActividadAg")->name('/ag_culminado');

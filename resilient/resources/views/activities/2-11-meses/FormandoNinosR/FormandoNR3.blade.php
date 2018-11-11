@@ -7,7 +7,7 @@ Formando Niños Resilientes 3
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="GET" action="{{route('/FormandoNR4')}}">
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -72,7 +72,7 @@ Formando Niños Resilientes 3
 
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/FormandoNR4')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                  <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                   </div>
             </div>
 
