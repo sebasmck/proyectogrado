@@ -22,7 +22,7 @@
                 <?php
                     foreach ($activities as $activity){
 
-                        echo ('<a href="/get-activity-info/'.$activity->Id_Actividad.'" class="list-group-item list-group-item-action align-items-start">
+                        echo ('<a href="get-activity-info/'.$activity->Id_Actividad.'" class="list-group-item list-group-item-action align-items-start">
                                 <div class="d-flex w-100 justify-content-between">
                                   <h5 class="mb-1">'.$activity->Nombre_Actividad.'</h5>
                                   <small>semana '.$activity->semana.'</small>

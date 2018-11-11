@@ -31,4 +31,5 @@ class User extends Authenticatable
     public function cuidador(){
         return $this->hasOne('App\Cuidador','id_usuario');
     }
+
 }
