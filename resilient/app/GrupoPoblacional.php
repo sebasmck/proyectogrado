@@ -11,6 +11,6 @@ class GrupoPoblacional extends Model
     public $timestamps = false;
 
     function actividadGrupo(){
-        $this->hasMany('App/ActividadGrupo','Id_Grupo_Poblacional','Id_Grupo_Poblacional');
+        $this->hasMany('App\ActividadGrupo','Id_Grupo_Poblacional','Id_Grupo_Poblacional');
     }
 }

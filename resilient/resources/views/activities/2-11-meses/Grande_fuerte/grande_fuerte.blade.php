@@ -137,10 +137,10 @@ $(document).ready(function(){
        }else{
         $('#startActivityFirstModal').modal('hide');
 
-        $('#startActivityFirstSecondStepModal').modal('toggle');
-         $("#imgFadeInSilence").fadeOut("fast", function(){
-            $("#imgFadeInSilence").fadeIn(4000);
-         });
+        $("#initialContent").fadeOut("slow" , function(){
+        window.location="{{URL::to('/GrandeYF2')}}";
+       });
+
        }
      });
 

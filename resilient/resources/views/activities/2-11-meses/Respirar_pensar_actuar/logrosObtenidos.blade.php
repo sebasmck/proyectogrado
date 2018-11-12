@@ -4,14 +4,14 @@ Logros Obtenidos
 @endsection
 @section('content')
 <div class="col-lg-offset-2 col-md-8">
-        {{--  <form class="form" method="POST" action="{{route('/cnr_culminado')}}">  --}}
+        <form class="form" method="POST" action="{{route('/RespirarActuarCulminacion')}}">
         {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
-                   <header> Logros Obtenidos - Cualidades Niños Resilientes </header>
+                   <header> Logros Obtenidos - Respirar pensar y actuar </header>
                 </div>
-
+ 
                 <div class="card-body floating-label">
                        
                         <table border ="black" id="example" class="display" >
@@ -49,13 +49,14 @@ Logros Obtenidos
                 </div> {{-- card-body no padding --}}
             </div><!--end .card-body -->
             <div class="card-actionbar">
-                <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/lrj_culminado')}}"> <button type="button"
-                            class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
-                </div>
+                  <div class="card-actionbar-row">
+                  <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                  </div>
             </div>
 
         </div><!--end .card -->
+            
+        </form>
     </div>
 
 @endsection

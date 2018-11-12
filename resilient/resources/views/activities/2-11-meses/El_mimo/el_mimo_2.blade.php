@@ -5,7 +5,7 @@ El mimo
 @endsection
 
 @section('content')
-<form action="{{route('/ftpUpImagesActivityLoQueMasTGuste') }}" method="post" enctype="multipart/form-data">
+<form action="{{route('/Elmimo3') }}" method="get" enctype="multipart/form-data">
 {{ csrf_field() }}
 <div class="col-lg-offset-2 col-md-8">
 
@@ -36,27 +36,61 @@ proveer o fomentar situaciones asertivas o buenas para que él las replique.</p>
 </div>
                 <br />
               
-                <div class="row">
-
-
 <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-8">
              <div class="form-group">
              <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 20px;color:gray;" >
-    
-
-
-    <!--<input type="submit" value="Upload Image" name="submit"-->
+             1- ¿En qué otras situaciones implementaste esta técnica?
                   </div>
              </div>
          </div> 
 
+        <div class="col-sm-4">
+        <div class="form-group">
+             <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 20px;color:gray;" >
+            <textarea required></textarea>
+                  </div>
+             </div>
+        </div>
+
 </div>
 <br/>
+
+
+<div class="row">
+
+        <div class="col-sm-8">
+        <div class="form-group">
+             <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 20px;color:gray;" >
+            2- ¿Se lo recomendarías a otros cuidadores?
+                  </div>
+             </div>
+        </div>
+
+    <div class="col-sm-2">
+        <div class="form-group">
+             <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 20px;color:gray;" >
+             <label>Si</label> <input type="radio" name="op" id="rad" required>
+                  </div>
+             </div>
+        </div>
+
+        <div class="col-sm-2">
+        <div class="form-group">
+             <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 20px;color:gray;" >
+             <label>No</label> <input type="radio" id="rad2" name="op" required>
+                  </div>
+             </div>
+        </div>
+
+
+
 </div>
 
 
-              
+
+
+
 
 <div class="card-actionbar">
                 <div class="card-actionbar-row">

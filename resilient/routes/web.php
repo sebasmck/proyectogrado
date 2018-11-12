@@ -281,6 +281,7 @@ Route::post('/ftpUpImagesActivityLoQueMasTGuste' , 'ActivityController@ftpUpImag
 Route::get('/MasTeGuste' , 'ActivityController@loQueMasTeGuste')->name('/MasTeGuste');
 Route::get('/MasTeGuste2' , 'ActivityController@loQueMasTeGuste2')->name('/MasTeGuste2');
 Route::get('/MasTeGuste3' , 'ActivityController@loQueMasTeGuste3')->name('/MasTeGuste3');
+Route::post('/MasTeGuste4' , 'ActivityController@loQueMasTeGusteCulminacion')->name('/MasTeGuste4');
 
 Route::get('/cnr_intro', 'ActivityController@cnr_intro')->name('/cnr_intro');
 Route::get('/cnr1', 'ActivityController@cnr1')->name('/cnr1');
@@ -323,22 +324,30 @@ Route::get('/NinosResilientes6', 'ActivityController@ninosResilientesCulminacion
 Route::get('/DignoCarinoIntro' , 'ActivityController@paraDignoDecarino')->name('/DignoCarinoIntro');
 Route::get('/DignoCarino' , 'ActivityController@paraDignoDecarino2')->name('/DignoCarino');
 Route::get('/DignoCarino2' , 'ActivityController@paraDignoDecarino3')->name('/DignoCarino2');
+Route::post('/DignoCarino3' , 'ActivityController@paraDignoDecarino4')->name('/DignoCarino3');
+Route::post('/DignoCarino4' , 'ActivityController@dignoCarinoCulminacion')->name('/DignoCarino4');
 
 //Ruta actividad el Mimo
 Route::get('/ElmimoIntro' , 'ActivityController@paraElmimo')->name('/ElmimoIntro');
 Route::get('/Elmimo' , 'ActivityController@paraElmimo2')->name('/Elmimo');
 Route::get('/Elmimo2' , 'ActivityController@paraElmimo3')->name('/Elmimo2');
+Route::get('/Elmimo3' , 'ActivityController@paraElmimo4')->name('/Elmimo3');
+Route::post('/Elmimo4' , 'ActivityController@elMimoCulminacion')->name('/Elmimo4');
 
 //Ruta actividad grande y fuerte
 Route::get('/GrandeYFIntro' , 'ActivityController@paraFuerteYGrande')->name('/GrandeYFIntro');
 Route::get('/GrandeYF' , 'ActivityController@paraFuerteYGrande2')->name('/GrandeYF');
 Route::get('/GrandeYF2' , 'ActivityController@paraFuerteYGrande3')->name('/GrandeYF2');
 Route::get('/GrandeYF3' , 'ActivityController@paraFuerteYGrande4')->name('/GrandeYF3');
+Route::get('/GrandeYF4' , 'ActivityController@paraFuerteYGrande5')->name('/GrandeYF4');
+Route::post('/GrandeYF5' , 'ActivityController@grandeYFuerteCulminacion')->name('/GrandeYF5');
 
 //Ruta actividad respirar pensar, actuar
 Route::get('/RespirarActuarIntro' , 'ActivityController@paraPensarActuar')->name('/RespirarActuarIntro');
 Route::get('/RespirarActuar' , 'ActivityController@paraPensarActuar1')->name('/RespirarActuar');
 Route::get('/RespirarActuar1' , 'ActivityController@paraPensarActuar2')->name('/RespirarActuar1');
+Route::get('/RespirarActuar2' , 'ActivityController@paraPensarActuar3')->name('/RespirarActuar2');
+Route::post('/RespirarActuarCulminacion' , 'ActivityController@paraPensarActuarCulminacion')->name('/RespirarActuarCulminacion');
 //Route::get('/RespirarActuarLogrosObtenidos' , 'ActivityController@paraFuerteYGrande4')->name('/RespirarActuarLogrosObtenidos);
 
 // Ruta actividad las emociones de mis padres

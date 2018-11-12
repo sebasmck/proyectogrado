@@ -376,7 +376,7 @@ class ActivityController extends Controller
         $LogrosActividad ->id_AcudienteInfante = $RelacionInfante;
         $LogrosActividad ->id_Actividad = $NumActividad; 
         $LogrosActividad ->save();
-        return view('activities.2-11-meses.Creando_Confianza.CreandoConfianzaFinal');
+        return view('activities.2anos_2anos11meses.hasta_el_final.hasta_final_culminacion');
     }
 
     public function downloadImage($file){
@@ -586,7 +586,7 @@ class ActivityController extends Controller
         $LogrosActividad ->id_AcudienteInfante = $RelacionInfante;
         $LogrosActividad ->id_Actividad = $NumActividad; 
         $LogrosActividad ->save();
-         return view('activities.2-11-meses.FormandoNinosR.FormandoNRFinal');
+         return view('activities.2-11-meses.Mas_Te_Guste.actividad_mas_te_guste_culminacion');
      }
      
     //Actividad digno de carino
@@ -601,6 +601,33 @@ class ActivityController extends Controller
     public function paraDignoDecarino3(){
         return view('activities.2-11-meses.Digno_De_Carino.digno_de_carino_3');
     }
+
+    public function paraDignoDecarino4(Request $request){
+        $id_usuario = auth()->id();
+        $acudiente = Cuidador::where('id_usuario', $id_usuario)->value('Id_Acudiente');
+
+        $pathFiles = 'Images/ActivityDignoCarino/'.$acudiente;
+        //var_dump($acudiente);
+
+            $file = $request->file('fileToUpload9');
+            Storage::disk('ftp')->put($pathFiles , $file);
+        
+        return view('activities.2-11-meses.Digno_De_Carino.logrosObtenidos');
+    }
+
+    public function dignoCarinoCulminacion(Request $request) {
+        $LogrosActividad = new LogrosActividad (); 
+        $NumActividad = 11; //Numero en base de datos tabla Actividad  
+        $RelacionInfante = null ; // Por el momento enviar vacio  
+        $LogrosActividad ->Aprendido = $request->input('si/No1');
+        $LogrosActividad ->NoAprendido = $request->input('si/No2');
+        $LogrosActividad ->AplicadoCrianza = $request->input('si/No3');
+        $LogrosActividad ->NoAplicadoCrianza = $request->input('si/No4');
+        $LogrosActividad ->id_AcudienteInfante = $RelacionInfante;
+        $LogrosActividad ->id_Actividad = $NumActividad; 
+        $LogrosActividad ->save();
+         return view('activities.2-11-meses.Digno_De_Carino.digno_de_carino_culminacion');
+     }
    
     //Actividad el Mimo
     public function paraElmimo(){
@@ -615,6 +642,25 @@ class ActivityController extends Controller
         return view('activities.2-11-meses.El_mimo.el_mimo_2');
     }
 
+    public function paraElmimo4(){
+        return view('activities.2-11-meses.El_mimo.logrosObtenidos');
+    }
+
+    public function elMimoCulminacion(Request $request) {
+        $LogrosActividad = new LogrosActividad (); 
+        $NumActividad = 12; //Numero en base de datos tabla Actividad  
+        $RelacionInfante = null ; // Por el momento enviar vacio  
+        $LogrosActividad ->Aprendido = $request->input('si/No1');
+        $LogrosActividad ->NoAprendido = $request->input('si/No2');
+        $LogrosActividad ->AplicadoCrianza = $request->input('si/No3');
+        $LogrosActividad ->NoAplicadoCrianza = $request->input('si/No4');
+        $LogrosActividad ->id_AcudienteInfante = $RelacionInfante;
+        $LogrosActividad ->id_Actividad = $NumActividad; 
+        $LogrosActividad ->save();
+         return view('activities.2-11-meses.El_mimo.el_mimo_culminacion');
+     }
+
+
     //Actividad fuerte y grande
     public function paraFuerteYGrande(){
         return view('activities.2-11-meses.Grande_fuerte.intro_grande_fuerte');
@@ -628,6 +674,23 @@ class ActivityController extends Controller
     public function paraFuerteYGrande4(){
         return view('activities.2-11-meses.Grande_fuerte.grande_fuerte_3');
     }
+    public function paraFuerteYGrande5(){
+        return view('activities.2-11-meses.Grande_fuerte.logrosObtenidos');
+    }
+
+    public function grandeYFuerteCulminacion(Request $request) {
+        $LogrosActividad = new LogrosActividad (); 
+        $NumActividad = 21; //Numero en base de datos tabla Actividad  
+        $RelacionInfante = null ; // Por el momento enviar vacio  
+        $LogrosActividad ->Aprendido = $request->input('si/No1');
+        $LogrosActividad ->NoAprendido = $request->input('si/No2');
+        $LogrosActividad ->AplicadoCrianza = $request->input('si/No3');
+        $LogrosActividad ->NoAplicadoCrianza = $request->input('si/No4');
+        $LogrosActividad ->id_AcudienteInfante = $RelacionInfante;
+        $LogrosActividad ->id_Actividad = $NumActividad; 
+        $LogrosActividad ->save();
+         return view('activities.2-11-meses.Grande_fuerte.grande_fuerte_culminacion');
+     }
 
     //Actividad respirar pensar actuar
     public function paraPensarActuar(){
@@ -642,6 +705,23 @@ class ActivityController extends Controller
         return view('activities.2-11-meses.Respirar_pensar_actuar.respirar_actuar_2');
     }
 
+    public function paraPensarActuar3(){
+        return view('activities.2-11-meses.Respirar_pensar_actuar.logrosObtenidos');
+    }
+
+    public function paraPensarActuarCulminacion(Request $request) {
+        $LogrosActividad = new LogrosActividad (); 
+        $NumActividad = 16; //Numero en base de datos tabla Actividad  
+        $RelacionInfante = null ; // Por el momento enviar vacio  
+        $LogrosActividad ->Aprendido = $request->input('si/No1');
+        $LogrosActividad ->NoAprendido = $request->input('si/No2');
+        $LogrosActividad ->AplicadoCrianza = $request->input('si/No3');
+        $LogrosActividad ->NoAplicadoCrianza = $request->input('si/No4');
+        $LogrosActividad ->id_AcudienteInfante = $RelacionInfante;
+        $LogrosActividad ->id_Actividad = $NumActividad; 
+        $LogrosActividad ->save();
+         return view('activities.2-11-meses.Respirar_pensar_actuar.respirar_actuar_culminacion');
+     }
 
 
 

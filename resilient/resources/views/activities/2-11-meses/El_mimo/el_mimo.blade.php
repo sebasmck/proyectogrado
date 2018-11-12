@@ -22,10 +22,12 @@ El mimo
                                         <div class="form-group">
                                         <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 20px;" >
                                             <label> 
-                                            <p>En primer lugar, encontrarás cuatro situaciones cotidianas del día a día, por favor escoge cuatro,
-para cuatro días con el fin de fomentar cada una de las situaciones.
-Arrastra cada una de las situaciones al día que escogiste, así en el transcurso de la semana la
-explicación de la situación te aparecerá.</p>
+                                            <p>En primer lugar, encontrarás cuatro situaciones cotidianas del día a día, por favor en el transcurso de estos
+días intenta que estas situaciones se realicen en el tiempo que tengas con tu niño o niña. Como mínimo te
+invitamos a realizar dos actividades, pero lo ideal es que realices las cuatro.
+<br />
+A continuación, encontraras la imagen de las cuatro situaciones, una instrucción de la situación para realizar
+y un recuadro donde nos podrás contarnos tu experiencia al realizar la actividad.</p>
                                             </label>
 
                                              </div>
@@ -49,7 +51,7 @@ explicación de la situación te aparecerá.</p>
   <tr>
   <th>Actividad</th>
   <th>Descripción</th>
-  <th>Fecha</th>
+  <th>Experiencia obtenida</th>
   </tr>
   <tr>
   <td> <img width="191" height="136" style="display:none;" id="imagen3" src="{{asset('img/mimo3.JPG')}}" /> </td>
@@ -57,7 +59,7 @@ explicación de la situación te aparecerá.</p>
    al saludar. </p> </td>
    <td> 
 
-    <input placeholder="DD/MM/YYYY" required type="date" class="form-control">
+    <textarea id="pri"></textarea>
   
   
    </td>
@@ -68,7 +70,7 @@ explicación de la situación te aparecerá.</p>
   <td> <p><b>Felicidad al éxito</b> Imita las expresiones de felicidad al lograrlo
                                     ¡Excelente! ¡Muy bien! ¡Lo lograste! </p> </td>
   <td>
-  <input placeholder="DD/MM/YYYY" required type="date" class="form-control">
+  <textarea id="seg"></textarea>
   </td>
   </tr>
 
@@ -77,7 +79,7 @@ explicación de la situación te aparecerá.</p>
   <td><p><b>Expresión frente al fracaso</b> Imitar regar unas pinturas, aunque fracases
                                             Reaccionar ante el error y buscar una solución </p></td>
   <td>
-  <input placeholder="DD/MM/YYYY" required type="date" class="form-control">
+  <textarea id="ter"></textarea>
   </td>
   </tr>
 
@@ -87,7 +89,7 @@ explicación de la situación te aparecerá.</p>
                                             busca repararlo (Cuando se rompe una porcelana o un
                                             libro muy preciado)</p></td>
   <td>
-  <input placeholder="DD/MM/YYYY" required type="date" class="form-control">
+  <textarea id="cua"></textarea>
   </td>
   </tr>
 
@@ -134,6 +136,8 @@ $(document).ready(function(){
      $("#imagen4").fadeIn(1500);
      $("#imagen5").fadeIn(1500);
      $("#imagen6").fadeIn(1500);
+
+});
 
 
 });
