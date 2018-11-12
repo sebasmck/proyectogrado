@@ -9,7 +9,7 @@ use App\Cuidador;
 use App\RespuestaAbiertaActividad;
 use App\LogrosActividad;
 use App\RespuestaMultipleActividad;  
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -36,29 +36,25 @@ class ActivityController extends Controller
         $relacionAcudienteInfante = AcudienteInfante::where('Id_Acudiente', auth()->user()->cuidador->Id_Acudiente)
             ->where('Id_Infante',$id)
             ->first();
-
         $fechaInicioCurso = $relacionAcudienteInfante->Fecha_Inicial;
         $fechaFinalCurso = $relacionAcudienteInfante->Fecha_Final;
-
         $fechaActual = new \DateTime('now');
         $dateInicioCurso = new \DateTime();
         $dateInicioCurso->setTimestamp($fechaInicioCurso);
         $dateFinalCurso = new \DateTime();
         $dateFinalCurso->setTimestamp($fechaFinalCurso);
-
         $diferencia = $dateInicioCurso->diff($fechaActual);
-
         $semanaActual = intval($diferencia->days/7);
-
-        $actividadesAsignadas = ActividadAsignada::where('id_RelacionAcudienteInfante', $relacionAcudienteInfante->id)->with('actividad')->get();
+        $actividadesAsignadas = DB::select('select a.Id_Actividad, semana from actividad_asignada a , actividad b  where a.Id_Actividad = b.Id_Actividad and a.id_RelacionAcudienteInfante = ? order by semana;', [$relacionAcudienteInfante->id])  ; 
+        //$actividadesAsignadas = ActividadAsignada::where('id_RelacionAcudienteInfante', $relacionAcudienteInfante->id)->with(['actividad'=> function($query)
+       // {$query->orderBy('semana')->get();}])->get();
         $actividadPendiente = null;
-
         $actividades = Array();
-
-        foreach ($actividadesAsignadas as $actividadAsignada){
-            array_push($actividades,$actividadAsignada->actividad);
+        foreach ($actividadesAsignadas as $actividadAsignada)
+        {
+            $actualModel = Actividad::find($actividadAsignada->Id_Actividad) ;
+            array_push($actividades,$actualModel);
         }
-
         if($dateFinalCurso >= $fechaActual){
             $actividadPendiente = ActividadAsignada::where('id_RelacionAcudienteInfante', $relacionAcudienteInfante->id)->whereNull('FechaFinalizada_Actividad_Terminada')->first();
         }
