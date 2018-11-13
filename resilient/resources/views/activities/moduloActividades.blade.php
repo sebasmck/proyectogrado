@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-    Intro Actividad Como Loros
+    Actividades
 @endsection
 
 @section('addcss')
@@ -20,16 +20,46 @@
             <div class="card-body">
                 <div class="list-group">
                 <?php
-                    foreach ($activities as $activity){
+                        $semanas= array();
 
-                        echo ('<a href="/get-activity-info/'.$activity->Id_Actividad.'" class="list-group-item list-group-item-action align-items-start">
+                        if($activities != null){
+                            foreach ($activities as $activity){
+
+                                if(!in_array($activity->semana,$semanas) )
+                                {
+                                    array_push($semanas,$activity->semana);
+                                    echo ('<div class="list-group-item list-group-item-action align-items-start style-primary-dark">
+                                            <div class="d-flex w-100 justify-content-between">
+                                              <h3 class="mb-1"> Semana No '.$activity->semana.'</h3>
+                                            </div>
+                                    </div>');
+                                }
+
+                                if($actividadPendiente->Id_Actividad == $activity->Id_Actividad){
+                                    echo ('<a href="'.env('APP_URL').'/get-activity-info/'.$activity->Id_Actividad.'" class="list-group-item list-group-item-action align-items-start">
                                 <div class="d-flex w-100 justify-content-between">
-                                  <h5 class="mb-1">'.$activity->Nombre_Actividad.'</h5>
-                                  <small>semana '.$activity->semana.'</small>
+                                  <h4 class="mb-1"><b>'.$activity->Nombre_Actividad.'</b></h4>
                                 </div>
-                            <p class="mb-1">'.$activity->Descripcion_Actividad.'</p>
-                            </a>');
-                    }
+                                <p class="mb-1">'.$activity->Descripcion_Actividad.'</p>
+                                </a>');
+                                }
+                                else
+                                {
+                                echo (
+                            '<div class="list-group-item list-group-item-action align-items-start disabled">
+                                <div class="d-flex w-100 justify-content-between">
+                                  <h4 class="mb-1"><b>'.$activity->Nombre_Actividad.'</b></h4>
+                                </div>
+                                 <p class="mb-1">'.$activity->Descripcion_Actividad.'</p>
+                              </div>');
+                                }
+                            }
+                        }else{
+                            echo '<div>Ya has terminado todas las actividades propuestas para este infante</div>';
+                        }
+
+                      
+
                 ?>
                 </div>
             </div>

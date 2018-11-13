@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\AcudienteInfante;
 use Illuminate\Http\Request;
 use App\User;
 
@@ -48,7 +49,7 @@ class HomeController extends Controller
 
     public function dashboardInfante($id) {
         $ruta = "";
-        return view('cuidador.dashboardInfante',['sour' => $ruta]);
+        return view('cuidador.dashboardInfante',['sour' => $ruta, 'infante' => $id]);
     }
 
     public function goEscala() {

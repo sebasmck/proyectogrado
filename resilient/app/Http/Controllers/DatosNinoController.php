@@ -8,7 +8,12 @@ use App\Http\Controllers\Auth\RedireccionadorRolController;
 use App\Infante;
 use App\RelacionInfante;
 use App\User;
+use App\ActividadAsignada;
+use App\Actividad;
+use App\ActividadGrupo;
+use App\GrupoPoblacional;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DatosNinoController extends Controller
 {
@@ -46,15 +51,14 @@ class DatosNinoController extends Controller
     public function store(Request $request)
     {
         $infante = new Infante();
-
         $infante->Nombre_Infante = $request->input("firstname");
         $infante->Apellido_Infante = $request->input("lastname");
         $infante->FechaDeNacimiento_Infante =  new \DateTime($request->input("fechanacimiento"));
         $infante->Edad_Infante = $request->input("edad");
         $infante->Id_Sexo = $request->input("sexo");
-
         $infante->save();
 
+      
         $user = User::find(auth()->id());
 
         $fechai = new \DateTime('now');
@@ -66,8 +70,43 @@ class DatosNinoController extends Controller
         $acudienteinfante->Fecha_Inicial = $fechai;
         $acudienteinfante->Fecha_Final = $fechaf;
         $acudienteinfante->save();
-
-        return $this->datosnino2();
+        $listaActividades = Actividad :: all();
+             $actividadGrupo = DB::table('actividad_grupo')
+                              ->join('grupo_poblacional', 'grupo_poblacional.Id_Grupo_Poblacional', '=', 'actividad_grupo.id_Grupo_Poblacional')
+                              ->select('actividad_grupo.Id_Actividad')
+                              ->get();  
+         foreach ($actividadGrupo as $actividadG) 
+          {  
+            $actividadesAsignadas = new ActividadAsignada();        
+             if( 2<= $infante->Edad_Infante &&  $infante->Edad_Infante <3)
+             {
+                $actividadesAsignadas->id_RelacionAcudienteInfante =  $acudienteinfante->id ;
+                $actividadesAsignadas->id_Actividad = $actividadG->Id_Actividad ;
+                $actividadesAsignadas->Estado_Actividad_Asignada = 1;
+                $actividadesAsignadas->FechaInicial_Actividad_Asignada = $fechai ;
+                $actividadesAsignadas->save();
+             }
+             else if(3<= $infante->Edad_Infante && $infante->Edad_Infante < 4 )
+             {
+                $actividadesAsignadas->id_RelacionAcudienteInfante =  $acudienteinfante->id ;
+               
+                $actividadesAsignadas->id_Actividad = $actividadG->Id_Actividad ;
+               
+                $actividadesAsignadas->Estado_Actividad_Asignada = 1;
+                $actividadesAsignadas->FechaInicial_Actividad_Asignada = $fechai ;
+                $actividadesAsignadas->save();
+             }
+             else if(4 <= $infante->Edad_Infante && $infante->Edad_Infante <= 5 )
+             {
+                $actividadesAsignadas->id_RelacionAcudienteInfante =  $acudienteinfante->id ;
+                $actividadesAsignadas->id_Actividad  = $actividadG->Id_Actividad ;
+                $actividadesAsignadas->Estado_Actividad_Asignada = 1;
+                $actividadesAsignadas->FechaInicial_Actividad_Asignada = $fechai ;  
+                $actividadesAsignadas->save(); 
+             }
+             
+        }
+       return $this->datosnino2();
     }
 
     public function storeSecond(){

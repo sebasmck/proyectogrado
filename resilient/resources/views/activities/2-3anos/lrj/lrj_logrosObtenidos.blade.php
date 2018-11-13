@@ -49,21 +49,13 @@ Logros Obtenidos
                 </div> {{-- card-body no padding --}}
             </div><!--end .card-body -->
             <div class="card-actionbar">
-                  <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
-                  </div>
-            </div>
-
-        </div><!--end .card -->
-            
-        {{--  </form>  --}}
-
-        <div class="card-actionbar">
                 <div class="card-actionbar-row">
                     <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/lrj_culminado')}}"> <button type="button"
                             class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                 </div>
             </div>
+
+        </div><!--end .card -->
     </div>
 
 @endsection

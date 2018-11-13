@@ -136,7 +136,10 @@ Route::post('/guardar-logros', 'ActivityController@guardarLogros')->name('/guard
 
 // Rutas actividades
 
-Route::get('/lista-actividades','ActivityController@goToActivities')->name('/lista-actividades');
+Route::get('/lista-actividades/{id}',[
+    'as' => 'get-activity-list',
+    'uses' => 'ActivityController@goToActivities'
+]);
 Route::get('/get-activity-info/{id}', [
     'as' => 'get-activity.id',
     'uses' => 'ActivityController@getActivity'

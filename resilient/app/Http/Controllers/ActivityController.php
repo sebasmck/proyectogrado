@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Actividad;
+use App\ActividadAsignada;
+use App\AcudienteInfante;
 use App\Cuidador;
 use App\RespuestaAbiertaActividad;
 use App\LogrosActividad;
 use App\RespuestaMultipleActividad;  
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -29,11 +31,35 @@ class ActivityController extends Controller
     // Activity: Cualidades Niños Resilientes
   
 
-    public function goToActivities(){
+    public function goToActivities($id){
 
-        $activities = Actividad::all();
+        $relacionAcudienteInfante = AcudienteInfante::where('Id_Acudiente', auth()->user()->cuidador->Id_Acudiente)
+            ->where('Id_Infante',$id)
+            ->first();
+        $fechaInicioCurso = $relacionAcudienteInfante->Fecha_Inicial;
+        $fechaFinalCurso = $relacionAcudienteInfante->Fecha_Final;
+        $fechaActual = new \DateTime('now');
+        $dateInicioCurso = new \DateTime();
+        $dateInicioCurso->setTimestamp($fechaInicioCurso);
+        $dateFinalCurso = new \DateTime();
+        $dateFinalCurso->setTimestamp($fechaFinalCurso);
+        $diferencia = $dateInicioCurso->diff($fechaActual);
+        $semanaActual = intval($diferencia->days/7);
+        $actividadesAsignadas = DB::select('select a.Id_Actividad, semana from actividad_asignada a , actividad b  where a.Id_Actividad = b.Id_Actividad and a.id_RelacionAcudienteInfante = ? order by semana;', [$relacionAcudienteInfante->id])  ; 
+        //$actividadesAsignadas = ActividadAsignada::where('id_RelacionAcudienteInfante', $relacionAcudienteInfante->id)->with(['actividad'=> function($query)
+       // {$query->orderBy('semana')->get();}])->get();
+        $actividadPendiente = null;
+        $actividades = Array();
+        foreach ($actividadesAsignadas as $actividadAsignada)
+        {
+            $actualModel = Actividad::find($actividadAsignada->Id_Actividad) ;
+            array_push($actividades,$actualModel);
+        }
+        if($dateFinalCurso >= $fechaActual){
+            $actividadPendiente = ActividadAsignada::where('id_RelacionAcudienteInfante', $relacionAcudienteInfante->id)->whereNull('FechaFinalizada_Actividad_Terminada')->first();
+        }
 
-        return view('activities.moduloActividades', ['activities' => $activities]);
+       return view('activities.moduloActividades', ['activities' => $actividades, 'actividadPendiente' => $actividadPendiente->actividad, 'semanaActual' => $semanaActual]);
     }
 
 
@@ -41,13 +67,6 @@ class ActivityController extends Controller
     {
         return view("activities.2-11-meses.aprendamos_resiliencia.intro_aprendamos_resiliencia");
     }
-
-   
-    // public function index($id)
-    // {
-    //     $actividad = Actividad::with('preguntaActividades.opcionPreguntaActividad')->where('Id_Actividad', $id)->first();
-    //     return view($actividad->View_Actividad, ['Actividad' => $actividad]);
-    // }
 
     public function actividad(Request $request,$id){
         $actividad  = Actividad::where('Id_Actividad',$id)->get();
