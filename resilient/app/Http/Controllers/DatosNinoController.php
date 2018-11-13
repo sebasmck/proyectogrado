@@ -57,11 +57,14 @@ class DatosNinoController extends Controller
 
         $user = User::find(auth()->id());
 
+        $fechai = new \DateTime('now');
+        $fechaf= date('Y-m-d', strtotime('+8 week', ($fechai->getTimestamp())));   
         $acudienteinfante = new AcudienteInfante();
         $acudienteinfante->Id_Acudiente = $user->cuidador->Id_Acudiente;
         $acudienteinfante->Id_Infante = $infante->Id_Infante;
         $acudienteinfante->Id_RelacionInfante = 1;
-
+        $acudienteinfante->Fecha_Inicial = $fechai;
+        $acudienteinfante->Fecha_Final = $fechaf;
         $acudienteinfante->save();
 
         return $this->datosnino2();

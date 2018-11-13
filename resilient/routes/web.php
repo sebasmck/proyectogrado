@@ -221,7 +221,7 @@ Route::get('finalizar-escalap2','CustomControllers\EscalaEP2Controller@finalizar
 
 Route::get('/datos-escala', 'EscalaWYController@index')->name('/datos-escala');
 
-Route::post('/escalaWY-cuestionario', 'EscalaWYController@updateCuidador')->name('/escalaWY-cuestionario');
+//Route::get('/escalaWY-cuestionario', 'EscalaWYController@index')->name('/escalaWY-cuestionario');
 
 Route::post('/escalaWY-cuestionario-calculate', 'EscalaWYController@calculateEscalaWY')->name('/escalaWY-cuestionario-calculate');
 
@@ -395,3 +395,7 @@ Route::get('/ag1', 'ActivityController@ag1')->name('/ag1');
 Route::get('/ag2', 'ActivityController@ag2')->name('/ag2');
 Route::get('/ag_logrosObtenidos', 'ActivityController@ag_logrosObtenidos')->name('/ag_logrosObtenidos');
 Route::get('/ag_culminado', "ActivityController@CulminadoActividadAg")->name('/ag_culminado');
+
+//Ruta módulo investigador
+Route::get('/menuInvestigador', 'MenuInvestigadorController@index')->name('/menuInvestigador');
+

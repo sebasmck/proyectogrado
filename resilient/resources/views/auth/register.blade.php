@@ -241,7 +241,13 @@ $("#scrolleable").scroll();
   //Input que solo admite letras
   $(".justLetters").keypress(function(e){
   var key = e.keyCode || e.charCode || e.which;
-  if((key >= 65 && key <= 90)  || (key>=97 && key <= 122) || key == 32){
+  
+if(e.charCode == 37 || e.charCode == 39){
+    e.preventDefault();
+    return;
+}
+
+  if((key >= 65 && key <= 90)  || (key >=97 && key <= 122) || key == 32 || key == 37 || key == 39 || key == 127 || key ==8){
       
   }else{
       e.preventDefault();
@@ -252,12 +258,17 @@ $("#scrolleable").scroll();
 //Input que admite solo números y la barrita (-)
  $(".number").keypress(function(event){
          var key = event.KeyCode || event.charCode || event.which;
-        if((key >= 48 && key <= 57) || key ==8 || key ==45) {
+ 
+ if(event.charCode == 37 || event.charCode == 39){
+    event.preventDefault();
+    return;
+}
+
+        if((key >= 48 && key <= 57) || key ==8 || key ==45 || key == 37 || key == 39) {
         
         }else{
          event.preventDefault();
         }
-
      });
 
 });
