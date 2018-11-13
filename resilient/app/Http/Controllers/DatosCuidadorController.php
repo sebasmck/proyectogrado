@@ -68,8 +68,8 @@ class DatosCuidadorController extends Controller
         
         // Failing
         // $cuidador->Id_Cuidador = $req->input('Id_RelacionInfante');
-        // $cuidador->Id_Area = $req->input('Id_Area');
-        // $cuidador->Id_NivelSocioEconomico = $req->input('Id_NivelSocioEconomico');        
+        $cuidador->Id_Area = $req->input('Id_Area');
+        // $cuidador->Id_NivelSocioEconomico = $req->input('Id_NivelSocioEconomico');    
         
         $cuidador->OtroRelacionInfante = $req->input('OtroRelacionInfante');
         
@@ -79,18 +79,22 @@ class DatosCuidadorController extends Controller
         $cuidador->Abuelo = $req->has('Abuelo')?$req->input('Abuelo'):'0';
         $cuidador->Hermano = $req->has('Hermano')?$req->input('Hermano'):'0';
         $cuidador->Tio = $req->has('Tio')?$req->input('Tio'):'0';
+
         $cuidador->Otro_Cuidador = $req->input('Otro_Cuidador');
 
         $cuidador->Id_Sexo = $req->input('Id_Sexo');
         // $cuidador->FechaDeNacimiento = $req->input('FechaDeNacimiento');
         $cuidador->Id_EstadoCivil = $req->input('Id_EstadoCivil');
         $cuidador->Id_Escolaridad = $req->input('Id_Escolaridad');
-        // $cuidador->Otro_Escolaridad = $req->input('Otro_Escolaridad');
         $cuidador->Id_Ocupacion = $req->input('Id_Ocupacion');
-        // $cuidador->Otro_Ocupacion = $req->input('Otro_Ocupacion');
-        $cuidador->id_usuario = auth()->id();
+        $cuidador->Otro_Ocupacion = $req->input('Otro_Ocupacion');
+        $cuidador->Otro_Escolaridad = $req->input('Otro_Escolaridad');
+        $cuidador->Id_NivelSocioEconomico = $req->input('Id_NivelSocioEconomico');
+        // $cuidador->id_Cuidador = auth()->id();
         $cuidador->Id_Nacionalidad = 2;
-        $cuidador->num_hijos = 1;
+
+        $cuidador->Ciudad = $req->input('items');
+        $cuidador->Departamento = $req->input('categories');
 
         $cuidador->save();
 

@@ -20,15 +20,15 @@ Datos Niño
                             <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="firstname" name="firstname">
-                                            <label for="firstname">Nombres completos del niño/a
+                                            <input type="text" class="form-control" id="Nombre_Infante" name="Nombre_Infante">
+                                            <label for="Nombre_Infante">Nombres completos del niño/a
 :                                                </label>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="lastname" name="lastname">
-                                            <label for="lastname">Apellidos completos del niño/a</label>
+                                            <input type="text" class="form-control" id="Apellido_Infante" name="Apellido_Infante">
+                                            <label for="Apellido_Infante">Apellidos completos del niño/a</label>
                                         </div>
                                     </div>
                                 </div>
@@ -38,12 +38,12 @@ Datos Niño
 
                             <div class="col-sm-4">
                                     <div class="form-group">
-                                         <select id="sexo" name="sexo" class="form-control">
+                                         <select id="Id_Sexo" name="Id_Sexo" class="form-control">
                                                 <option value="">&nbsp;</option>
                                                 <option value="1">Hombre</option>
                                                 <option value="2">Mujer</option>
                                          </select>
-                                         <label for="sexo">Sexo</label>
+                                         <label for="Id_Sexo">Sexo</label>
                                     </div>
                             </div>
 
@@ -51,7 +51,7 @@ Datos Niño
                                     <div class="form-group control-width-normal">
                                             <div class="input-group date" id="demo-date">
                                                 <div class="input-group-content">
-                                                    <input type="text" class="form-control" id="fechaNacimiento" name="fechanacimiento">
+                                                    <input type="text" class="form-control" id="FechaDeNacimiento_Infante" name="FechaDeNacimiento_Infante">
                                                     <label>Fecha de nacimiento</label>
                                                 </div>
                                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -60,7 +60,7 @@ Datos Niño
                             </div>
                             <div class="col-sm-4">
                                     <div class="form-group">
-                                            <input type="number" class="form-control" id="edad" name="edad">
+                                            <input type="number" class="form-control" id="Edad_Infante" name="Edad_Infante">
                                             <label for="edad">Edad</label>
                                         </div>
                             </div>
@@ -68,29 +68,29 @@ Datos Niño
                     <div class="row">
                             <div class="col-sm-6">
                                     <div class="form-group">
-                                         <select id="select2" name="select2" class="form-control">
+                                         <select id="Id_SistemaDeSalud" name="Id_SistemaDeSalud" class="form-control">
                                                 <option value="">&nbsp;</option>
-                                                <option value="">Régimen contributivo</option>
-                                                <option value="">Régimen subsidiado</option>
-                                                <option value="">Sisben</option>
+                                                <option value="1">Régimen contributivo</option>
+                                                <option value="2">Régimen subsidiado</option>
+                                                <option value="3">Sisben</option>
                                          </select>
-                                         <label for="select1">Sistema de salud al que se encuentra inscrito el niño/a</label>
+                                         <label for="Id_SistemaDeSalud">Sistema de salud al que se encuentra inscrito el niño/a</label>
                                     </div>
                             </div>
                             <div class="col-sm-6">
                                     <div class="form-group">
-                                            <select id="select2" name="select2" class="form-control">
+                                            <select id="Id_NivelEducativo" name="Id_NivelEducativo" class="form-control">
                                                    <option value="">&nbsp;</option>
-                                                   <option value="30">Sala cunas</option>
-                                                   <option value="40">Párvulos</option>
-                                                   <option value="40">Pre jardín</option>
-                                                   <option value="40">Jardín</option>
-                                                   <option value="40">Transición</option>
-                                                   <option value="40">Primero de primaria</option>
-                                                   <option value="40">Caminadores</option>   
-                                                   <option value="40">Ninguno</option>                                                    </option>                                        
+                                                   <option value="1">Sala cunas</option>
+                                                   <option value="2">Párvulos</option>
+                                                   <option value="3">Pre jardín</option>
+                                                   <option value="4">Jardín</option>
+                                                   <option value="5">Transición</option>
+                                                   <option value="6">Primero de primaria</option>
+                                                   <option value="7">Caminadores</option>   
+                                                   <option value="8">Ninguno</option>                                                    </option>                                        
                                             </select>
-                                            <label for="select1">Nivel educativo
+                                            <label for="Id_NivelEducativo">Nivel educativo
                                                     (actual o en curso)</label>
                                        </div>
                             </div>
@@ -99,21 +99,21 @@ Datos Niño
                     <div class="row">
                         <div class="col-sm-7">
                                 <div class="form-group">
-                                    <select id="select2" name="select2" class="form-control">
+                                    <select id="Id_ViveInfante" name="Id_ViveInfante" class="form-control">
                                                <option value="">&nbsp;</option>
-                                               <option value="30">Mamá</option>
-                                               <option value="40">Papá</option>
-                                               <option value="40">Hermano(s)</option>
-                                               <option value="">Otros</option>
+                                               <option value="1">Mamá</option>
+                                               <option value="2">Papá</option>
+                                               <option value="3">Hermano(s)</option>
+                                               <option value="4">Otros</option>
                                             
                                     </select>
-                                    <label for="select1">Con quién vive el niño/a</label>
+                                    <label for="Id_ViveInfante">Con quién vive el niño/a</label>
                                 </div>
                             </div> 
                         <div class="col-sm-3">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="Firstname2">
-                                <label for="Firstname2"> <b>Otros</b></label>
+                                <input type="text" class="form-control" name="Id_OtroViveInfante" id="Id_OtroViveInfante">
+                                <label for="Id_OtroViveInfante"> <b>Otros</b></label>
                             </div>
                         </div>
                     </div>
@@ -121,34 +121,34 @@ Datos Niño
                     <div class="row">
                         <div class="col-sm-5">
                             <div class="form-group">
-                                <select id="select2" name="select2" class="form-control">
+                                <select id="Id_VinculoPadre" name="Id_VinculoPadre" class="form-control">
                                            <option value="">&nbsp;</option>
-                                           <option value="30">Casados</option>
-                                           <option value="40">Union Libre</option>
-                                           <option value="40">Separados</option>
-                                           <option value="40">Divorciados</option>
-                                           <option value="40">"Fallecido Madre"</option>
-                                           <option value="40">"Fallecido Padre"</option>
-                                           <option value="40">"Otros"</option>
+                                           <option value="1">Casados</option>
+                                           <option value="2">Union Libre</option>
+                                           <option value="3">Separados</option>
+                                           <option value="4">Divorciados</option>
+                                           <option value="5">"Fallecido Madre"</option>
+                                           <option value="6">"Fallecido Padre"</option>
+                                           <option value="7">"Otros"</option>
                                 </select>
                                 <label for="select1">Vínculo de los padres </label>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="Firstname2">
-                                <label for="Firstname2"><b>Otros</b></label>
+                                <input type="text" class="form-control" class="Otro_VinculoPadre" id="Otro_VinculoPadre">
+                                <label for="Otro_VinculoPadre"><b>Otros</b></label>
                             </div>
                         </div>
 
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <select id="select2" name="select2" class="form-control">
+                                <select id="Embarazo_Planeado" name="Embarazo_Planeado" class="form-control">
                                            <option value="">&nbsp;</option>
-                                           <option value="Si">Si</option>
-                                           <option value="No">No</option>
+                                           <option value="1">Si</option>
+                                           <option value="0">No</option>
                                 </select>
-                                <label for="select1">¿El embarazo fue planeado?</label>
+                                <label for="Embarazo_Planeado">¿El embarazo fue planeado?</label>
                             </div>
                         </div>
 
@@ -158,18 +158,18 @@ Datos Niño
                         <div class="col-sm-5">
                             <div class="form-group">
                                 <label>¿Qué edad tenía la madre cuando quedó en embarazo? </label>
-                                <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input type="text" class="form-control ui-spinner-input" id="spinner" value="19" aria-valuemin="16" aria-valuenow="19" autocomplete="off" role="spinbutton">  <a class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"></a><a class="ui-spinner-button ui-spinner-down ui-corner-br" tabindex="-1"></a></span>
+                                <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input  type="text" class="form-control ui-spinner-input" id="Edad_MadreEmbarazo" name="Edad_MadreEmbarazo" value="19" aria-valuemin="16" aria-valuenow="19" autocomplete="off" role="spinbutton">  <a class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"></a><a class="ui-spinner-button ui-spinner-down ui-corner-br" tabindex="-1"></a></span>
                             </div>
                         </div>
 
                         <div class="col-sm-7">
                             <div class="form-group">
-                                <select id="select2" name="select2" class="form-control">
+                                <select id="Madre_Medicamento" name="Madre_Medicamento" class="form-control">
                                            <option value="">&nbsp;</option>
-                                           <option value="30">Si (De responder sí, ¿qué tipo?)</option>
-                                           <option value="40">No</option>
+                                           <option value="1">Si (De responder sí, ¿qué tipo?)</option>
+                                           <option value="0">No</option>
                                 </select>
-                                <label for="select1">Durante el embarazo ¿la madre recibió algún medicamento? </label>
+                                <label for="Madre_Medicamento">Durante el embarazo ¿la madre recibió algún medicamento? </label>
                             </div>
                         </div>
                     </div>
@@ -179,24 +179,24 @@ Datos Niño
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label>¿A qué edad gestacional nació el niño(a)?</label>
-                                <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input type="text" class="form-control ui-spinner-input" id="spinner" value="19" aria-valuemin="16" aria-valuenow="19" autocomplete="off" role="spinbutton">  <a class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"></a><a class="ui-spinner-button ui-spinner-down ui-corner-br" tabindex="-1"></a></span>
+                                <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input type="text"  class="form-control ui-spinner-input" id="Edad_Gestacional" name="Edad_Gestacional" value="19" aria-valuemin="16" aria-valuenow="19" autocomplete="off" role="spinbutton">  <a class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"></a><a class="ui-spinner-button ui-spinner-down ui-corner-br" tabindex="-1"></a></span>
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <select id="select2" name="select2" class="form-control">
+                                <select id="Complicaciones_Parto" name="Complicaciones_Parto" class="form-control">
                                         <option value="">&nbsp;</option>
-                                        <option value="30">Si</option>
-                                        <option value="40">No</option>
+                                        <option value="1">Si</option>
+                                        <option value="0">No</option>
                                 </select>
-                                <label for="select1">¿Hubo complicaciones en el nacimiento del niño/a? </label>
+                                <label for="Complicaciones_Parto">¿Hubo complicaciones en el nacimiento del niño/a? </label>
                             </div>
                         </div>
                         <div class="col-sm-3">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="Firstname2">
-                                    <label for="Firstname2">Especificar <b>Otros</b></label>
+                                    <input type="text" class="form-control" name="Otro_Complicaciones_Parto" id="Otro_Complicaciones_Parto">
+                                    <label for="Otro_Complicaciones_Parto">Especificar <b>Otros</b></label>
                                 </div>
                             </div>
                     </div>
@@ -204,23 +204,23 @@ Datos Niño
                     <div class="row">
                             <div class="col-sm-6">
                                     <div class="form-group">
-                                        <select id="select2" name="select2" class="form-control">
+                                        <select id="Id_DificultadEmbarazo" name="Id_DificultadEmbarazo" class="form-control">
                                                 <option value="">&nbsp;</option>
-                                                <option value="30">Enfermedad Médica gineco-obstetrica</option>
-                                                <option value="40">Consumo de SPA</option>
-                                                <option value="40">Condición Emocional</option>
-                                                <option value="40">Eventos estresantes</option>
-                                                <option value="40">Trastorno Psicológico</option>
-                                                <option value="40">Ninguna</option>
-                                                <option value="40">Otros</option>
+                                                <option value="1">Enfermedad Médica gineco-obstetrica</option>
+                                                <option value="2">Consumo de SPA</option>
+                                                <option value="3">Condición Emocional</option>
+                                                <option value="4">Eventos estresantes</option>
+                                                <option value="5">Trastorno Psicológico</option>
+                                                <option value="6">Ninguna</option>
+                                                <option value="7">Otros</option>
                                         </select>
-                                        <label for="select1"> Dificultades durante el embarazo </label>
+                                        <label for="Id_DificultadEmbarazo"> Dificultades durante el embarazo </label>
                                     </div>
                             </div>
                             <div class="col-sm-3">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="Firstname2">
-                                        <label for="Firstname2"><b>Otros</b></label>
+                                        <input type="text" class="form-control" name="Otro_DificultadEmbarazo" id="Otro_DificultadEmbarazo">
+                                        <label for="Otro_DificultadEmbarazo"><b>Otros</b></label>
                                     </div>
                             </div>
                     </div>
@@ -228,12 +228,12 @@ Datos Niño
                     <div class="row">
                             <div class="col-sm-6">
                                     <div class="form-group">
-                                        <select id="select2" name="select2" class="form-control">
+                                        <select id="Id_TipoParto" name="Id_TipoParto" class="form-control">
                                                 <option value="">&nbsp;</option>
-                                                <option value="30">Cesárea</option>
-                                                <option value="40">Natural</option>
+                                                <option value="1">Cesárea</option>
+                                                <option value="2">Natural</option>
                                         </select>
-                                        <label for="select1">Tipo de parto</label>
+                                        <label for="Id_TipoParto">Tipo de parto</label>
                                     </div>
                             </div>
                     </div>
@@ -241,24 +241,24 @@ Datos Niño
                     <div class="row">
                             <div class="col-sm-6">
                                     <div class="form-group">
-                                        <select id="select2" name="select2" class="form-control">
+                                        <select id="Dificultades_Parto" name="Dificultades_Parto" class="form-control">
                                                 <option value="">&nbsp;</option>
-                                                <option value="30">Parto antes de tiempo</option>
-                                                <option value="40">hipoxia / anoxia</option>
-                                                <option value="40">Parto largo con dificultades</option>
-                                                <option value="40">Cordón enredado</option>
-                                                <option value="40">Preeclampsia</option>
-                                                <option value="40">Hemorragias </option>
-                                                <option value="40">Otro</option>
+                                                <option value="1">Parto antes de tiempo</option>
+                                                <option value="2">hipoxia / anoxia</option>
+                                                <option value="3">Parto largo con dificultades</option>
+                                                <option value="4">Cordón enredado</option>
+                                                <option value="5">Preeclampsia</option>
+                                                <option value="6">Hemorragias </option>
+                                                <option value="7">Otro</option>
                                         </select>
-                                        <label for="select1">Dificultades en el parto</label>
+                                        <label for="Dificultades_Parto">Dificultades en el parto</label>
                                     </div>
                             </div>
 
                             <div class="col-sm-3">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="Firstname2">
-                                        <label for="Firstname2">Especificar <b>Otros</b></label>
+                                        <input type="text" class="form-control" name="Otro_Dificultadoes_Parto" id="Otro_Dificultadoes_Parto">
+                                        <label for="Otro_Dificultadoes_Parto">Especificar <b>Otros</b></label>
                                     </div>
                             </div>
                     </div>
@@ -266,26 +266,32 @@ Datos Niño
                     <div class="row">
                             <div class="col-sm-6">
                                     <div class="form-group">
-                                        <select id="select2" name="select2" class="form-control">
+                                        <select id="Id_DificultadPostParto" name="Id_DificultadPostParto" class="form-control">
                                                 <option value="">&nbsp;</option>
-                                                <option value="30">Hemorragias</option>
-                                                <option value="40">Incompatibilidad sanguínea fetal</option>
-                                                <option value="40">Retraso del crecimiento intrauterino (RCI)</option>
-                                                <option value="40">Bajo peso al nacer (BPN)</option>
-                                                <option value="40">Prematurez</option>
-                                                <option value="40">Otro</option>
+                                                <option value="1">Hemorragias</option>
+                                                <option value="2">Incompatibilidad sanguínea fetal</option>
+                                                <option value="3">Retraso del crecimiento intrauterino (RCI)</option>
+                                                <option value="4">Bajo peso al nacer (BPN)</option>
+                                                <option value="5">Prematurez</option>
+                                                <option value="6">Otro</option>
                                         </select>
-                                        <label for="select1">Dificultades después del parto</label>
+                                        <label for="Id_DificultadPostParto">Dificultades después del parto</label>
                                     </div>
                             </div>
                             <div class="col-sm-3">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="Firstname2">
-                                        <label for="Firstname2">Especificar <b>Otros</b></label>
+                                        <input type="text" class="form-control" name="Otro_DificultadoesPostParto" id="Otro_DificultadoesPostParto">
+                                        <label for="Otro_DificultadoesPostParto">Especificar <b>Otros</b></label>
                                     </div>
                             </div>
                             
                     </div>
+
+                    <div class="card-actionbar">
+                            <div class="card-actionbar-row">
+                                <button type="submit" class="btn btn-flat btn-primary ink-reaction">Continuar <b> > </b> </button>
+                            </div>
+                        </div>
 
                    
       {{--  </form>  --}}
@@ -307,14 +313,30 @@ Datos Niño
 
                     
                 </div><!--end .card-body -->
-                <div class="card-actionbar">
-                    <div class="card-actionbar-row">
-                        <button type="submit" class="btn btn-flat btn-primary ink-reaction">Continuar</button>
-                    </div>
-                </div>
+                
             </div><!--end .card -->
             
         </form>
     </div>
 
 @endsection
+
+@section('addjs')
+
+<script>
+
+    // 
+    $('#Id_RelacionInfante').change(function(){
+    if($(this).val() == '6'){
+        // alert('whatever happened');
+        // document.getElementById('otrorelacion').style.display == 'block';
+        document.getElementById("otrorelacion").style.display = "block";
+    }else{
+        // alert('nothing happened');
+        document.getElementById("otrorelacion").style.display = "none";
+    }
+});
+
+</script>
+
+@ensection
