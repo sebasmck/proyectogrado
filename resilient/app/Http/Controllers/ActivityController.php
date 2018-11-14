@@ -22,11 +22,13 @@ class ActivityController extends Controller
 
     const URL_ACTIVITIES_2_11_MESES = "activities.2-11-meses.";
     const URL_ACTIVITIES_3_11_MESES = "activities.3-11-meses.";
+    const URL_ACTIVITIES_4_11_MESES = "activities.4-11-meses.";
 
     const URL_ACTIVITIE_ACDR = self::URL_ACTIVITIES_2_11_MESES."aterrizando_el_concepto_resiliencia.";
     const URL_ACTIVITIE_GDLE = self::URL_ACTIVITIES_2_11_MESES."gafas_de_las_emociones.";
     const URL_ACTIVITIE_PE = self::URL_ACTIVITIES_3_11_MESES."papito_escultor.";
     const URL_ACTIVITIE_DDE = self::URL_ACTIVITIES_3_11_MESES."dia_del_elogio.";
+    const URL_ACTIVITIE_ICE = self::URL_ACTIVITIES_4_11_MESES."identificacion_control_emocional.";
 
     // Activity: Cualidades Niños Resilientes
   
@@ -232,7 +234,29 @@ class ActivityController extends Controller
         return view(self::URL_ACTIVITIE_PE."logrosObtenidos");
     }
 
+    // Actividad identificación y control emocional
 
+    public function intro_ice(){
+        return view( self::URL_ACTIVITIE_ICE."intro" );
+    }
+
+    public function desarrollo_ice(){
+        return view(self::URL_ACTIVITIE_ICE."desarrollo");
+    }
+
+    public function regulacion_emociones_ice(){
+        return view(self::URL_ACTIVITIE_ICE."regulacionEmocional");
+    }
+
+    public function tareas_semana_ice(){
+        return view(self::URL_ACTIVITIE_ICE."tareasSemana");
+    }
+
+    public function logros_ice(){
+        return view(self::URL_ACTIVITIE_ICE."logrosObtenidos");
+    }
+
+    // guardar logros
 
     public function guardarLogros( Request $request)
     {

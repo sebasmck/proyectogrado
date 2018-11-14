@@ -190,7 +190,7 @@ Route::prefix('actividades')->group(function () {
 
     // Actividad dia del elogio
 
-    Route::get('/dia-del-elogio-1   ', 'ActivityController@intro_dde')->name('/dia-del-elogio-1');
+    Route::get('/dia-del-elogio-1', 'ActivityController@intro_dde')->name('/dia-del-elogio-1');
     Route::get('/dia-del-elogio-2', 'ActivityController@cuandoPrestoAtencion_dde')->name('/dia-del-elogio-2');
     Route::get('/dia-del-elogio-3', 'ActivityController@paraQueDeboElogiar_dde')->name('/dia-del-elogio-3');
     Route::get('/dia-del-elogio-4', 'ActivityController@aprendeEstrategias_dde')->name('/dia-del-elogio-4');
@@ -199,6 +199,14 @@ Route::prefix('actividades')->group(function () {
     Route::get('/dia-del-elogio-7', 'ActivityController@ojosAbiertosYTactoDispuesto_dde')->name('/dia-del-elogio-7');
     Route::get('/dia-del-elogio-8', 'ActivityController@tarea_dde')->name('/dia-del-elogio-8');
     Route::get('/dia-del-elogio-9', 'ActivityController@logros_dde')->name('/dia-del-elogio-9');
+
+    // Actividad identificación y control emocional
+
+    Route::get('/identificacion-control-emocional-1', 'ActivityController@intro_ice')->name('/identificacion-control-emocional-1');
+    Route::get('/identificacion-control-emocional-2', 'ActivityController@desarrollo_ice')->name('/identificacion-control-emocional-2');
+    Route::get('/identificacion-control-emocional-3', 'ActivityController@regulacion_emociones_ice')->name('/identificacion-control-emocional-3');
+    Route::get('/identificacion-control-emocional-4', 'ActivityController@tareas_semana_ice')->name('/identificacion-control-emocional-4');
+    Route::get('/identificacion-control-emocional-5', 'ActivityController@logros_ice')->name('/identificacion-control-emocional-5');
 });
 
 //Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');
