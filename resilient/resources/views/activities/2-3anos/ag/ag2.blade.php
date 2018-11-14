@@ -58,7 +58,7 @@ ARBOL GENIALOGICO
         <div class="card">
 
             <div class="card-head style-primary">
-                <header> ARBOL GENIALOGICO </header>
+                <header> ÁRBOL GENEALÓGICO  </header>
             </div>
 
             <div class="card-body floating-label">

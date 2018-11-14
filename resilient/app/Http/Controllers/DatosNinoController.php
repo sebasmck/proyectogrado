@@ -48,17 +48,45 @@ class DatosNinoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $req)
     {
         $infante = new Infante();
-        $infante->Nombre_Infante = $request->input("firstname");
-        $infante->Apellido_Infante = $request->input("lastname");
-        $infante->FechaDeNacimiento_Infante =  new \DateTime($request->input("fechanacimiento"));
-        $infante->Edad_Infante = $request->input("edad");
-        $infante->Id_Sexo = $request->input("sexo");
+        // $infante->Nombre_Infante = $request->input("firstname");
+        // $infante->Apellido_Infante = $request->input("lastname");
+        // $infante->FechaDeNacimiento_Infante =  new \DateTime($request->input("fechanacimiento"));
+        // $infante->Edad_Infante = $request->input("edad");
+        // $infante->Id_Sexo = $request->input("sexo");
+
+        $infante->Id_Infante = $req->input('Id_Infante');
+        $infante->Nombre_Infante = $req->input('Nombre_Infante');
+        $infante->Apellido_Infante = $req->input('Apellido_Infante');
+        $infante->Id_Sexo = $req->input('Id_Sexo');
+        // $infante->FechaDeNacimiento_Infante = $req->input('FechaDeNacimiento_Infante');  
+        $infante->Edad_Infante = $req->input('Edad_Infante');
+        $infante->Id_SistemaDeSalud = $req->input('Id_SistemaDeSalud');
+        $infante->Id_NivelEducativo = $req->input('Id_NivelEducativo');
+        // $infante->Id_ViveInfante = $req->input('Id_ViveInfante');
+        $infante->OtroViveInfante = $req->input('OtroViveInfante');
+        // $infante->Id_VinculoPadre = $req->input('Id_VinculoPadre');
+        $infante->Otro_VinculoPadre = $req->input('Otro_VinculoPadre');
+        $infante->Embarazo_Planeado = $req->input('Embarazo_Planeado');
+        $infante->Edad_MadreEmbarazo = $req->input('Edad_MadreEmbarazo');
+        $infante->Madre_Medicamento = $req->input('Madre_Medicamento');
+        $infante->Edad_Gestacional = $req->input('Edad_Gestacional');
+        $infante->Complicaciones_Parto = $req->input('Complicaciones_Parto');
+        $infante->Otro_Complicaciones_Parto = $req->input('Otro_Complicaciones_Parto');
+        // $infante->Id_DificultadEmbarazo = $req->input('Id_DificultadEmbarazo');
+        $infante->Otro_DificultadEmbarazo = $req->input('Otro_DificultadEmbarazo');
+        $infante->Id_TipoParto = $req->input('Id_TipoParto');
+        $infante->Dificultades_Parto = $req->input('Dificultades_Parto');
+        $infante->Otro_Dificultadoes_Parto = $req->input('Otro_Dificultadoes_Parto');
+        // $infante->Id_DificultadPostParto = $req->input('Id_DificultadPostParto');
+        $infante->Otro_DificultadoesPostParto = $req->input('Otro_DificultadoesPostParto');
+
+
+
         $infante->save();
 
-      
         $user = User::find(auth()->id());
         $fechai = new \DateTime('now');
         $fechaf= date('Y-m-d', strtotime('+8 week', ($fechai->getTimestamp())));   
@@ -70,10 +98,13 @@ class DatosNinoController extends Controller
         $acudienteinfante->Fecha_Final = $fechaf;
         $acudienteinfante->save();
         $listaActividades = Actividad :: all();
-             $actividadGrupo = DB::table('actividad_grupo')
+        $actividadGrupo = DB::table('actividad_grupo')
                               ->join('grupo_poblacional', 'grupo_poblacional.Id_Grupo_Poblacional', '=', 'actividad_grupo.id_Grupo_Poblacional')
                               ->select('actividad_grupo.Id_Actividad')
+                              ->where('EdadMinima_Grupo_Poblacional', '<=' , $infante->Edad_Infante)
+                              ->Where('EdadMaxima_Grupo_Poblacional', '>' , $infante->Edad_Infante)
                               ->get();  
+         //dd($actividadGrupo);
          foreach ($actividadGrupo as $actividadG) 
           {  
             $actividadesAsignadas = new ActividadAsignada();        

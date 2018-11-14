@@ -13,18 +13,21 @@ use App\EscalarAcudiente;
 class EscalaWYController extends Controller{
 
 
+    // public function index()
+    // {
+    //    $id_usuario = auth()->id();
+     //   $escol = Cuidador::with('escolaridad')->where('id_usuario', $id_usuario)->get()[0];
+      //  $civil = Cuidador::with('estadoCivil')->where('id_usuario', $id_usuario)->get()[0];
+     //    return view('escalaWY.escalaWYDatosIniciales')->with('escolaridad', $escol['escolaridad']['Nombre_Escolaridad'])->with('estadoCivi', $civil['estadoCivil']['Nombre_EstadoCivil']);
+    // }
+
      public function index()
      {
         $id_usuario = auth()->id();
-        $escol = Cuidador::with('escolaridad')->where('id_usuario', $id_usuario)->get()[0];
-        $civil = Cuidador::with('estadoCivil')->where('id_usuario', $id_usuario)->get()[0];
-         return view('escalaWY.escalaWYDatosIniciales')->with('escolaridad', $escol['escolaridad']['Nombre_Escolaridad'])->with('estadoCivi', $civil['estadoCivil']['Nombre_EstadoCivil']);
+         return view('escalaWY.escalaWYCuestionario');
      }
       
-    public function escalaWYCuestionario(){
 
-        return view('escalaWY.escalaWYCuestionario');
-    }
 
 
     public function create()
@@ -47,19 +50,6 @@ class EscalaWYController extends Controller{
     public function edit($id)
     {
         
-    }
-
-    
-    public function updateCuidador(Request $request)
-    {
-       // $acudiente = DB::table('acudiente')->where('id_usuario', $id_usuario)->get();
-         $id_usuario = auth()->id();
-         $acudiente = Cuidador::where('id_usuario', $id_usuario)->get()[0];
-         $acudiente->edad = $request->input('edad');
-         $acudiente->num_hijos = $request->input('children');
-         $acudiente->save();
-      //
-        return view('escalaWY.escalaWYCuestionario');
     }
 
 

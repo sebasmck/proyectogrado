@@ -108,11 +108,11 @@
 								<div class="panel-footer">
 									<form action="{{route('logout')}}" method="POST">
 										{{csrf_field()}}
-										<button class="btn btn-danger btn-xs btn-block">Cerrar sessión</button>
+										<button class="btn btn-danger btn-xs btn-block">Cerrar sesión</button>
 									</form>
 								</div>
 
-								{{-- <li><a href="../../html/pages/login.html"><i class="fa fa-fw fa-power-off text-danger"></i> Logout</a></li> --}}
+								{{-- <li><a href="../../html/pages/login.html"><i class="fa fa-fw fa-power-off text-danger"></i> Salir </a></li> --}}
 
 
 
