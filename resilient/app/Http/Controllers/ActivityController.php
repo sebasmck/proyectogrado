@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Actividad;
 use App\ActividadAsignada;
+use App\ActividadGrupo;
 use App\AcudienteInfante;
 use App\Cuidador;
 use App\RespuestaAbiertaActividad;
@@ -45,24 +46,24 @@ class ActivityController extends Controller
         $dateFinalCurso->setTimestamp($fechaFinalCurso);
         $diferencia = $dateInicioCurso->diff($fechaActual);
         $semanaActual = intval($diferencia->days/7);
-        $actividadesAsignadas = DB::select('select a.Id_Actividad, semana from actividad_asignada a , actividad b  where a.Id_Actividad = b.Id_Actividad and a.id_RelacionAcudienteInfante = ? order by semana;', [$relacionAcudienteInfante->id])  ; 
+        $actividadesAsignadas = DB::select('select c.*,a.Id_Actividad, b.semana 
+        from actividad_asignada a , actividad_grupo b , actividad c 
+        where a.Id_Actividad = c.Id_Actividad 
+              and b.Id_Actividad = c.Id_Actividad
+                and a.id_RelacionAcudienteInfante = ? order by b.semana;', [$relacionAcudienteInfante->id])  ; 
         //$actividadesAsignadas = ActividadAsignada::where('id_RelacionAcudienteInfante', $relacionAcudienteInfante->id)->with(['actividad'=> function($query)
        // {$query->orderBy('semana')->get();}])->get();
-        $actividadPendiente = null;
-        $actividades = Array();
-        foreach ($actividadesAsignadas as $actividadAsignada)
+
+        $actividadPendiente=null;
+        //$actividades = Array();
+        if($dateFinalCurso >= $fechaActual)
         {
-            $actualModel = Actividad::find($actividadAsignada->Id_Actividad) ;
-            array_push($actividades,$actualModel);
-        }
-        if($dateFinalCurso >= $fechaActual){
             $actividadPendiente = ActividadAsignada::where('id_RelacionAcudienteInfante', $relacionAcudienteInfante->id)->whereNull('FechaFinalizada_Actividad_Terminada')->first();
         }
 
-       return view('activities.moduloActividades', ['activities' => $actividades, 'actividadPendiente' => $actividadPendiente->actividad, 'semanaActual' => $semanaActual]);
+      return view('activities.moduloActividades', ['activities' => $actividadesAsignadas, 'actividadPendiente' => $actividadPendiente->actividad, 'semanaActual' => $semanaActual]);
     }
-
-
+    
     public function aprendamosResilienciaIntro()
     {
         return view("activities.2-11-meses.aprendamos_resiliencia.intro_aprendamos_resiliencia");
@@ -515,8 +516,14 @@ class ActivityController extends Controller
      {
          return view('activities.3-11-meses.NinosResilientes.NinosResilientes4');
      }
-     public function ninosResilientesLogros()
+     public function ninosResilientesLogros(Request $request)
      {
+        $id_usuario = auth()->id();
+        $acudiente = Cuidador::where('id_usuario', $id_usuario)->value('Id_Acudiente');
+        $pathFiles = 'Files/ActivityNinosResilientes/'.$acudiente;
+        //var_dump($acudiente);
+        $file = $request->file('archivo');
+        Storage::disk('ftp')->put($pathFiles , $file);
         return view('activities.3-11-meses.NinosResilientes.LogrosObtenidos');
      }
      public function ninosResilientesCulminacion()
@@ -561,12 +568,14 @@ class ActivityController extends Controller
         return view('activities.2-11-meses.Mas_Te_Guste.logros_obtenidos');
     }
 
-    public function ftpUpFilesActivityNinosResilientes(Request $request){
+    public function ftpUpFilesActivityNinosResilientes(Request $request)
+    {
         $id_usuario = auth()->id();
         $acudiente = Cuidador::where('id_usuario', $id_usuario)->value('Id_Acudiente');
         $pathFiles = 'Files/ActivityNinosResilientes/'.$acudiente;
-        var_dump($acudiente);
-        $file = $request->file('fileToUpload'.$i);
+        //var_dump($acudiente);
+
+        $file = $request->file('fileToUpload');
         Storage::disk('ftp')->put($pathFiles , $file);
         return $request;
     }

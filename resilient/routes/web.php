@@ -117,10 +117,10 @@ Route::post('/posttestprueba11', 'PostTestController@posttestPrueba11')->name('/
 Route::post('/posttestprueba12', 'PostTestController@posttestPrueba12')->name('/posttestprueba12');
 
 //repuestas posttest 
-Route::get('/respuestaposttest', 'PostTestController@respuestasPostest')->name('/respuestaposttest');
+Route::post('/respuestaposttest', 'PostTestController@respuestasPostest')->name('/respuestaposttest');
 
 // preguntas de cierre 
-Route::post('/preguntascierreposttest', 'PostTestController@preguntasCierre')->name('/preguntascierreposttest');
+Route::get('/preguntascierreposttest', 'PostTestController@preguntasCierre')->name('/preguntascierreposttest');
 
 //Route::get('/preguntascierreposttest', 'PostTestController@preguntasCierrePrueba')->name('/preguntascierreposttest');
 
@@ -277,6 +277,7 @@ Route::get('/testFtp' , 'ActivityController@ftpTest')->name('/testFtp');
 
 //Subir imagenes y retornar vista
 Route::post('/ftpUpImagesActivityLoQueMasTGuste' , 'ActivityController@ftpUpImagesActivityLoQueMasTGuste')->name('/ftpUpImagesActivityLoQueMasTGuste');
+
 // Ruta actividad elije lo que mas te guste
 Route::get('/MasTeGuste' , 'ActivityController@loQueMasTeGuste')->name('/MasTeGuste');
 Route::get('/MasTeGuste2' , 'ActivityController@loQueMasTeGuste2')->name('/MasTeGuste2');
@@ -315,8 +316,7 @@ Route::get('/NinosResilientes1', 'ActivityController@ninosResilientes1')->name('
 Route::get('/NinosResilientes2', 'ActivityController@ninosResilientes2')->name('/NinosResilientes2');
 Route::get('/NinosResilientes3', 'ActivityController@ninosResilientes3')->name('/NinosResilientes3');
 Route::get('/NinosResilientes4', 'ActivityController@ninosResilientes4')->name('/NinosResilientes4');
-
-Route::get('/NinosResilientes5', 'ActivityController@ninosResilientesLogros')->name('/NinosResilientes5');
+Route::post('/NinosResilientes5', 'ActivityController@ninosResilientesLogros')->name('/NinosResilientes5');
 Route::get('/NinosResilientes6', 'ActivityController@ninosResilientesCulminacion')->name('/NinosResilientes6');
 
 

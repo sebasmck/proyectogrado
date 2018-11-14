@@ -26,7 +26,8 @@ const INVESTIGADOR = 3;
 class RedireccionadorRolController
 {
     public static function redirectTo(){
-        $user  = auth()->user();
+        // $user  = auth()->user();
+        $user = User::find(auth()->id()); 
 
         switch ($user->id_rol){
             case ADMINISTADOR: {

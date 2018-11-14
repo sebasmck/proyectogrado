@@ -51,11 +51,11 @@ class DatosNinoController extends Controller
     public function store(Request $request)
     {
         $infante = new Infante();
-        $infante->Nombre_Infante = $request->input("firstname");
-        $infante->Apellido_Infante = $request->input("lastname");
+        $infante->Nombre_Infante = $request->input("Nombre_Infante");
+        $infante->Apellido_Infante = $request->input("Apellido_Infante");
         $infante->FechaDeNacimiento_Infante =  new \DateTime($request->input("fechanacimiento"));
-        $infante->Edad_Infante = $request->input("edad");
-        $infante->Id_Sexo = $request->input("sexo");
+        $infante->Edad_Infante = $request->input("Edad_Infante");
+        $infante->Id_Sexo = $request->input("Id_Sexo");
         $infante->save();
 
       
@@ -71,10 +71,13 @@ class DatosNinoController extends Controller
         $acudienteinfante->Fecha_Final = $fechaf;
         $acudienteinfante->save();
         $listaActividades = Actividad :: all();
-             $actividadGrupo = DB::table('actividad_grupo')
+        $actividadGrupo = DB::table('actividad_grupo')
                               ->join('grupo_poblacional', 'grupo_poblacional.Id_Grupo_Poblacional', '=', 'actividad_grupo.id_Grupo_Poblacional')
                               ->select('actividad_grupo.Id_Actividad')
+                              ->where('EdadMinima_Grupo_Poblacional', '<=' , $infante->Edad_Infante)
+                              ->Where('EdadMaxima_Grupo_Poblacional', '>' , $infante->Edad_Infante)
                               ->get();  
+         //dd($actividadGrupo);
          foreach ($actividadGrupo as $actividadG) 
           {  
             $actividadesAsignadas = new ActividadAsignada();        

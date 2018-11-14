@@ -3,12 +3,13 @@
 @section('title')
 Niños Resilientes 4
 @endsection
-<!-- terminar descagar archivo  --> 
+
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
-                {{ csrf_field() }}
+        <form action="{{route('/NinosResilientes5')}}" method="post" class="form" enctype="multipart/form-data">
+         {{ csrf_field()}}
+
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -98,7 +99,7 @@ Niños Resilientes 4
                             <p style="text-align:left; text-justify: inter-word;">
 
                                     <label id="labelpan" class="btn btn-default btn-file" style="background-color:#0097A7;color:white;  border-radius: 25px;">
-                                            Seleccionar Archivo <input type="file" name="fileToUpload1" style="display: none;" id="btnhid">
+                                            Seleccionar Archivo <input type="file" name="archivo" style="display: none;" id="btnhid">
                                     </label>
                                    <button id="buttonPass" style="color:black;background-color:gray;display:none;border-radius:15px;border: 2px solid gray;" disabled> Archivo ya seleccionada</button>
                           </div> 
@@ -111,7 +112,7 @@ Niños Resilientes 4
 
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/NinosResilientes5')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                  <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                   </div>
             </div>
 

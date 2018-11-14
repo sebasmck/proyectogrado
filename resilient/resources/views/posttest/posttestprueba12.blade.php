@@ -7,7 +7,7 @@ Pretest 12
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form" method="POST" action="{{route('/preguntascierreposttest')}}">
+        <form class="form" method="POST" action="{{route('/respuestaposttest')}}">
         {{csrf_field()}}
             <div class="card">
 

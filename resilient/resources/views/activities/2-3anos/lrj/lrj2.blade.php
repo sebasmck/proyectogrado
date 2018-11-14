@@ -46,7 +46,7 @@ LAS REGLAS DE JUEGO
                                 <li><label class="checkbox-inline checkbox-styled">
                                         {!!Form::checkbox('escondite','0',false, ['id' => 'escondite'])!!}<span>Escondite</span></li>
                                 <li><label class="checkbox-inline checkbox-styled">{!! Form::checkbox('yeimi', '1',
-                                        false, ['id' => 'yeimi'])!!}<span>Yeimy</span></li>
+                                        false, ['id' => 'yeimi'])!!}<span>Yermis</span></li>
                                 <li><label class="checkbox-inline checkbox-styled">{!!
                                         Form::checkbox('lalleva','1',false, ['id' => 'lalleva'])!!}<span>La lleva</span></li>
                                 <li><label class="checkbox-inline checkbox-styled">{!!
