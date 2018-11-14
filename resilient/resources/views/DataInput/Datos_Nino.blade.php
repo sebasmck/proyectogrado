@@ -112,8 +112,8 @@ Datos Niño
                             </div> 
                         <div class="col-sm-3">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="Id_OtroViveInfante" id="Id_OtroViveInfante">
-                                <label for="Id_OtroViveInfante"> <b>Otros</b></label>
+                                <input type="text" class="form-control" name="OtroViveInfante" id="OtroViveInfante">
+                                <label for="OtroViveInfante"> <b>Otros</b></label>
                             </div>
                         </div>
                     </div>
@@ -339,4 +339,4 @@ Datos Niño
 
 </script>
 
-@ensection
+@endsection
