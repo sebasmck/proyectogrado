@@ -7,7 +7,7 @@ Datos Niño
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form method="post" class="form" action="{{ route('datosninos.store') }}">
+        <form id="form" method="post" class="form" action="{{ route('datosninos.store') }}">
             @csrf
 
             <div class="card">
@@ -289,7 +289,7 @@ Datos Niño
 
                     <div class="card-actionbar">
                             <div class="card-actionbar-row">
-                                <button type="submit" class="btn btn-flat btn-primary ink-reaction">Continuar <b> > </b> </button>
+                                <button id="continuar" type="submit" class="btn btn-flat btn-primary ink-reaction">Continuar<b></b> </button>
                             </div>
                         </div>
 
@@ -310,8 +310,6 @@ Datos Niño
 
                     
 
-
-                    
                 </div><!--end .card-body -->
                 
             </div><!--end .card -->
@@ -325,7 +323,8 @@ Datos Niño
 
 <script>
 
-    // 
+    preventDoubleSubmit();
+
     $('#Id_RelacionInfante').change(function(){
     if($(this).val() == '6'){
         // alert('whatever happened');
