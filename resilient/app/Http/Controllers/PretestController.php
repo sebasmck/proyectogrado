@@ -382,7 +382,7 @@ class PretestController extends Controller
 
        return view('pretest.pretestfinal');
     }
-
+    
     public function pretestCompletado(){
         $user = User::find(auth()->id());
         $user->id_estado = 5;

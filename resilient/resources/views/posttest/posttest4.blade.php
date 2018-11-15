@@ -83,6 +83,8 @@ Post Test 3
 
 <script>
 
+
+
  function validar ()
     {
         if($('input[type=checkbox]:checked').length == 0)

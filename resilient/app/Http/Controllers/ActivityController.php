@@ -60,8 +60,8 @@ class ActivityController extends Controller
         $actividadAsignada->FechaFinalizada_Actividad_Terminada = new \DateTime("now");
         $actividadAsignada->save();
 
-       // unset($infoNavegacion['id_actividad']);
-       // Cache::store('database')->forever(auth()->id(),$infoNavegacion);
+        unset($infoNavegacion['id_actividad']);
+        Cache::store('database')->forever(auth()->id(),$infoNavegacion);
 
         $actividadesPendientes = ActividadAsignada::where('id_RelacionAcudienteInfante',$relacionAcudienteInfante->id)->whereNull('FechaFinalizada_Actividad_Terminada')->get();
 

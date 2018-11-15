@@ -76,6 +76,9 @@ Cuestionario 1
 
 <script>
 
+
+    preventDoubleSubmit();
+
          $("#si").on( "click", function() {
             $('#casoSi').show(); //muestro mediante id
             $('#casoNo').hide();
