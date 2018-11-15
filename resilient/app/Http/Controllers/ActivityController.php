@@ -222,6 +222,11 @@ class ActivityController extends Controller
         return view(self::URL_ACTIVITIE_ACDR."logrosObtenidos");
     }
 
+    public function culminado_acdr()
+    {
+        return view(self::URL_ACTIVITIE_ACDR."Culminadoconceptoresiliencia");
+    }
+
     // Actividad gafas de las emociones
 
     public function intro_gdle(){
@@ -238,6 +243,10 @@ class ActivityController extends Controller
 
     public function logros_gdle(){
         return view(self::URL_ACTIVITIE_GDLE."logrosObtenidos");
+    }
+
+    public function culminado_gdle(){
+        return view(self::URL_ACTIVITIE_GDLE."Culminadogafas");
     }
 
     // Actividad dia del elogio
@@ -277,6 +286,11 @@ class ActivityController extends Controller
     public function logros_dde(){
         return view(self::URL_ACTIVITIE_DDE."logrosObtenidos");
     }
+    
+    public function culminado_dde(){
+        return view(self::URL_ACTIVITIE_DDE."logrosObtenidos");
+    }
+
 
 
     // Actividad papito escultor
@@ -304,6 +318,12 @@ class ActivityController extends Controller
     public function logros_pe(){
         return view(self::URL_ACTIVITIE_PE."logrosObtenidos");
     }
+
+    public function culminado_pe()
+    {
+        return view(self::URL_ACTIVITIE_PE."Culminadopapito");
+    }
+
 
     // Actividad identificación y control emocional
 

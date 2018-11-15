@@ -4,7 +4,7 @@ Logros Obtenidos
 @endsection
 @section('content')
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form" method="POST" action="{{route('/guardar-logros',['id'=> 2])}}">
+        <form class="form" method="GET" action="{{route('/papito-escultor-7')}}">
         {{csrf_field()}}
             <div class="card">
 
