@@ -4,15 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Actividad;
 use App\ActividadAsignada;
-use App\ActividadGrupo;
 use App\AcudienteInfante;
 use App\Cuidador;
 use App\RespuestaAbiertaActividad;
 use App\LogrosActividad;
-use App\RespuestaMultipleActividad;  
+use App\RespuestaMultipleActividad;
+use App\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use \Illuminate\Support\Facades\Cache as Cache;
 
 
 class ActivityController extends Controller
@@ -31,8 +32,57 @@ class ActivityController extends Controller
     const URL_ACTIVITIE_DDE = self::URL_ACTIVITIES_3_11_MESES."dia_del_elogio.";
     const URL_ACTIVITIE_ICE = self::URL_ACTIVITIES_4_11_MESES."identificacion_control_emocional.";
 
+    public function finalizarActividad(){
+
+        // objeto de navegación guardado en el storage de la aplicación
+        $infoNavegacion = Cache::store('database')->get(auth()->id());
+
+        // comprobación finalización de una actividad sin el infante seleccionado
+        if(!isset($infoNavegacion['id_infante'])){
+            return view('cuidador.menuCuidador');
+        }
+
+        $infante = $infoNavegacion['id_infante'];
+
+        if(!isset($infoNavegacion['id_actividad'])){
+            return $this->goToActivities($infante);
+        }
+
+        $actividad = $infoNavegacion['id_actividad'];
+
+        $relacionAcudienteInfante = AcudienteInfante::where('Id_Infante',$infante)
+            ->where('Id_Acudiente',auth()->user()->cuidador->Id_Acudiente)
+            ->with(['actividadesAsignadas' => function($query) use ($actividad){
+                $query->where('Id_Actividad',$actividad)->first();
+            }])->first();
+
+        $actividadAsignada = $relacionAcudienteInfante->actividadesAsignadas[0];
+        $actividadAsignada->FechaFinalizada_Actividad_Terminada = new \DateTime("now");
+        $actividadAsignada->save();
+
+       // unset($infoNavegacion['id_actividad']);
+       // Cache::store('database')->forever(auth()->id(),$infoNavegacion);
+
+        $actividadesPendientes = ActividadAsignada::where('id_RelacionAcudienteInfante',$relacionAcudienteInfante->id)->whereNull('FechaFinalizada_Actividad_Terminada')->get();
+
+        if(empty($actividadesPendientes)) {
+            return $this->goToActivities($infante);
+        }else{
+            if(auth()->user()->cuidador->finalizo_curso == 1){
+                return $this->goToActivities($infante);
+            }else{
+
+                $usuario = User::find(auth()->id());
+                $usuario->id_estado = 8;
+                $usuario->save();
+
+                return redirect()->route('/postest');
+            }
+        }
+    }
+
+
     // Activity: Cualidades Niños Resilientes
-  
 
     public function goToActivities($id){
 
@@ -48,7 +98,7 @@ class ActivityController extends Controller
         $dateFinalCurso->setTimestamp($fechaFinalCurso);
         $diferencia = $dateInicioCurso->diff($fechaActual);
         $semanaActual = intval($diferencia->days/7);
-        $actividadesAsignadas = DB::select('select c.*,a.Id_Actividad, b.semana 
+        $actividadesAsignadas = DB::select('select c.*,a.Id_Actividad,a.FechaFinalizada_Actividad_Terminada,a.Id as IdActividadAsignada, b.semana 
         from actividad_asignada a , actividad_grupo b , actividad c 
         where a.Id_Actividad = c.Id_Actividad 
               and b.Id_Actividad = c.Id_Actividad
@@ -60,10 +110,22 @@ class ActivityController extends Controller
         //$actividades = Array();
         if($dateFinalCurso >= $fechaActual)
         {
-            $actividadPendiente = ActividadAsignada::where('id_RelacionAcudienteInfante', $relacionAcudienteInfante->id)->whereNull('FechaFinalizada_Actividad_Terminada')->first();
+            $parar = false;
+            $idActividadPendiente = null;
+            for($i = 0; $i < sizeof($actividadesAsignadas) && $parar == false ; $i++){
+               $actividadAsignadadActual = $actividadesAsignadas[$i];
+               if(!$actividadAsignadadActual->FechaFinalizada_Actividad_Terminada){
+                   $parar = true;
+                   $idActividadPendiente = $actividadAsignadadActual->IdActividadAsignada;
+               }
+            }
+            if($idActividadPendiente){
+                $actividadPendiente = ActividadAsignada::find($idActividadPendiente);
+            }
+
         }
 
-      return view('activities.moduloActividades', ['activities' => $actividadesAsignadas, 'actividadPendiente' => $actividadPendiente->actividad, 'semanaActual' => $semanaActual]);
+      return view('activities.moduloActividades', ['activities' => $actividadesAsignadas, 'actividadPendiente' => $actividadPendiente?$actividadPendiente->actividad:$actividadPendiente, 'semanaActual' => $semanaActual]);
     }
     
     public function aprendamosResilienciaIntro()
@@ -77,6 +139,10 @@ class ActivityController extends Controller
     }
 
     public function getActivity($id){
+        $infoNavegacion = Cache::store('database')->get(auth()->id());
+        $infoNavegacion['id_actividad'] = $id;
+        Cache::store('database')->forever(auth()->id(),$infoNavegacion);
+
         $actividad  = Actividad::where('Id_Actividad',$id)->first();
         return view($actividad->View_Actividad);
     }
@@ -128,6 +194,10 @@ class ActivityController extends Controller
 
     public function resiliencialogros(){
         return view("activities.2-11-meses.aprendamos_resiliencia.logrosObtenidos");
+    }
+
+    public function libroLogros_apr(){
+        return view("activities.2-11-meses.aprendamos_resiliencia.libro_logros");
     }
 
     // Actividad Aterrizando el concepto de resiliencia

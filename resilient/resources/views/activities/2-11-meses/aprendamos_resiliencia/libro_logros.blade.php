@@ -156,12 +156,12 @@ h4 {
       <br>
       <br>
 			<p>Da clic en el boton siguiente</p>
-			<p>Para continuar</p>
+			<p>Para Finalizar</p>
       <br>
       <br>
       <p><div class="card-actionbar">
           <div class="card-actionbar-row">
-          <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/finalizar-actividad')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+          	<a style="btn btn-flat btn-primary ink-reaction" href="/finalizar-actividad"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
           </div>
     </div></p>
 		</div>

@@ -4,7 +4,7 @@ Logros Obtenidos
 @endsection
 @section('content')
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form" method="post" action="{{route('/guardar-logros/1')}}">
+        <form class="form" method="get" action="{{route('/actividades-aprendamos-resiliencia-9')}}">
         {{csrf_field()}}
             <div class="card">
 

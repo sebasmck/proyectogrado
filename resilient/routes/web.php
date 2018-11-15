@@ -130,6 +130,8 @@ Route::post('/preguntascierreposttest3', 'PostTestController@preguntasCierre3')-
 Route::post('/preguntascierreposttest4', 'PostTestController@preguntasCierre4')->name('/preguntascierreposttest4');
 Route::post('/preguntascierreposttestfinal', 'PostTestController@preguntasCierreFinal')->name('/preguntascierreposttestfinal');
 
+Route::get('/finalizar-curso','HomeController@finalizarCurso')->name('/finalizar-curso');
+
 
 //logros
 Route::post('/guardar-logros', 'ActivityController@guardarLogros')->name('/guardar-logros');
@@ -146,6 +148,8 @@ Route::get('/get-activity-info/{id}', [
 ]);
 
 
+Route::get('/finalizar-actividad','ActivityController@finalizarActividad')->name('/finalizar-actividad');
+
 Route::get('/actividad-intro-1', 'ActivityController@aprendamosResilienciaIntro')->name('/actividad-intro-1');
 Route::post('/actividades-componentes','ActivityController@goToUrl')->name('/actividades-componentes');
 Route::get('/actividades-aprendamos-resiliencia-1', 'ActivityController@index')->name('/actividades-aprendamos-resiliencia-1');
@@ -157,7 +161,7 @@ Route::get('/actividades-aprendamos-resiliencia-6', 'ActivityController@escogerD
 Route::get('/actividades-aprendamos-resiliencia-7', 'ActivityController@verbalizacioneDeGrotberg')->name('/actividades-aprendamos-resiliencia-7');
 Route::get('/actividades-aprendamos-resiliencia-8', 'ActivityController@resilienciaEnLaCrianza')->name('/actividades-aprendamos-resiliencia-8');
 Route::get('/logros', 'ActivityController@resiliencialogros')->name('/logros');
-
+Route::get('/actividades-aprendamos-resiliencia-9', 'ActivityController@libroLogros_apr')->name('/actividades-aprendamos-resiliencia-9');
 
 
 Route::prefix('actividades')->group(function () {

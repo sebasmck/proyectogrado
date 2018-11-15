@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 
 use App\AcudienteInfante;
+use App\Http\Controllers\Auth\RedireccionadorRolController;
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\Cache;
 
 
 class HomeController extends Controller
@@ -49,11 +51,25 @@ class HomeController extends Controller
 
     public function dashboardInfante($id) {
         $ruta = "";
+        $infoNavegacion = ['id_infante' => $id];
+        Cache::store('database')->forever(auth()->id(),$infoNavegacion);
         return view('cuidador.dashboardInfante',['sour' => $ruta, 'infante' => $id]);
     }
 
     public function goEscala() {
         return view('escalaP2.escalaParentabilidad');
+    }
+
+    public function finalizarCurso(){
+        $user = User::find(auth()->id());
+        $cuidador = $user->cuidador;
+        $cuidador->finalizo_curso = 1;
+        $cuidador->save();
+
+        $user->id_estado = 2;
+        $user->save();
+
+        return RedireccionadorRolController::redirectTo();
     }
 
 }

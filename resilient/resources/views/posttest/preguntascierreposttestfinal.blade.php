@@ -31,7 +31,7 @@ Pretest Final
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href=""> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Finalizar</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="/finalizar-curso"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Finalizar</button></a>
                     </div>
               </div>
 

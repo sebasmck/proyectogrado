@@ -25,4 +25,8 @@ class AcudienteInfante extends Model
     {
         return $this->belongsTo('App\Infante','Id_Infante');
     }
+
+    public function actividadesAsignadas(){
+        return $this->hasMany('App\ActividadAsignada','id_RelacionAcudienteInfante');
+    }
 }
