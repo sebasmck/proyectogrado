@@ -12,7 +12,7 @@
             width: 200px;
             display: inline;
             left: 80px;
-            margin-top: 60px;
+            margin-top: -200px;
             text-justify: distribute-all-lines;
             text-align: center;
             z-index: 1;

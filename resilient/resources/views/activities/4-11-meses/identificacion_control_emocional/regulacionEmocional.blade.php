@@ -85,33 +85,33 @@
                 </div>
 
                 <div class="card-body">
-
+                    <form id="myform" method="GET" action="{{ route('/identificacion-control-emocional-4') }}">
                     <p>
                         Elige la forma más adecuada que consideras para  regular las emociones de los niños ante las diferentes situaciones de la vida.
                     </p>
 
-                    <div class="space-content">
+                    <div class="space-content question">
                             <div>
-                               <input type="radio" id="op1" name="option1" value="1" class="col-md-3 col-sm-6"/>
+                               <input type="radio" id="op1" name="option1" value="1" class="col-md-3 col-sm-6" required/>
                                 <label class="grow" for="op1"><img src="{{ asset('/ActividadIce/actividad_ocio.png') }}"  /><h4 style="display: block">Actividad de ocio</h4></label>
                             </div>
                             <div>
-                                <input type="radio" id="op2" name="option1" value="2" class="col-md-3 col-sm-6"/>
+                                <input type="radio" id="op2" name="option1" value="2" class="col-md-3 col-sm-6" required/>
                                 <label class="grow" for="op2"><img src="{{ asset('/ActividadIce/conversacion.png') }}" /><h4 style="display: block">Conversación</h4></label>
                             </label>
                             </div>
                             <div>
-                                <input type="radio" id="op3" name="option1" value="3" class="col-md-3 col-sm-6"/>
+                                <input type="radio" id="op3" name="option1" value="3" class="col-md-3 col-sm-6" required/>
                                 <label class="grow" for="op3"><img src="{{ asset('/ActividadIce/fomenta_miedo.png') }}" /><h4 style="display: block">Fomenta miedo</h4></label>
                             </label>
                             </div>
                             <div>
-                                <input type="radio" id="op4" name="option1" value="4" class="col-md-3 col-sm-6"/>
-                                <label class="grow" for="op4"><img src="{{ asset('/ActividadIce/respiracion.png') }}" /><h4 style="display: block">Respiraciòn</h4></label>
+                                <input type="radio" id="op4" name="option1" value="4" class="col-md-3 col-sm-6" required/>
+                                <label class="grow" for="op4"><img src="{{ asset('/ActividadIce/respiracion.png') }}" /><h4 style="display: block">Respiración</h4></label>
                             </label>
                             </div>
                             <div>
-                                <input type="radio" id="op5" name="option1" value="5" class="col-md-3 col-sm-6"/>
+                                <input type="radio" id="op5" name="option1" value="5" class="col-md-3 col-sm-6" required/>
                                 <label class="grow" for="op5"><img src="{{ asset('/ActividadIce/rompe_objetos.png') }}" /><h4 style="display: block">Rompe objetos</h4></label>
                             </label>
                             </div>
@@ -121,10 +121,40 @@
                     <hr style="clear: left" />
 
                     <div style="text-align: right">
-                        <a href="{{ route('/identificacion-control-emocional-4') }}"><button class="btn style-accent-light">Aquí vamos!</button> </a>
+                            <button id="nextStage" class="btn style-accent-light" disabled>Continuar!</button>
                     </div>
+                    </form>
                 </div>
         </div>
     </div>
 
-@endsection
+    @section('addjs')
+        <script>
+
+            var selectedQuestion = null;
+
+            $(".question").on("click",function (event) {
+                var target = event.target;
+                if(target.id.indexOf("op") > -1){
+                    if(window.selectedQuestion == null){
+                        $("#nextStage").attr('disabled',false);
+                        window.selectedQuestion = target;
+                        target.classList.add("selected");
+                    }else{
+                        window.selectedQuestion.classList.remove("selected");
+                        window.selectedQuestion = target;
+                        target.classList.add("selected");
+                    }
+
+                    var matches = target.id.match("\\d");
+                    if(matches.length > 0){
+                        for(var i = 1; i < 5; i++){
+                            $("#op"+i).attr('checked',false);
+                        }
+                        var input = $("#op"+matches[0]).attr('checked',true);
+                    }
+
+                }
+            })
+        </script>
+    @endsection

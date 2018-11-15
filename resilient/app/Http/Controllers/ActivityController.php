@@ -267,20 +267,20 @@ class ActivityController extends Controller
         return view(self::URL_ACTIVITIE_DDE."aprende_estrategias");
     }
 
-    public function recuerdasEstrategias_dde(){
-        return view(self::URL_ACTIVITIE_DDE."recuerda_estrategias");
-    }
+   // public function recuerdasEstrategias_dde(){
+   //     return view(self::URL_ACTIVITIE_DDE."recuerda_estrategias");
+  //  }
 
-    public function practicaRefuerzo_dde(){
-        return view(self::URL_ACTIVITIE_DDE."practicaRefuerzo");
-    }
+ //   public function practicaRefuerzo_dde(){
+ //       return view(self::URL_ACTIVITIE_DDE."practicaRefuerzo");
+ //   }
 
     public function ojosAbiertosYTactoDispuesto_dde(){
-        return view(self::URL_ACTIVITIE_DDE."ojos_abiertos_y_tacto_dispuesto");
+        return view(self::URL_ACTIVITIE_DDE."ojos_abiertos");
     }
 
     public function tarea_dde(){
-        return view(self::URL_ACTIVITIE_DDE."tareas_dde");
+        return view(self::URL_ACTIVITIE_DDE."tarea");
     }
 
     public function logros_dde(){
@@ -288,7 +288,7 @@ class ActivityController extends Controller
     }
     
     public function culminado_dde(){
-        return view(self::URL_ACTIVITIE_DDE."logrosObtenidos");
+        return view(self::URL_ACTIVITIE_DDE."Culminadoelogio");
     }
 
 

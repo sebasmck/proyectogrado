@@ -13,7 +13,7 @@
                     <header>Pautas de Crianza resiliente</header>
                 </div>
 
-                <div class="card-body">
+                <div class="card-body" style="text-justify: auto;">
                     Bienvenido al programa de pautas de Crianza Resilientes para padres. <br /> Este programa se
                     desarrolla en el transcurso de <b> ocho semanas </b> en las cuales se realizará una serie de
                     actividades en las cuales se le enseñaran habilidades resilientes que puede aplicar en el
@@ -22,7 +22,7 @@
                     sobre ella, entonces que fortalezca sus conocimientos y así los puedas poner en práctica.
                     <hr />
                     <div style="text-align: right">
-                        <button class="btn style-success">AquÍ vamos!</button>
+                        <button class="btn style-success">Aquí vamos!</button>
                     </div>
             </div>
             </form>

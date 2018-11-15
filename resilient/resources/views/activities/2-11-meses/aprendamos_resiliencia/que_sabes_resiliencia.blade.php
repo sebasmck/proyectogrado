@@ -14,7 +14,7 @@
             </div>
             <div class="card-body">
                 <b><h3>En tus palabras, escribe que crees que es la resiliencia</h3></b>
-                <textarea name="input1" rows="15" cols="200" style="width: 100%"></textarea>
+                <textarea name="input1" rows="15" cols="200" style="width: 100%" required minlength="5"></textarea>
                 <hr />
                 <div style="text-align: right">
                     <button id="concepto" type="text" class="btn style-success"> Siguiente</button>

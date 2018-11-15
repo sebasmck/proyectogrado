@@ -29,7 +29,7 @@
                         <form method="GET" action="{{ route('/aterrizando-el-concepto-resiliencia-4') }}">
                             <h4>Después de ver el video de “La Oveja Esquilada” </h4>
 
-                            <textarea placeholder="¿Escribe qué elementos podrías rescatar del video acerca de la resiliencia?" cols="40" rows="10" style="width: 100%"></textarea>
+                            <textarea placeholder="¿Escribe qué elementos podrías rescatar del video acerca de la resiliencia?" cols="40" rows="10" style="width: 100%" required minlength="10"></textarea>
 
                             <hr />
                             <div style="text-align: right">

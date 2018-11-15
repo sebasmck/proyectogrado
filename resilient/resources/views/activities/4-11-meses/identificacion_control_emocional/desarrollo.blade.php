@@ -109,7 +109,7 @@
 
                         <hr />
 
-                        <div class="space-content">
+                        <div class="space-content question">
                             <span>
                                <input type="radio" id="op1" name="option1" required value="1"/>
                                 <label class="grow" for="op1">Alegría</label>
@@ -153,7 +153,7 @@
 
                         <hr />
 
-                        <div class="space-content">
+                        <div class="space-content question">
                             <span>
                                <input type="radio" id="op6" name="option2" value="1"/>
                                 <label class="grow" for="op6">Alegría</label>
@@ -196,7 +196,7 @@
 
                         <hr />
 
-                        <div class="space-content">
+                        <div class="space-content question">
                             <span>
                                <input type="radio" id="op11" name="option3" value="1"/>
                                 <label class="grow" for="op11">Alegría</label>
@@ -240,7 +240,7 @@
 
                         <hr />
 
-                        <div class="space-content">
+                        <div class="space-content question">
                             <span>
                                <input type="radio" id="op16" name="option4" value="1"/>
                                 <label class="grow" for="op16">Alegría</label>
@@ -271,7 +271,7 @@
                     <hr />
 
                     <div style="text-align: right">
-                            <button class="btn style-accent-light" onClick="continuar();">Continuar!</button>
+                            <button id="nextStage" class="btn style-accent-light" onClick="continuar();" disabled>Continuar!</button>
                     </div>
                 </div>
         </div>
@@ -288,6 +288,8 @@
         function continuar(){
             if(contentActual < 4)
             {
+                $("#nextStage").attr('disabled',true);
+                selectedQuestion = null;
                 $("#caso-"+contentActual).hide();
                 window.contentActual ++;
                 $("#caso-"+contentActual).fadeIn(300);
@@ -295,6 +297,32 @@
                 window.location.href = "{{ route('/identificacion-control-emocional-3') }}" ;
             }
         }
+
+        var selectedQuestion = null;
+
+        $(".question").on("click",function (event) {
+            var target = event.target;
+            if(target.id.indexOf("op") > -1){
+                if(window.selectedQuestion == null){
+                    $("#nextStage").attr('disabled',false);
+                    window.selectedQuestion = target;
+                    target.classList.add("selected");
+                }else{
+                    window.selectedQuestion.classList.remove("selected");
+                    window.selectedQuestion = target;
+                    target.classList.add("selected");
+                }
+
+                var matches = target.id.match("\\d");
+                if(matches.length > 0){
+                    for(var i = 1; i < 5; i++){
+                        $("#op"+i).attr('checked',false);
+                    }
+                    var input = $("#op"+matches[0]).attr('checked',true);
+                }
+
+            }
+        })
     </script>
 
 @endsection

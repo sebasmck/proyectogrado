@@ -4,7 +4,7 @@ Logros Obtenidos
 @endsection
 @section('content')
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form" method="POST" action="{{route('/dia-del-elogio-10')}}">
+        <form class="form" method="GET" action="{{route('/dia-del-elogio-10')}}">
         {{csrf_field()}}
             <div class="card">
 

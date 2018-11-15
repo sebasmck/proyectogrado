@@ -55,9 +55,9 @@
                 <hr />
 
                 <div style="text-align: right">
-                    <a href=" {{route('/papito-escultor-4')}} ">
-                        <button type="button" class="btn btn-primary">Aquí vamos!</button>
-                    </a>
+                    <form method="GET" action="{{route('/papito-escultor-4')}}">
+                        <button type="submit" class="btn btn-primary">Aquí vamos!</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -72,6 +72,7 @@
         var mousePressed = false;
         var lastX, lastY;
         var ctx;
+        var pinto = false;
 
         function initScripts() {
             ctx = document.getElementById('myCanvas').getContext("2d");
@@ -99,7 +100,10 @@
             if (isDown) {
                 var color = "";
 
-                if(x < 211 && y < 180)
+                if(x> 310 && x < 400 && y < 180 && y > 40){
+                    color="orange";
+                }
+                else if(x < 211 && y < 180)
                 {
                     color = "green";
                 }else if(x > 211 && y < 180){
@@ -107,7 +111,7 @@
                 }else if(x < 259 && y > 180){
                     color = "green";
                 }else {
-                    color = "red";
+                    color = "orange";
                 }
                 window.ctx.beginPath();
                 window.ctx.strokeStyle = color;
@@ -117,6 +121,9 @@
                 window.ctx.lineTo(x, y);
                 window.ctx.closePath();
                 window.ctx.stroke();
+
+                pinto = true;
+
             }
             lastX = x; lastY = y;
         }
@@ -136,6 +143,13 @@
 
             pintarImagen();
         }
+
+        $(document).on('click', 'form button[type=submit]', function(e) {
+            if (!pinto) {
+                e.preventDefault(); //prevent the default action
+                alert("Debes seguir las indicaciones para seguir avanzando");
+            }
+        });
 
 
         initScripts();
