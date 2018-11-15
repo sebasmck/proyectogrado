@@ -332,3 +332,13 @@ Datos Niño
     </div>
 
 @endsection
+
+@section('addjs')
+
+<script>
+
+    preventDoubleSubmit();
+
+</script>
+
+@endsection

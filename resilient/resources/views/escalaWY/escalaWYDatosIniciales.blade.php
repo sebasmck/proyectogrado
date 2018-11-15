@@ -81,6 +81,7 @@ Escala
 
 
 <script>
+preventDoubleSubmit();
 $(document).ready(function(){
   
     $("#state").change(function(){

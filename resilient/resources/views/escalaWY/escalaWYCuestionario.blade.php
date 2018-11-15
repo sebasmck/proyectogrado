@@ -1181,10 +1181,14 @@ hacer</label>
 
 @endsection
 
+
 @section('addjs')
 
+<script>
 
+    preventDoubleSubmit();
 
-
+</script>
 
 @endsection
+

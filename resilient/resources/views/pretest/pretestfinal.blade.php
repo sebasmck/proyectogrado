@@ -16,18 +16,23 @@ Pretest Final
                 </div>
 
                 <div class="card-body floating-label"> 
-                
+
+                    <div  style="font-family: 'Raleway', sans-serif; font-size: 24px;color:blue;">
+                        <p style="text-align:center; text-justify: inter-word;">
+                             <b>Has finalizado el pre test</b></p>
+                      </div> 
+                      <div  style="font-family: 'Raleway', sans-serif; font-size: 16px;color:black;">
+                            <p style="text-align:center; text-justify: inter-word;">
+                                 <b>da clic en finalizar para continuar</b></p>
+    
+                          </div> 
                </div>
                             
                     </div>
                           
                     <br><br>
                 </div> {{-- card-body no padding --}}
-
-
-
-                    
-            </div><!--end .card-body -->
+    
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">

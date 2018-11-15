@@ -54,6 +54,7 @@
 @endsection
 
 @section('addjs')
+
     <?php
             $competenciasText = "";
             foreach ($competencias as $competencia){

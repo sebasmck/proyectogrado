@@ -173,7 +173,7 @@ Route::prefix('actividades')->group(function () {
     Route::get('/aterrizando-el-concepto-resiliencia-3', 'ActivityController@resilienciaEnLaVidaReal_acdr')->name('/aterrizando-el-concepto-resiliencia-3');
     Route::get('/aterrizando-el-concepto-resiliencia-4', 'ActivityController@monitoreoElComportamiento_acdr')->name('/aterrizando-el-concepto-resiliencia-4');
     Route::get('/aterrizando-el-concepto-resiliencia-5', 'ActivityController@logros_acdr' )->name('/aterrizando-el-concepto-resiliencia-5');
-
+    Route::get('/aterrizando-el-concepto-resiliencia-6', 'ActivityController@culminado_acdr' )->name('/aterrizando-el-concepto-resiliencia-6'); 
 
     // Actividad gafas de las emociones
 
@@ -181,6 +181,7 @@ Route::prefix('actividades')->group(function () {
     Route::get('/gafas-de-las-emociones-2', 'ActivityController@videosDescriptivos_gdle')->name('/gafas-de-las-emociones-2');
     Route::get('/gafas-de-las-emociones-3', 'ActivityController@relacionVideosHijo_gdle')->name('/gafas-de-las-emociones-3');
     Route::get('/gafas-de-las-emociones-4', 'ActivityController@logros_gdle')->name('/gafas-de-las-emociones-4');
+    Route::get('/gafas-de-las-emociones-5', 'ActivityController@culminado_gdle')->name('/gafas-de-las-emociones-5');
 
 
     // Actividad papito escultor
@@ -191,6 +192,7 @@ Route::prefix('actividades')->group(function () {
     Route::get('/papito-escultor-4', 'ActivityController@yoYMiManera_pe')->name('/papito-escultor-4');
     Route::get('/papito-escultor-5', 'ActivityController@tareas_pe')->name('/papito-escultor-5');
     Route::get('/papito-escultor-6', 'ActivityController@logros_pe')->name('/papito-escultor-6');
+    Route::get('/papito-escultor-7', 'ActivityController@culminado_pe')->name('/papito-escultor-7');
 
     // Actividad dia del elogio
 
@@ -203,6 +205,7 @@ Route::prefix('actividades')->group(function () {
     Route::get('/dia-del-elogio-7', 'ActivityController@ojosAbiertosYTactoDispuesto_dde')->name('/dia-del-elogio-7');
     Route::get('/dia-del-elogio-8', 'ActivityController@tarea_dde')->name('/dia-del-elogio-8');
     Route::get('/dia-del-elogio-9', 'ActivityController@logros_dde')->name('/dia-del-elogio-9');
+    Route::get('/dia-del-elogio-10', 'ActivityController@culminado_dde')->name('/dia-del-elogio-10');
 
     // Actividad identificación y control emocional
 

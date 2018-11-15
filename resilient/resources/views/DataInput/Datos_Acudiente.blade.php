@@ -344,7 +344,7 @@ Datos Acudiente
 //     }
 
 
-
+preventDoubleSubmit();
 //Validation on relacion infante
 
 $('#Id_RelacionInfante').change(function(){

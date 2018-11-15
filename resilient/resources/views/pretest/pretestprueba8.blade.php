@@ -70,22 +70,12 @@ Pretest 11
 
 @endsection
 
-{{--  @section('addjs')
+@section('addjs')
 
 <script>
 
-        var tl = new TimelineLite();
-    
-         avatar = $('.avatar');
-        //  content = $('.content-card');
+    preventDoubleSubmit();
 
+</script>
 
-
-        
-        // tl.to(title, 1.5, {y:10});
-        // tl.from(card1, .3, {left:100, opacity:0});
-        
-    
-    </script>
-
-@endsection  --}}
+@endsection
