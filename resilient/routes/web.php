@@ -211,6 +211,7 @@ Route::prefix('actividades')->group(function () {
     Route::get('/identificacion-control-emocional-3', 'ActivityController@regulacion_emociones_ice')->name('/identificacion-control-emocional-3');
     Route::get('/identificacion-control-emocional-4', 'ActivityController@tareas_semana_ice')->name('/identificacion-control-emocional-4');
     Route::get('/identificacion-control-emocional-5', 'ActivityController@logros_ice')->name('/identificacion-control-emocional-5');
+    Route::get('/identificacion-control-emocional-6', 'ActivityController@libroLogros_ice')->name('/identificacion-control-emocional-6');
 });
 
 //Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');

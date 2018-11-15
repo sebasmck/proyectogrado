@@ -327,6 +327,10 @@ class ActivityController extends Controller
         return view(self::URL_ACTIVITIE_ICE."logrosObtenidos");
     }
 
+    public function libroLogros_ice(){
+        return view(self::URL_ACTIVITIE_ICE."libro_logros");
+    }
+
     // guardar logros
 
     public function guardarLogros( Request $request)
