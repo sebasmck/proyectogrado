@@ -9,7 +9,7 @@ Logros Obtenidos
             <div class="card">
 
                 <div class="card-head style-primary">
-                   <header> Logros Obtenidos - Practica Sentido </header>
+                   <header> Logros Obtenidos</header>
                 </div>
 
                 <div class="card-body floating-label">
