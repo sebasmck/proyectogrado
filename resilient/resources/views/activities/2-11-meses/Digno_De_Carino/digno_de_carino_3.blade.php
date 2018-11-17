@@ -35,7 +35,7 @@ Digno de carino
                    <div class="col-sm-5">
                    <div>
                    <label id="labelpan9" class="btn btn-default btn-file" style="background-color:#0aa89e;color:white; color:white; border-radius: 25px;">
-                   Seleccionar Imagen <input type="file" name="fileToUpload9" style="display: none;" id="btnhid9">
+                   Seleccionar Imagen <input required type="file" name="fileToUpload9" style="display: none;" id="btnhid9">
                    </div>
                    <div>
                   <button id="buttonPass9" style="color:black;display:none;background-color:gray;border-radius:15px;border: 2px solid gray;" disabled>Imagen ya seleccionada</button>

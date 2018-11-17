@@ -49,18 +49,18 @@ Hasta el final
 <tr>
 <td>
 <label id="labelpan" class="btn btn-default btn-file" style="background-color:#0097A7;color:white;  border-radius: 25px;">
-    Seleccionar Imagen <input type="file" name="fileToUpload1" style="display: none;" id="btnhid">
+    Seleccionar Imagen <input required type="file" name="fileToUpload1" style="display: none;" id="btnhid">
 </label>
 <button id="buttonPass" style="color:black;background-color:gray;display:none;border-radius:15px;border: 2px solid gray;" disabled>Imagen ya seleccionada</button>
 </td>
 
 <td><label id="labelpan2" class="btn btn-default btn-file" style="background-color:#AFB42B; color:white;border-radius: 25px;">
-    Seleccionar Imagen <input type="file" name="fileToUpload2" style="display: none;" id="btnhid2">
+    Seleccionar Imagen <input required type="file" name="fileToUpload2" style="display: none;" id="btnhid2">
 </label>
 <button id="buttonPass2" style="color:black;background-color:gray;display:none;border-radius:15px;border: 2px solid gray;" disabled>Imagen ya seleccionada</button>
 </td>
 <td><label id="labelpan3" class="btn btn-default btn-file" style="background-color:#388E3C;color:white;  border-radius: 25px;">
-    Seleccionar Imagen <input type="file" name="fileToUpload3" style="display: none;" id="btnhid3">
+    Seleccionar Imagen <input required type="file" name="fileToUpload3" style="display: none;" id="btnhid3">
 </label>
 <button id="buttonPass3" style="color:black;background-color:gray;display:none;border-radius:15px;border: 2px solid gray;" disabled>Imagen ya seleccionada</button>
 </td>
@@ -69,18 +69,18 @@ Hasta el final
 <tr>
 <td>
 <label id="labelpan4" class="btn btn-default btn-file" style="background-color:#FBC02D; color:white; border-radius: 25px;">
-    Seleccionar Imagen <input type="file" name="fileToUpload4" style="display: none;" id="btnhid4">
+    Seleccionar Imagen <input required type="file" name="fileToUpload4" style="display: none;" id="btnhid4">
 </label>
 <button id="buttonPass4" style="color:black;background-color:gray;display:none;border-radius:15px;border: 2px solid gray;" disabled>Imagen ya seleccionada</button>
 </td>
 
 <td><label id="labelpan5" class="btn btn-default btn-file" style="background-color:#F57C00; color:white; border-radius: 25px;">
-    Seleccionar Imagen <input type="file" name="fileToUpload5" style="display: none;" id="btnhid5">
+    Seleccionar Imagen <input required type="file" name="fileToUpload5" style="display: none;" id="btnhid5">
 </label>
 <button id="buttonPass5" style="color:black;background-color:gray;display:none;border-radius:15px;border: 2px solid gray;" disabled>Imagen ya seleccionada</button>
 </td>
 <td><label id="labelpan6" class="btn btn-default btn-file" style="background-color:#5D4037;color:white; color:white; border-radius: 25px;">
-    Seleccionar Imagen <input type="file" name="fileToUpload6" style="display: none;" id="btnhid6">
+    Seleccionar Imagen <input required type="file" name="fileToUpload6" style="display: none;" id="btnhid6">
 </label>
 <button id="buttonPass6" style="color:black;background-color:gray;display:none;border-radius:15px;border: 2px solid gray;" disabled>Imagen ya seleccionada</button>
 </td>
@@ -90,18 +90,18 @@ Hasta el final
 <tr>
 <td>
 <label id="labelpan7" class="btn btn-default btn-file" style="background-color:#455A64; color:white; border-radius: 25px;">
-    Seleccionar Imagen <input type="file" name="fileToUpload7" style="display: none;" id="btnhid7">
+    Seleccionar Imagen <input required type="file" name="fileToUpload7" style="display: none;" id="btnhid7">
 </label>
 <button id="buttonPass7" style="color:black;background-color:gray;display:none;border-radius:15px;border: 2px solid gray;" disabled>Imagen ya seleccionada</button>
 </td>
 
 <td><label id="labelpan8" class="btn btn-default btn-file" style="background-color:#689F38; color:white; border-radius: 25px;">
-    Seleccionar Imagen <input type="file" name="fileToUpload8" style="display: none;" id="btnhid8">
+    Seleccionar Imagen <input required type="file" name="fileToUpload8" style="display: none;" id="btnhid8">
 </label>
 <button id="buttonPass8" style="color:black;background-color:gray;display:none;border-radius:15px;border: 2px solid gray;" disabled>Imagen ya seleccionada</button>
 </td>
 <td><label id="labelpan9" class="btn btn-default btn-file" style="background-color:#AFB42B;color:white; color:white; border-radius: 25px;">
-    Seleccionar Imagen <input type="file" name="fileToUpload9" style="display: none;" id="btnhid9">
+    Seleccionar Imagen <input required type="file" name="fileToUpload9" style="display: none;" id="btnhid9">
 </label>
 <button id="buttonPass9" style="color:black;background-color:gray;display:none;border-radius:15px;border: 2px solid gray;" disabled>Imagen ya seleccionada</button>
 </td>
@@ -184,6 +184,10 @@ $('#btnhid9').change(function(){
    $("#labelpan9").css("display","none");
    $("#buttonPass9").fadeIn(1000);
 });
+
+
+
+
 
 });
 </script>

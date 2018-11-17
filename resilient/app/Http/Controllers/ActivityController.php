@@ -732,7 +732,7 @@ class ActivityController extends Controller
         $id_usuario = auth()->id();
         $acudiente = Cuidador::where('id_usuario', $id_usuario)->value('Id_Acudiente');
 
-        $pathFiles = 'Images/ActivityDignoCarino/'.$acudiente;
+        $pathFiles = 'Images1/ActivityDignoCarino/'.$acudiente;
         //var_dump($acudiente);
 
             $file = $request->file('fileToUpload9');
