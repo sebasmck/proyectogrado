@@ -38,17 +38,12 @@ class ActivityController extends Controller
         // objeto de navegación guardado en el storage de la aplicación
         $infoNavegacion = Cache::store('database')->get(auth()->id());
 
-        // comprobación finalización de una actividad sin el infante seleccionado
+
         if(!isset($infoNavegacion['id_infante'])){
             return view('cuidador.menuCuidador');
         }
 
         $infante = $infoNavegacion['id_infante'];
-
-        if(!isset($infoNavegacion['id_actividad'])){
-            return $this->goToActivities($infante);
-        }
-
         $actividad = $infoNavegacion['id_actividad'];
 
         $relacionAcudienteInfante = AcudienteInfante::where('Id_Infante',$infante)
@@ -66,8 +61,8 @@ class ActivityController extends Controller
 
         $actividadesPendientes = ActividadAsignada::where('id_RelacionAcudienteInfante',$relacionAcudienteInfante->id)->whereNull('FechaFinalizada_Actividad_Terminada')->get();
 
-     
-        if(!empty($actividadesPendientes)) {
+
+        if(sizeof($actividadesPendientes) > 0) {
             return $this->goToActivities($infante);
         }else{
             if(auth()->user()->cuidador->finalizo_curso == 1){
@@ -81,6 +76,12 @@ class ActivityController extends Controller
                 return redirect()->route('/postest');
             }
         }
+
+    }
+
+    public function other(){
+        // comprobación finalización de una actividad sin el infante seleccionado
+
     }
 
 

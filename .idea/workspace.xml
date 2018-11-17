@@ -74,24 +74,24 @@
         <counts>
           <entry key="bootstrap-LICENSE" value="2" />
           <entry key="css" value="3" />
-          <entry key="env" value="5" />
+          <entry key="env" value="6" />
           <entry key="gitattributes" value="1" />
           <entry key="js" value="7" />
           <entry key="md" value="1" />
-          <entry key="php" value="459" />
+          <entry key="php" value="460" />
           <entry key="png" value="3" />
           <entry key="ts" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key=".env file" value="5" />
+          <entry key=".env file" value="6" />
           <entry key="Blade" value="288" />
           <entry key="CSS" value="3" />
           <entry key="Image" value="3" />
           <entry key="JavaScript" value="7" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="171" />
+          <entry key="PHP" value="172" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="TypeScript" value="1" />
         </counts>
@@ -99,18 +99,18 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="11" />
-          <entry key="env" value="20" />
+          <entry key="env" value="25" />
           <entry key="js" value="51" />
-          <entry key="php" value="56934" />
+          <entry key="php" value="57046" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key=".env file" value="20" />
+          <entry key=".env file" value="25" />
           <entry key="Blade" value="35040" />
           <entry key="HTML" value="63" />
           <entry key="JavaScript" value="51" />
-          <entry key="PHP" value="21830" />
+          <entry key="PHP" value="21942" />
           <entry key="PLAIN_TEXT" value="11" />
           <entry key="SQL" value="1" />
         </counts>
@@ -148,28 +148,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resilient/resources/views/cuidador/cuidador-infantes.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resilient/resources/views/DataInput/Datos_Acudiente.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="197" column="61" selection-start-line="197" selection-start-column="61" selection-end-line="197" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resilient/resources/views/DataInput/Datos_Nino.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4545">
@@ -190,8 +168,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resilient/app/Http/Controllers/ActivityController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="584">
-              <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+            <state relative-caret-position="148">
+              <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resilient/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="491">
+              <caret line="326" column="23" selection-start-line="326" selection-start-column="13" selection-end-line="326" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resilient/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -246,7 +242,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>finalizar</find>
       <find>apren</find>
       <find>11e7d7</find>
       <find>lista-a</find>
@@ -276,6 +271,7 @@
       <find>fecha</find>
       <find>Id_ViveInfante</find>
       <find>Edad_INF</find>
+      <find>como</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -289,7 +285,6 @@
         <option value="$PROJECT_DIR$/resilient/helpers/validation_helper.php" />
         <option value="$PROJECT_DIR$/resilient/public/js/utils/dryUtils.js" />
         <option value="$PROJECT_DIR$/resilient/config/cache.php" />
-        <option value="$PROJECT_DIR$/resilient/.env" />
         <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/libro_logros.blade.php" />
         <option value="$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/aprendamos_resiliencia/logrosObtenidos.blade.php" />
         <option value="$PROJECT_DIR$/resilient/app/AcudienteInfante.php" />
@@ -334,6 +329,7 @@
         <option value="$PROJECT_DIR$/resilient/resources/views/cuidador/dashboardInfante.blade.php" />
         <option value="$PROJECT_DIR$/resilient/resources/views/DataInput/Datos_Nino.blade.php" />
         <option value="$PROJECT_DIR$/resilient/app/Http/Controllers/DatosNinoController.php" />
+        <option value="$PROJECT_DIR$/resilient/.env" />
         <option value="$PROJECT_DIR$/resilient/app/Http/Controllers/ActivityController.php" />
       </list>
     </option>
@@ -464,22 +460,28 @@
               <item name="proyectogrado" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="resilient" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="proyectogrado" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="resilient" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="proyectogrado" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="resilient" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Controllers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="activities" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="proyectogrado" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="resilient" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="routes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -614,18 +616,18 @@
       <workItem from="1542329940986" duration="417000" />
       <workItem from="1542334728916" duration="4264000" />
       <workItem from="1542370855993" duration="20168000" />
-      <workItem from="1542421679078" duration="16504000" />
+      <workItem from="1542421679078" duration="20534000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="375305000" />
+    <option name="totallyTimeSpent" value="379335000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26120642" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26120642" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -638,7 +640,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32864866" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.88353413" weight="0.18378378" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.88353413" visible="true" weight="0.18378378" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.11732153" side_tool="true" weight="0.25621623" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32972974" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -654,13 +656,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/2-11-meses/gafas_de_las_emociones/relacion_videos_hijo.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="111" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resilient/resources/views/activities/3-11-meses/dia_del_elogio/tarea.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -803,13 +798,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resilient/routes/api.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resilient/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resilient/app/Http/Kernel.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -971,10 +959,24 @@
         <state relative-caret-position="-3600" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="326" column="23" selection-start-line="326" selection-start-column="13" selection-end-line="326" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resilient/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resilient/app/Http/Controllers/ActivityController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+        <state relative-caret-position="148">
+          <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
         </state>
       </provider>
     </entry>
