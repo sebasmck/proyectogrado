@@ -21,3 +21,5 @@ Homestead.json
 *.zip
 
 resilient/resources/views/posttest/preguntascierreposttest\.blade\.php
+
+resilient/resources/views/activities/3-11-meses/dia_del_elogio/logrosObtenidos\.blade\.php
