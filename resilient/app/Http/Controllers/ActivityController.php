@@ -66,7 +66,8 @@ class ActivityController extends Controller
 
         $actividadesPendientes = ActividadAsignada::where('id_RelacionAcudienteInfante',$relacionAcudienteInfante->id)->whereNull('FechaFinalizada_Actividad_Terminada')->get();
 
-        if(empty($actividadesPendientes)) {
+     
+        if(!empty($actividadesPendientes)) {
             return $this->goToActivities($infante);
         }else{
             if(auth()->user()->cuidador->finalizo_curso == 1){
@@ -101,7 +102,7 @@ class ActivityController extends Controller
         $semanaActual = intval($diferencia->days/7);
         $grupoPoblacional = GrupoPoblacional::where('EdadMinima_Grupo_Poblacional','=',$relacionAcudienteInfante->infante->Edad_Infante)
                                             ->where('EdadMaxima_Grupo_Poblacional','>',$relacionAcudienteInfante->infante->Edad_Infante)->first();
-        
+
         $actividadesAsignadas = DB::select('call get_activity(?,?)', [$relacionAcudienteInfante->id,$grupoPoblacional->Id_Grupo_Poblacional])  ;
         //$actividadesAsignadas = ActividadAsignada::where('id_RelacionAcudienteInfante', $relacionAcudienteInfante->id)->with(['actividad'=> function($query)
        // {$query->orderBy('semana')->get();}])->get();
