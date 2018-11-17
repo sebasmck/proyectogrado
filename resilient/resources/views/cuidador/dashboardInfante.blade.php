@@ -28,14 +28,14 @@ Home
                                 </div>
                             </div>
 
-                            <div class="col-md-6">  
+                           <!-- <div class="col-md-6">
                              <div class="card ">
                               <a href="{{ route('/cuidador-infantes') }}"><div class="card-body small-padding text-center ">
                                <img style="width:100%;height:300px" src="{{ asset('img/libros.jpg') }}" alt="">
                                  My BOOK
                                </div>
                               </a>
-                           </div> 
+                           </div> -->
                        </div>
 
                     </div>                    

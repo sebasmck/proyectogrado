@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('Registro') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}" onsubmit="return validate()">
@@ -47,10 +47,9 @@
                                     <option value="2">C.E</option>
                                     <option value="3">PASAPORTE</option>
                                 </select>
-
                             </div>
                             <div class="col-md-3">
-                                <input id="documento" type="" class="form-control{{ $errors->has('documento') ? ' is-invalid' : '' }} number" name="documento" value="{{ old('documento') }}" required autofocus maxlength="10">
+                                <input id="documento" type="text" class="form-control{{ $errors->has('documento') ? ' is-invalid' : '' }} number" name="identity-id" value="{{ old('documento') }}" required autofocus maxlength="10">
                             
                                 @if ($errors->has('documento'))
                                     <span class="invalid-feedback">
@@ -78,8 +77,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-                                oninvalid="this.setCustomValidity('la contraseña debe contener una mayuscula, numeros y debe tener 8 caracteres ')">
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" maxlength="10" required title="La contraseña debe tener 8 caracteres, 1 mayúscula, letras y números" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback">
@@ -93,7 +91,7 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Repita la contraseña') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation"  maxlength="10" required title="La contraseña debe tener 8 caracteres, 1 mayúscula, letras y números" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
                             </div>
                         </div>
 
@@ -221,6 +219,10 @@ Wagnild y Young sean utilizados exclusivamente con fines académicos de esta inv
 @section('addjs')
 <script>
 
+ $("#tipo-documento").change(function () {
+     $("#documento").val(null);
+ });
+
 jQuery.fn.preventDoubleSubmission = function() {
         $(this).on('submit',function(e){
             var $form = $(this);
@@ -264,11 +266,11 @@ $("#scrolleable").scroll();
   //Input que solo admite letras
   $(".justLetters").keypress(function(e){
   var key = e.keyCode || e.charCode || e.which;
-  
-if(e.charCode == 37 || e.charCode == 39){
-    e.preventDefault();
-    return;
-}
+
+  if(e.charCode == 37 || e.charCode == 39){
+        e.preventDefault();
+        return;
+    }
 
   if((key >= 65 && key <= 90)  || (key >=97 && key <= 122) || key == 32 || key == 37 || key == 39 || key == 127 || key ==8){
       
@@ -280,7 +282,15 @@ if(e.charCode == 37 || e.charCode == 39){
 
 //Input que admite solo números y la barrita (-)
  $(".number").keypress(function(event){
-         var key = event.KeyCode || event.charCode || event.which;
+     var key = event.KeyCode || event.charCode || event.which;
+
+     var tipoDocumento = $("#tipo-documento").val();
+
+
+     if(tipoDocumento == 3) //número pasaporte puede contener letras
+     {
+         return;
+     }
  
  if(event.charCode == 37 || event.charCode == 39){
     event.preventDefault();

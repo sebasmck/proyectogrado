@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Cuidador;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -48,11 +49,19 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, [
+        $messages = [
+            'unique' => 'El :attribute ya existe en nuestros registros por favor escoja otro',
+            'max' => 'el campo :attribute excede el máximo permitido',
+            'string' => 'el campo :attribute debe contener caracteres alfanuméricos'
+        ];
+
+        $validator = Validator::make($data, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-        ]);
+        ], $messages);
+
+        return $validator;
     }
 
     /**
@@ -70,8 +79,18 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
-       $user->id_estado = 1;
-       $user->save();
+        $user->id_estado = 1;
+        $user->save();
+
+       $cuidador = new Cuidador();
+       $cuidador->Nombre_Acudiente = $data['name'];
+       $cuidador->Apellido_Acudiente = $data['last-name'];
+       $cuidador->Id_TipoDocumento = $data['tipo-documento'];
+       $cuidador->NumeroDocumento_Acudiente = $data['identity-id'];
+       $cuidador->Correo_Acudiente = $data['email'];
+       $cuidador->id_usuario = $user->id;
+
+       $cuidador->save();
 
         return $user;
     }

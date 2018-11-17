@@ -103,13 +103,13 @@ Datos Acudiente
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="Nombre_Acudiente" id="Nombre_Acudiente" required>
+                            <input type="text" class="form-control" name="Nombre_Acudiente" id="Nombre_Acudiente" value="{{ $cuidador->Nombre_Acudiente }}" disabled>
                             <label for="Nombre_Acudiente">Nombres Completos del Acudiente:</label>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="Apellido_Acudiente" id="Apellido_Acudiente" required>
+                            <input type="text" class="form-control" name="Apellido_Acudiente" id="Apellido_Acudiente" value="{{ $cuidador->Apellido_Acudiente }}" disabled>
                             <label for="Apellido_Acudiente">Apellidos Completos del Acudiente:</label>
                         </div>
                     </div>
@@ -117,7 +117,7 @@ Datos Acudiente
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="Correo_Acudiente" id="Correo_Acudiente" required>
+                            <input type="text" class="form-control" name="Correo_Acudiente" id="Correo_Acudiente" value="{{ $cuidador->Correo_Acudiente }}" disabled="">
                             <label for="Correo_Acudiente">Dirección de correo electrónico:</label>
                         </div>
                     </div>
@@ -125,20 +125,20 @@ Datos Acudiente
                     <div class="col-sm-1">
                         <div class="form-group">
                             {{ Form::select('Id_TipoDocumento',
-                            $tipodoc->prepend('none')->pluck('Nombre_TipoDocumento', 'Id_TipoDocumento'),NULL, ['class'
-                            => 'form-control', 'id' => 'Id_TipoDocumento', 'required']) }}
+                            $tipodoc->prepend('none')->pluck('Nombre_TipoDocumento', 'Id_TipoDocumento'), $cuidador->Id_TipoDocumento, ['class'
+                            => 'form-control', 'id' => 'Id_TipoDocumento', 'disabled']) }}
                             <label for="Id_TipoDocumento">Tipo</label>
                         </div>
                     </div>
                     <div class="col-sm-5">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="NumeroDocumento_Acudiente" id="NumeroDocumento_Acudiente" required>
+                            <input type="text" class="form-control" name="NumeroDocumento_Acudiente" id="NumeroDocumento_Acudiente" value="{{ $cuidador->NumeroDocumento_Acudiente }}" disabled>
                             <label for="NumeroDocumento_Acudiente">Número de identificación</label>
                         </div>
                     </div>
                 </div>
                 {{-- PENDING 2 Id_RelacionInfante NEED EXTRA FIELD FOR OTRO --}}
-                <div class="row">
+                <!--<div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
                             {{ Form::select('Id_RelacionInfante',
@@ -153,9 +153,9 @@ Datos Acudiente
                             <label for="otrorelacion"> <b>Otro Relación infante</b> </label>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="row">
+               <!-- <div class="row">
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Cuidadores:</label>
@@ -177,9 +177,8 @@ Datos Acudiente
                                     {!! Form::checkbox('Tio', '1') !!}<span>Tio(a)</span>
                                 </label>
                             </div>
-                            <!--end .col -->
+
                         </div>
-                        <!--end .form-group -->
                     </div>
                     <br>
                     <div class="col-sm-3">
@@ -189,6 +188,7 @@ Datos Acudiente
                         </div>
                     </div>
                 </div>
+                -->
 
                 <div class="row">
                     <div class="col-sm-2">
@@ -253,69 +253,36 @@ Datos Acudiente
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <select required id="categories" name="categories" onchange="document.theform.showValue.value=this.value"
-                                class="form-control" required>
-                                <option value="">&nbsp;</option>
-                                <Option Value="Cundinamarca">Cundinamarca </Option>
-                                <Option Value="Magdalena">Magdalena</Option>
-                                <Option Value="Santander">Santander</Option>
-                            </select>
-                            <label for="select1">Departamento</label>
+                            {{ Form::select('Id_Departamento',
+                            $departamentos->prepend('none')->pluck('Nombre_Departamento','Id_Departamento'),NULL, ['class'
+                            => 'form-control', 'id' => 'departamentos', 'required']) }}
+                            <label for="departamentos">Departamento</label>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <select required name="items" id="items" class="form-control">
+                            <select required name="Id_Ciudad" id="ciudades" class="form-control">
                                 <option value="">&nbsp;</option>
-                                <Option Class="Cundinamarca" Value="Bogota">Bogota</Option>
-                                <Option Class="Cundinamarca" Value="Soacha">Soacha</Option>
-                                <Option Class="Cundinamarca" Value="Chia">Chia</Option>
-                                <Option Class="Cundinamarca" Value="Facatativá">Facatativá</Option>
-
-
-                                <option value="">&nbsp;</option>
-                                <Option Class="Magdalena" Value="Ciénaga">Ciénaga</Option>
-                                <Option Class="Magdalena" Value="StaMarta">Sta Marta</Option>
-                                <Option Class="Magdalena" Value="ZonaBananera">Zona Bananera</Option>
-                                <Option Class="Magdalena" Value="plato">plato</Option>
-
-
-
-                                <option value="">&nbsp;</option>
-                                <Option Class="Santander" Value="Automobile">Piedecuesta</Option>
-                                <Option Class="Santander" Value="Girón">Girón</Option>
-                                <Option Class="Santander" Value="Cúcuta">Cúcuta</Option>
-                                <Option Class="Santander" Value="Bucaramanga">Bucaramanga</Option>
-
                             </select>
-                            <label for="select1">Ciudad</label>
+                            <label for="ciudades">Ciudad</label>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <select required id="area" name="Id_Area" class="form-control">
-                                <option value="">&nbsp;</option>
-                                <option value="30">Área Rural</option>
-                                <option value="30">Área Rural Dispersa</option>
-                                <option value="30">Área Urbana</option>
-                            </select>
-                            <label for="select1">Área</label>
+                            {{ Form::select('Id_Area',
+                            $areasociodemografica->prepend('none')->pluck('Nombre_Area', 'Id_Area'),NULL, ['class'
+                            => 'form-control', 'id' => 'areasociodemografica', 'required']) }}
+                            <label for="areasociodemografica">Área</label>
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div required class="form-group">
-                            <select id="Id_NivelSocioEconomico" name="Id_NivelSocioEconomico" class="form-control">
-                                <option value="">&nbsp;</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                            </select>
-                            <label for="select1">Estrato</label>
+                        <div class="form-group">
+                            {{ Form::select('Id_NivelSocioEconomico',
+                            $nivelsocioeconomico->prepend('none')->pluck('Numero_NivelSocieconomico', 'Id_NivelSocioEconomico'),NULL, ['class'
+                            => 'form-control', 'id' => 'nivelsocioeconomico', 'required']) }}
+                            <label for="nivelsocioeconomico">Estrato</label>
                         </div>
                     </div>
                 </div>
@@ -346,6 +313,29 @@ Datos Acudiente
 
 preventDoubleSubmit();
 //Validation on relacion infante
+
+$('#departamentos').change(function(event){
+    var selectorDepartamento = event.target;
+    var html = "<option value=\"\"></option>";
+    $('#ciudades').html(html);
+    if(selectorDepartamento.value !== ""){
+        var idDepartamento = selectorDepartamento.value;
+        var token = $('input[name="_token"]').val();
+        $.ajax({
+            url:"{{ route('/datoscuidador.ciudades') }}",
+            method:"POST",
+            data: {idDepartamento: idDepartamento, _token: token},
+            success: function(result){
+                var html = "<option value=\"\"></option>";
+                for(var index in result){
+                    var ciudad = result[index];
+                    html += "<option value="+ciudad['Id_Ciudad']+">"+ciudad['Nombre_Ciudad']+"</option>";
+                }
+                $('#ciudades').html(html);
+            }
+        });
+    }
+});
 
 $('#Id_RelacionInfante').change(function(){
     if($(this).val() == '6'){

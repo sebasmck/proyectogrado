@@ -264,7 +264,7 @@
 
                 {{-- Slideshow --}}
 
-                <img style="margin-bottom:5%; margin-top: 15%" src="{{asset('img/ueblogo.png')}}" width="15%" />
+                <img style="margin-bottom:5%;" src="{{asset('img/ueblogo.png')}}" width="15%" />
 
                 
 
@@ -272,23 +272,19 @@
 
                 <div class="bss-slides demo1" tabindex="1" autofocus="autofocus">
                     <figure>
-                        <img src="{{asset('img/home/family_1.jpeg')}}" width="100%" />
+                        <img src="{{asset('img/home/family_1.jpeg')}}" width="100%" height="80%"/>
                         <figcaption>Resilient</figcaption>
                     </figure>
                     <figure>
-                        <img src="{{asset('img/home/family_2.jpeg')}}" width="100%" />
+                        <img src="{{asset('img/home/family_3.jpeg')}}" width="100%" height="80%" />
                         <figcaption>Resilient</figcaption>
                     </figure>
                     <figure>
-                        <img src="{{asset('img/home/family_3.jpeg')}}" width="100%" />
+                        <img src="{{asset('img/home/family_4.jpeg')}}" width="100%" height="80%" />
                         <figcaption>Resilient</figcaption>
                     </figure>
                     <figure>
-                        <img src="{{asset('img/home/family_4.jpeg')}}" width="100%" />
-                        <figcaption>Resilient</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="{{asset('img/home/family_5.jpeg')}}" width="100%" />
+                        <img src="{{asset('img/home/family_5.jpeg')}}" width="100%" height="80%" />
                         <figcaption>Resilient</figcaption>
                     </figure>
                 </div> <!-- // bss-slides -->

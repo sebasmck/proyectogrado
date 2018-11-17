@@ -31,6 +31,8 @@ Route::get('/menuCuidador', 'HomeController@mostrarMenuCuidador')->name('/menuCu
 
 Route::Resource('cuidador', 'DatosCuidadorController');
 
+Route::post('/datoscuidador/ciudades','DatosCuidadorController@getCities')->name('/datoscuidador.ciudades');
+
 Route::get('/datoscuidador', 'DatosCuidadorController@index')->name('/datoscuidador');
 
 Route::get('/datosnino', 'DatosNinoController@index')->name('/datosnino');
