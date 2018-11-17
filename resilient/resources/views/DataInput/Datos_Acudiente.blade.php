@@ -104,13 +104,13 @@ Datos Acudiente
                     <div class="col-sm-6">
                         <div class="form-group">
                             <input type="text" class="form-control" name="Nombre_Acudiente" id="Nombre_Acudiente" value="{{ $cuidador->Nombre_Acudiente }}" disabled>
-                            <label for="Nombre_Acudiente">Nombres Completos del Acudiente:</label>
+                            <label for="Nombre_Acudiente">Nombres completos del acudiente:</label>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <input type="text" class="form-control" name="Apellido_Acudiente" id="Apellido_Acudiente" value="{{ $cuidador->Apellido_Acudiente }}" disabled>
-                            <label for="Apellido_Acudiente">Apellidos Completos del Acudiente:</label>
+                            <label for="Apellido_Acudiente">Apellidos completos del acudiente:</label>
                         </div>
                     </div>
                 </div>
@@ -214,7 +214,7 @@ Datos Acudiente
                             {{ Form::select('Id_EstadoCivil',
                             $estadocivil->prepend('none')->pluck('Nombre_EstadoCivil', 'Id_EstadoCivil'),NULL, ['class'
                             => 'form-control', 'id' => 'Id_EstadoCivil', 'required']) }}
-                            <label for="Id_EstadoCivil">Estado Civil</label>
+                            <label for="Id_EstadoCivil">Estado civil</label>
                         </div>
                     </div>
                 </div>

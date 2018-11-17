@@ -58,12 +58,6 @@ Datos Niño
                                             </div>
                                         </div>
                             </div>
-                            <div class="col-sm-4">
-                                    <div class="form-group">
-                                            <input type="number" class="form-control" id="Edad_Infante" name="Edad_Infante">
-                                            <label for="edad">Edad</label>
-                                        </div>
-                            </div>
                     </div>
                     <div class="row">
                             <div class="col-sm-6">
@@ -72,7 +66,6 @@ Datos Niño
                                                 <option value="">&nbsp;</option>
                                                 <option value="1">Régimen contributivo</option>
                                                 <option value="2">Régimen subsidiado</option>
-                                                <option value="3">Sisben</option>
                                          </select>
                                          <label for="Id_SistemaDeSalud">Sistema de salud al que se encuentra inscrito el niño/a</label>
                                     </div>
@@ -124,12 +117,12 @@ Datos Niño
                                 <select id="Id_VinculoPadre" name="Id_VinculoPadre" class="form-control">
                                            <option value="">&nbsp;</option>
                                            <option value="1">Casados</option>
-                                           <option value="2">Union Libre</option>
+                                           <option value="2">Union libre</option>
                                            <option value="3">Separados</option>
                                            <option value="4">Divorciados</option>
-                                           <option value="5">"Fallecido Madre"</option>
-                                           <option value="6">"Fallecido Padre"</option>
-                                           <option value="7">"Otros"</option>
+                                           <option value="5">Fallecido madre</option>
+                                           <option value="6">Fallecido padre</option>
+                                           <option value="7">Otros</option>
                                 </select>
                                 <label for="select1">Vínculo de los padres </label>
                             </div>
@@ -158,7 +151,7 @@ Datos Niño
                         <div class="col-sm-5">
                             <div class="form-group">
                                 <label>¿Qué edad tenía la madre cuando quedó en embarazo? </label>
-                                <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input  type="text" class="form-control ui-spinner-input" id="Edad_MadreEmbarazo" name="Edad_MadreEmbarazo" value="19" aria-valuemin="16" aria-valuenow="19" autocomplete="off" role="spinbutton">  <a class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"></a><a class="ui-spinner-button ui-spinner-down ui-corner-br" tabindex="-1"></a></span>
+                                <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input  type="text" class="form-control ui-spinner-input number" id="Edad_MadreEmbarazo" name="Edad_MadreEmbarazo" value="19" aria-valuemin="16" aria-valuenow="19" autocomplete="off" role="spinbutton" maxlength="2">  <a class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"></a><a class="ui-spinner-button ui-spinner-down ui-corner-br" tabindex="-1"></a></span>
                             </div>
                         </div>
 
@@ -179,7 +172,7 @@ Datos Niño
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label>¿A qué edad gestacional nació el niño(a)?</label>
-                                <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input type="text"  class="form-control ui-spinner-input" id="Edad_Gestacional" name="Edad_Gestacional" value="19" aria-valuemin="16" aria-valuenow="19" autocomplete="off" role="spinbutton">  <a class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"></a><a class="ui-spinner-button ui-spinner-down ui-corner-br" tabindex="-1"></a></span>
+                                <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input type="text"  class="form-control ui-spinner-input number" id="Edad_Gestacional" name="Edad_Gestacional" value="19" aria-valuemin="16" aria-valuenow="19" autocomplete="off" role="spinbutton" maxlength="2">  <a class="ui-spinner-button ui-spinner-up ui-corner-tr" tabindex="-1"></a><a class="ui-spinner-button ui-spinner-down ui-corner-br" tabindex="-1"></a></span>
                             </div>
                         </div>
 
@@ -336,6 +329,28 @@ Datos Niño
     }
 });
 
+
+
+
 </script>
 
+
+<script>
+$(document).ready(function(){
+    $(".number").keypress(function(event){
+     var key = event.KeyCode || event.charCode || event.which;
+ 
+ if(event.charCode == 37 || event.charCode == 39){
+    event.preventDefault();
+    return;
+}
+
+        if((key >= 48 && key <= 57) || key ==8 || key ==45 || key == 37 || key == 39) {
+        
+        }else{
+         event.preventDefault();
+        }
+     });
+});
+</script>
 @endsection
