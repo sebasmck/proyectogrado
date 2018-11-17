@@ -16,9 +16,9 @@ PRACTICA EL SENTIDO DEL HUMOR TC
 
                 <div class="card-body floating-label">
                 <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;" > 
-                       <p style="text-align:left; text-justify: inter-word;"><b>Para esta actividad necesitamos que, en uno de tus tiempos libres,
+                       <p style="text-align:left; text-justify: inter-word;">Para esta actividad necesitamos que, en uno de tus tiempos libres,
                         puede ser después de cenar en la noche, invites a tu niña o niño a jugar con los cubos, 
-                        en esta etapa de la vida será una actividad muy atractiva. </b></p>  
+                        en esta etapa de la vida será una actividad muy atractiva. </p>  
                  </div>
 
                  <div class="title" >
