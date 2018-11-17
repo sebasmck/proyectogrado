@@ -99,9 +99,9 @@ Creando Confianza 2
                          <img src="{{asset('ActividadCreandoConfianza/Escalon7.png')}}" align="left"  alt="E7" id="E7" style = "display:none;margin-top:50px;">
                          <img src="{{asset('ActividadCreandoConfianza/Escalon8.png')}}" align="left"  alt="E8" id="E8" style = "display:none;margin-top:50px;">
                          <img src="{{asset('ActividadCreandoConfianza/Escalon9.png')}}" align="left"  alt="E9" id="E9" style = "display:none;margin-top:50px;">
-
+                         <img src="{{asset('ActividadCreandoConfianza/Escalon10.png')}}" align="left"  alt="E10" id="E10" style = "display:none;margin-top:50px;"> 
                      </div>
-                     <img src="{{asset('ActividadCreandoConfianza/Final.png')}}" alt="Final" id="Final" style = "float:right; margin-right:290px;">
+                     <img src="{{asset('ActividadCreandoConfianza/Final.png')}}" alt="Final" id="Final" style = "float:right; margin-right:240px;">
                  </div>  
                 {{-- FIN-Puente --}}
                 </div> {{-- card-body no padding --}}

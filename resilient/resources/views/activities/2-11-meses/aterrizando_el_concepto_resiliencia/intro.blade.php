@@ -837,7 +837,7 @@ button:hover {
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="title animated lightSpeedIn" style="font-family: 'Raleway', sans-serif; font-size: 40px;" >
-                Actividad Aterrizando el concepto de resiliencia
+                Actividad aterrizando el concepto de resiliencia
             </div>
         </div> 
         

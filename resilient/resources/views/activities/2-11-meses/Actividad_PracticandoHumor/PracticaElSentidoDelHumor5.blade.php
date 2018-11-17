@@ -18,9 +18,9 @@ PRACTICA EL SENTIDO DEL HUMOR
                 <div class="card-body floating-label">
                 <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;" > 
                        <p style="text-align:left; text-justify: inter-word;">
-                       <b>En cada una de las actividades se utilizaron momentos cotidianos en la vida de tu niño o niña donde es posible fomentar el sentido del humor. Siendo una característica 
+                       En cada una de las actividades se utilizaron momentos cotidianos en la vida de tu niño o niña donde es posible fomentar el sentido del humor. Siendo una característica 
                        muy importante queremos que la sigas implementando después de esta semana, cuando se presente la oportunidad.  
-                       Teniendo en cuenta lo anterior. </b></p> 
+                       Teniendo en cuenta lo anterior. </p> 
                  </div>
 
                  <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;" > 
