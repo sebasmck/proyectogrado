@@ -6,6 +6,7 @@ use App\Actividad;
 use App\ActividadAsignada;
 use App\AcudienteInfante;
 use App\Cuidador;
+use App\GrupoPoblacional;
 use App\RespuestaAbiertaActividad;
 use App\LogrosActividad;
 use App\RespuestaMultipleActividad;
@@ -98,14 +99,12 @@ class ActivityController extends Controller
         $dateFinalCurso->setTimestamp($fechaFinalCurso);
         $diferencia = $dateInicioCurso->diff($fechaActual);
         $semanaActual = intval($diferencia->days/7);
-        $actividadesAsignadas = DB::select('select c.*,a.Id_Actividad,a.FechaFinalizada_Actividad_Terminada,a.Id as IdActividadAsignada, b.semana 
-        from actividad_asignada a , actividad_grupo b , actividad c 
-        where a.Id_Actividad = c.Id_Actividad 
-              and b.Id_Actividad = c.Id_Actividad
-                and a.id_RelacionAcudienteInfante = ? order by b.semana;', [$relacionAcudienteInfante->id])  ; 
+        $grupoPoblacional = GrupoPoblacional::where('EdadMinima_Grupo_Poblacional','=',$relacionAcudienteInfante->infante->Edad_Infante)
+                                            ->where('EdadMaxima_Grupo_Poblacional','>',$relacionAcudienteInfante->infante->Edad_Infante)->first();
+        
+        $actividadesAsignadas = DB::select('call get_activity(?,?)', [$relacionAcudienteInfante->id,$grupoPoblacional->Id_Grupo_Poblacional])  ;
         //$actividadesAsignadas = ActividadAsignada::where('id_RelacionAcudienteInfante', $relacionAcudienteInfante->id)->with(['actividad'=> function($query)
        // {$query->orderBy('semana')->get();}])->get();
-
         $actividadPendiente=null;
         //$actividades = Array();
         if($dateFinalCurso >= $fechaActual)
@@ -113,11 +112,11 @@ class ActivityController extends Controller
             $parar = false;
             $idActividadPendiente = null;
             for($i = 0; $i < sizeof($actividadesAsignadas) && $parar == false ; $i++){
-               $actividadAsignadadActual = $actividadesAsignadas[$i];
-               if(!$actividadAsignadadActual->FechaFinalizada_Actividad_Terminada){
-                   $parar = true;
-                   $idActividadPendiente = $actividadAsignadadActual->IdActividadAsignada;
-               }
+                $actividadAsignadadActual = $actividadesAsignadas[$i];
+                if(!$actividadAsignadadActual->FechaFinalizada_Actividad_Terminada){
+                    $parar = true;
+                    $idActividadPendiente = $actividadAsignadadActual->IdActividadAsignada;
+                }
             }
             if($idActividadPendiente){
                 $actividadPendiente = ActividadAsignada::find($idActividadPendiente);
@@ -125,7 +124,9 @@ class ActivityController extends Controller
 
         }
 
-      return view('activities.moduloActividades', ['activities' => $actividadesAsignadas, 'actividadPendiente' => $actividadPendiente?$actividadPendiente->actividad:$actividadPendiente, 'semanaActual' => $semanaActual]);
+        return view('activities.moduloActividades', ['activities' => $actividadesAsignadas, 'actividadPendiente' => $actividadPendiente?$actividadPendiente->actividad:$actividadPendiente, 'semanaActual' => $semanaActual]);
+
+
     }
     
     public function aprendamosResilienciaIntro()

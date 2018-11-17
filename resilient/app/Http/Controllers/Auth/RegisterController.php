@@ -52,7 +52,8 @@ class RegisterController extends Controller
         $messages = [
             'unique' => 'El :attribute ya existe en nuestros registros por favor escoja otro',
             'max' => 'el campo :attribute excede el máximo permitido',
-            'string' => 'el campo :attribute debe contener caracteres alfanuméricos'
+            'string' => 'el campo :attribute debe contener caracteres alfanuméricos',
+            'confirmed' => 'La contraseña debe coincidir'
         ];
 
         $validator = Validator::make($data, [
