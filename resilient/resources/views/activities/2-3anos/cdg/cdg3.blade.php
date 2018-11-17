@@ -51,7 +51,7 @@ COSAS DE GRANDE
             </div>
 
             <div class="card-body floating-label">
-                <p>ANTES </p> <br>
+                <b>ANTES </b> <br>
                 <ol>
                     <li>Invita a tu hijo a realizar la actividad</li>
                     <li>Explícale los elementos que se involucran en cada una de ellas</li>

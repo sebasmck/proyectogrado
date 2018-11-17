@@ -27,7 +27,7 @@ COSAS DE GRANDE
                                 Para esta oportunidad se utilizarán todas las actividades o tareas que diariamente se
                                 realizan en la casa como parte de la rutina. A continuación, encontrarás 4 situaciones
                                 diarias de una rutina de niños de 2 a 3 años en donde le otorgarás un papel importante
-                                a tu hijo. Como ves son actividades que se realizan a diario o que se realizan por lo
+                                a tu hijo. Como veras son actividades que se realizan a diario o que se realizan por lo
                                 menos una vez a la semana. Ten presente las recomendaciones antes, durante y después de
                                 la actividad.
                             </p>

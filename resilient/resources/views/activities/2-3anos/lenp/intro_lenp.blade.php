@@ -817,7 +817,7 @@ button:hover {
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="title animated lightSpeedIn" style="font-family: 'Raleway', sans-serif; font-size: 40px;" >
-                Actividad: Las emociones de nuestros Padres/Cuidadores
+                Actividad las emociones de nuestros padres/cuidadores
             </div>
         </div> 
         

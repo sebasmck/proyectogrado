@@ -837,7 +837,7 @@ button:hover {
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="title animated lightSpeedIn" style="font-family: 'Raleway', sans-serif; font-size: 40px;" >
-                Actividad Grande y fuerte
+                Actividad grande y fuerte
             </div>
         </div> 
         

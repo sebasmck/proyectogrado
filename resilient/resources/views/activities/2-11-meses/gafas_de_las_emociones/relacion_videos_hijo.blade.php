@@ -56,7 +56,7 @@
 
                     <div style="width: 66%; margin: auto; text-align: center">
                         <label id="si" class="radio radio-styled radio-inline">
-                            <input type="radio" name="option6" value="1"  required="true" checked="checked" />
+                            <input type="radio" name="option6" value="1"  required="true"  />
                             <img src=" {{ asset('ActividadGafasDeLasEmociones/005_aprove.png') }}" width="100px" height="100px" />
                         </label>
 
