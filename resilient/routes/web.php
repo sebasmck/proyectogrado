@@ -444,3 +444,16 @@ Route::get('/CaritasFelices5', 'ActivityController@CaritasFelices5')->name('/Car
 Route::get('/CaritasFelices6', 'ActivityController@CaritasFelices6')->name('/CaritasFelices6');
 Route::get('/CaritasFelices7', 'ActivityController@CaritasFelices7')->name('/CaritasFelices7');
 Route::get('/CulminacionCaritasF', 'ActivityController@culminadoCaritasFelices')->name('/CulminacionCaritasF');
+
+// actividad que quiero se cuando sea grande 
+Route::get('/IntroQuieroSerGrande', 'ActivityController@introqqscsg')->name('/IntroQuieroSerGrande');
+Route::get('/QuieroSerGrande1', 'ActivityController@qqscsg1')->name('/QuieroSerGrande1');
+Route::get('/QuieroSerGrande2', 'ActivityController@qqscsg2')->name('/QuieroSerGrande2');
+Route::get('/QuieroSerGrande3', 'ActivityController@qqscsg3')->name('/QuieroSerGrande3');
+Route::get('/QuieroSerGrandeLogros', 'ActivityController@qqscsgLogros')->name('/QuieroSerGrandeLogros');
+Route::get('/CulminacionQuieroSerGrande', 'ActivityController@culminadoqqscsg')->name('/CulminacionQuieroSerGrande');
+
+// actividad de 0 a 6 meses UNA VEZ MÁS EN MIS BRAZOS 
+Route::get('/IntroUnaVezBrazos', 'ActivityController@introUnaVezMasBrazos')->name('/IntroUnaVezBrazos');
+Route::get('/UnaVezBrazos1', 'ActivityController@UnaVezMasBrazos1')->name('/UnaVezBrazos1');
+Route::get('/CulminacionUnaVezBrazos', 'ActivityController@culminadoUnaVezMasBrazos')->name('/CulminacionUnaVezBrazos');

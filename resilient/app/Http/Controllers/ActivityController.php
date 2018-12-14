@@ -1127,5 +1127,47 @@ class ActivityController extends Controller
         return view(self::URL_ACTIVITIE_UM."culminando_una_manita");
     }
 
+    // Actividad QUE QUIERES SER CUANDO SEAS GRANDE
+      
+    public function introqqscsg()
+    {
+        return view('activities.4-11-meses.que_qs_cs_grande.intro_SerGrande');
+    }
+
+    public function qqscsg1()
+    {
+        return view('activities.4-11-meses.que_qs_cs_grande.SerGrande1');
+    }
+    public function qqscsg2()
+    {
+        return view('activities.4-11-meses.que_qs_cs_grande.SerGrande2');
+    }
+    public function qqscsg3()
+    {
+        return view('activities.4-11-meses.que_qs_cs_grande.SerGrande3');
+    }
+    public function qqscsgLogros()
+    {
+        return view('activities.4-11-meses.que_qs_cs_grande.logrosObtenidos');
+    }
+    public function culminadoqqscsg()
+    {
+        return view('activities.4-11-meses.que_qs_cs_grande.CulminadoSerGrande');
+    }
+
+    // actividad de 0 a 6 meses UNA VEZ MÁS EN MIS BRAZOS 
+    public function introUnaVezMasBrazos()
+    {
+        return view('activities.0-6-meses.UnaVezMasBrazos.intro_UnaVezMasBrazos');
+    }
+    public function UnaVezMasBrazos1()
+    {
+        return view('activities.0-6-meses.UnaVezMasBrazos.UnaVezMasBrazos1');
+    }
+    public function culminadoUnaVezMasBrazos()
+    {
+        return view('activities.4-11-meses.UnaVezMasBrazos.CulminadoUnaVezMasBrazos');
+    }
+
 
 }
