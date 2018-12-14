@@ -17,15 +17,27 @@ Actividad Una Vez Mas En Mis Brazos 1
               </div>
 
                <div class="modal-body">
-                   
+                  <div  style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;">
+                    <p style="text-align:justify; text-justify: inter-word;">
+                      <b>Edad permitida:</b> Esta posición la puedes usar desde los 0 meses
+                    </p>      
+                  </div>
 
-                  <div style="text-align:center;">
-                        <p> A continuación, se te presentan un par de videos que probablemente te permitan 
-                            identificar momentos que en la cotidianidad puedes generar para fortalecer la confianza 
-                            en tu hijo y que ello le aporte para tomar decisiones.
-                        </p>
-                        <div>
-                          <iframe width="560" height="315" id="video1" style="display:none;" src="https://www.youtube.com/embed/mfeCeebBZVQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  <div style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;">
+                    <b><i>Instrucciones</i></b>    
+                    <p style="text-align:justify; text-justify: inter-word;"> 
+                      Primero que deberás hacer, es recostar a tú bebé en un lugar donde 
+                      haya espacio y comodidad (por ejemplo la cama). Ahora desliza tu mano
+                       derecha entre su cabeza y su cuello; y la izquierda debajo de su cola, 
+                       y mientras haces esto, tu mano derecha se irá deslizando de su cabeza 
+                       hasta llegar al final de su espalda y tu mano izquierda deberá estar 
+                       sosteniendo su colita y sus piernas, de forma que al final la cabeza
+                       y la espalda de tu bebé queden acostados sobre tu brazo derecho, y 
+                       su colita y sus piernas estarán sostenidas por tu brazo izquierdo.
+                     </p>
+
+                         <div>
+                            
                         </div>    
                   </div>
                 </div> <!--modal body close -->
