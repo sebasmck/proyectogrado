@@ -22,7 +22,6 @@ class ActivityController extends Controller
     const URL_APRENDAMOS_DE_RESILIENCIA_ = "activities.2-11-meses.aprendamos_resiliencia.aprendamos_resiliencia";
     const URL_ACTIVIDAD_1_PRENDIENDO_MOTORES = "activities.2-11-meses.aprendamos_resiliencia.prendiendo_motores";
 
-
     const URL_ACTIVITIES_2_11_MESES = "activities.2-11-meses.";
     const URL_ACTIVITIES_3_11_MESES = "activities.3-11-meses.";
     const URL_ACTIVITIES_4_11_MESES = "activities.4-11-meses.";
@@ -32,6 +31,8 @@ class ActivityController extends Controller
     const URL_ACTIVITIE_PE = self::URL_ACTIVITIES_3_11_MESES."papito_escultor.";
     const URL_ACTIVITIE_DDE = self::URL_ACTIVITIES_3_11_MESES."dia_del_elogio.";
     const URL_ACTIVITIE_ICE = self::URL_ACTIVITIES_4_11_MESES."identificacion_control_emocional.";
+
+    const URL_ACTIVITIE_UM = self::URL_ACTIVITIES_3_11_MESES."una_manita.";
 
     public function finalizarActividad(){
 
@@ -1082,5 +1083,49 @@ class ActivityController extends Controller
     {
         return view('activities.3-11-meses.CaritasFelices.CulminadoCaritasFelices');
     }
+
+    // Actividad UM
+
+    public function intro_um(){
+        return view(self::URL_ACTIVITIE_UM."intro");
+    }
+
+    public function cuandoPrestoAtencion_um(){
+        return view(self::URL_ACTIVITIE_UM."cuando_presto_atencion");
+
+    }
+
+    public function losOjosDePapa_um(){
+        return view(self::URL_ACTIVITIE_UM."ojos_de_papa");
+
+    }
+
+    public function descubreLasPalabras_um(){
+        return view(self::URL_ACTIVITIE_UM."descubre_palabras");
+
+    }
+
+    public function piensaEnRedes_um(){
+        return view(self::URL_ACTIVITIE_UM."piensa_en_redes");
+
+    }
+
+    public function yoSoyElMediador_um(){
+        return view(self::URL_ACTIVITIE_UM."yo_soy_mediador");
+    }
+
+    public function tarea_um(){
+        return view(self::URL_ACTIVITIE_UM."tareas");
+
+    }
+
+    public function logrosObtenidos_um(){
+        return view(self::URL_ACTIVITIE_UM."logrosObtenidos");
+    }
+
+    public function culminar_um(){
+        return view(self::URL_ACTIVITIE_UM."culminando_una_manita");
+    }
+
 
 }

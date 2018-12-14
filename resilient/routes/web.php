@@ -217,6 +217,20 @@ Route::prefix('actividades')->group(function () {
     Route::get('/identificacion-control-emocional-4', 'ActivityController@tareas_semana_ice')->name('/identificacion-control-emocional-4');
     Route::get('/identificacion-control-emocional-5', 'ActivityController@logros_ice')->name('/identificacion-control-emocional-5');
     Route::get('/identificacion-control-emocional-6', 'ActivityController@libroLogros_ice')->name('/identificacion-control-emocional-6');
+
+
+    // Actividad una manita
+
+    Route::get('/una-manita-1', 'ActivityController@intro_um')->name('/una-manita-1');
+    Route::get('/una-manita-2', 'ActivityController@cuandoPrestoAtencion_um')->name('/una-manita-2');
+    Route::get('/una-manita-3', 'ActivityController@losOjosDePapa_um')->name('/una-manita-3');
+    Route::get('/una-manita-4', 'ActivityController@descubreLasPalabras_um')->name('/una-manita-4');
+    Route::get('/una-manita-5', 'ActivityController@piensaEnRedes_um')->name('/una-manita-5');
+    Route::get('/una-manita-6', 'ActivityController@yoSoyElMediador_um')->name('/una-manita-6');
+    Route::get('/una-manita-7', 'ActivityController@tarea_um')->name('/una-manita-7');
+    Route::get('/una-manita-8', 'ActivityController@logrosObtenidos_um')->name('/una-manita-8');
+    Route::get('/una-manita-9', 'ActivityController@culminar_um')->name('/una-manita-9');
+
 });
 
 //Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');
