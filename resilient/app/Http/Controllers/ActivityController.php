@@ -1037,6 +1037,50 @@ class ActivityController extends Controller
     public function CulminadoActividadAg(){
         return view('activities.2-3anos.ag.CulminadoActividadAg');
     }
+    
+    
+    // Actividad Caritas Felices 
 
+    public function introCaritasFelices()
+    {
+        return view('activities.3-11-meses.CaritasFelices.intro_CaritasFelices');
+    }
+
+    public function CaritasFelices1()
+    {
+        return view('activities.3-11-meses.CaritasFelices.CaritasFelices1');
+    }
+    public function CaritasFelices2()
+    {
+        return view('activities.3-11-meses.CaritasFelices.CaritasFelices2');
+    }
+    public function CaritasFelices3()
+    {
+        return view('activities.3-11-meses.CaritasFelices.CaritasFelices3');
+    }
+
+    public function CaritasFelices4()
+    {
+        return view('activities.3-11-meses.CaritasFelices.CaritasFelices4');
+    }
+
+    public function CaritasFelices5()
+    {
+        return view('activities.3-11-meses.CaritasFelices.CaritasFelices5');
+    }
+
+    public function CaritasFelices6()
+    {
+        return view('activities.3-11-meses.CaritasFelices.CaritasFelices6');
+    }
+    public function CaritasFelices7()
+    {
+        return view('activities.3-11-meses.CaritasFelices.logrosObtenidos');
+    }
+
+    public function culminadoCaritasFelices()
+    {
+        return view('activities.3-11-meses.CaritasFelices.CulminadoCaritasFelices');
+    }
 
 }

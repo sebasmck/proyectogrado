@@ -420,3 +420,13 @@ Route::get('/ag_culminado', "ActivityController@CulminadoActividadAg")->name('/a
 //Ruta módulo investigador
 Route::get('/menuInvestigador', 'MenuInvestigadorController@index')->name('/menuInvestigador');
 
+// actividad Caritas felices 
+Route::get('/IntroCaritasF', 'ActivityController@introCaritasFelices')->name('/IntroCaritasF');
+Route::get('/CaritasFelices1', 'ActivityController@CaritasFelices1')->name('/CaritasFelices1');
+Route::get('/CaritasFelices2', 'ActivityController@CaritasFelices2')->name('/CaritasFelices2');
+Route::get('/CaritasFelices3', 'ActivityController@CaritasFelices3')->name('/CaritasFelices3');
+Route::get('/CaritasFelices4', 'ActivityController@CaritasFelices4')->name('/CaritasFelices4');
+Route::get('/CaritasFelices5', 'ActivityController@CaritasFelices5')->name('/CaritasFelices5');
+Route::get('/CaritasFelices6', 'ActivityController@CaritasFelices6')->name('/CaritasFelices6');
+Route::get('/CaritasFelices7', 'ActivityController@CaritasFelices7')->name('/CaritasFelices7');
+Route::get('/CulminacionCaritasF', 'ActivityController@culminadoCaritasFelices')->name('/CulminacionCaritasF');
