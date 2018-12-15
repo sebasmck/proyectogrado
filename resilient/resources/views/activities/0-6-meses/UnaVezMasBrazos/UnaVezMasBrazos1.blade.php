@@ -3,7 +3,13 @@
 Actividad Una Vez Mas En Mis Brazos 1  
 @endsection
 
-@section('addcss')
+@section('content')
+<div class="container" id="initialContent">
+    <div align="center">
+                <img style="width:300px;height:300px;text-align:center;" src="{{asset('img/logo.png')}}">
+    </div>
+</div>
+
 <!-- Comienzo del modal de Inicio Actividad-->
 <div class="modal fade" id="startActivityModal" 
      tabindex="-1" role="dialog" 
@@ -14,7 +20,7 @@ Actividad Una Vez Mas En Mis Brazos 1
        <div class="modal-dialog modal-lg" role="document">
            <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title" id="favoritesModalLabel">1. Posición de cuna </h4>
+                <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;" > <b>1. Posición de cuna</b> </h4>
               </div>
 
                <div class="modal-body">
@@ -68,7 +74,7 @@ Actividad Una Vez Mas En Mis Brazos 1
      <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
          <div class="modal-header">
-           <h4 class="modal-title" id="favoritesModalLabel">2. Frente a Frente  </h4>
+           <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;">  <b> 2. Frente a Frente</b> </h4>
          </div>
 
           <div class="modal-body">
@@ -118,7 +124,7 @@ Actividad Una Vez Mas En Mis Brazos 1
      <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
          <div class="modal-header">
-           <h4 class="modal-title" id="favoritesModalLabel">3. Boca abajo </h4>
+           <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;"> <b>3. Boca abajo</b>  </h4>
          </div>
 
           <div class="modal-body">
@@ -170,7 +176,7 @@ Actividad Una Vez Mas En Mis Brazos 1
      <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
          <div class="modal-header">
-           <h4 class="modal-title" id="favoritesModalLabel">4. Pelota de Fútbol </h4>
+           <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;"> <b>4. Pelota de Fútbol</b> </h4>
          </div>
 
           <div class="modal-body">
@@ -224,42 +230,49 @@ Actividad Una Vez Mas En Mis Brazos 1
      aria-hidden="true" data-backdrop="static" data-keyboard="false"
      data-show="true">
 
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-       
-        <h4 class="modal-title" 
-        id="favoritesModalLabel">Aprendiendo a emprender</h4>
-      </div>
-      <div class="modal-body">
-      <div id="scrolleable" style="overflow: scroll; height: 400px;">
-<div style="text-align:center;">
-<p><b>1. </b>identifica tres actividades de diversión entre tu hijo y tú por medio de
- alguna de estas opciones. (Cocinar, pintar con temperas un pliego de papel, pensar y
- elegir un juego de los niños, vestir un muñeco con diferentes prendas de vestir).</p> 
-<p><b>2. </b>Identifica junto con tu hijo cuáles son los objetivos de la actividad y define 
-los pasos para dar cumplimiento a los objetivos.</p>
-<p><b>¡Alienta a tu hijo a tomar las decisiones!</b></p>
-<p><b>3. </b>Al terminar, sube fotografías a estos cuadros según corresponda el paso a paso
- que eligió tu hijo en la actividad y cuál fue el resultado de la tarea. Mira a continuación
- un ejemplo:</p>
-<img style="width:200px;height:200px;text-align:center;display:none;" id="imgFadeEx" src="{{asset('img/EjemploActividad.JPG')}}">
-</div>
+ 
+     <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+           <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;"> <b>5. Cerca de ti</b> </h4>
+         </div>
 
-</div>
-      </div>
-      <div class="modal-footer">
-        <span class="pull-right">
-        <!-- SI acepta sigue el flujo normal de la aplicación-->
-         <button id="btnStartThirdStepActivity" type="button" class="btn btn-primary" data-dismiss="modal">
-            Siguiente
-          </button> 
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Fin del modal de Inicio de primera actividad segundo Paso-->
+          <div class="modal-body">
+             <div  style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;">
+               <p style="text-align:justify; text-justify: inter-word;">
+                 <b>Edad permitida:</b>  Esta posición la puedes usar desde los 0 meses 
+               </p>      
+             </div>
+
+             <div style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;">
+               <b><i>Instrucciones</i></b>    
+               <p style="text-align:justify; text-justify: inter-word;"> 
+                Primero deberás acostar a tu bebé en un lugar donde haya espacio y comodidad, luego alza a tu hijo de forma que quede 
+                frente a ti, con tu mano derecha sostén su espalda, mientras hagas esto, sostén a tu bebé con tu brazo 
+                izquierdo de su cola. Debe quedar sentado en tu brazo. Ahora lleva tu bebé hacia tu pecho, de forma que permanezca 
+                recostado sobre ti.
+                </p>
+                <p style="text-align:justify; text-justify: inter-word;">
+                  Puedes ver una imagen que te ayudará a entender mejor la posición cerca de ti.
+                </p>
+                    <div align="center">
+                     <img style="width:280px; height:200px;text-align:center;" id="imgFadeEx" src="{{asset('ActividadUnaVezBrazos/brazos5.png')}}">
+                   </div>    
+             </div>
+           </div> <!--modal body close -->
+
+         <div class="modal-footer">
+           <span class="pull-right">
+           <!-- SI acepta sigue el flujo normal de la aplicación-->
+              <button id="btnStartThirdStepActivity" type="button" class="btn btn-primary" data-dismiss="modal">
+                Siguiente
+              </button>
+           </span>
+         </div>
+    </div><!--modal content close -->
+</div> <!--modal dialog close -->
+</div>  <!--modal fade close -->
+<!-- Fin del modal de Inicio de primera actividad segundo Paso   btnStartThirdStepActivity-->
 @endsection
 
 @section('addjs')
@@ -286,14 +299,14 @@ $(document).ready(function()
 
    $("#btnStartcercadeti").click(function()
    {
-
+       $('#startActivityFirstSecondStepModal').modal('toggle');     
    });
 
    $("#btnStartThirdStepActivity").click(function()
    {
         $("#initialContent").fadeOut("slow" , function()
         {
-          window.location="{{URL::to('/MasTeGuste3')}}";
+          window.location="{{URL::to('/UnaVezBrazos2')}}";
         });
    });
 

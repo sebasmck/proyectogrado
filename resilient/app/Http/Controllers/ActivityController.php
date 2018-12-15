@@ -1164,10 +1164,30 @@ class ActivityController extends Controller
     {
         return view('activities.0-6-meses.UnaVezMasBrazos.UnaVezMasBrazos1');
     }
+    public function UnaVezMasBrazos2()
+    {
+        return view('activities.0-6-meses.UnaVezMasBrazos.UnaVezMasBrazos2');
+    }
     public function culminadoUnaVezMasBrazos()
     {
-        return view('activities.4-11-meses.UnaVezMasBrazos.CulminadoUnaVezMasBrazos');
+        return view('activities.0-6-meses.UnaVezMasBrazos.CulminadoUnaVezMasBrazos');
     }
-
+// actividad de 0 a 6 meses A LA HORA DE AMAMANTAR
+public function introALaHoraDeAmamantar()
+    {
+        return view('activities.0-6-meses.AlaHoraDeAmamantar.intro_HoraAmamantar');
+    }
+    public function ALaHoraDeAmamantar1()
+    {
+        return view('activities.0-6-meses.AlaHoraDeAmamantar.HoraDeAmamantar1');
+    }
+    public function ALaHoraDeAmamantar2()
+    {
+        return view('activities.0-6-meses.AlaHoraDeAmamantar.HoraDeAmamantar2');
+    }
+    public function culminadoALaHoraDeAmamantar()
+    {
+        return view('activities.0-6-meses.AlaHoraDeAmamantar.CulminadoHoraDeAmamantar');
+    }    
 
 }

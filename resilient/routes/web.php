@@ -456,4 +456,10 @@ Route::get('/CulminacionQuieroSerGrande', 'ActivityController@culminadoqqscsg')-
 // actividad de 0 a 6 meses UNA VEZ MÁS EN MIS BRAZOS 
 Route::get('/IntroUnaVezBrazos', 'ActivityController@introUnaVezMasBrazos')->name('/IntroUnaVezBrazos');
 Route::get('/UnaVezBrazos1', 'ActivityController@UnaVezMasBrazos1')->name('/UnaVezBrazos1');
+Route::get('/UnaVezBrazos2', 'ActivityController@UnaVezMasBrazos2')->name('/UnaVezBrazos2');
 Route::get('/CulminacionUnaVezBrazos', 'ActivityController@culminadoUnaVezMasBrazos')->name('/CulminacionUnaVezBrazos');
+// actividad de 0 a 6 meses A LA HORA DE AMAMANTAR
+Route::get('/IntroHoraAmamantar', 'ActivityController@introALaHoraDeAmamantar')->name('/IntroHoraAmamantar');
+Route::get('/HoraAmamantar1', 'ActivityController@ALaHoraDeAmamantar1')->name('/HoraAmamantar1');
+Route::get('/HoraAmamantar2', 'ActivityController@ALaHoraDeAmamantar2')->name('/HoraAmamantar2');
+Route::get('/CulminacionHoraAmamantar', 'ActivityController@culminadoALaHoraDeAmamantar1')->name('/CulminacionHoraAmamantar');
