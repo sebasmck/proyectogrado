@@ -231,6 +231,18 @@ Route::prefix('actividades')->group(function () {
     Route::get('/una-manita-8', 'ActivityController@logrosObtenidos_um')->name('/una-manita-8');
     Route::get('/una-manita-9', 'ActivityController@culminar_um')->name('/una-manita-9');
 
+
+    // Actividad con toda mi atención
+
+    Route::get('/con-toda-mi-atencion-1', 'ActivityController@intro_ctma')->name('/con-toda-mi-atencion-1');
+    Route::get('/con-toda-mi-atencion-2', 'ActivityController@cuandoPrestoAtencion_ctma')->name('/con-toda-mi-atencion-2');
+    Route::get('/con-toda-mi-atencion-3', 'ActivityController@asiSeVive_ctma')->name('/con-toda-mi-atencion-3');
+    Route::get('/con-toda-mi-atencion-4', 'ActivityController@escalonesColor_ctma')->name('/con-toda-mi-atencion-4');
+    Route::get('/con-toda-mi-atencion-5', 'ActivityController@yoPapa_ctma')->name('/con-toda-mi-atencion-5');
+    Route::get('/con-toda-mi-atencion-6', 'ActivityController@SoyTuGuia_ctma')->name('/con-toda-mi-atencion-6');
+    Route::get('/con-toda-mi-atencion-7', 'ActivityController@logrosObtenidos_ctma')->name('/con-toda-mi-atencion-7');
+    Route::get('/con-toda-mi-atencion-8', 'ActivityController@culminar_ctma')->name('/con-toda-mi-atencion-8');
+
 });
 
 //Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');

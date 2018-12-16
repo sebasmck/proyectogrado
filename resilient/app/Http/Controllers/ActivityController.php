@@ -33,6 +33,7 @@ class ActivityController extends Controller
     const URL_ACTIVITIE_ICE = self::URL_ACTIVITIES_4_11_MESES."identificacion_control_emocional.";
 
     const URL_ACTIVITIE_UM = self::URL_ACTIVITIES_3_11_MESES."una_manita.";
+    const URL_ACTIVITIE_CTMA = self::URL_ACTIVITIES_3_11_MESES."con_toda_mi_atencion.";
 
     public function finalizarActividad(){
 
@@ -1084,4 +1085,37 @@ class ActivityController extends Controller
     }
 
 
+    //  Actividad con toda mi atención
+
+    public function intro_ctma(){
+        return view(self::URL_ACTIVITIE_CTMA."intro");
+    }
+
+    public function cuandoPrestoAtencion_ctma(){
+        return view(self::URL_ACTIVITIE_CTMA."cuando_presto_atencion");
+    }
+
+    public function asiSeVive_ctma(){
+        return view(self::URL_ACTIVITIE_CTMA."asi_se_vive");
+    }
+
+    public function escalonesColor_ctma(){
+        return view(self::URL_ACTIVITIE_CTMA."escalones_de_color");
+    }
+
+    public function yoPapa_ctma(){
+        return view(self::URL_ACTIVITIE_CTMA."yopapa");
+    }
+
+    public function soyTuGuia_ctma(){
+        return view(self::URL_ACTIVITIE_CTMA."soy_tu_guia");
+    }
+
+    public function logrosObtenidos_ctma(){
+        return view(self::URL_ACTIVITIE_CTMA."logrosObtenidos");
+    }
+
+    public function culminar_ctma(){
+        return view(self::URL_ACTIVITIE_CTMA."culminando_ctma");
+    }
 }
