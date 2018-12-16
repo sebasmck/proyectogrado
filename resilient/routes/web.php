@@ -446,3 +446,32 @@ Route::get('/ag_culminado', "ActivityController@CulminadoActividadAg")->name('/a
 //Ruta módulo investigador
 Route::get('/menuInvestigador', 'MenuInvestigadorController@index')->name('/menuInvestigador');
 
+// actividad Caritas felices 
+Route::get('/IntroCaritasF', 'ActivityController@introCaritasFelices')->name('/IntroCaritasF');
+Route::get('/CaritasFelices1', 'ActivityController@CaritasFelices1')->name('/CaritasFelices1');
+Route::get('/CaritasFelices2', 'ActivityController@CaritasFelices2')->name('/CaritasFelices2');
+Route::get('/CaritasFelices3', 'ActivityController@CaritasFelices3')->name('/CaritasFelices3');
+Route::get('/CaritasFelices4', 'ActivityController@CaritasFelices4')->name('/CaritasFelices4');
+Route::get('/CaritasFelices5', 'ActivityController@CaritasFelices5')->name('/CaritasFelices5');
+Route::get('/CaritasFelices6', 'ActivityController@CaritasFelices6')->name('/CaritasFelices6');
+Route::get('/CaritasFelices7', 'ActivityController@CaritasFelices7')->name('/CaritasFelices7');
+Route::get('/CulminacionCaritasF', 'ActivityController@culminadoCaritasFelices')->name('/CulminacionCaritasF');
+
+// actividad que quiero se cuando sea grande 
+Route::get('/IntroQuieroSerGrande', 'ActivityController@introqqscsg')->name('/IntroQuieroSerGrande');
+Route::get('/QuieroSerGrande1', 'ActivityController@qqscsg1')->name('/QuieroSerGrande1');
+Route::get('/QuieroSerGrande2', 'ActivityController@qqscsg2')->name('/QuieroSerGrande2');
+Route::get('/QuieroSerGrande3', 'ActivityController@qqscsg3')->name('/QuieroSerGrande3');
+Route::get('/QuieroSerGrandeLogros', 'ActivityController@qqscsgLogros')->name('/QuieroSerGrandeLogros');
+Route::get('/CulminacionQuieroSerGrande', 'ActivityController@culminadoqqscsg')->name('/CulminacionQuieroSerGrande');
+
+// actividad de 0 a 6 meses UNA VEZ MÁS EN MIS BRAZOS 
+Route::get('/IntroUnaVezBrazos', 'ActivityController@introUnaVezMasBrazos')->name('/IntroUnaVezBrazos');
+Route::get('/UnaVezBrazos1', 'ActivityController@UnaVezMasBrazos1')->name('/UnaVezBrazos1');
+Route::get('/UnaVezBrazos2', 'ActivityController@UnaVezMasBrazos2')->name('/UnaVezBrazos2');
+Route::get('/CulminacionUnaVezBrazos', 'ActivityController@culminadoUnaVezMasBrazos')->name('/CulminacionUnaVezBrazos');
+// actividad de 0 a 6 meses A LA HORA DE AMAMANTAR
+Route::get('/IntroHoraAmamantar', 'ActivityController@introALaHoraDeAmamantar')->name('/IntroHoraAmamantar');
+Route::get('/HoraAmamantar1', 'ActivityController@ALaHoraDeAmamantar1')->name('/HoraAmamantar1');
+Route::get('/HoraAmamantar2', 'ActivityController@ALaHoraDeAmamantar2')->name('/HoraAmamantar2');
+Route::get('/CulminacionHoraAmamantar', 'ActivityController@culminadoALaHoraDeAmamantar1')->name('/CulminacionHoraAmamantar');

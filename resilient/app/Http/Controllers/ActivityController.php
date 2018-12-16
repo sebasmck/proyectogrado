@@ -1039,7 +1039,51 @@ class ActivityController extends Controller
     public function CulminadoActividadAg(){
         return view('activities.2-3anos.ag.CulminadoActividadAg');
     }
+    
+    
+    // Actividad Caritas Felices 
 
+    public function introCaritasFelices()
+    {
+        return view('activities.3-11-meses.CaritasFelices.intro_CaritasFelices');
+    }
+
+    public function CaritasFelices1()
+    {
+        return view('activities.3-11-meses.CaritasFelices.CaritasFelices1');
+    }
+    public function CaritasFelices2()
+    {
+        return view('activities.3-11-meses.CaritasFelices.CaritasFelices2');
+    }
+    public function CaritasFelices3()
+    {
+        return view('activities.3-11-meses.CaritasFelices.CaritasFelices3');
+    }
+
+    public function CaritasFelices4()
+    {
+        return view('activities.3-11-meses.CaritasFelices.CaritasFelices4');
+    }
+
+    public function CaritasFelices5()
+    {
+        return view('activities.3-11-meses.CaritasFelices.CaritasFelices5');
+    }
+
+    public function CaritasFelices6()
+    {
+        return view('activities.3-11-meses.CaritasFelices.CaritasFelices6');
+    }
+    public function CaritasFelices7()
+    {
+        return view('activities.3-11-meses.CaritasFelices.logrosObtenidos');
+    }
+
+    public function culminadoCaritasFelices()
+    {
+        return view('activities.3-11-meses.CaritasFelices.CulminadoCaritasFelices');
+    }
 
     // Actividad UM
 
@@ -1084,6 +1128,68 @@ class ActivityController extends Controller
         return view(self::URL_ACTIVITIE_UM."culminando_una_manita");
     }
 
+    // Actividad QUE QUIERES SER CUANDO SEAS GRANDE
+      
+    public function introqqscsg()
+    {
+        return view('activities.4-11-meses.que_qs_cs_grande.intro_SerGrande');
+    }
+
+    public function qqscsg1()
+    {
+        return view('activities.4-11-meses.que_qs_cs_grande.SerGrande1');
+    }
+    public function qqscsg2()
+    {
+        return view('activities.4-11-meses.que_qs_cs_grande.SerGrande2');
+    }
+    public function qqscsg3()
+    {
+        return view('activities.4-11-meses.que_qs_cs_grande.SerGrande3');
+    }
+    public function qqscsgLogros()
+    {
+        return view('activities.4-11-meses.que_qs_cs_grande.logrosObtenidos');
+    }
+    public function culminadoqqscsg()
+    {
+        return view('activities.4-11-meses.que_qs_cs_grande.CulminadoSerGrande');
+    }
+
+    // actividad de 0 a 6 meses UNA VEZ MÁS EN MIS BRAZOS 
+    public function introUnaVezMasBrazos()
+    {
+        return view('activities.0-6-meses.UnaVezMasBrazos.intro_UnaVezMasBrazos');
+    }
+    public function UnaVezMasBrazos1()
+    {
+        return view('activities.0-6-meses.UnaVezMasBrazos.UnaVezMasBrazos1');
+    }
+    public function UnaVezMasBrazos2()
+    {
+        return view('activities.0-6-meses.UnaVezMasBrazos.UnaVezMasBrazos2');
+    }
+    public function culminadoUnaVezMasBrazos()
+    {
+        return view('activities.0-6-meses.UnaVezMasBrazos.CulminadoUnaVezMasBrazos');
+    }
+// actividad de 0 a 6 meses A LA HORA DE AMAMANTAR
+public function introALaHoraDeAmamantar()
+    {
+        return view('activities.0-6-meses.AlaHoraDeAmamantar.intro_HoraAmamantar');
+    }
+    public function ALaHoraDeAmamantar1()
+    {
+        return view('activities.0-6-meses.AlaHoraDeAmamantar.HoraDeAmamantar1');
+    }
+    public function ALaHoraDeAmamantar2()
+    {
+        return view('activities.0-6-meses.AlaHoraDeAmamantar.HoraDeAmamantar2');
+    }
+    public function culminadoALaHoraDeAmamantar()
+    {
+        return view('activities.0-6-meses.AlaHoraDeAmamantar.CulminadoHoraDeAmamantar');
+    }    
 
     //  Actividad con toda mi atención
 
