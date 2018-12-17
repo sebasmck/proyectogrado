@@ -34,6 +34,7 @@ class ActivityController extends Controller
 
     const URL_ACTIVITIE_UM = self::URL_ACTIVITIES_3_11_MESES."una_manita.";
     const URL_ACTIVITIE_CTMA = self::URL_ACTIVITIES_3_11_MESES."con_toda_mi_atencion.";
+    const URL_ACTIVITIE_DQPA = self::URL_ACTIVITIES_4_11_MESES."de_quien_puedo_aprender.";
 
     public function finalizarActividad(){
 
@@ -1224,4 +1225,32 @@ public function introALaHoraDeAmamantar()
     public function culminar_ctma(){
         return view(self::URL_ACTIVITIE_CTMA."culminando_ctma");
     }
+
+    // Actividad  de quien puedo aprender
+
+    public function intro_dqpa(){
+        return view(self::URL_ACTIVITIE_DQPA."intro");
+    }
+
+    public function laMetafora_dqpa(){
+        return view(self::URL_ACTIVITIE_DQPA."la_metafora");
+    }
+
+    public function actividadPalabras_dqpa(){
+        return view(self::URL_ACTIVITIE_DQPA."actividad_palabras");
+    }
+
+    public function tareas_dqpa(){
+        return view(self::URL_ACTIVITIE_DQPA."tareas");
+    }
+
+    public function logrosObtenidos_dqpa(){
+        return view(self::URL_ACTIVITIE_DQPA."logrosObtenidos");
+    }
+
+    public function culminar_dqpa(){
+        return view(self::URL_ACTIVITIE_DQPA."culminando_de_quien_puedo_aprender");
+    }
+
+
 }

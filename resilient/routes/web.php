@@ -243,6 +243,15 @@ Route::prefix('actividades')->group(function () {
     Route::get('/con-toda-mi-atencion-7', 'ActivityController@logrosObtenidos_ctma')->name('/con-toda-mi-atencion-7');
     Route::get('/con-toda-mi-atencion-8', 'ActivityController@culminar_ctma')->name('/con-toda-mi-atencion-8');
 
+
+    // Actividad de quien puedo aprender
+
+    Route::get('/de-quien-puedo-aprender-1', 'ActivityController@intro_dqpa')->name('/de-quien-puedo-aprender-1');
+    Route::get('/de-quien-puedo-aprender-2', 'ActivityController@laMetafora_dqpa')->name('/de-quien-puedo-aprender-2');
+    Route::get('/de-quien-puedo-aprender-3', 'ActivityController@actividadPalabras_dqpa')->name('/de-quien-puedo-aprender-3');
+    Route::get('/de-quien-puedo-aprender-4', 'ActivityController@tareas_dqpa')->name('/de-quien-puedo-aprender-4');
+    Route::get('/de-quien-puedo-aprender-5', 'ActivityController@logrosObtenidos_dqpa')->name('/de-quien-puedo-aprender-5');
+    Route::get('/de-quien-puedo-aprender-6', 'ActivityController@culminar_dqpa')->name('/de-quien-puedo-aprender-6');
 });
 
 //Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');
