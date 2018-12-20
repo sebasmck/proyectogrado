@@ -483,4 +483,7 @@ Route::get('/CulminacionUnaVezBrazos', 'ActivityController@culminadoUnaVezMasBra
 Route::get('/IntroHoraAmamantar', 'ActivityController@introALaHoraDeAmamantar')->name('/IntroHoraAmamantar');
 Route::get('/HoraAmamantar1', 'ActivityController@ALaHoraDeAmamantar1')->name('/HoraAmamantar1');
 Route::get('/HoraAmamantar2', 'ActivityController@ALaHoraDeAmamantar2')->name('/HoraAmamantar2');
-Route::get('/CulminacionHoraAmamantar', 'ActivityController@culminadoALaHoraDeAmamantar1')->name('/CulminacionHoraAmamantar');
+Route::get('/HoraAmamantar3', 'ActivityController@ALaHoraDeAmamantar3')->name('/HoraAmamantar3');
+Route::get('/HoraAmamantar4', 'ActivityController@ALaHoraDeAmamantar4')->name('/HoraAmamantar4');
+Route::get('/HoraAmamantar5', 'ActivityController@ALaHoraDeAmamantar5')->name('/HoraAmamantar5');
+Route::get('/CulminacionHoraAmamantar', 'ActivityController@culminadoALaHoraDeAmamantar')->name('/CulminacionHoraAmamantar');

@@ -1187,6 +1187,18 @@ public function introALaHoraDeAmamantar()
     {
         return view('activities.0-6-meses.AlaHoraDeAmamantar.HoraDeAmamantar2');
     }
+    public function ALaHoraDeAmamantar3()
+    {
+        return view('activities.0-6-meses.AlaHoraDeAmamantar.HoraDeAmamantar3');
+    }
+    public function ALaHoraDeAmamantar4()
+    {
+        return view('activities.0-6-meses.AlaHoraDeAmamantar.HoraDeAmamantar4');
+    }
+    public function ALaHoraDeAmamantar5()
+    {
+        return view('activities.0-6-meses.AlaHoraDeAmamantar.HoraDeAmamantar5');
+    }
     public function culminadoALaHoraDeAmamantar()
     {
         return view('activities.0-6-meses.AlaHoraDeAmamantar.CulminadoHoraDeAmamantar');
