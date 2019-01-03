@@ -487,3 +487,10 @@ Route::get('/HoraAmamantar3', 'ActivityController@ALaHoraDeAmamantar3')->name('/
 Route::get('/HoraAmamantar4', 'ActivityController@ALaHoraDeAmamantar4')->name('/HoraAmamantar4');
 Route::get('/HoraAmamantar5', 'ActivityController@ALaHoraDeAmamantar5')->name('/HoraAmamantar5');
 Route::get('/CulminacionHoraAmamantar', 'ActivityController@culminadoALaHoraDeAmamantar')->name('/CulminacionHoraAmamantar');
+
+// actividad de 0 a 6 meses Descubriendo las emociones 
+Route::get('/IntroDescubriendoEmociones', 'ActivityController@introDescubriendoEmociones')->name('/IntroDescubriendoEmociones');
+Route::get('/DescubriendoEmociones1', 'ActivityController@descubriendoEmociones1')->name('/DescubriendoEmociones1');
+Route::get('/DescubriendoEmociones2', 'ActivityController@descubriendoEmociones2')->name('/DescubriendoEmociones2');
+Route::get('/DescubriendoEmociones3', 'ActivityController@descubriendoEmociones3')->name('/DescubriendoEmociones3');
+Route::get('/CulminacionDescubriendoEmociones', 'ActivityController@culminadoDescubriendoEmociones')->name('/CulminacionDescubriendoEmociones');

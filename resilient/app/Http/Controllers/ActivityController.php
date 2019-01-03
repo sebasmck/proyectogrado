@@ -1204,6 +1204,28 @@ public function introALaHoraDeAmamantar()
         return view('activities.0-6-meses.AlaHoraDeAmamantar.CulminadoHoraDeAmamantar');
     }    
 
+    // actividad de 0 a 6 meses Descubriendo las emociones 
+    public function introDescubriendoEmociones()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.intro_DescubriendoEmocion');
+    }
+    public function descubriendoEmociones1()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion1');
+    }
+    public function descubriendoEmociones2()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion2');
+    }
+    public function descubriendoEmociones3()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion3');
+    }
+    public function culminadoDescubriendoEmociones()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.CulminadoDescubriendoEmocion');
+    }    
+    
     //  Actividad con toda mi atención
 
     public function intro_ctma(){
