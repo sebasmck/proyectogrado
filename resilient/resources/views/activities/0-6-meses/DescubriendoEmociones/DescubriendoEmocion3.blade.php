@@ -6,7 +6,7 @@ Descubriendo Las Emociones
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form"  id="formulario" method="GET" action="{{route('/CulminacionHoraAmamantar')}}">
+        <form class="form"  id="formulario" method="GET" action="{{route('/DescubriendoEmociones4')}}">
             <div class="card">
 
                 <div class="card-head style-primary">

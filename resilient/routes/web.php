@@ -493,4 +493,7 @@ Route::get('/IntroDescubriendoEmociones', 'ActivityController@introDescubriendoE
 Route::get('/DescubriendoEmociones1', 'ActivityController@descubriendoEmociones1')->name('/DescubriendoEmociones1');
 Route::get('/DescubriendoEmociones2', 'ActivityController@descubriendoEmociones2')->name('/DescubriendoEmociones2');
 Route::get('/DescubriendoEmociones3', 'ActivityController@descubriendoEmociones3')->name('/DescubriendoEmociones3');
+Route::get('/DescubriendoEmociones4', 'ActivityController@descubriendoEmociones4')->name('/DescubriendoEmociones4');
+Route::get('/DescubriendoEmociones5', 'ActivityController@descubriendoEmociones5')->name('/DescubriendoEmociones5');
+Route::get('/DescubriendoEmociones6', 'ActivityController@descubriendoEmociones6')->name('/DescubriendoEmociones6');
 Route::get('/CulminacionDescubriendoEmociones', 'ActivityController@culminadoDescubriendoEmociones')->name('/CulminacionDescubriendoEmociones');

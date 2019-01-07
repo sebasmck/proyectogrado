@@ -1221,6 +1221,18 @@ public function introALaHoraDeAmamantar()
     {
         return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion3');
     }
+    public function descubriendoEmociones4()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion4');
+    }
+    public function descubriendoEmociones5()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion5');
+    }
+    public function descubriendoEmociones6()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion6');
+    }
     public function culminadoDescubriendoEmociones()
     {
         return view('activities.0-6-meses.DescubriendoEmociones.CulminadoDescubriendoEmocion');
