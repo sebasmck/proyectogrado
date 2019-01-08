@@ -6,7 +6,7 @@ Descubriendo Las Emociones
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form"  id="formulario" method="GET" action="{{route('/DescubriendoEmociones2')}}">
+        <form class="form"  id="formulario" method="GET" action="{{route('/DescubriendoEmociones7')}}">
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -92,7 +92,7 @@ Descubriendo Las Emociones
                             <p style="text-align:justify; text-justify: inter-word;">
                             Un día, después de algunos meses ellos estaban caminando por el centro comercial, y se encontraron 
                             con otra amiga de él. Cuando ellos se saludaron, él le dio un pequeño abrazo; en ese momento ella 
-                            sintió mucho enojo, entonces se preguntó ¿Por qué estoy sintiendo enojo si ella me cae bien?! Jamás
+                            sintió mucho enojo, entonces se preguntó ¿Por qué estoy sintiendo enojo si ella me cae bien? !Jamás
                              me había enojado porque la saludara así! 
                             </p>
 
@@ -100,7 +100,7 @@ Descubriendo Las Emociones
                             Con este ejemplo podrás ver que Juanita en un inicio de la relación no experimentaba enojó 
                             cuando él saludaba a sus amigas, dándoles un pequeño abrazo. Pero después de algunas 
                             situaciones en las que ella sintió enojo por algunos comportamientos de él y se lo calló 
-                            creyendo que estaba mal sentir eso, con el tiempo comenzó a experimentar esta emoción pero
+                            creyendo que estaba mal sentir eso, con el tiempo comenzó a experimentar esta emoción, pero
                              con cosas que al inicio de la relación no le generaban enojo. Negar tus emociones lo único
                               que hará será que seas más sensible ante situaciones que antes no te generaban esa emoción
                                y con el tiempo tu emoción saldrá con mayor fuerza como es muñeco. 
@@ -116,7 +116,7 @@ Descubriendo Las Emociones
                             Diferentes investigaciones han llegado a la siguiente conclusión:
                             </p>
                               <div align="center">
-                               <p style="text-align:justify; text-justify: inter-word;">
+                               <p style="text-align:center; text-justify: inter-word;">
                                     ¡ACEPTAR LAS EMOCIONES ES MEJOR QUE INTENTAR HACER QUE SE VAYAN!
                                 </p>
                                 <img id="imagen1" src="{{asset('ActividadDescubriendoEmociones/algo.png')}}"/>

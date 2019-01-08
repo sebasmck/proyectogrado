@@ -496,4 +496,25 @@ Route::get('/DescubriendoEmociones3', 'ActivityController@descubriendoEmociones3
 Route::get('/DescubriendoEmociones4', 'ActivityController@descubriendoEmociones4')->name('/DescubriendoEmociones4');
 Route::get('/DescubriendoEmociones5', 'ActivityController@descubriendoEmociones5')->name('/DescubriendoEmociones5');
 Route::get('/DescubriendoEmociones6', 'ActivityController@descubriendoEmociones6')->name('/DescubriendoEmociones6');
+Route::get('/DescubriendoEmociones7', 'ActivityController@descubriendoEmociones7')->name('/DescubriendoEmociones7');
+Route::get('/DescubriendoEmociones8', 'ActivityController@descubriendoEmociones8')->name('/DescubriendoEmociones8');
 Route::get('/CulminacionDescubriendoEmociones', 'ActivityController@culminadoDescubriendoEmociones')->name('/CulminacionDescubriendoEmociones');
+
+// Actividad de 0 a 6 meses  juguemos a conocer nuestras emociones
+Route::get('/IntroJuguemosEmociones', 'ActivityController@introJuguemosEmociones')->name('/IntroJuguemosEmociones');
+Route::get('/JuguemosEmociones', 'ActivityController@JuguemosEmociones')->name('/JuguemosEmociones');
+Route::post('/JuguemosEmocione1', 'ActivityController@JuguemosEmociones1')->name('/JuguemosEmocione1');
+Route::get('/JuguemosEmociones2', 'ActivityController@JuguemosEmociones2')->name('/JuguemosEmociones2');
+Route::post('/JuguemosEmociones3', 'ActivityController@JuguemosEmociones3')->name('/JuguemosEmociones3');
+Route::get('/CulminacionJuguemosEmociones', 'ActivityController@culminadoJuguemosEmociones')->name('/CulminacionJuguemosEmociones');
+
+// Actividad de 0 a 6 meses  momento feliz 
+Route::get('/IntroMomentoFeliz', 'ActivityController@introMomentoFeliz')->name('/IntroMomentoFeliz');
+Route::get('/MomentoFeliz1', 'ActivityController@MomentoFeliz1')->name('/MomentoFeliz1');
+Route::get('/CulminacionMomentoFeliz', 'ActivityController@culminadoMomentoFeliz')->name('/CulminacionMomentoFeliz');
+
+// Actividad de 0 a 6 meses  siempre juntos
+Route::get('/IntroSiempreJuntos', 'ActivityController@introSiempreJuntos')->name('/IntroSiempreJuntos');
+Route::get('/SiempreJuntos1', 'ActivityController@SiempreJuntos1')->name('/SiempreJuntos1');
+Route::get('/SiempreJuntos2', 'ActivityController@SiempreJuntos2')->name('/SiempreJuntos2');
+Route::get('/CulminacionSiempreJuntos', 'ActivityController@culminadoSiempreJuntos')->name('/CulminacionSiempreJuntos');

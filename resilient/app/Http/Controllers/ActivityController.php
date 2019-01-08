@@ -1233,11 +1233,93 @@ public function introALaHoraDeAmamantar()
     {
         return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion6');
     }
+    public function descubriendoEmociones7()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion7');
+    }
+    public function descubriendoEmociones8()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion8');
+    }
     public function culminadoDescubriendoEmociones()
     {
         return view('activities.0-6-meses.DescubriendoEmociones.CulminadoDescubriendoEmocion');
     }    
     
+    // Actividad de 0 a 6 meses  juguemos a conocer nuestras emociones
+    public function introJuguemosEmociones()
+    {
+        return view('activities.0-6-meses.JugamosConocerEmociones.intro_JugamosEmociones');
+    }
+    public function JuguemosEmociones()
+    {
+        return view('activities.0-6-meses.JugamosConocerEmociones.JugamosEmociones');
+    }
+    public function JuguemosEmociones1(Request $request)
+    {
+        $id_usuario = auth()->id();
+        $acudiente = Cuidador::where('id_usuario', $id_usuario)->value('Id_Acudiente');
+        $pathFiles = 'Files/ActivityJuguemosConNuestrasEmociones/'.$acudiente;
+        //var_dump($acudiente);
+        $file = $request->file('archivo');
+        Storage::disk('ftp')->put($pathFiles , $file);
+        return view('activities.0-6-meses.JugamosConocerEmociones.JugamosEmociones1');
+    }
+    public function JuguemosEmociones2()
+    {
+        return view('activities.0-6-meses.JugamosConocerEmociones.JugamosEmociones2');
+    }
+    public function JuguemosEmociones3(Request $request)
+    {
+        $id_usuario = auth()->id();
+        $acudiente = Cuidador::where('id_usuario', $id_usuario)->value('Id_Acudiente');
+        $pathFiles = 'actividades/ActivityJuguemosConNuestrasEmocionesActividad3/'.$acudiente;
+
+        for($i=1;$i<4;$i++)
+        {
+            $file = $request->file('fileToUpload'.$i);
+            Storage::disk('ftp')->put($pathFiles , $file);
+        }
+        return view('activities.0-6-meses.JugamosConocerEmociones.JugamosEmociones3');
+    }
+
+    public function culminadoJuguemosEmociones()
+    {
+        return view('activities.0-6-meses.JugamosConocerEmociones.CulminadoJugamosEmociones');
+    }    
+
+// Actividad de 0 a 6 meses  momento feliz
+public function introMomentoFeliz()
+{
+    return view('activities.0-6-meses.MomentoFeliz.intro_MomentoFeliz');
+} 
+public function MomentoFeliz1()
+{
+    return view('activities.0-6-meses.MomentoFeliz.MomentoFeliz1');
+} 
+public function culminadoMomentoFeliz()
+{
+    return view('activities.0-6-meses.MomentoFeliz.CulminadoMomentoFeliz');
+} 
+
+// Actividad de 0 a 6 meses  siempre juntos
+public function introSiempreJuntos()
+{
+    return view('activities.0-6-meses.SiempreJuntos.intro_SiempreJuntos');
+} 
+public function SiempreJuntos1()
+{
+    return view('activities.0-6-meses.SiempreJuntos.SiempreJuntos1');
+} 
+public function SiempreJuntos2()
+{
+    return view('activities.0-6-meses.SiempreJuntos.SiempreJuntos2');
+} 
+public function culminadoSiempreJuntos()
+{
+    return view('activities.0-6-meses.SiempreJuntos.CulminadoSiempreJuntos');
+} 
+
     //  Actividad con toda mi atención
 
     public function intro_ctma(){
