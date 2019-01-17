@@ -1302,22 +1302,22 @@ public function culminadoMomentoFeliz()
     return view('activities.0-6-meses.MomentoFeliz.CulminadoMomentoFeliz');
 } 
 
-// Actividad de 0 a 6 meses  siempre juntos
-public function introSiempreJuntos()
+// Actividad de 0 a 6 meses  contigo siempre
+public function introContigoSiempre()
 {
-    return view('activities.0-6-meses.SiempreJuntos.intro_SiempreJuntos');
+    return view('activities.0-6-meses.ContigoSiempre.intro_ContigoSiempre');
 } 
-public function SiempreJuntos1()
+public function ContigoSiempre1()
 {
-    return view('activities.0-6-meses.SiempreJuntos.SiempreJuntos1');
+    return view('activities.0-6-meses.ContigoSiempre.ContigoSiempre1');
 } 
-public function SiempreJuntos2()
+public function ContigoSiempre2()
 {
-    return view('activities.0-6-meses.SiempreJuntos.SiempreJuntos2');
+    return view('activities.0-6-meses.ContigoSiempre.ContigoSiempre2');
 } 
-public function culminadoSiempreJuntos()
+public function culminadoContigoSiempre()
 {
-    return view('activities.0-6-meses.SiempreJuntos.CulminadoSiempreJuntos');
+    return view('activities.0-6-meses.ContigoSiempre.CulminadoContigoSiempre');
 } 
 
     //  Actividad con toda mi atención

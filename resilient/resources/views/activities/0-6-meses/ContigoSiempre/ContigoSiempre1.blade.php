@@ -20,15 +20,17 @@ Actividad Una Vez Mas En Mis Brazos 1
        <div class="modal-dialog modal-lg" role="document">
            <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;" > <b>Siempre Juntos - Explicación</b> </h4>
+                <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;" > <b>Contigo Siempre - Explicación</b> </h4>
               </div>
 
                <div class="modal-body">
                   <div  style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;">
                     <p style="text-align:justify; text-justify: inter-word;">
-                            En primer lugar te enseñaremos una lista de videos que puedes utilizar para ponerle a tu bebé y escuchar
-                             y cantar; si en caso dado no puedes hacer esto, te dejaremos un archivo con las letras de las canciones,
-                              para que lo imprimas o descargues y tú le puedas cantar aunque no tengan el video.
+                      Las actividades que realizarás con tu bebé serán leerle cuentos y cantar para esto encontrarás 
+                      una serie de opciones en donde puedes hacer click para visualizar cuentos en audio, si tienes en
+                       tu casa algunos cuentos, los puedes utilizar. Para las canciones también tendrás unos links y letras
+                        de las canciones. Esta actividad no te tomará más de 10 a 15 minutos, la puedes hacer en las noches
+                         cuando lo llevas a dormir, cuando lo estás amamantando, dándole el biberón o cuando lo estas bañando.
                     </p>      
                   </div>
                 </div> <!--modal body close -->
@@ -56,7 +58,7 @@ Actividad Una Vez Mas En Mis Brazos 1
      <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
          <div class="modal-header">
-           <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;">  <b> Siempre Juntos - Musica </b> </h4>
+           <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;">  <b> Contigo Siempre - Musica </b> </h4>
          </div>
 
           <div class="modal-body">
@@ -99,7 +101,7 @@ Actividad Una Vez Mas En Mis Brazos 1
      <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
          <div class="modal-header">
-           <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;"> <b>Siempre Juntos - Musica</b>  </h4>
+           <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;"> <b>Contigo Siempre - Musica</b>  </h4>
          </div>
 
           <div class="modal-body">
@@ -137,7 +139,7 @@ Actividad Una Vez Mas En Mis Brazos 1
      <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
          <div class="modal-header">
-           <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;"> <b> Siempre Juntos - Musica </b> </h4>
+           <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;"> <b> Contigo Siempre  - Musica </b> </h4>
          </div>
 
          <div class="modal-body">
@@ -178,7 +180,7 @@ Actividad Una Vez Mas En Mis Brazos 1
      <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
          <div class="modal-header">
-           <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;"> <b> Siempre Juntos - Musica </b> </h4>
+           <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;"> <b> Contigo Siempre  - Musica </b> </h4>
          </div>
 
          <div class="modal-body">
@@ -213,7 +215,7 @@ Actividad Una Vez Mas En Mis Brazos 1
      <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
          <div class="modal-header">
-           <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;"><b> Siempre Juntos - Musica </b></h4>
+           <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;"><b> Contigo Siempre  - Musica </b></h4>
          </div>
 
          <div class="modal-body">
@@ -248,7 +250,7 @@ Actividad Una Vez Mas En Mis Brazos 1
      <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
          <div class="modal-header">
-           <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;"> <b> Siempre Juntos - Musica </b> </h4>
+           <h4 class="modal-title" id="favoritesModalLabel" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;"> <b> Contigo Siempre  - Musica </b> </h4>
          </div>
 
          <div class="modal-body">
@@ -316,7 +318,7 @@ $(document).ready(function()
    {
         $("#initialContent").fadeOut("slow" , function()
         {
-          window.location="{{URL::to('/SiempreJuntos2')}}";
+          window.location="{{URL::to('/ContigoSiempre2')}}";
         });
    });
 

@@ -1,6 +1,6 @@
 @extends('partials.layout')
 @section('title')
-Actividad Siempre Juntos
+Actividad Contigo Siempre 
 @endsection
 <style>
         ul {
@@ -106,16 +106,16 @@ Actividad Siempre Juntos
         <div class="card">
 
                 <div class="card-head style-primary">
-                   <header>  Siempre Juntos - Actividad  </header>
+                   <header>  Contigo Siempre  - Actividad  </header>
                 </div>
 
               <div class="card-body floating-label">
 
                 <div style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black;">
                   <p style="text-align:justify; text-justify: inter-word;">
-                        El siguiente cuadro debes seleccionar o hacer click en las canciones que usaste con tu bebé en esta semana,
-                         y que día de la semana. Además vas encontrar algunas casillas libres donde podrás escribir si usaste un material
-                          diferente al propuesto por nosotros.
+                        El siguiente cuadro debes seleccionar o hacer click en las canciones que usaste con tu bebé en esta semana, 
+                        y que día de la semana. Además, vas encontrar algunas casillas libres donde podrás escribir si usaste un material
+                         diferente al propuesto por nosotros.
                     </p>
                 </div>  
                 <div align="center">
@@ -291,37 +291,83 @@ Actividad Siempre Juntos
                                         </label>
                                 </td> 
                                 <td> 
-                                        <input type="radio" id="cb30" name="optionsRadios4" value="1"/>
+                                        <input type="radio" id="cb30" name="optionsRadios4" value="2"/>
                                         <label class="grow" for="cb30"><img WIDTH="100" HEIGTH="100"  id="imagen1" src="{{asset('ActividadSiempreJuntos/cancion5.png')}}" style="margin-inline-start:10%"/> 
                                         </label>
                                 </td> 
                                 <td> 
-                                        <input type="radio" id="cb31" name="optionsRadios4" value="1"/>
+                                        <input type="radio" id="cb31" name="optionsRadios4" value="3"/>
                                         <label class="grow" for="cb31"><img WIDTH="100" HEIGTH="100"  id="imagen1" src="{{asset('ActividadSiempreJuntos/cancion5.png')}}" style="margin-inline-start:10%"/> 
                                         </label>
                                 </td> 
                                 <td> 
-                                        <input type="radio" id="cb32" name="optionsRadios4" value="1"/>
+                                        <input type="radio" id="cb32" name="optionsRadios4" value="4"/>
                                         <label class="grow" for="cb32"><img WIDTH="100" HEIGTH="100"  id="imagen1" src="{{asset('ActividadSiempreJuntos/cancion5.png')}}" style="margin-inline-start:10%"/> 
                                         </label>
                                 </td> 
                                 <td> 
-                                        <input type="radio" id="cb33" name="optionsRadios4" value="1"/>
+                                        <input type="radio" id="cb33" name="optionsRadios4" value="5"/>
                                         <label class="grow" for="cb33"><img WIDTH="100" HEIGTH="100"  id="imagen1" src="{{asset('ActividadSiempreJuntos/cancion5.png')}}" style="margin-inline-start:10%"/> 
                                         </label>
                                 </td> 
                                 <td> 
-                                        <input type="radio" id="cb34" name="optionsRadios4" value="1"/>
+                                        <input type="radio" id="cb34" name="optionsRadios4" value="6"/>
                                         <label class="grow" for="cb34"><img WIDTH="100" HEIGTH="100"  id="imagen1" src="{{asset('ActividadSiempreJuntos/cancion5.png')}}" style="margin-inline-start:10%"/> 
                                         </label>
                                 </td> 
                                 <td> 
-                                        <input type="radio" id="cb35" name="optionsRadios4" value="1"/>
+                                        <input type="radio" id="cb35" name="optionsRadios4" value="7"/>
                                         <label class="grow" for="cb35"><img WIDTH="100" HEIGTH="100"  id="imagen1" src="{{asset('ActividadSiempreJuntos/cancion5.png')}}" style="margin-inline-start:10%"/> 
                                         </label>
                                 </td>      
 
                         </tr>  
+
+                        <tr>
+                             <td> 
+                                  <div class="form-group" style="display: none" id="otro_l">
+                                  <input type="text" class="form-control" name="OtroLunes" id="Otro_Lunes" >
+                                  <label for="Otro_Lunes"><b>Otra canción</b></label>
+                                  </div>           
+                            </td>   
+                            <td>        
+                                <div class="form-group" style="display: none" id="otro_m">
+                                <input type="text" class="form-control" name="OtroMartes" id="Otro_Martes" >
+                                <label for="Otro_Martes"><b>Otra canción</b></label>
+                                </div>
+                            </td>   
+                            <td>
+                                <div class="form-group"  style="display: none" id="otro_mi">
+                                <input type="text" class="form-control" name="OtroMiercoles" id="Otro_Miercoles" >
+                                <label for="Otro_Miercoles"><b>Otra canción</b></label>
+                                </div>
+                            </td>   
+                            <td>
+                                <div class="form-group"  style="display: none" id="otro_j">
+                                <input type="text" class="form-control" name="OtroJueves" id="Otro_Jueves" >
+                                <label for="Otro_Jueves"><b>Otra canción</b></label>
+                                </div>
+                            </td>   
+                            <td>
+                                <div class="form-group" style="display: none"  id="otro_v">
+                                <input type="text" class="form-control" name="OtroViernes" id="Otro_Viernes" >
+                                <label for="Otro_Viernes"><b>Otra canción</b></label>
+                                </div>
+                            </td>   
+                            <td>
+                                <div class="form-group" style="display: none"  id="otro_s">
+                                <input type="text" class="form-control" name="OtroSabado" id="Otro_Sabado" >
+                                <label for="Otro_Sabado"><b>Otra canción</b><label>
+                                </div>
+                             </td>   
+                            <td>
+                                   
+                                <div class="form-group" style="display: none" id="otro_d">
+                                <input type="text" class="form-control" name="OtroDomingo" id="Otro_Domingo" >
+                                <label for="Otro_Domingo"><b>Otra canción</b></label>
+                                </div>
+                           </td>   
+                        </tr>        
                   </table>
                 </div>    
 
@@ -343,6 +389,132 @@ Actividad Siempre Juntos
 @section('addjs')
 
 <script type="text/javascript">
+var seleccionado =  $('input[name="optionsRadios4"]');
+seleccionado.change(function()
+{
+        if(seleccionado.val() == 1)
+        {
+            $("#otro_l").show();
+            $("#Otro_Lunes").attr("required", "true");
+        }
+        if(seleccionado.val() == 2)
+        {
+            $("#otro_m").show();
+            $("#Otro_Martes").attr("required", "true");
+        }
+        if(seleccionado.val() == 3)
+        {
+            $("#otro_mi").show();
+            $("#Otro_Miercoles").attr("required", "true");
+        }
+        if(seleccionado.val() == 4)
+        {
+            $("#otro_j").show();
+            $("#Otro_Jueves").attr("required", "true");
+        }
+        if(seleccionado.val() == 5)
+        {
+            $("#otro_v").show();
+            $("#Otro_Viernes").attr("required", "true");
+        }
+        if(seleccionado.val() == 6)
+        {
+            $("#otro_s").show();
+            $("#Otro_Sabado").attr("required", "true");
+        }
+        if(seleccionado.val() == 7)
+        {
+            $("#otro_d").show();
+            $("#Otro_Domingo").attr("required", "true");
+        }
+}); 
+
+//
+//$("#cb29").change(function()
+//{
+//        var seleccionado =  $('input[name="optionsRadios4"]');
+//       if(seleccionado.val() == 1)
+//        {
+//            $("#otro_l").show();
+//            $("#Otro_Lunes").attr("required", "true");
+//        }else{
+//            $("#otro_l").hide();
+//            $("#Otro_Lunes").attr("required", "false");
+//        }
+//});
+//$("#cb30").change(function()
+//{
+//        var seleccionado =  $('input[name="optionsRadios4"]');
+//        if(seleccionado.val() == 2)
+ //       {
+ //           $("#otro_m").show();
+ //           $("#Otro_Martes").attr("required", "true");
+ //       }else{
+ //           $("#otro_m").hide();
+ //           $("#Otro_Martes").attr("required", "false");
+ //       }    
+//});
+//$("#cb31").change(function()
+//{
+ //       var seleccionado =  $('input[name="optionsRadios4"]');
+   //     if(seleccionado.val() == 3)
+     //   {
+       //     $("#otro_mi").show();
+         //   $("#Otro_Miercoles").attr("required", "true");
+        //}else{
+          //  $("#otro_mi").hide();
+            //$("#Otro_Miercoles").attr("required", "false");
+        //}
+//});
+//$("#cb32").change(function()
+//{
+  //      var seleccionado =  $('input[name="optionsRadios4"]');
+    //    if(seleccionado.val() == 4)
+      //  {
+        //    $("#otro_j").show();
+          //  $("#Otro_Jueves").attr("required", "true");
+        //}else{
+          //  $("#otro_j").hide();
+            //$("#Otro_Jueves").attr("required", "false");
+        //}
+//});
+//$("#cb33").change(function()
+//{
+  //      var seleccionado =  $('input[name="optionsRadios4"]');
+    //    if(seleccionado.val() == 5)
+      //  {
+        //    $("#otro_v").show();
+          //  $("#Otro_Viernes").attr("required", "true");
+        //}else{
+          //  $("#otro_v").hide();
+            //$("#Otro_Viernes").attr("required", "false");
+        //}
+//});
+//$("#cb34").change(function()
+//{
+  //      var seleccionado =  $('input[name="optionsRadios4"]');
+    //    if(seleccionado.val() == 6)
+      //  {
+        //    $("#otro_s").show();
+          //  $("#Otro_Sabado").attr("required", "true");
+//        }else{
+//            $("#otro_s").hide();
+//            $("#Otro_Sabado").attr("required", "false");
+//        }
+//});
+//$("#cb35").change(function()
+//{
+//        var seleccionado =  $('input[name="optionsRadios4"]');
+//        if(seleccionado.val() == 7 )
+//        {
+//            $("#otro_d").show();
+//            $("#Otro_Domingo").attr("required", "true");
+//        }else{
+//            $("#otro_d").hide();
+//            $("#Otro_Domingo").attr("required", "false");
+//        }
+//});
+
 $(document).ready(function(){
 
 $('#btnhid').change(function(){

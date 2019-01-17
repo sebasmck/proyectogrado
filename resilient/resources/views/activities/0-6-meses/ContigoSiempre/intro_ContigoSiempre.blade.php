@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('title')
-Intro Siempre Juntos
+Intro Contigo Siempre
 @endsection
 
 @section('addcss')
@@ -837,7 +837,7 @@ button:hover {
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="title animated lightSpeedIn" style="font-family: 'Raleway', sans-serif; font-size: 40px;" >
-                Actividad siempre juntos
+                Actividad contigo siempre
             </div>
         </div> 
         
@@ -892,28 +892,13 @@ button:hover {
                             <div class="card-body" >
                             <label> 
                                <p style="text-align:justify; text-justify: inter-word; color:black;">
-                                  Que tu realices actividades como compartir tiempo con tu hijo(a) es muy importante,
-                                   pues se ha encontrado que los humanos desde bebés aprendemos al ver los comportamientos 
-                                   de nuestros padres o de personas significativas. Por eso, si tu hijo(a) crece viendo que 
-                                   tú compartes tiempo con él o ella, y que le cuentas cosas de tu diario, creerá que está bien 
-                                   y por ende va imitar ese comportamiento. En un futuro, esto hará que sea él o ella quien busque
-                                    compartir tiempo contigo y te cuente cosas de su día
+                                Que realices actividades como compartir tiempo con tu hijo/a es muy importante, 
+                                pues se ha encontrado que los humanos desde bebés aprenden al ver los comportamientos 
+                                de sus padres o de personas significativas. Por eso, si tu hijo/a crece viendo que compartes
+                                 tiempo con él o ella, y que le cuentas cosas de ti día a día, creerá que está bien y por ende 
+                                 va imitar ese comportamiento. En un futuro, esto hará que sea él o ella quien busque compartir 
+                                 tiempo contigo y te cuente cosas de su día. 
                                 </p>
-
-                                <p style="text-align:justify; text-justify: inter-word; color:black;">
-                                    Las actividades que realizarás con tu bebé serán leerle cuentos y cantar para esto encontrarás
-                                     unos links de cuentos virtuales y unos en pdf, si tienes cuentos en tu casa los puedes utilizar.
-                                      Para las canciones también tendrás unos links y letras de las canciones. Esta actividad no te 
-                                      tomará más de 10 a 15 minutos, la puedes hacer en las noches cuando lo llevas a dormir, cuando 
-                                      lo estás amamantando, dándole el biberón o cuando lo estas bañando.
-                                  </p>
-
-                                  <p style="text-align:justify; text-justify: inter-word; color:black;">
-                                      En primer lugar encontrarás una lista de links que puedes utilizar para ponerle a tu bebé 
-                                      y escuchar y cantar; si en caso dado no puedes hacer esto, te dejaremos un archivo con las 
-                                      letras de las canciones, para que lo imprimas o descargues y tú le puedas cantar aunque no
-                                       tengan el video
-                                    </p>
                              </label>
                             </div>
                         </div>
@@ -969,7 +954,7 @@ button:hover {
                 
                 <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/SiempreJuntos1')}}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
+                    <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/ContigoSiempre1')}}"> <button type="button" style="margin-top:50px; margin-left:30%; margin-right:30% ">Comenzar</button></a>
                     </div>
                 </div><!--end .card-actionbar -->
             </div>
