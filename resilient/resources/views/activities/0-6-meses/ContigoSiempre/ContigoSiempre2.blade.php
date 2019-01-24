@@ -102,7 +102,7 @@ Actividad Contigo Siempre
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form"  id="formulario" method="GET" action="{{route('/CulminacionMomentoFeliz')}}">
+        <form class="form"  id="formulario" method="GET" action="{{route('/ContigoSiempre3')}}">
         <div class="card">
 
                 <div class="card-head style-primary">
@@ -321,55 +321,21 @@ Actividad Contigo Siempre
                                         </label>
                                 </td>      
 
-                        </tr>  
-
-                        <tr>
-                             <td> 
-                                  <div class="form-group" style="display: none" id="otro_l">
-                                  <input type="text" class="form-control" name="OtroLunes" id="Otro_Lunes" >
-                                  <label for="Otro_Lunes"><b>Otra canción</b></label>
-                                  </div>           
-                            </td>   
-                            <td>        
-                                <div class="form-group" style="display: none" id="otro_m">
-                                <input type="text" class="form-control" name="OtroMartes" id="Otro_Martes" >
-                                <label for="Otro_Martes"><b>Otra canción</b></label>
-                                </div>
-                            </td>   
-                            <td>
-                                <div class="form-group"  style="display: none" id="otro_mi">
-                                <input type="text" class="form-control" name="OtroMiercoles" id="Otro_Miercoles" >
-                                <label for="Otro_Miercoles"><b>Otra canción</b></label>
-                                </div>
-                            </td>   
-                            <td>
-                                <div class="form-group"  style="display: none" id="otro_j">
-                                <input type="text" class="form-control" name="OtroJueves" id="Otro_Jueves" >
-                                <label for="Otro_Jueves"><b>Otra canción</b></label>
-                                </div>
-                            </td>   
-                            <td>
-                                <div class="form-group" style="display: none"  id="otro_v">
-                                <input type="text" class="form-control" name="OtroViernes" id="Otro_Viernes" >
-                                <label for="Otro_Viernes"><b>Otra canción</b></label>
-                                </div>
-                            </td>   
-                            <td>
-                                <div class="form-group" style="display: none"  id="otro_s">
-                                <input type="text" class="form-control" name="OtroSabado" id="Otro_Sabado" >
-                                <label for="Otro_Sabado"><b>Otra canción</b><label>
-                                </div>
-                             </td>   
-                            <td>
-                                   
-                                <div class="form-group" style="display: none" id="otro_d">
-                                <input type="text" class="form-control" name="OtroDomingo" id="Otro_Domingo" >
-                                <label for="Otro_Domingo"><b>Otra canción</b></label>
-                                </div>
-                           </td>   
                         </tr>        
                   </table>
+                           
                 </div>    
+
+                <div id="otro" class="col-sm-13" style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black; background-color: lightcyan; display: none;">
+                                <label id="labelOtro" for="" style="color:black" >
+                                       Otra Canción
+                                </label>
+                                <br>
+                                   <textarea name="textarea1" id="textarea" class="form-control" rows="3" placeholder="" required></textarea>
+                                <div class="form-control-line">
+        
+                                </div>
+                </div>            
 
              </div> {{-- card-body no padding --}}
         </div><!--end .card-body -->
@@ -389,134 +355,52 @@ Actividad Contigo Siempre
 @section('addjs')
 
 <script type="text/javascript">
-var seleccionado =  $('input[name="optionsRadios4"]');
-seleccionado.change(function()
+
+$("#cb29").change(function()
 {
-        if(seleccionado.val() == 1)
-        {
-            $("#otro_l").show();
-            $("#Otro_Lunes").attr("required", "true");
-        }
-        if(seleccionado.val() == 2)
-        {
-            $("#otro_m").show();
-            $("#Otro_Martes").attr("required", "true");
-        }
-        if(seleccionado.val() == 3)
-        {
-            $("#otro_mi").show();
-            $("#Otro_Miercoles").attr("required", "true");
-        }
-        if(seleccionado.val() == 4)
-        {
-            $("#otro_j").show();
-            $("#Otro_Jueves").attr("required", "true");
-        }
-        if(seleccionado.val() == 5)
-        {
-            $("#otro_v").show();
-            $("#Otro_Viernes").attr("required", "true");
-        }
-        if(seleccionado.val() == 6)
-        {
-            $("#otro_s").show();
-            $("#Otro_Sabado").attr("required", "true");
-        }
-        if(seleccionado.val() == 7)
-        {
-            $("#otro_d").show();
-            $("#Otro_Domingo").attr("required", "true");
-        }
-}); 
+            $("#otro").show();
+            $("#labelOtro").text('Otra canción lunes'); 
+            $("#textarea").attr("required", "true");
+});
+$("#cb30").change(function()
+{
+            $("#otro").show();
+            $("#labelOtro").text('Otra canción martes'); 
+            $("#textarea").attr("required", "true");
+});
+$("#cb31").change(function()
+{
+            $("#otro").show();
+            $("#labelOtro").text('Otra canción miércoles'); 
+            $("#textarea").attr("required", "true");
+});
+$("#cb32").change(function()
+{
+            $("#otro").show();
+            $("#labelOtro").text('Otra canción jueves'); 
+            $("#textarea").attr("required", "true");
+});
+$("#cb33").change(function()
+{
+            $("#otro").show();
+            $("#labelOtro").text('Otra canción viernes'); 
+            $("#textarea").attr("required", "true");
+});
+$("#cb34").change(function()
+{
+            $("#otro").show();
+            $("#labelOtro").text('Otra canción sábado'); 
+            $("#textarea").attr("required", "true");
+});
+$("#cb35").change(function()
+{
+            $("#otro").show();
+            $("#labelOtro").text('Otra canción  domingo'); 
+            $("#textarea").attr("required", "true");
+});
 
-//
-//$("#cb29").change(function()
-//{
-//        var seleccionado =  $('input[name="optionsRadios4"]');
-//       if(seleccionado.val() == 1)
-//        {
-//            $("#otro_l").show();
-//            $("#Otro_Lunes").attr("required", "true");
-//        }else{
-//            $("#otro_l").hide();
-//            $("#Otro_Lunes").attr("required", "false");
-//        }
-//});
-//$("#cb30").change(function()
-//{
-//        var seleccionado =  $('input[name="optionsRadios4"]');
-//        if(seleccionado.val() == 2)
- //       {
- //           $("#otro_m").show();
- //           $("#Otro_Martes").attr("required", "true");
- //       }else{
- //           $("#otro_m").hide();
- //           $("#Otro_Martes").attr("required", "false");
- //       }    
-//});
-//$("#cb31").change(function()
-//{
- //       var seleccionado =  $('input[name="optionsRadios4"]');
-   //     if(seleccionado.val() == 3)
-     //   {
-       //     $("#otro_mi").show();
-         //   $("#Otro_Miercoles").attr("required", "true");
-        //}else{
-          //  $("#otro_mi").hide();
-            //$("#Otro_Miercoles").attr("required", "false");
-        //}
-//});
-//$("#cb32").change(function()
-//{
-  //      var seleccionado =  $('input[name="optionsRadios4"]');
-    //    if(seleccionado.val() == 4)
-      //  {
-        //    $("#otro_j").show();
-          //  $("#Otro_Jueves").attr("required", "true");
-        //}else{
-          //  $("#otro_j").hide();
-            //$("#Otro_Jueves").attr("required", "false");
-        //}
-//});
-//$("#cb33").change(function()
-//{
-  //      var seleccionado =  $('input[name="optionsRadios4"]');
-    //    if(seleccionado.val() == 5)
-      //  {
-        //    $("#otro_v").show();
-          //  $("#Otro_Viernes").attr("required", "true");
-        //}else{
-          //  $("#otro_v").hide();
-            //$("#Otro_Viernes").attr("required", "false");
-        //}
-//});
-//$("#cb34").change(function()
-//{
-  //      var seleccionado =  $('input[name="optionsRadios4"]');
-    //    if(seleccionado.val() == 6)
-      //  {
-        //    $("#otro_s").show();
-          //  $("#Otro_Sabado").attr("required", "true");
-//        }else{
-//            $("#otro_s").hide();
-//            $("#Otro_Sabado").attr("required", "false");
-//        }
-//});
-//$("#cb35").change(function()
-//{
-//        var seleccionado =  $('input[name="optionsRadios4"]');
-//        if(seleccionado.val() == 7 )
-//        {
-//            $("#otro_d").show();
-//            $("#Otro_Domingo").attr("required", "true");
-//        }else{
-//            $("#otro_d").hide();
-//            $("#Otro_Domingo").attr("required", "false");
-//        }
-//});
-
-$(document).ready(function(){
-
+$(document).ready(function()
+{
 $('#btnhid').change(function(){
    $("#labelpan").css("display","none");
    $("#buttonPass").fadeIn(1000);

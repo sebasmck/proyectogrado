@@ -516,5 +516,6 @@ Route::get('/CulminacionMomentoFeliz', 'ActivityController@culminadoMomentoFeliz
 // Actividad de 0 a 6 meses  ContigoSiempre
 Route::get('/IntroContigoSiempre', 'ActivityController@introContigoSiempre')->name('/IntroContigoSiempre');
 Route::get('/ContigoSiempre1', 'ActivityController@ContigoSiempre1')->name('/ContigoSiempre1');
-Route::get('/ContigoSiempre2', 'ActivityController@ContigoSiempre2')->name('/ContigoSiempre');
-Route::get('/CulminacionContigoSiempre', 'ActivityController@culminadoContigoSiempre')->name('/ContigoSiempre');
+Route::get('/ContigoSiempre2', 'ActivityController@ContigoSiempre2')->name('/ContigoSiempre2');
+Route::get('/ContigoSiempre3', 'ActivityController@ContigoSiempre3')->name('/ContigoSiempre3');
+Route::get('/CulminacionContigoSiempre', 'ActivityController@culminadoContigoSiempre')->name('/CulminacionContigoSiempre');

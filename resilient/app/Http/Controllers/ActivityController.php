@@ -1315,6 +1315,10 @@ public function ContigoSiempre2()
 {
     return view('activities.0-6-meses.ContigoSiempre.ContigoSiempre2');
 } 
+public function ContigoSiempre3()
+{
+    return view('activities.0-6-meses.ContigoSiempre.ContigoSiempre3');
+} 
 public function culminadoContigoSiempre()
 {
     return view('activities.0-6-meses.ContigoSiempre.CulminadoContigoSiempre');
