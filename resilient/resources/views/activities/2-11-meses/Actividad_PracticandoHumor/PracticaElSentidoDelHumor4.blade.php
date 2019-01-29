@@ -17,14 +17,14 @@ PRACTICA EL SENTIDO DEL HUMOR CD
                 <div class="card-body floating-label">
                 <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;" > 
                        <p style="text-align:left; text-justify: inter-word;">
-                       <b>En esta etapa de la vida de tu niño o niña le gusta explorar figuras y formas estas actividades 
+                       En esta etapa de la vida de tu niño o niña le gusta explorar figuras y formas estas actividades 
                        hacen que las manos ya que tendrán el papel principal en todas las actividades que realice.
-                         En esta oportunidad utilizaremos el famoso juego Dominó. En esta ocasión construirán conjuntamente casas de Dominó. </b></p> 
+                         En esta oportunidad utilizaremos el famoso juego Dominó. En esta ocasión construirán conjuntamente casas de Dominó.</p> 
                  </div>
 
                  <div class="title">
                     <p style="text-align:center;"> 
-                     <img src="{{asset('ActividadPruebaHumor/Ejercicio6.png')}}"  alt="Logo" id="logo">
+                     <img src="{{asset('ActividadPruebaHumor/Ejercicio6.png')}}"  alt="Logo" id="logo" width="90%"> 
                     </p> 
                   </div>  
 

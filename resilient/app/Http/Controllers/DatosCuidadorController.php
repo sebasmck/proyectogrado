@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\AreaSociodemografica;
+use App\Ciudad;
+use App\Departamento;
+use App\Http\Controllers\Auth\RedireccionadorRolController;
+use App\NivelSocioeconomico;
 use Illuminate\Http\Request;
 use App\Cuidador;
 use App\TipoDoc;
@@ -21,21 +26,37 @@ class DatosCuidadorController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
+    {
+
         $tipodoc = TipoDoc::all();
         $relacion = RelacionInfante::all();
         $sexo = Sexo::all();
         $estadocivil = EstadoCivil::all();
         $escolaridad = Escolaridad::all();
         $ocupacion = Ocupacion::all();
+        $departamentos = Departamento::all();
+        $areasociodemografica = AreaSociodemografica::all();
+        $nivelsocioeconomico = NivelSocioeconomico::all();
+
+        $cuidador = auth()->user()->cuidador;
 
         return view('DataInput.Datos_Acudiente')
+        ->with('cuidador', $cuidador)
         ->with('tipodoc', $tipodoc)
         ->with('relacion', $relacion)
         ->with('sexo', $sexo)
         ->with('estadocivil', $estadocivil)
         ->with('escolaridad', $escolaridad)
-        ->with('ocupacion', $ocupacion);
+        ->with('ocupacion', $ocupacion)
+        ->with('departamentos', $departamentos)
+        ->with('areasociodemografica', $areasociodemografica)
+        ->with('nivelsocioeconomico', $nivelsocioeconomico);
+    }
+
+    public function getCities(Request $request){
+        $idDepartamento = $request->get('idDepartamento');
+        $ciudades = Ciudad::where('Id_Departamento',$idDepartamento)->get();
+        return $ciudades;
     }
 
     /**
@@ -57,44 +78,32 @@ class DatosCuidadorController extends Controller
     public function store(Request $req)
     {
 
-        $cuidador = new Cuidador;
-        $user = new User;
-
-        $cuidador->Nombre_Acudiente = $req->input('Nombre_Acudiente');
-        $cuidador->Apellido_Acudiente = $req->input('Apellido_Acudiente');
-        $cuidador->Correo_Acudiente = $req->input('Correo_Acudiente');
-        $cuidador->Id_TipoDocumento = $req->input('Id_TipoDocumento');
-        $cuidador->NumeroDocumento_Acudiente = $req->input('NumeroDocumento_Acudiente');
-        
-        // Failing
-        // $cuidador->Id_Cuidador = $req->input('Id_RelacionInfante');
-        // $cuidador->Id_Area = $req->input('Id_Area');
-        // $cuidador->Id_NivelSocioEconomico = $req->input('Id_NivelSocioEconomico');        
-        
-        $cuidador->OtroRelacionInfante = $req->input('OtroRelacionInfante');
-        
-        // // checkboxes
-        $cuidador->Padre = $req->has('Padre')?$req->input('Padre'):'0';
-        $cuidador->Madre = $req->has('Madre')?$req->input('Madre'):'0';
-        $cuidador->Abuelo = $req->has('Abuelo')?$req->input('Abuelo'):'0';
-        $cuidador->Hermano = $req->has('Hermano')?$req->input('Hermano'):'0';
-        $cuidador->Tio = $req->has('Tio')?$req->input('Tio'):'0';
-        $cuidador->Otro_Cuidador = $req->input('Otro_Cuidador');
+        $user = User::find(auth()->id());
+        $cuidador = $user->cuidador;
+        $fechaNacimiento = new \DateTime($req->input('FechaDeNacimiento'));
+        $edadCronologica = getDiffDates($fechaNacimiento->getTimestamp());
 
         $cuidador->Id_Sexo = $req->input('Id_Sexo');
-        // $cuidador->FechaDeNacimiento = $req->input('FechaDeNacimiento');
+        $cuidador->Id_Area = $req->input('Id_Area');
+        $cuidador->Id_NivelSocioEconomico = $req->input('Id_NivelSocioEconomico');
+        $cuidador->FechaDeNacimiento = $fechaNacimiento;
         $cuidador->Id_EstadoCivil = $req->input('Id_EstadoCivil');
         $cuidador->Id_Escolaridad = $req->input('Id_Escolaridad');
-        // $cuidador->Otro_Escolaridad = $req->input('Otro_Escolaridad');
         $cuidador->Id_Ocupacion = $req->input('Id_Ocupacion');
-        // $cuidador->Otro_Ocupacion = $req->input('Otro_Ocupacion');
-        $cuidador->id_usuario = 5;
-        $cuidador->Id_Nacionalidad = 2;
-        $cuidador->num_hijos = 1;
+        $cuidador->Otro_Ocupacion = $req->input('Otro_Ocupacion');
+        $cuidador->Otro_Escolaridad = $req->input('Otro_Escolaridad');
+        $cuidador->Id_NivelSocioEconomico = $req->input('Id_NivelSocioEconomico');
+        $cuidador->Id_Nacionalidad = 36; //nacionalidad Colombiana por defecto
+        $cuidador->id_usuario = $user->id;
+        $cuidador->Id_Ciudad = $req->input('Id_Ciudad');
+        $cuidador->edad = $edadCronologica->y;
+
 
         $cuidador->save();
+        $user->id_estado = 2; //REGISTRO_COMPLETO
+        $user->save();
 
-        return redirect()->back();
+        return RedireccionadorRolController::redirectTo();
     }
 
     /**

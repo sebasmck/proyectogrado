@@ -4,12 +4,12 @@ Logros Obtenidos
 @endsection
 @section('content')
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form" method="POST" action="{{route('/guardar-logros/1')}}">
+        <form class="form" method="get" action="{{route('/actividades-aprendamos-resiliencia-9')}}">
         {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
-                   <header> Logros Obtenidos - Practica Sentido </header>
+                   <header> Logros Obtenidos</header>
                 </div>
 
                 <div class="card-body floating-label">

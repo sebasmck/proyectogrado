@@ -21,10 +21,6 @@
         clear: both;
     }
 
-    [class^="col-"] {
-        float: left;
-    }
-
     .col-full {
         width: 100%;
     }
@@ -43,9 +39,12 @@
         position: relative;
     }
 
+    .container-height{
+        height: auto;
+    }
+
     .hitbox:before {
         display: block;
-        content: "";
     }
 
     .dropzone {
@@ -53,7 +52,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background-size: 100% auto;
+        min-height: 60px !important;
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -76,9 +75,14 @@
     }
 
     .dropzone:not(.container) .icon {
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: 20px;
         margin: 0;
+    }
+
+    .dropzone {
+        min-height: 60px;
+        border: dashed 0.5px #1e8adf !important;
     }
 
     .container {
@@ -90,6 +94,10 @@
         width: 24%;
         margin: 0.5%;
         background-color: #1e8adf;
+    }
+
+    .paragraph-container {
+        height: 70px;
     }
 
 
@@ -124,7 +132,7 @@
                     <p> Selecciona una de las 4 opciones y arrastra</p>
 
                     <div class="row">
-                        <div class="col-sm-12 hitbox" >
+                        <div class="col-sm-12 hitbox" style="margin-top: 20px">
                             <div id="dropzone-container" class="col-sm-12 dropzone container" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
                                 <div id="drag-yotengo" class="icon" draggable="true" ondragstart="return start(event)" ondragend="return end(event)">“Yo tengo”</div>
                                 <div id="drag-yosoy" class="icon" draggable="true" ondragstart="return start(event)" ondragend="return end(event)">“Yo soy”</div>
@@ -132,56 +140,82 @@
                                 <div id="drag-yopuedo" class="icon" draggable="true" ondragstart="return start(event)" ondragend="return end(event)">“Yo puedo”</div>
                             </div>
                         </div>
+                    </div>
 
-                        <div id="dropzone-holder">
-                            <div class="col-sm-4 hitbox">
-                                <img class="answer hide" src="img/correct-green.png" />
-                                <div id="dropzone-1" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                        <div class="row" style="margin-top: 50px">
+                            <div class="col-sm-12 container-height">
+                                <div id="dropzone-holder">
+
+                                    <div class="col-sm-3 hitbox">
+                                        <div id="dropzone-1" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col" style="padding-top: 15px">
+                                    <p>
+                                        Personas que me ponen límites para que aprenda a evitar peligros o problemas.
+                                    </p>
                                 </div>
                             </div>
-                            <div class="col-sm-8">
-                                <p>
-                                    Personas que me ponen límites para que aprenda a evitar peligros o problemas.
-                                </p>
-                            </div>
-
-                        <div class="col-sm-4 hitbox">
-                            <img class="answer hide" src="img/correct-green.png" />
-                            <div id="dropzone-2" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
-                            </div>
-
                         </div>
-                            <div class="col-sm-8">
-                                <p>
-                                    Feliz cuando hago algo bueno para los demás y les demuestro mi afecto
-                                </p>
-                            </div>
+
+                        <hr />
 
 
-                        <div class="col-sm-4 hitbox">
-                            <img class="answer hide" src="img/correct-green.png" />
-                            <div id="dropzone-3" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                        <div class="row"  style="margin-top: 30px">
+                            <div class="col-sm-12 container-height">
+                                <div id="dropzone-holder">
+                                    <div class="col-sm-3 hitbox">
+                                        <div id="dropzone-2" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                                        </div>
+
+                                    </div>
+                                    <div class="col" style="padding-top: 20px">
+                                        <p>
+                                            Feliz cuando hago algo bueno para los demás y les demuestro mi afecto
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                            <div class="col-sm-8">
-                                <p>
-                                    Buscar la manera de resolver mis problemas.
-                                </p>
-                            </div>
 
+                        <hr />
 
-
-                        <div class="col-sm-4 hitbox">
-                            <img class="answer hide" src="img/correct-green.png" />
-                            <div id="dropzone-4" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                        <div class="row"  style="margin-top: 30px">
+                            <div class="col-sm-12 container-height">
+                                <div id="dropzone-holder">
+                                    <div class="col-sm-3 hitbox">
+                                        <div id="dropzone-3" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                                        </div>
+                                    </div>
+                                    <div class="col" style="padding-top: 20px">
+                                        <p>
+                                            Buscar la manera de resolver mis problemas.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                            <div class="col-sm-8">
-                                <p>
-                                    Seguro de que todo saldrá bien.
-                                </p>
+
+                     <hr />
+
+                        <div class="row"  style="margin-top: 30px">
+                            <div class="col-sm-12 container-height">
+                                <div id="dropzone-holder">
+                                    <div class="col-sm-3 hitbox">
+                                        <div id="dropzone-4" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                                        </div>
+                                    </div>
+                                    <div class="col" style="padding-top: 20px">
+                                        <p>
+                                            Seguro de que todo saldrá bien.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        <hr />
 
                         <div class="row">
                             <div class="col-sm-12">
@@ -201,12 +235,20 @@
 
     <script>
         $("#next").click(function () {
-            $("#preparacion").fadeOut();
-            $("#actividad").fadeIn();
+            $("#preparacion").fadeOut(300);
+            setTimeout(function () {
+                $("#actividad").fadeIn(500)
+            },500)
         });
     </script>
 
     <script type="text/javascript">
+
+        var drop1 = false;
+        var drop2 = false;
+        var drop3 = false;
+        var drop4 = false;
+
         var start = function(e) {
             e.dataTransfer.effectAllowed = 'move';
             e.dataTransfer.setData('iconId', e.target.id);
@@ -222,12 +264,11 @@
             var iconId = e.dataTransfer.getData('iconId');
             var targetId = e.target.id;
 
-
             if(e.target.childNodes.length >= 2 ){
                 return true;
             }
 
-            if(targetId == iconId){
+            if(targetId === iconId){
                 return true;
             }
 
@@ -237,12 +278,15 @@
         var drop = function(e) {
             var iconId = e.dataTransfer.getData('iconId');
             var icon = document.getElementById(iconId);
-            if(e.target.id.indexOf('drag') > -1){
-                e.stopPropagation();
-                changePositions(e.target, icon);
-            }else{
-                e.target.appendChild(icon);
-                e.stopPropagation();
+            if(e.target.id != iconId){
+                if(e.target.id.indexOf('drag') > -1){
+                    e.stopPropagation();
+                    changePositions(e.target, icon);
+                }else{
+                    e.target.appendChild(icon);
+                    validate();
+                    e.stopPropagation();
+                }
             }
 
             return false;
@@ -252,33 +296,6 @@
             e.dataTransfer.clearData('iconId');
             return true;
         }
-
-        var pollResults = function() {
-
-            var hitboxes = document.getElementById('dropzone-holder').children;
-
-            for (var i = 0; i < hitboxes.length; ++i) {
-                var hitbox = hitboxes[i];
-                var dropzone = hitbox.lastElementChild;
-
-                if (dropzone.children.length > 0) {
-                    dropzone.style.backgroundSize = '0';
-
-                    var dropzoneId = dropzone.id;
-                    var iconId = dropzone.firstElementChild.id;
-
-                    var dropzoneName = dropzoneId.substring(dropzoneId.indexOf('-') + 1);
-                    var iconName = iconId.substring(iconId.indexOf('-') + 1);
-
-                    dropzone.previousElementSibling.setAttribute('class', 'answer show');
-
-                } else {
-                    dropzone.style.backgroundSize = '100% auto';
-                }
-            }
-        }
-
-        setInterval(pollResults, 50);
 
         var shuffleIcons = function() {
             var dropzoneContainer = document.getElementById('dropzone-container');
@@ -317,9 +334,56 @@
 
                 elementoPadre.append(targetNuevo);
                 objectivoPadre.append(elementoNuevo);
+
+                validate();
+
             }
 
         }
+
+        function validate(){
+            var padre3 = $("#drag-yopuedo").parent();
+            var padre1 = $("#drag-yotengo").parent();
+            var padre4 = $("#drag-yoestoy").parent();
+            var padre2 = $("#drag-yosoy").parent();
+
+            if(padre3[0].id === "dropzone-3"){
+                drop3 = true;
+            }else{
+                drop3 = false;
+            }
+            if(padre1[0].id === "dropzone-1"){
+                drop1 = true;
+            }
+            else{
+                drop1 = false;
+            }
+            if(padre4[0].id  === "dropzone-4"){
+                drop4 = true;
+            }else{
+                drop4 = false;
+            }
+            if(padre2[0].id  === "dropzone-2"){
+                drop2 = true;
+            }else{
+                drop2 = false;
+            }
+        }
+
+        function comprobar(){
+            if(drop1 && drop2 && drop3 && drop4 && drop1 === true){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        $(document).on('click', 'form button[type=submit]', function(e) {
+                if (!comprobar()) {
+                    e.preventDefault(); //prevent the default action
+                    alert("Debes relacionar correctamente las opciones para seguir avanzando");
+                }
+            });
 
         window.onload = function() {
             shuffleIcons();

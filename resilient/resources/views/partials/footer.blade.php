@@ -5,8 +5,8 @@
 	
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-		<script src="{{URL::asset('js/DataTables/datatables.min.js')}}" ></script>
 		<script src="{{URL::asset('js/libs/jquery/jquery-1.11.2.min.js')}}"></script>
+		<script src="{{URL::asset('js/DataTables/datatables.min.js')}}" ></script>
 		<script src="{{URL::asset('js/libs/jquery/jquery-migrate-1.2.1.min.js')}}"></script>
 		<script src="{{URL::asset('js/libs/jquery-ui/jquery-ui.min.js')}}"></script>
 		<script src="{{URL::asset('js/libs/bootstrap/bootstrap.min.js')}}"></script>
@@ -44,7 +44,7 @@
 		
 		
 		<!-- prueba con este codigo para los checkbox-->
-		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		{{--  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  --}}
 		
 		
 		
@@ -121,9 +121,9 @@
 
 			</script>
 
-		<script type="text/javascript">
+		{{--  <script type="text/javascript">
     			$(".date").datepicker({format: 'dd/mm/yyyy'});
-		</script>  
+		</script>    --}}
 
 
 		{{-- <script type="text/javascript">

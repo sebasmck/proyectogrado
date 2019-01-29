@@ -64,6 +64,18 @@ return [
             'url' => env('AWS_URL'),
         ],
 
+        'ftp' => [
+            'driver'   => 'ftp',
+            'host'     => 'web13.anaxanet.com',
+            'username' => 'vksbgxbd_resilient',
+            'password' => 'Resilient2018..*',
+        
+            // Optional FTP Settings...
+            'port'     => 21,
+            // 'root'     => '',
+            // 'passive'  => true,
+            // 'ssl'      => true,
+            // 'timeout'  => 30,
+        ],
     ],
-
 ];

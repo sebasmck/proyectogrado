@@ -329,7 +329,19 @@ class PostTestController extends Controller
     }
 
     public function preguntasCierre(Request $request){
-        //pregunta 15      
+    
+        return view('posttest.preguntascierreposttest');
+    }
+
+   public function preguntasCierrePrueba ()
+   {
+    return view('posttest.preguntascierreposttest');
+   }
+
+    public function respuestasPostest(Request $request)
+    {
+        //$res = RespuestaPregunta::where('ValorDeVerdad', 1)->get();
+         //pregunta 15      
        $preguntas_15 = 15;
        //pregunta 17      
        $preguntas_16 = 16;
@@ -360,13 +372,6 @@ class PostTestController extends Controller
        $pregunta17->id_Preguntas =  $preguntas_17; 
        $pregunta17->valorDeVerdad  = $request->input('pregunta17');
        $pregunta17->save(); 
-
-        return view('posttest.preguntascierreposttest');
-    }
-
-    public function respuestasPostest()
-    {
-        //$res = RespuestaPregunta::where('ValorDeVerdad', 1)->get();
 
         $array = [4,5,7,8,9,10,11,12,13,14,15,16,17];
 

@@ -78,7 +78,10 @@ Post Test 2
 @section('addjs')
 
 <script>
-         
+
+
+    preventDoubleSubmit();
+    
         $("#si").on( "click", function() {
             $('#casoSi').show(); //muestro mediante id
             $('#casoNo').hide();

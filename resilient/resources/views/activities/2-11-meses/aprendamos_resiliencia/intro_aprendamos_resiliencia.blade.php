@@ -837,7 +837,7 @@ button:hover {
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="title animated lightSpeedIn" style="font-family: 'Raleway', sans-serif; font-size: 40px;" >
-                Actividad Aprendamos de resiliencia
+                Actividad aprendamos de resiliencia
             </div>
         </div> 
         
@@ -894,7 +894,8 @@ button:hover {
                                <p style="text-align:justify; text-justify: inter-word; color:black;">
                                  Bienvenido al programa de pautas de Crianza Resilientes para padres. Este programa se desarrolla en el transcurso de ocho semanas en las cuales se realizará una serie de actividades que fomentan habilidades resilientes aplicadas en el proceso de crianza de tu niño o niña quien finalmente será el más beneficiado.
                                  El objetivo de esta actividad es que se conozca sobre la resiliencia y si ya se sabe un poco sobre ella, fortalecer los conocimientos y así los puedas poner en práctica.
-                               </p></label>
+                               </p>
+                            </label>
                             </div>
                         </div>
                     </div>

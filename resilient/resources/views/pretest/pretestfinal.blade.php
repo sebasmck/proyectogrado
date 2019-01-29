@@ -7,7 +7,7 @@ Pretest Final
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" action="{{ route("/pretestcompletado") }}">
         {{csrf_field()}}
             <div class="card">
 
@@ -16,22 +16,27 @@ Pretest Final
                 </div>
 
                 <div class="card-body floating-label"> 
-                
+
+                    <div  style="font-family: 'Raleway', sans-serif; font-size: 24px;color:blue;">
+                        <p style="text-align:center; text-justify: inter-word;">
+                             <b>Has finalizado el pre test</b></p>
+                      </div> 
+                      <div  style="font-family: 'Raleway', sans-serif; font-size: 16px;color:black;">
+                            <p style="text-align:center; text-justify: inter-word;">
+                                 <b>da clic en finalizar para continuar</b></p>
+    
+                          </div> 
                </div>
                             
                     </div>
                           
                     <br><br>
                 </div> {{-- card-body no padding --}}
-
-
-
-                    
-            </div><!--end .card-body -->
+    
 
             <div class="card-actionbar">
                     <div class="card-actionbar-row">
-                    <a style="btn btn-flat btn-primary ink-reaction" href=""> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Finalizar</button></a>
+                        <button class="btn btn-default ink-reaction btn-primary-dark">Finalizar</button>
                     </div>
               </div>
 

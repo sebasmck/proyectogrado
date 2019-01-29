@@ -7,7 +7,6 @@ Escala
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-<form class="form" method="POST" action="{{route('/escalaWY-cuestionario') }}">
 {{csrf_field()}}
 <div class="card">
                 <div class="card-head style-primary">
@@ -35,10 +34,12 @@ Escala
             
         
 </div>
-
+    <div class="text-right small-padding">
+        <button type="button" class="btn btn-primary"><a href="{{ route('/finalizar-escalawy') }}">Finalizar</a></button>
+    </div>
 
 </div>
-</form>
+
 </div>
 
 @endsection

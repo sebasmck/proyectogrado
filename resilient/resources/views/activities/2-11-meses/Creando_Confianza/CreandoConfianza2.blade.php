@@ -99,9 +99,9 @@ Creando Confianza 2
                          <img src="{{asset('ActividadCreandoConfianza/Escalon7.png')}}" align="left"  alt="E7" id="E7" style = "display:none;margin-top:50px;">
                          <img src="{{asset('ActividadCreandoConfianza/Escalon8.png')}}" align="left"  alt="E8" id="E8" style = "display:none;margin-top:50px;">
                          <img src="{{asset('ActividadCreandoConfianza/Escalon9.png')}}" align="left"  alt="E9" id="E9" style = "display:none;margin-top:50px;">
-
+                         <img src="{{asset('ActividadCreandoConfianza/Escalon10.png')}}" align="left"  alt="E10" id="E10" style = "display:none;margin-top:50px;"> 
                      </div>
-                     <img src="{{asset('ActividadCreandoConfianza/Final.png')}}" alt="Final" id="Final" style = "float:right; margin-right:290px;">
+                     <img src="{{asset('ActividadCreandoConfianza/Final.png')}}" alt="Final" id="Final" style = "float:right; margin-right:240px;">
                  </div>  
                 {{-- FIN-Puente --}}
                 </div> {{-- card-body no padding --}}
@@ -109,7 +109,7 @@ Creando Confianza 2
 
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction"  href=""> <button type="button"  class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                  <a style="btn btn-flat btn-primary ink-reaction"  href="{{route('/CreandoConfianza3')}}"> <button type="button" id="boton" style="display:none" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                   </div>
             </div>
         </div><!--end .card -->
@@ -157,6 +157,10 @@ $(function () {
                             {
                                contadorDisplay ++;  
                             }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
+                            }
 
                         }
                         $('#E'+ (contadorDisplay + 1)).show();
@@ -182,6 +186,10 @@ $(function () {
                             {
                                contadorDisplay ++;  
                             }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
+                            }
                         }
                         $('#E'+ (contadorDisplay + 1)).show();
                     }
@@ -205,6 +213,10 @@ $(function () {
                             if(displays == "block")
                             {
                                contadorDisplay ++;  
+                            }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
                             }
                         }
                         $('#E'+ (contadorDisplay + 1)).show();
@@ -230,6 +242,10 @@ $(function () {
                             {
                                 contadorDisplay ++;  
                             }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
+                            }
                         }
                         $('#E'+ (contadorDisplay + 1)).show();
                     }
@@ -253,6 +269,10 @@ $(function () {
                             if(displays == "block")
                             {
                                 contadorDisplay ++;  
+                            }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
                             }
 
                         }
@@ -279,6 +299,10 @@ $(function () {
                             {
                                 contadorDisplay ++;  
                             }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
+                            }
                         }
                         $('#E'+ (contadorDisplay + 1)).show();
                     }
@@ -302,6 +326,10 @@ $(function () {
                             if(displays == "block")
                             {
                                 contadorDisplay ++;  
+                            }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
                             }
                         }
                         $('#E'+ (contadorDisplay + 1)).show();
@@ -327,6 +355,10 @@ $(function () {
                             {
                                 contadorDisplay ++;  
                             }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
+                            }
                         }
                         $('#E'+ (contadorDisplay + 1)).show();
                     }
@@ -351,6 +383,10 @@ $(function () {
                             {
                                 contadorDisplay ++;  
                             }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
+                            }
                         }
                         $('#E'+ (contadorDisplay + 1)).show();
                     }
@@ -374,6 +410,10 @@ $(function () {
                             if(displays == "block")
                             {
                                 contadorDisplay ++;  
+                            }
+                            if(contadorDisplay == 9)
+                            {
+                                $('#boton').show();
                             }
                         }
                         $('#E'+ (contadorDisplay + 1)).show();

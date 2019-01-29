@@ -519,6 +519,11 @@ Datos Acudiente
 
 @section('addjs')
 
+<script>
+
+    preventDoubleSubmit();
+
+</script>
 
 @endsection
 

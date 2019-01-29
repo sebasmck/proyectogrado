@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Auth\RedireccionadorRolController;
+use App\User;
 use Illuminate\Http\Request;
 use App\Documento;
 use App\Preguntas;
@@ -379,6 +381,14 @@ class PretestController extends Controller
        $pregunta17->save(); 
 
        return view('pretest.pretestfinal');
+    }
+    
+    public function pretestCompletado(){
+        $user = User::find(auth()->id());
+        $user->id_estado = 5;
+        $user->save();
+
+        return RedireccionadorRolController::redirectTo();
     }
 
     public function create()

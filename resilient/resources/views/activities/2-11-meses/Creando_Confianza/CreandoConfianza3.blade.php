@@ -3,10 +3,18 @@
 @section('title')
 Creando Confianza 3
 @endsection
+ <style>
+    .linea {
+        float: left;
+        margin-right:50px;
+    }
+ </style>   
+
 @section('content')
 
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form">
+        <form class="form" method="POST" action="{{route('/CreandoConfianzaLogros')}}">
+        {{csrf_field()}}
             <div class="card">
 
                 <div class="card-head style-primary">
@@ -23,36 +31,49 @@ Creando Confianza 3
 
                   <div class="title" >
                     <p style="text-align:center;"> 
-                     <img src="{{asset('ActividadCreandoConfianza/Logros.png')}}" alt="Logo" id="logo">
+                     <img src="{{asset('ActividadCreandoConfianza/Logros.png')}}" alt="Logo" id="logo" width="90%">
                     </p> 
                    </div>  
 
-                    <div class="col-sm-9">
-                            <div class="radio radio-styled">
-                                <label>
+                    <div class="col-sm-12" >
+                            <div class="radio radio-styled" >
+                                    
+                                <div class="linea col-2" style="margin-left:15%; " >
+                                    <label >
                                     <input type="radio" name="optionsRadios" value="1"  required >
-                                    <span>a. Alegria  </span>
-                                </label>
+                                    <span>a. Alegria  </span></label> 
+                                </div>
 
-                                <label>
-                                    <input type="radio" name="optionsRadios" value="2">
-                                    <span>  b. Miedo </span>
-                                </label>
+                                <div class="linea col-2">
+                                   <label>
+                                       <input type="radio" name="optionsRadios" value="2">
+                                       <span>  b. Miedo </span> 
+                                   </label>
+                               </div>
+                               <div class="linea col-2">
 
-                                <label>
-                                    <input type="radio" name="optionsRadios" value="3">
-                                    <span>c. Rabia </span>
-                                </label>
+                                   <label>
+                                       <input type="radio" name="optionsRadios" value="3">
+                                       <span>c. Rabia </span> 
+                                   </label>
+                               </div>
 
-                                <label>
-                                    <input type="radio" name="optionsRadios" value="4">
-                                    <span>d. Tristeza </span>
-                                </label>
+                               <div class="linea col-2">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" value="4">
+                                        <span>d. Tristeza </span> 
+                                    </label>
+                                    
+                                </div> 
                                 
-                                <label>
-                                    <input type="radio" name="optionsRadios" value="5">
-                                    <span>d. Sorpresa </span>
-                                </label>
+                                <div class="linea col-2">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" value="5">
+    
+                                        <span>d. Sorpresa </span> 
+                                    </label>
+                                </div>
+
                             </div>
                      </div>
 
@@ -61,7 +82,7 @@ Creando Confianza 3
 
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction" href=" "> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                  <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
                   </div>
             </div>
         </div><!--end .card -->

@@ -13,19 +13,19 @@ class ActividadAsignada extends Model
     public $timestamps = false;
 
     public function acudienteInfante(){
-        return $this->belongsTo('App/AcudienteInfante','id_RelacionAcudienteInfante');
+        return $this->belongsTo('App\AcudienteInfante','id_RelacionAcudienteInfante');
     }
 
     public function actividad(){
-        return $this->belongsTo('App/Actividad','Id_Actividad');
+        return $this->belongsTo('App\Actividad','Id_Actividad');
     }
 
     public function respuestaMultipleActividad(){
-        return $this->hasMany('App/RespuestaMultipleActividad','id_RelacionAcudienteInfante');
+        return $this->hasMany('App\RespuestaMultipleActividad','id_RelacionAcudienteInfante');
     }
 
     public function respuestaAbiertaActividad(){
-        return $this->hasMany('App/RespuestaAbiertaActividad','id_RelacionAcudienteInfante');
+        return $this->hasMany('App\RespuestaAbiertaActividad','id_RelacionAcudienteInfante');
     }
 
 }

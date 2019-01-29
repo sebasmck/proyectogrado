@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Auth\RedireccionadorRolController;
+use App\User;
 use Illuminate\Http\Request;
 use App\EscalaResilienciaWY;
 use App\Cuidador;
@@ -11,18 +13,21 @@ use App\EscalarAcudiente;
 class EscalaWYController extends Controller{
 
 
+    // public function index()
+    // {
+    //    $id_usuario = auth()->id();
+     //   $escol = Cuidador::with('escolaridad')->where('id_usuario', $id_usuario)->get()[0];
+      //  $civil = Cuidador::with('estadoCivil')->where('id_usuario', $id_usuario)->get()[0];
+     //    return view('escalaWY.escalaWYDatosIniciales')->with('escolaridad', $escol['escolaridad']['Nombre_Escolaridad'])->with('estadoCivi', $civil['estadoCivil']['Nombre_EstadoCivil']);
+    // }
+
      public function index()
      {
         $id_usuario = auth()->id();
-        $escol = Cuidador::with('escolaridad')->where('id_usuario', $id_usuario)->get()[0];
-        $civil = Cuidador::with('estadoCivil')->where('id_usuario', $id_usuario)->get()[0];
-         return view('escalaWY.escalaWYDatosIniciales')->with('escolaridad', $escol['escolaridad']['Nombre_Escolaridad'])->with('estadoCivi', $civil['estadoCivil']['Nombre_EstadoCivil']);
+         return view('escalaWY.escalaWYCuestionario');
      }
       
-    public function escalaWYCuestionario(){
 
-        return view('escalaWY.escalaWYCuestionario');
-    }
 
 
     public function create()
@@ -45,19 +50,6 @@ class EscalaWYController extends Controller{
     public function edit($id)
     {
         
-    }
-
-    
-    public function updateCuidador(Request $request)
-    {
-       // $acudiente = DB::table('acudiente')->where('id_usuario', $id_usuario)->get();
-         $id_usuario = auth()->id();
-         $acudiente = Cuidador::where('id_usuario', $id_usuario)->get()[0];
-         $acudiente->edad = $request->input('edad');
-         $acudiente->num_hijos = $request->input('children');
-         $acudiente->save();
-      //
-        return view('escalaWY.escalaWYCuestionario');
     }
 
 
@@ -139,6 +131,14 @@ class EscalaWYController extends Controller{
       $escalaA->save();
 
       return  view('escalaWY.escalaWYResult')->with('result' , $str)->with('img', $img);  
+    }
+
+    public function finalizarEscala(){
+        $user = User::find(auth()->id());
+        $user->id_estado = 7;
+        $user->save();
+
+        return RedireccionadorRolController::redirectTo();
     }
 
 }

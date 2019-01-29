@@ -17,15 +17,15 @@ PRACTICA EL SENTIDO DEL HUMOR JC
                 <div class="card-body floating-label">
                 <div class="title" style="font-family: 'Raleway', sans-serif; font-size: 18px;color:black;" > 
                        <p style="text-align:left; text-justify: inter-word;">
-                       <b>Una de las ventajas del sentido del humor es la aceptación de los cambios del
+                       Una de las ventajas del sentido del humor es la aceptación de los cambios del
                         cuerpo especialmente en la adolescencia, aunque en esta edad no se dan este tipo de cambios, 
                         si es posible ir desarrollando este tipo de habilidades para cuando los necesiten. 
-                        En esta ocasión utilizaremos las pinturas para cambiar la percepción de cómo nos vemos. </b></p> 
+                        En esta ocasión utilizaremos las pinturas para cambiar la percepción de cómo nos vemos. </p> 
                  </div>
 
                  <div class="title">
                     <p style="text-align:center;"> 
-                     <img src="{{asset('ActividadPruebaHumor/Ejercicio5.png')}}"  alt="Logo" id="logo">
+                     <img src="{{asset('ActividadPruebaHumor/Ejercicio5.png')}}"  alt="Logo" id="logo" width="90%">
                     </p> 
                   </div>  
 

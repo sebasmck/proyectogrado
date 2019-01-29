@@ -4,7 +4,7 @@ Logros Obtenidos
 @endsection
 @section('content')
 <div class="col-lg-offset-2 col-md-8">
-        <form class="form" method="POST" action="{{route('/PracticaSentido6')}}">
+        <form class="form" method="POST" action="{{route('/CreandoConfianzaCulminacion')}}">
         {{csrf_field()}}
             <div class="card">
 

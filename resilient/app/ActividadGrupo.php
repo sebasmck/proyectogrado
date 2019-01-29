@@ -12,11 +12,11 @@ class ActividadGrupo extends Model
 
     public $timestamps = false;
 
-    function grupoPoblacional (){
-        $this->belongsTo('App/GrupoPoblacional','Id_Grupo_Poblacional');
+    function grupoPoblacional(){
+        return $this->belongsTo('App\GrupoPoblacional','Id_Grupo_Poblacional','Id_Grupo_Poblacional');
     }
 
     function actividad(){
-        $this->hasMany('App/Actividad','Id_Actividad','Id_Actividad');
+        return $this->hasMany('App\Actividad','Id_Actividad','Id_Actividad');
     }
 }

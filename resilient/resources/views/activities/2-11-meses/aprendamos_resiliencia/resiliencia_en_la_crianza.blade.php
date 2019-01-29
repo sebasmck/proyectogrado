@@ -14,10 +14,10 @@
             </div>
             <div class="card-body">
                 <b><h3>Escribe cómo crees que se puede integrar este modelo en tu modelo de crianza </h3></b>
-                <textarea name="opcion3" rows="15" cols="200" style="width: 100%"></textarea>
+                <textarea name="opcion3" rows="15" cols="200" style="width: 100%" required minlength="5"></textarea>
                 <hr />
                 <div style="text-align: right">
-                    <button id="concepto" type="text" class="btn style-success"> Siguiente</button>
+                    <button id="concepto" type="submit" class="btn style-success"> Siguiente</button>
                 </div>
             </div>
         </div>

@@ -107,8 +107,10 @@
 
 @section('addjs')
 
+<script>
 
+    preventDoubleSubmit();
 
-
+</script>
 
 @endsection

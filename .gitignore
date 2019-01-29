@@ -18,3 +18,8 @@ Homestead.json
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
+*.zip
+
+resilient/resources/views/posttest/preguntascierreposttest\.blade\.php
+
+resilient/resources/views/activities/3-11-meses/dia_del_elogio/logrosObtenidos\.blade\.php

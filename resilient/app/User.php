@@ -29,7 +29,10 @@ class User extends Authenticatable
     ];
 
     public function cuidador(){
-        return $this->hasOne('App\Cuidador','Id_Acudiente');
+        return $this->hasOne('App\Cuidador','id_usuario');
     }
-    
+
+    public function rol(){
+        return $this->belongsTo('App\Roles','id_rol');
+    }
 }
