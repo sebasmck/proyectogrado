@@ -519,3 +519,10 @@ Route::get('/ContigoSiempre1', 'ActivityController@ContigoSiempre1')->name('/Con
 Route::get('/ContigoSiempre2', 'ActivityController@ContigoSiempre2')->name('/ContigoSiempre2');
 Route::get('/ContigoSiempre3', 'ActivityController@ContigoSiempre3')->name('/ContigoSiempre3');
 Route::get('/CulminacionContigoSiempre', 'ActivityController@culminadoContigoSiempre')->name('/CulminacionContigoSiempre');
+
+// Actividad de 1 a 2 años  Siempre Contigo 
+Route::get('/IntroSiempreContigo', 'ActivityController@introSiempreContigo')->name('/IntroSiempreContigo');
+Route::get('/SiempreContigo1', 'ActivityController@siempreContigo1')->name('/SiempreContigo1');
+Route::get('/SiempreContigo2', 'ActivityController@siempreContigo2')->name('/SiempreContigo2');
+Route::get('/SiempreContigo3', 'ActivityController@siempreContigo3')->name('/SiempreContigo3');
+Route::get('/CulminacionSiempreContigo', 'ActivityController@culminadoSiempreContigo')->name('/CulminacionSiempreContigo');

@@ -1324,6 +1324,28 @@ public function culminadoContigoSiempre()
     return view('activities.0-6-meses.ContigoSiempre.CulminadoContigoSiempre');
 } 
 
+// Actividad de 1 a 2 años Siempre Contigo 
+public function introSiempreContigo()
+{
+    return view('activities.1-2anos.SiempreContigo.intro_SiempreContigo');
+} 
+public function siempreContigo1()
+{
+    return view('activities.1-2anos.SiempreContigo.SiempreContigo1');
+} 
+public function siempreContigo2()
+{
+    return view('activities.1-2anos.SiempreContigo.SiempreContigo2');
+} 
+public function siempreContigo3()
+{
+    return view('activities.1-2anos.SiempreContigo.SiempreContigo3');
+} 
+public function culminadoSiempreContigo()
+{
+    return view('activities.1-2anos.SiempreContigo.CulminadoSiempreContigo');
+} 
+
     //  Actividad con toda mi atención
 
     public function intro_ctma(){
