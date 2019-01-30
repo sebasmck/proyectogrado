@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use \Illuminate\Support\Facades\Cache as Cache;
+use phpDocumentor\Reflection\Types\Self_;
 
 
 class ActivityController extends Controller
@@ -25,6 +26,7 @@ class ActivityController extends Controller
     const URL_ACTIVITIES_2_11_MESES = "activities.2-11-meses.";
     const URL_ACTIVITIES_3_11_MESES = "activities.3-11-meses.";
     const URL_ACTIVITIES_4_11_MESES = "activities.4-11-meses.";
+    const URL_ACTIVITIES_7_11_MESES = "activities.7-11-meses.";
 
     const URL_ACTIVITIE_ACDR = self::URL_ACTIVITIES_2_11_MESES."aterrizando_el_concepto_resiliencia.";
     const URL_ACTIVITIE_GDLE = self::URL_ACTIVITIES_2_11_MESES."gafas_de_las_emociones.";
@@ -35,6 +37,8 @@ class ActivityController extends Controller
     const URL_ACTIVITIE_UM = self::URL_ACTIVITIES_3_11_MESES."una_manita.";
     const URL_ACTIVITIE_CTMA = self::URL_ACTIVITIES_3_11_MESES."con_toda_mi_atencion.";
     const URL_ACTIVITIE_DQPA = self::URL_ACTIVITIES_4_11_MESES."de_quien_puedo_aprender.";
+
+    const URL_ACTIVITIE_SJ = self::URL_ACTIVITIES_7_11_MESES."SiempreJuntos.";
 
     public function finalizarActividad(){
 
@@ -1405,6 +1409,29 @@ public function culminadoSiempreContigo()
     public function culminar_dqpa(){
         return view(self::URL_ACTIVITIE_DQPA."culminando_de_quien_puedo_aprender");
     }
+
+    // Actividad de siempre juntos
+
+    public function  intro_sj(){
+        return view(self::URL_ACTIVITIE_SJ."intro_SiempreJuntos");
+    }
+
+    public function musica_sj(){
+        return view(self::URL_ACTIVITIE_SJ."SiempreJuntos1");
+    }
+
+    public function cuentos_sj(){
+        return view(self::URL_ACTIVITIE_SJ."SiempreJuntos2");
+    }
+
+    public function recomendacion_sj(){
+        return view(self::URL_ACTIVITIE_SJ."SiempreJuntos3");
+    }
+
+    public function logros_sj(){
+        return view(self::URL_ACTIVITIE_SJ."CulminadoSiempreJuntos");
+    }
+
 
 
 }
