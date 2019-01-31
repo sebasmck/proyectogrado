@@ -252,6 +252,17 @@ Route::prefix('actividades')->group(function () {
     Route::get('/de-quien-puedo-aprender-4', 'ActivityController@tareas_dqpa')->name('/de-quien-puedo-aprender-4');
     Route::get('/de-quien-puedo-aprender-5', 'ActivityController@logrosObtenidos_dqpa')->name('/de-quien-puedo-aprender-5');
     Route::get('/de-quien-puedo-aprender-6', 'ActivityController@culminar_dqpa')->name('/de-quien-puedo-aprender-6');
+
+    // Actividad siempre juntos
+
+    Route::get('/siempre-juntos-1', 'ActivityController@intro_sj')->name('/siempre-juntos-1');
+    Route::get('/siempre-juntos-2', 'ActivityController@musica_sj')->name('/siempre-juntos-2');
+    Route::get('/siempre-juntos-3', 'ActivityController@cuentos_sj')->name('/siempre-juntos-3');
+    Route::get('/siempre-juntos-4', 'ActivityController@recomendacion_sj')->name('/siempre-juntos-4');
+    Route::get('/siempre-juntos-5', 'ActivityController@logros_sj')->name('/siempre-juntos-5');
+
+    //
+
 });
 
 //Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');
