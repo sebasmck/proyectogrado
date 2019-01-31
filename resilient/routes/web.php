@@ -498,6 +498,9 @@ Route::get('/DescubriendoEmociones5', 'ActivityController@descubriendoEmociones5
 Route::get('/DescubriendoEmociones6', 'ActivityController@descubriendoEmociones6')->name('/DescubriendoEmociones6');
 Route::get('/DescubriendoEmociones7', 'ActivityController@descubriendoEmociones7')->name('/DescubriendoEmociones7');
 Route::get('/DescubriendoEmociones8', 'ActivityController@descubriendoEmociones8')->name('/DescubriendoEmociones8');
+Route::get('/DescubriendoEmociones9', 'ActivityController@descubriendoEmociones9')->name('/DescubriendoEmociones9');
+Route::get('/DescubriendoEmociones10', 'ActivityController@descubriendoEmociones10')->name('/DescubriendoEmociones10');
+Route::get('/DescubriendoEmociones11', 'ActivityController@descubriendoEmociones11')->name('/DescubriendoEmociones11');
 Route::get('/CulminacionDescubriendoEmociones', 'ActivityController@culminadoDescubriendoEmociones')->name('/CulminacionDescubriendoEmociones');
 
 // Actividad de 0 a 6 meses  juguemos a conocer nuestras emociones
