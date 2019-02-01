@@ -261,7 +261,14 @@ Route::prefix('actividades')->group(function () {
     Route::get('/siempre-juntos-4', 'ActivityController@recomendacion_sj')->name('/siempre-juntos-4');
     Route::get('/siempre-juntos-5', 'ActivityController@logros_sj')->name('/siempre-juntos-5');
 
-    //
+    // Actividad ¡Eso si, Eso no!
+
+    Route::get('/eso-si-eso-no-1', 'ActivityController@intro_esen')->name('/eso-si-eso-no-1');
+    Route::get('/eso-si-eso-no-2', 'ActivityController@imagenes_esen')->name('/eso-si-eso-no-2');
+    Route::get('/eso-si-eso-no-3', 'ActivityController@experiencia_esen')->name('/eso-si-eso-no-3');
+    Route::get('/eso-si-eso-no-4', 'ActivityController@logros_esen')->name('/eso-si-eso-no-4');
+    Route::get('/eso-si-eso-no-5', 'ActivityController@culminar_esen')->name('/eso-si-eso-no-5');
+
 
 });
 

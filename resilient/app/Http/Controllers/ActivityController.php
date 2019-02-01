@@ -39,6 +39,7 @@ class ActivityController extends Controller
     const URL_ACTIVITIE_DQPA = self::URL_ACTIVITIES_4_11_MESES."de_quien_puedo_aprender.";
 
     const URL_ACTIVITIE_SJ = self::URL_ACTIVITIES_7_11_MESES."SiempreJuntos.";
+    const URL_ACTIVITIE_ESEN = self::URL_ACTIVITIES_7_11_MESES."eso_si_eso_no.";
 
     public function finalizarActividad(){
 
@@ -1446,6 +1447,28 @@ public function culminadoSiempreContigo()
 
     public function logros_sj(){
         return view(self::URL_ACTIVITIE_SJ."CulminadoSiempreJuntos");
+    }
+
+    // Actividad eso si eso no
+
+    public function intro_esen(){
+        return view(self::URL_ACTIVITIE_ESEN."intro");
+    }
+
+    public function imagenes_esen(){
+        return view(self::URL_ACTIVITIE_ESEN."dialogs");
+    }
+
+    public function experiencia_esen(){
+        return view(self::URL_ACTIVITIE_ESEN."experiencia");
+    }
+
+    public function logros_esen(){
+        return view(self::URL_ACTIVITIE_ESEN."logros_obtenidos");
+    }
+
+    public function culminar_esen(){
+        return view(self::URL_ACTIVITIE_ESEN."culminacion");
     }
 
 
