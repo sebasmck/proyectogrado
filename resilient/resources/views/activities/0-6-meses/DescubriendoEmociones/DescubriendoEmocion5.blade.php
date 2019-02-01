@@ -40,24 +40,23 @@ Descubriendo Las Emociones
                   </p>
                 </div>  
 
-              <div class="row" align="center">
-                  <div>
-                    <img WIDTH="150" HEIGTH="100"  id="imagen1" src="{{asset('ActividadDescubriendoEmociones/ej1.png')}}"/>
-                    <input type="text" required/>
-                  </div>   
-                  <div>
-                        <img WIDTH="150" HEIGTH="100"  id="imagen1" src="{{asset('ActividadDescubriendoEmociones/ej2.png')}}"/>
-                        <input type="text" required/>
-                      </div>  
-                      <div>
-                            <img WIDTH="150" HEIGTH="100"  id="imagen1" src="{{asset('ActividadDescubriendoEmociones/ej3.png')}}"/>
-                            <input type="text" required/>
-                          </div>  
-                          <div>
-                                <img WIDTH="150" HEIGTH="100"  id="imagen1" src="{{asset('ActividadDescubriendoEmociones/ej4.png')}}"/>
-                                <input type="text" required/>
-                              </div>  
+              <div>
+                <table align="center">
+                  <tr>
+                    <td><img WIDTH="150" HEIGTH="100"  id="imagen1" src="{{asset('ActividadDescubriendoEmociones/ej1.png')}}"/></td>
+                    <td><img WIDTH="150" HEIGTH="100"  id="imagen1" src="{{asset('ActividadDescubriendoEmociones/ej2.png')}}"/></td>
+                    <td><img WIDTH="150" HEIGTH="100"  id="imagen1" src="{{asset('ActividadDescubriendoEmociones/ej3.png')}}"/></td>
+                    <td><img WIDTH="150" HEIGTH="100"  id="imagen1" src="{{asset('ActividadDescubriendoEmociones/ej4.png')}}"/></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" required/>  <br></td>
+                    <td><input type="text" required/>  <br></td>
+                    <td><input type="text" required/>  <br></td>
+                    <td><input type="text" required/>  <br></td>
+                  </tr>  
+                </table>  
               </div>
+
 
               <div style="font-family: 'Raleway', sans-serif; font-size: 14px;color:black; display:none;">
                     <p style="text-align:justify; text-justify: inter-word;">
