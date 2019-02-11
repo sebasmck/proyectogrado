@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use \Illuminate\Support\Facades\Cache as Cache;
+use phpDocumentor\Reflection\Types\Self_;
 
 
 class ActivityController extends Controller
@@ -25,6 +26,7 @@ class ActivityController extends Controller
     const URL_ACTIVITIES_2_11_MESES = "activities.2-11-meses.";
     const URL_ACTIVITIES_3_11_MESES = "activities.3-11-meses.";
     const URL_ACTIVITIES_4_11_MESES = "activities.4-11-meses.";
+    const URL_ACTIVITIES_7_11_MESES = "activities.7-11-meses.";
 
     const URL_ACTIVITIE_ACDR = self::URL_ACTIVITIES_2_11_MESES."aterrizando_el_concepto_resiliencia.";
     const URL_ACTIVITIE_GDLE = self::URL_ACTIVITIES_2_11_MESES."gafas_de_las_emociones.";
@@ -34,6 +36,10 @@ class ActivityController extends Controller
 
     const URL_ACTIVITIE_UM = self::URL_ACTIVITIES_3_11_MESES."una_manita.";
     const URL_ACTIVITIE_CTMA = self::URL_ACTIVITIES_3_11_MESES."con_toda_mi_atencion.";
+    const URL_ACTIVITIE_DQPA = self::URL_ACTIVITIES_4_11_MESES."de_quien_puedo_aprender.";
+
+    const URL_ACTIVITIE_SJ = self::URL_ACTIVITIES_7_11_MESES."SiempreJuntos.";
+    const URL_ACTIVITIE_ESEN = self::URL_ACTIVITIES_7_11_MESES."eso_si_eso_no.";
 
     public function finalizarActividad(){
 
@@ -1186,10 +1192,180 @@ public function introALaHoraDeAmamantar()
     {
         return view('activities.0-6-meses.AlaHoraDeAmamantar.HoraDeAmamantar2');
     }
+    public function ALaHoraDeAmamantar3()
+    {
+        return view('activities.0-6-meses.AlaHoraDeAmamantar.HoraDeAmamantar3');
+    }
+    public function ALaHoraDeAmamantar4()
+    {
+        return view('activities.0-6-meses.AlaHoraDeAmamantar.HoraDeAmamantar4');
+    }
+    public function ALaHoraDeAmamantar5()
+    {
+        return view('activities.0-6-meses.AlaHoraDeAmamantar.HoraDeAmamantar5');
+    }
     public function culminadoALaHoraDeAmamantar()
     {
         return view('activities.0-6-meses.AlaHoraDeAmamantar.CulminadoHoraDeAmamantar');
     }    
+
+    // actividad de 0 a 6 meses Descubriendo las emociones 
+    public function introDescubriendoEmociones()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.intro_DescubriendoEmocion');
+    }
+    public function descubriendoEmociones1()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion1');
+    }
+    public function descubriendoEmociones2()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion2');
+    }
+    public function descubriendoEmociones3()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion3');
+    }
+    public function descubriendoEmociones4()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion4');
+    }
+    public function descubriendoEmociones5()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion5');
+    }
+    public function descubriendoEmociones6()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion6');
+    }
+    
+    public function descubriendoEmociones7()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion7');
+    }
+
+    public function descubriendoEmociones8()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion8');
+    }
+
+    public function descubriendoEmociones9()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion9');
+    }
+
+    public function descubriendoEmociones10()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion10');
+    }
+    public function descubriendoEmociones11()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.DescubriendoEmocion11');
+    }
+    public function culminadoDescubriendoEmociones()
+    {
+        return view('activities.0-6-meses.DescubriendoEmociones.CulminadoDescubriendoEmocion');
+    }    
+    
+    // Actividad de 0 a 6 meses  juguemos a conocer nuestras emociones
+    public function introJuguemosEmociones()
+    {
+        return view('activities.0-6-meses.JugamosConocerEmociones.intro_JugamosEmociones');
+    }
+    public function JuguemosEmociones()
+    {
+        return view('activities.0-6-meses.JugamosConocerEmociones.JugamosEmociones');
+    }
+    public function JuguemosEmociones1(Request $request)
+    {
+        $id_usuario = auth()->id();
+        $acudiente = Cuidador::where('id_usuario', $id_usuario)->value('Id_Acudiente');
+        $pathFiles = 'Files/ActivityJuguemosConNuestrasEmociones/'.$acudiente;
+        //var_dump($acudiente);
+        $file = $request->file('archivo');
+        Storage::disk('ftp')->put($pathFiles , $file);
+        return view('activities.0-6-meses.JugamosConocerEmociones.JugamosEmociones1');
+    }
+    public function JuguemosEmociones2()
+    {
+        return view('activities.0-6-meses.JugamosConocerEmociones.JugamosEmociones2');
+    }
+    public function JuguemosEmociones3(Request $request)
+    {
+        $id_usuario = auth()->id();
+        $acudiente = Cuidador::where('id_usuario', $id_usuario)->value('Id_Acudiente');
+        $pathFiles = 'actividades/ActivityJuguemosConNuestrasEmocionesActividad3/'.$acudiente;
+
+        for($i=1;$i<4;$i++)
+        {
+            $file = $request->file('fileToUpload'.$i);
+            Storage::disk('ftp')->put($pathFiles , $file);
+        }
+        return view('activities.0-6-meses.JugamosConocerEmociones.JugamosEmociones3');
+    }
+
+    public function culminadoJuguemosEmociones()
+    {
+        return view('activities.0-6-meses.JugamosConocerEmociones.CulminadoJugamosEmociones');
+    }    
+
+// Actividad de 0 a 6 meses  momento feliz
+public function introMomentoFeliz()
+{
+    return view('activities.0-6-meses.MomentoFeliz.intro_MomentoFeliz');
+} 
+public function MomentoFeliz1()
+{
+    return view('activities.0-6-meses.MomentoFeliz.MomentoFeliz1');
+} 
+public function culminadoMomentoFeliz()
+{
+    return view('activities.0-6-meses.MomentoFeliz.CulminadoMomentoFeliz');
+} 
+
+// Actividad de 0 a 6 meses  contigo siempre
+public function introContigoSiempre()
+{
+    return view('activities.0-6-meses.ContigoSiempre.intro_ContigoSiempre');
+} 
+public function ContigoSiempre1()
+{
+    return view('activities.0-6-meses.ContigoSiempre.ContigoSiempre1');
+} 
+public function ContigoSiempre2()
+{
+    return view('activities.0-6-meses.ContigoSiempre.ContigoSiempre2');
+} 
+public function ContigoSiempre3()
+{
+    return view('activities.0-6-meses.ContigoSiempre.ContigoSiempre3');
+} 
+public function culminadoContigoSiempre()
+{
+    return view('activities.0-6-meses.ContigoSiempre.CulminadoContigoSiempre');
+} 
+
+// Actividad de 1 a 2 años Siempre Contigo 
+public function introSiempreContigo()
+{
+    return view('activities.1-2anos.SiempreContigo.intro_SiempreContigo');
+} 
+public function siempreContigo1()
+{
+    return view('activities.1-2anos.SiempreContigo.SiempreContigo1');
+} 
+public function siempreContigo2()
+{
+    return view('activities.1-2anos.SiempreContigo.SiempreContigo2');
+} 
+public function siempreContigo3()
+{
+    return view('activities.1-2anos.SiempreContigo.SiempreContigo3');
+} 
+public function culminadoSiempreContigo()
+{
+    return view('activities.1-2anos.SiempreContigo.CulminadoSiempreContigo');
+} 
 
     //  Actividad con toda mi atención
 
@@ -1224,6 +1400,79 @@ public function introALaHoraDeAmamantar()
     public function culminar_ctma(){
         return view(self::URL_ACTIVITIE_CTMA."culminando_ctma");
     }
+
+    // Actividad  de quien puedo aprender
+
+    public function intro_dqpa(){
+        return view(self::URL_ACTIVITIE_DQPA."intro");
+    }
+
+    public function laMetafora_dqpa(){
+        return view(self::URL_ACTIVITIE_DQPA."la_metafora");
+    }
+
+    public function actividadPalabras_dqpa(){
+        return view(self::URL_ACTIVITIE_DQPA."actividad_palabras");
+    }
+
+    public function tareas_dqpa(){
+        return view(self::URL_ACTIVITIE_DQPA."tareas");
+    }
+
+    public function logrosObtenidos_dqpa(){
+        return view(self::URL_ACTIVITIE_DQPA."logrosObtenidos");
+    }
+
+    public function culminar_dqpa(){
+        return view(self::URL_ACTIVITIE_DQPA."culminando_de_quien_puedo_aprender");
+    }
+
+    // Actividad de siempre juntos
+
+    public function  intro_sj(){
+        return view(self::URL_ACTIVITIE_SJ."intro_SiempreJuntos");
+    }
+
+    public function musica_sj(){
+        return view(self::URL_ACTIVITIE_SJ."SiempreJuntos1");
+    }
+
+    public function cuentos_sj(){
+        return view(self::URL_ACTIVITIE_SJ."SiempreJuntos2");
+    }
+
+    public function recomendacion_sj(){
+        return view(self::URL_ACTIVITIE_SJ."SiempreJuntos3");
+    }
+
+    public function logros_sj(){
+        return view(self::URL_ACTIVITIE_SJ."CulminadoSiempreJuntos");
+    }
+
+    // Actividad eso si eso no
+
+    public function intro_esen(){
+        return view(self::URL_ACTIVITIE_ESEN."intro");
+    }
+
+    public function imagenes_esen(){
+        return view(self::URL_ACTIVITIE_ESEN."dialogs");
+    }
+
+    public function experiencia_esen(){
+        return view(self::URL_ACTIVITIE_ESEN."experiencia");
+    }
+
+    public function logros_esen(){
+        return view(self::URL_ACTIVITIE_ESEN."logros_obtenidos");
+    }
+
+    public function culminar_esen(){
+        return view(self::URL_ACTIVITIE_ESEN."culminacion");
+    }
+
+
+
     
     //Actividad cositas por vivir
     public function introCositasPorVivir()

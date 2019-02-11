@@ -243,6 +243,33 @@ Route::prefix('actividades')->group(function () {
     Route::get('/con-toda-mi-atencion-7', 'ActivityController@logrosObtenidos_ctma')->name('/con-toda-mi-atencion-7');
     Route::get('/con-toda-mi-atencion-8', 'ActivityController@culminar_ctma')->name('/con-toda-mi-atencion-8');
 
+
+    // Actividad de quien puedo aprender
+
+    Route::get('/de-quien-puedo-aprender-1', 'ActivityController@intro_dqpa')->name('/de-quien-puedo-aprender-1');
+    Route::get('/de-quien-puedo-aprender-2', 'ActivityController@laMetafora_dqpa')->name('/de-quien-puedo-aprender-2');
+    Route::get('/de-quien-puedo-aprender-3', 'ActivityController@actividadPalabras_dqpa')->name('/de-quien-puedo-aprender-3');
+    Route::get('/de-quien-puedo-aprender-4', 'ActivityController@tareas_dqpa')->name('/de-quien-puedo-aprender-4');
+    Route::get('/de-quien-puedo-aprender-5', 'ActivityController@logrosObtenidos_dqpa')->name('/de-quien-puedo-aprender-5');
+    Route::get('/de-quien-puedo-aprender-6', 'ActivityController@culminar_dqpa')->name('/de-quien-puedo-aprender-6');
+
+    // Actividad siempre juntos
+
+    Route::get('/siempre-juntos-1', 'ActivityController@intro_sj')->name('/siempre-juntos-1');
+    Route::get('/siempre-juntos-2', 'ActivityController@musica_sj')->name('/siempre-juntos-2');
+    Route::get('/siempre-juntos-3', 'ActivityController@cuentos_sj')->name('/siempre-juntos-3');
+    Route::get('/siempre-juntos-4', 'ActivityController@recomendacion_sj')->name('/siempre-juntos-4');
+    Route::get('/siempre-juntos-5', 'ActivityController@logros_sj')->name('/siempre-juntos-5');
+
+    // Actividad ¡Eso si, Eso no!
+
+    Route::get('/eso-si-eso-no-1', 'ActivityController@intro_esen')->name('/eso-si-eso-no-1');
+    Route::get('/eso-si-eso-no-2', 'ActivityController@imagenes_esen')->name('/eso-si-eso-no-2');
+    Route::get('/eso-si-eso-no-3', 'ActivityController@experiencia_esen')->name('/eso-si-eso-no-3');
+    Route::get('/eso-si-eso-no-4', 'ActivityController@logros_esen')->name('/eso-si-eso-no-4');
+    Route::get('/eso-si-eso-no-5', 'ActivityController@culminar_esen')->name('/eso-si-eso-no-5');
+
+
 });
 
 //Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');
@@ -517,3 +544,50 @@ Route::get('/reconociendoMiPersona2', 'ActivityController@reconociendoMiPersona2
 //Actividad fortaleciendo la comunicación con mi hijo
 Route::get('/fortaleciendoComunicacionHijoIntro', 'ActivityController@fortaleciendoComunicacionHijoIntro')->name('/fortaleciendoComunicacionHijoIntro');
 Route::get('/fortaleciendoComunicacionHijo1', 'ActivityController@fortaleciendoComunicacionHijo1')->name('/fortaleciendoComunicacionHijo1');
+
+Route::get('/HoraAmamantar3', 'ActivityController@ALaHoraDeAmamantar3')->name('/HoraAmamantar3');
+Route::get('/HoraAmamantar4', 'ActivityController@ALaHoraDeAmamantar4')->name('/HoraAmamantar4');
+Route::get('/HoraAmamantar5', 'ActivityController@ALaHoraDeAmamantar5')->name('/HoraAmamantar5');
+Route::get('/CulminacionHoraAmamantar', 'ActivityController@culminadoALaHoraDeAmamantar')->name('/CulminacionHoraAmamantar');
+
+// actividad de 0 a 6 meses Descubriendo las emociones 
+Route::get('/IntroDescubriendoEmociones', 'ActivityController@introDescubriendoEmociones')->name('/IntroDescubriendoEmociones');
+Route::get('/DescubriendoEmociones1', 'ActivityController@descubriendoEmociones1')->name('/DescubriendoEmociones1');
+Route::get('/DescubriendoEmociones2', 'ActivityController@descubriendoEmociones2')->name('/DescubriendoEmociones2');
+Route::get('/DescubriendoEmociones3', 'ActivityController@descubriendoEmociones3')->name('/DescubriendoEmociones3');
+Route::get('/DescubriendoEmociones4', 'ActivityController@descubriendoEmociones4')->name('/DescubriendoEmociones4');
+Route::get('/DescubriendoEmociones5', 'ActivityController@descubriendoEmociones5')->name('/DescubriendoEmociones5');
+Route::get('/DescubriendoEmociones6', 'ActivityController@descubriendoEmociones6')->name('/DescubriendoEmociones6');
+Route::get('/DescubriendoEmociones7', 'ActivityController@descubriendoEmociones7')->name('/DescubriendoEmociones7');
+Route::get('/DescubriendoEmociones8', 'ActivityController@descubriendoEmociones8')->name('/DescubriendoEmociones8');
+Route::get('/DescubriendoEmociones9', 'ActivityController@descubriendoEmociones9')->name('/DescubriendoEmociones9');
+Route::get('/DescubriendoEmociones10', 'ActivityController@descubriendoEmociones10')->name('/DescubriendoEmociones10');
+Route::get('/DescubriendoEmociones11', 'ActivityController@descubriendoEmociones11')->name('/DescubriendoEmociones11');
+Route::get('/CulminacionDescubriendoEmociones', 'ActivityController@culminadoDescubriendoEmociones')->name('/CulminacionDescubriendoEmociones');
+
+// Actividad de 0 a 6 meses  juguemos a conocer nuestras emociones
+Route::get('/IntroJuguemosEmociones', 'ActivityController@introJuguemosEmociones')->name('/IntroJuguemosEmociones');
+Route::get('/JuguemosEmociones', 'ActivityController@JuguemosEmociones')->name('/JuguemosEmociones');
+Route::post('/JuguemosEmocione1', 'ActivityController@JuguemosEmociones1')->name('/JuguemosEmocione1');
+Route::get('/JuguemosEmociones2', 'ActivityController@JuguemosEmociones2')->name('/JuguemosEmociones2');
+Route::post('/JuguemosEmociones3', 'ActivityController@JuguemosEmociones3')->name('/JuguemosEmociones3');
+Route::get('/CulminacionJuguemosEmociones', 'ActivityController@culminadoJuguemosEmociones')->name('/CulminacionJuguemosEmociones');
+
+// Actividad de 0 a 6 meses  momento feliz 
+Route::get('/IntroMomentoFeliz', 'ActivityController@introMomentoFeliz')->name('/IntroMomentoFeliz');
+Route::get('/MomentoFeliz1', 'ActivityController@MomentoFeliz1')->name('/MomentoFeliz1');
+Route::get('/CulminacionMomentoFeliz', 'ActivityController@culminadoMomentoFeliz')->name('/CulminacionMomentoFeliz');
+
+// Actividad de 0 a 6 meses  ContigoSiempre
+Route::get('/IntroContigoSiempre', 'ActivityController@introContigoSiempre')->name('/IntroContigoSiempre');
+Route::get('/ContigoSiempre1', 'ActivityController@ContigoSiempre1')->name('/ContigoSiempre1');
+Route::get('/ContigoSiempre2', 'ActivityController@ContigoSiempre2')->name('/ContigoSiempre2');
+Route::get('/ContigoSiempre3', 'ActivityController@ContigoSiempre3')->name('/ContigoSiempre3');
+Route::get('/CulminacionContigoSiempre', 'ActivityController@culminadoContigoSiempre')->name('/CulminacionContigoSiempre');
+
+// Actividad de 1 a 2 años  Siempre Contigo 
+Route::get('/IntroSiempreContigo', 'ActivityController@introSiempreContigo')->name('/IntroSiempreContigo');
+Route::get('/SiempreContigo1', 'ActivityController@siempreContigo1')->name('/SiempreContigo1');
+Route::get('/SiempreContigo2', 'ActivityController@siempreContigo2')->name('/SiempreContigo2');
+Route::get('/SiempreContigo3', 'ActivityController@siempreContigo3')->name('/SiempreContigo3');
+Route::get('/CulminacionSiempreContigo', 'ActivityController@culminadoSiempreContigo')->name('/CulminacionSiempreContigo');
