@@ -283,6 +283,13 @@ Route::prefix('actividades')->group(function () {
     Route::get('/jugamos-a-las-emociones-9', 'ActivityController@archivos_jale_2')->name('/jugamos-a-las-emociones-9');
     Route::get('/jugamos-a-las-emociones-10', 'ActivityController@archivos_jale_3')->name('/jugamos-a-las-emociones-10');
     Route::post('/jugamos-a-las-emociones-11', 'ActivityController@archivos_jale_4')->name('/jugamos-a-las-emociones-11');
+
+    // Mi dibujo favorito
+
+    Route::get('/mi-dibujo-favorito-1', 'ActivityController@intro_mdf')->name('/mi-dibujo-favorito-1');
+    Route::get('/mi-dibujo-favorito-2', 'ActivityController@actividad_mdf')->name('/mi-dibujo-favorito-2');
+    Route::get('/mi-dibujo-favorito-3', 'ActivityController@logros_mdf')->name('/mi-dibujo-favorito-3');
+
 });
 
 //Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');
