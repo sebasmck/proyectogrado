@@ -28,6 +28,7 @@ class ActivityController extends Controller
     const URL_ACTIVITIES_3_11_MESES = "activities.3-11-meses.";
     const URL_ACTIVITIES_4_11_MESES = "activities.4-11-meses.";
     const URL_ACTIVITIES_7_11_MESES = "activities.7-11-meses.";
+    const URL_ACTIVITIES_1_2_ANOS = "activities.1-2-anos.";
 
     const URL_ACTIVITIE_ACDR = self::URL_ACTIVITIES_2_11_MESES."aterrizando_el_concepto_resiliencia.";
     const URL_ACTIVITIE_GDLE = self::URL_ACTIVITIES_2_11_MESES."gafas_de_las_emociones.";
@@ -42,6 +43,8 @@ class ActivityController extends Controller
     const URL_ACTIVITIE_SJ = self::URL_ACTIVITIES_7_11_MESES."SiempreJuntos.";
     const URL_ACTIVITIE_ESEN = self::URL_ACTIVITIES_7_11_MESES."eso_si_eso_no.";
     const URL_ACTIVITIE_JALE = self::URL_ACTIVITIES_7_11_MESES."jugamos_a_las_emociones.";
+
+    const URL_ACTIVITIE_MDF = self::URL_ACTIVITIES_1_2_ANOS."my_dibujo_favorito.";
 
     public function finalizarActividad(){
 
@@ -1690,6 +1693,21 @@ public function culminadoSiempreContigo()
     public function fortaleciendoComunicacionHijo1()
     {
         return view('activities.1-2-anos.Fortaleciendo_comunicacion_hijo.fortaleciendo_comunicacion_hijo_1');
+    }
+
+
+    // Mi dibujo favorito
+
+    public function intro_mdf(){
+        return view(self::URL_ACTIVITIE_MDF."intro");
+    }
+
+    public function actividad_mdf(){
+        return view(self::URL_ACTIVITIE_MDF."actividad");
+    }
+
+    public function logros_mdf(){
+        return view(self::URL_ACTIVITIE_MDF."logrosObtenidos");
     }
 
 
