@@ -514,6 +514,50 @@ Route::get('/CulminacionUnaVezBrazos', 'ActivityController@culminadoUnaVezMasBra
 Route::get('/IntroHoraAmamantar', 'ActivityController@introALaHoraDeAmamantar')->name('/IntroHoraAmamantar');
 Route::get('/HoraAmamantar1', 'ActivityController@ALaHoraDeAmamantar1')->name('/HoraAmamantar1');
 Route::get('/HoraAmamantar2', 'ActivityController@ALaHoraDeAmamantar2')->name('/HoraAmamantar2');
+Route::get('/CulminacionHoraAmamantar', 'ActivityController@culminadoALaHoraDeAmamantar1')->name('/CulminacionHoraAmamantar');
+
+//Actividad cositas por vivir
+Route::get('/IntroCositasPorVivir', 'ActivityController@introCositasPorVivir')->name('/IntroCositasPorVivir');
+Route::get('/cositasPorVivir2', 'ActivityController@cositasPorVivir2')->name('/cositasPorVivir2');
+Route::get('/cositasPorVivir3', 'ActivityController@cositasPorVivir3')->name('/cositasPorVivir3');
+Route::get('/cositasPorVivir4', 'ActivityController@cositasPorVivir4')->name('/cositasPorVivir4');
+Route::get('/cositasPorVivir5', 'ActivityController@cositasPorVivir5')->name('/cositasPorVivir5');
+Route::get('/cositasPorVivir6', 'ActivityController@cositasPorVivir6')->name('/cositasPorVivir6');
+Route::get('/cositasPorVivir7', 'ActivityController@cositasPorVivir7')->name('/cositasPorVivir7');
+Route::get('/cositasPorVivirLogros', 'ActivityController@cositasPorVivirLogros')->name('/cositasPorVivirLogros');
+Route::get('/cositasPorVivirCulminacion', 'ActivityController@cositasPorVivirCulminacion')->name('/cositasPorVivirCulminacion');
+
+//Pautas de crianza con SOFI
+Route::get('/introAprendiendoConSofi', 'ActivityController@introAprendiendoConSofi')->name('/introAprendiendoConSofi');
+Route::get('/aprendiendoConSofi1', 'ActivityController@aprendiendoConSofi1')->name('/aprendiendoConSofi1');
+Route::get('/aprendiendoConSofi2', 'ActivityController@aprendiendoConSofi2')->name('/aprendiendoConSofi2');
+Route::get('/aprendiendoConSofi3', 'ActivityController@aprendiendoConSofi3')->name('/aprendiendoConSofi3');
+Route::get('/aprendiendoConSofi4', 'ActivityController@aprendiendoConSofi4')->name('/aprendiendoConSofi4');
+
+    //Actividad Piel A Piel
+Route::get('/pielAPielIntro', 'ActivityController@pielAPielIntro')->name('/pielAPielIntro');
+Route::get('/pielAPiel1', 'ActivityController@pielAPiel1')->name('/pielAPiel1');
+Route::get('/pielAPiel2', 'ActivityController@pielAPiel2')->name('/pielAPiel2');
+Route::get('/pielAPiel3', 'ActivityController@pielAPiel3')->name('/pielAPiel3');
+Route::get('/pielAPiel4', 'ActivityController@pielAPiel4')->name('/pielAPiel4');
+
+    //Actividad Dejando Huella
+Route::get('/dejandoHIntro', 'ActivityController@dejandoHIntro')->name('/dejandoHIntro');
+Route::get('/dejandoH', 'ActivityController@dejandoH')->name('/dejandoH');
+
+//Actividad  Aprendiendo a decir adios 
+Route::get('/decirAdiosIntro', 'ActivityController@adiosIntro')->name('/decirAdiosIntro');
+Route::get('/decirAdios1', 'ActivityController@adios1')->name('/decirAdios1');
+
+//Actividad reconociendo a mi persona
+Route::get('/reconociendoMiPersonaIntro', 'ActivityController@reconociendoMiPersonaIntro')->name('/reconociendoMiPersonaIntro');
+Route::get('/reconociendoMiPersona1', 'ActivityController@reconociendoMiPersona1')->name('/reconociendoMiPersona1');
+Route::get('/reconociendoMiPersona2', 'ActivityController@reconociendoMiPersona2')->name('/reconociendoMiPersona2');
+
+//Actividad fortaleciendo la comunicación con mi hijo
+Route::get('/fortaleciendoComunicacionHijoIntro', 'ActivityController@fortaleciendoComunicacionHijoIntro')->name('/fortaleciendoComunicacionHijoIntro');
+Route::get('/fortaleciendoComunicacionHijo1', 'ActivityController@fortaleciendoComunicacionHijo1')->name('/fortaleciendoComunicacionHijo1');
+
 Route::get('/HoraAmamantar3', 'ActivityController@ALaHoraDeAmamantar3')->name('/HoraAmamantar3');
 Route::get('/HoraAmamantar4', 'ActivityController@ALaHoraDeAmamantar4')->name('/HoraAmamantar4');
 Route::get('/HoraAmamantar5', 'ActivityController@ALaHoraDeAmamantar5')->name('/HoraAmamantar5');

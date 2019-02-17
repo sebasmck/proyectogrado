@@ -1548,4 +1548,152 @@ public function culminadoSiempreContigo()
     }
 
 
+    
+    //Actividad cositas por vivir
+    public function introCositasPorVivir()
+    {
+        return view('activities.3-11-meses.cositas_por_vivir.cositas_por_vivir_intro');
+    }
+
+    public function cositasPorVivir2()
+    {
+        return view('activities.3-11-meses.cositas_por_vivir.cositas_por_vivir_1');
+    }
+
+    public function cositasPorVivir3()
+    {
+        return view('activities.3-11-meses.cositas_por_vivir.cositas_por_vivir_2');
+    }
+
+    public function cositasPorVivir4()
+    {
+        return view('activities.3-11-meses.cositas_por_vivir.cositas_por_vivir_3');
+    }
+
+    public function cositasPorVivir5()
+    {
+        return view('activities.3-11-meses.cositas_por_vivir.cositas_por_vivir_4');
+    }
+
+    public function cositasPorVivir6()
+    {
+        return view('activities.3-11-meses.cositas_por_vivir.cositas_por_vivir_5');
+    }
+    
+    public function cositasPorVivir7()
+    {
+        return view('activities.3-11-meses.cositas_por_vivir.cositas_por_vivir_6');
+    }
+
+    public function cositasPorVivirLogros()
+    {
+        return view('activities.3-11-meses.cositas_por_vivir.logrosObtenidos');
+    }
+
+    public function cositasPorVivirCulminacion()
+    {
+        return view('activities.3-11-meses.cositas_por_vivir.cositas_por_vivir_culminacion');
+    }
+
+    //Actividad Aprendiendo con sofi
+    public function introAprendiendoConSofi()
+    {
+        return view('activities.0-6-meses.AprendiendoPautasConSofi.intro_aprendiendo_pautas_sofi');
+    }
+
+    public function aprendiendoConSofi1()
+    {
+        return view('activities.0-6-meses.AprendiendoPautasConSofi.aprendiento_pautas_sofi');
+    }
+
+    public function aprendiendoConSofi2()
+    {
+        return view('activities.0-6-meses.AprendiendoPautasConSofi.aprendiendo_pautas_sofi_1');
+    }
+
+    public function aprendiendoConSofi3()
+    {
+        return view('activities.0-6-meses.AprendiendoPautasConSofi.aprendiendo_pautas_sofi_2');
+    }
+        public function aprendiendoConSofi4()
+    {
+        return view('activities.0-6-meses.AprendiendoPautasConSofi.aprendiendo_pautas_sofi_3');
+    }
+
+    //Actividad Piel A Piel
+    public function pielAPielIntro()
+    {
+        return view('activities.0-6-meses.PielAPiel.piel_piel_intro');
+    }
+    public function pielAPiel1()
+    {
+        return view('activities.0-6-meses.PielAPiel.piel_piel_1');
+    }
+    public function pielAPiel2()
+    {
+        return view('activities.0-6-meses.PielAPiel.piel_piel_2');
+    }
+    public function pielAPiel3()
+    {
+        return view('activities.0-6-meses.PielAPiel.piel_piel_3');
+    }
+
+    public function pielAPiel4()
+    {
+        return view('activities.0-6-meses.PielAPiel.piel_piel_4');
+    }
+
+    //Actividad Dejando Huella
+    public function dejandoHIntro()
+    {
+        return view('activities.7-11-meses.Dejando_Huella.dejando_huella_intro');
+    }
+
+    public function dejandoH()
+    {
+        return view('activities.7-11-meses.Dejando_Huella.dejando_huella');
+    }
+
+    //Actividad aprendiendo a decir adios
+    public function adiosIntro()
+    {
+        return view('activities.7-11-meses.Aprendiendo_decir_adios.aprendiendo_decir_adios_intro');
+    }
+
+    public function adios1()
+    {
+        return view('activities.7-11-meses.Aprendiendo_decir_adios.aprendiendo_decir_adios_1');
+    }
+
+    //Actividad reconiciendo a mi persona
+    public function reconociendoMiPersonaIntro()
+    {
+        return view('activities.7-11-meses.Reconocinedo_mi_persona.reconociendo_mi_persona_intro');
+    }
+
+    public function reconociendoMiPersona1()
+    {
+        return view('activities.7-11-meses.Reconocinedo_mi_persona.reconociendo_mi_persona_1');
+    }
+
+    public function reconociendoMiPersona2()
+    {
+        return view('activities.7-11-meses.Reconocinedo_mi_persona.reconociendo_mi_persona_2');
+    }
+
+    //Actividad fortalenciendo la comunicación con mi hijo
+    public function fortaleciendoComunicacionHijoIntro()
+    {
+        return view('activities.1-2-anos.Fortaleciendo_comunicacion_hijo.fortaleciendo_comunicacion_hijo_intro');
+    }
+
+    public function fortaleciendoComunicacionHijo1()
+    {
+        return view('activities.1-2-anos.Fortaleciendo_comunicacion_hijo.fortaleciendo_comunicacion_hijo_1');
+    }
+
+
+
+
+
 }
