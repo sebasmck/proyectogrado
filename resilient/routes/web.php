@@ -270,6 +270,19 @@ Route::prefix('actividades')->group(function () {
     Route::get('/eso-si-eso-no-5', 'ActivityController@culminar_esen')->name('/eso-si-eso-no-5');
 
 
+    // ¿ Jugamos a las emociones?
+
+    Route::get('/jugamos-a-las-emociones-1', 'ActivityController@intro_jale')->name('/jugamos-a-las-emociones-1');
+    Route::get('/jugamos-a-las-emociones-2', 'ActivityController@actividad1_jale')->name('/jugamos-a-las-emociones-2');
+    Route::get('/jugamos-a-las-emociones-3', 'ActivityController@actividad2_jale')->name('/jugamos-a-las-emociones-3');
+    Route::get('/jugamos-a-las-emociones-4', 'ActivityController@actividad3_jale')->name('/jugamos-a-las-emociones-4');
+    Route::get('/jugamos-a-las-emociones-5', 'ActivityController@actividad4_jale')->name('/jugamos-a-las-emociones-5');
+    Route::get('/jugamos-a-las-emociones-6', 'ActivityController@actividad5_jale')->name('/jugamos-a-las-emociones-6');
+    Route::get('/jugamos-a-las-emociones-7', 'ActivityController@logros_jale')->name('/jugamos-a-las-emociones-7');
+    Route::get('/jugamos-a-las-emociones-8', 'ActivityController@archivos_jale_1')->name('/jugamos-a-las-emociones-8');
+    Route::get('/jugamos-a-las-emociones-9', 'ActivityController@archivos_jale_2')->name('/jugamos-a-las-emociones-9');
+    Route::get('/jugamos-a-las-emociones-10', 'ActivityController@archivos_jale_3')->name('/jugamos-a-las-emociones-10');
+    Route::post('/jugamos-a-las-emociones-11', 'ActivityController@archivos_jale_4')->name('/jugamos-a-las-emociones-11');
 });
 
 //Route::get('/actividades2', 'ActivityController@yourCharacter')->name('/actividades2');

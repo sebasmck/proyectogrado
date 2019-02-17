@@ -16,6 +16,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use \Illuminate\Support\Facades\Cache as Cache;
 use phpDocumentor\Reflection\Types\Self_;
+use Intervention\Image\Facades\Image;
 
 
 class ActivityController extends Controller
@@ -40,6 +41,7 @@ class ActivityController extends Controller
 
     const URL_ACTIVITIE_SJ = self::URL_ACTIVITIES_7_11_MESES."SiempreJuntos.";
     const URL_ACTIVITIE_ESEN = self::URL_ACTIVITIES_7_11_MESES."eso_si_eso_no.";
+    const URL_ACTIVITIE_JALE = self::URL_ACTIVITIES_7_11_MESES."jugamos_a_las_emociones.";
 
     public function finalizarActividad(){
 
@@ -1471,6 +1473,79 @@ public function culminadoSiempreContigo()
         return view(self::URL_ACTIVITIE_ESEN."culminacion");
     }
 
+
+    // Actividad jugamos a las emociones
+
+    public function intro_jale(){
+        return view(self::URL_ACTIVITIE_JALE."intro");
+    }
+
+    public function actividad1_jale(){
+        return view(self::URL_ACTIVITIE_JALE."actividad");
+    }
+
+    public function actividad2_jale(){
+        return view(self::URL_ACTIVITIE_JALE."actividad2");
+    }
+
+    public function actividad3_jale(){
+        return view(self::URL_ACTIVITIE_JALE."actividad3");
+    }
+
+    public function actividad4_jale(){
+        return view(self::URL_ACTIVITIE_JALE."actividad4");
+    }
+
+    public function actividad5_jale(){
+        return view(self::URL_ACTIVITIE_JALE."actividad5");
+    }
+
+    public function logros_jale(){
+        return view(self::URL_ACTIVITIE_JALE."logrosObtenidos");
+    }
+
+    public function archivos_jale_1(){
+        $pathFiles = 'Files/ActividadJugamosALasEmociones/caritas.odt';
+
+        $file = Storage::disk('ftp')->download($pathFiles);
+        return $file;
+    }
+
+    public function archivos_jale_2(){
+        $pathFiles = 'Files/ActividadJugamosALasEmociones/formato.odt';
+
+        $file = Storage::disk('ftp')->download($pathFiles);
+        return $file;
+    }
+
+    public function archivos_jale_3(){
+        $pathFiles = 'Files/ActividadJugamosALasEmociones/carasRecortes.odt';
+
+        $file = Storage::disk('ftp')->download($pathFiles);
+        return $file;
+    }
+
+    public function archivos_jale_4(Request $request){
+
+        // objeto de navegación guardado en el storage de la aplicación
+        $infoNavegacion = Cache::store('database')->get(auth()->id());
+
+
+        if(!isset($infoNavegacion['id_infante'])){
+            return view('cuidador.menuCuidador');
+        }
+
+        $infante = $infoNavegacion['id_infante'];
+
+        $relacionAcudienteInfante = AcudienteInfante::where('Id_Infante',$infante)
+            ->where('Id_Acudiente',auth()->user()->cuidador->Id_Acudiente)
+            ->first();
+
+        $file = $request->file("userImage");
+        $pathFiles = 'Files/ActividadJugamosALasEmociones/actividad5/'.$relacionAcudienteInfante->id."/".$file->getBasename();
+
+        return "ok";
+    }
 
 
     
