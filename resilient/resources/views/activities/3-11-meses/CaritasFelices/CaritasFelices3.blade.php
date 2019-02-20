@@ -32,49 +32,49 @@ Caritas Felices
                    <div class="row">
                         <ul>
                             <li>
-                                Felicidad <input class="activities" type="text">
+                               <label>Felicidad</label>  <input class="activities" type="text">
                             </li>
                             <li>
-                                Parte del cuerpo donde lo siento <input class="activities" type="text">
+                                <label> Parte del cuerpo donde lo siento</label> <input class="activities" type="text">
                             </li>
 
                             <li>
-                               Tristeza <input class="activities" type="text">
+                              <label> Tristeza</label> <input class="activities" type="text">
                             </li>
                             <li>
-                                Parte del cuerpo donde lo siento <input class="activities" type="text">
+                                <label>Parte del cuerpo donde lo siento</label> <input class="activities" type="text">
                             </li>
                             
                             <li>
-                                Miedo <input class="activities" type="text">
+                                <label>Miedo</label> <input class="activities" type="text">
                             </li>
                                 
                             <li>
-                                Parte del cuerpo donde lo siento <input class="activities" type="text">
+                                <label> Parte del cuerpo donde lo siento</label> <input class="activities" type="text">
                             </li>
 
                             <li>
-                                Sorpresa <input class="activities" type="text">
+                                <label>Sorpresa</label> <input class="activities" type="text">
                             </li>
                         
                             <li>
-                                Parte del cuerpo donde lo siento  <input class="activities" type="text">
+                                <label>Parte del cuerpo donde lo siento</label>  <input class="activities" type="text">
                             </li>  
                             
                             <li>
-                                    Asco<input class="activities" type="text">
+                                <label>Asco</label><input class="activities" type="text">
                                 </li>
                             
                                 <li>
-                                    Parte del cuerpo donde lo siento  <input class="activities" type="text">
+                                    <label>Parte del cuerpo donde lo siento</label>  <input class="activities" type="text">
                                 </li> 
 
                                 <li>
-                                        Ira <input class="activities" type="text">
+                                    <label> Ira</label> <input class="activities" type="text">
                                     </li>
                                 
                                     <li>
-                                        Parte del cuerpo donde lo siento  <input class="activities" type="text">
+                                        <label>Parte del cuerpo donde lo siento</label>  <input class="activities" type="text">
                                     </li>    
 
                         </ul>
@@ -86,7 +86,7 @@ Caritas Felices
 
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                      <button type="button" class="btn btn-default ink-reaction btn-primary-dark" onclick="guardarRespuesta(1,null)">Siguiente</button>
+                      <button type="button" class="btn btn-default ink-reaction btn-primary-dark" onclick="guardarRespuestaConcatenadaPorInputsyHermanos(1)">Siguiente</button>
                   <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/CaritasFelices4')}}"> </a>
                   </div>
             </div>
