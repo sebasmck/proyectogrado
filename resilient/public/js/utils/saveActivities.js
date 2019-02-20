@@ -1,102 +1,35 @@
-function guardarRespuesta(id_pregunta, clase = null) { // si hay text area por favor indicar cada input o text area con una clase.
-    var allInputs = $(":input"); // document.getElementsByTagName("input");
+function guardarRespuestasPorArrayTextArea(preguntasArray){
+    var textArea = $("textarea");
+    var cont = 0;
 
-    var concatenado = "";
+    textArea.each(function () {
+       var actual =  new objectoTextArea($(this));
+       var valor = actual.getValue();
+       var idPreguntaActual = preguntasArray[cont];
 
-    if(clase == null)
-    {
-        allInputs.each(function( i ) {
-
-            var actual = $(this);
-            var entro = false;
-
-            var tipoInput = actual.attr("type");
-            var textoActual;
-            switch (tipoInput) {
-                case "text":{
-                    textoActual = actual.val();
-                    entro = true;
-                    break;
-                }
-                case "radio":
-                case "checkbox":{
-                    if(actual.checked){
-                       textoActual = actual.val();
-                       entro = true;
-                    }
-                    break;
-                }
-            }
-            if(textoActual !== undefined && entro){
-                if(i === 0) {
-                    concatenado = textoActual;
-                } else {
-                    concatenado = concatenado + ";" + textoActual;
-                }
-            }
-
-        });
-
-
-    }else{
-        var inputsClase = $("."+clase);
-
-        inputsClase.each(function( j ) {
-
-            var inputClaseActual = $(this);
-            var entro = false;
-
-            var tipoInputClase = inputClaseActual.attr("type");
-            var textoActualClase;
-            switch (tipoInputClase) {
-                case "text":{
-                    textoActualClase = inputClaseActual.val();
-                    entro = true;
-                    break;
-                }
-                case "radio":
-                case "checkbox":{
-                    if(inputClaseActual.checked){
-                        textoActualClase = inputClaseActual.val();
-                        entro = true;
-                    }
-                    break;
-                }
-            }
-
-
-            if(inputClaseActual.prop("tagName") == "TEXTAREA"){
-                textoActualClase = inputClaseActual.val();
-                entro = true;
-            }
-
-            if(textoActualClase !== undefined && entro) {
-                if (j === 0) {
-                    concatenado = textoActualClase;
-                } else {
-                    concatenado = concatenado + ";" + textoActualClase;
-                }
-            }
-
-        });
-
-    }
+       var respuesta = new RespuestaAbierta(idPreguntaActual, valor);
+       respuesta.guardarRespuesta();
+       cont ++;
+    });
 }
 
+
 function guardarRespuestaConcatenadaPorInputsyHermanos(idPregunta){
-    var inputsClase = $(":input").not(':input[type=button]');
+    var inputsClase = $("input").not(':input[type=button], :input[type=submit], :input[type=reset],input[name=_token]');
     var array = [];
 
     inputsClase.each(function () {
         actual = new objectoInput($(this));
         array.push(actual.getValueAndSibbling());
     });
-    var respuesta = concatenarPorArray(array);
-    console.log(respuesta);
+    var datos = concatenarPorArray(array);
+
+    var respuesta = new RespuestaAbierta(idPregunta, datos);
+    respuesta.guardarRespuesta();
 }
 
 function guardarRespuestaConcatenadaPorInputs(idPregunta){
-    var inputsClase = $(":input").not(':input[type=button]');
+    var inputsClase = $(":input").not(':input[type=button],input[name=_token]');
     var array = [];
 
     inputsClase.each(function () {
@@ -105,6 +38,7 @@ function guardarRespuestaConcatenadaPorInputs(idPregunta){
     });
     var respuesta = concatenarPorArray(array);
 }
+
 
 function guardarRespuestaConcatenadaPorClase(idPregunta, clase){
     var objectClase = $("."+clase);
@@ -202,20 +136,18 @@ class objectoInput extends objectoDom {
 
 class Respuesta {
 
-    constructor(idPregunta, idAcudienteInfante)
+    constructor(idPregunta)
     {
         this.idPregunta = idPregunta;
-        this.idAcudienteInfante = idAcudienteInfante;
         this.formData = new FormData();
     }
 
     guardar(route){
         this.formData.append("idPregunta",this.idPregunta);
-        this.formData.append("idAcudienteInfante",this.idAcudienteInfante);
 
         $.ajax({
-            url: "{{ route('"+route+"') }}",
-            data: formData,
+            url: route,
+            data: this.formData,
             type: "POST",
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -229,10 +161,10 @@ class Respuesta {
 
 class RespuestaMultiple extends Respuesta {
 
-        constructor(idPregunta, idAcudienteInfante, seleccionada){
-        super(idPregunta, idAcudienteInfante);
+        constructor(idPregunta, seleccionada){
+        super(idPregunta);
         this.seleccionada = seleccionada;
-        this.route = "";
+        this.route = "/SavaActivityMulti";
     }
 
     guardarRespuesta(){
@@ -244,10 +176,10 @@ class RespuestaMultiple extends Respuesta {
 
 class RespuestaAbierta extends Respuesta {
 
-    constructor(idPregunta, idAcudienteInfante, respuesta) {
-        super(idPregunta, idAcudienteInfante);
+    constructor(idPregunta, respuesta) {
+        super(idPregunta);
         this.respuesta = respuesta;
-        this.route = "";
+        this.route = "/SaveActivityOpen";
     }
 
     guardarRespuesta(){
@@ -255,91 +187,4 @@ class RespuestaAbierta extends Respuesta {
         this.guardar(this.route)
     }
 
-}
-
-
-
-function guardarRespuestaConComodin(id_pregunta, clase, claseLabel) {
-    var allInputs = $(":input"); // document.getElementsByTagName("input");
-
-    var concatenado = "";
-
-    if(clase == null)
-    {
-        allInputs.each(function( i ) {
-
-            var actual = $(this);
-            var entro = false;
-
-            var tipoInput = actual.attr("type");
-            var textoActual;
-            switch (tipoInput) {
-                case "text":{
-                    textoActual = actual.val();
-                    entro = true;
-                    break;
-                }
-                case "radio":
-                case "checkbox":{
-                    if(actual.checked){
-                        textoActual = actual.val();
-                        entro = true;
-                    }
-                    break;
-                }
-            }
-            if(textoActual !== undefined && entro){
-                if(i === 0) {
-                    concatenado = textoActual;
-                } else {
-                    concatenado = concatenado + ";" + textoActual;
-                }
-            }
-
-        });
-        console.log(concatenado)
-
-    }else{
-        var inputsClase = $("."+clase);
-
-        inputsClase.each(function( j ) {
-
-            var inputClaseActual = $(this);
-            var entro = false;
-
-            var tipoInputClase = inputClaseActual.attr("type");
-            var textoActualClase;
-            switch (tipoInputClase) {
-                case "text":{
-                    textoActualClase = inputClaseActual.val();
-                    entro = true;
-                    break;
-                }
-                case "radio":
-                case "checkbox":{
-                    if(inputClaseActual.checked){
-                        textoActualClase = inputClaseActual.val();
-                        entro = true;
-                    }
-                    break;
-                }
-            }
-
-
-            if(inputClaseActual.prop("tagName") == "TEXTAREA"){
-                textoActualClase = inputClaseActual.val();
-                entro = true;
-            }
-
-            if(textoActualClase !== undefined && entro) {
-                if (j === 0) {
-                    concatenado = textoActualClase;
-                } else {
-                    concatenado = concatenado + ";" + textoActualClase;
-                }
-            }
-
-        });
-
-    }
 }

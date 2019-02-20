@@ -1714,32 +1714,41 @@ public function culminadoSiempreContigo()
 
      public function guardarRespuestaAbiertaActividad(Request $request)
      {
+
+         $infoNavegacion = Cache::store('database')->get(auth()->id());
+         $infante = $infoNavegacion['id_infante'];
+
         $relacionAcudienteInfante = AcudienteInfante::where('Id_Infante',$infante)
         ->where('Id_Acudiente',auth()->user()->cuidador->Id_Acudiente)
-        ->with(['actividadesAsignadas' => function($query) use ($actividad){
-            $query->where('Id_Actividad',$actividad)->first();
-        }])->first();
+        ->first();
+
         $preguntaActividad = $request->input('idPregunta');
-        $respuestaPregunta = new RespuestaAbiertaActividad ();  
-        $respuestaPregunta->Id_Pregunta = $preguntaActividad ; 
+
+        $respuestaPregunta = new RespuestaAbiertaActividad();
+        $respuestaPregunta->Id_Pregunta = $preguntaActividad ;
         $respuestaPregunta->Respuesta = $request->input('respuesta');
-        $respuestaPregunta->id_AcudienteInfante = $relacionAcudienteInfante; 
+        $respuestaPregunta->id_AcudienteInfante = $relacionAcudienteInfante->id;
         $respuestaPregunta->save();
+
+        return $respuestaPregunta;
      }
 
      public function guardarRespuestaCerradaActividad(Request $request )
      {
+
+         $infoNavegacion = Cache::store('database')->get(auth()->id());
+         $infante = $infoNavegacion['id_infante'];
+
         $relacionAcudienteInfante = AcudienteInfante::where('Id_Infante',$infante)
         ->where('Id_Acudiente',auth()->user()->cuidador->Id_Acudiente)
-        ->with(['actividadesAsignadas' => function($query) use ($actividad){
-            $query->where('Id_Actividad',$actividad)->first();
-        }])->first();
+        ->first();
+
         $respuestaMultiple = new RespuestaMultipleActividad();
         $pregunta = $request->input('idPregunta'); 
-        $RelacionInfante = $relacionAcudienteInfante ; 
+
         $respuestaMultiple ->Seleccionada = $request->input('seleccionada');
         $respuestaMultiple->Id_Pregunta = $pregunta;
-        $respuestaMultiple->id_AcudienteInfante = $RelacionInfante; 
+        $respuestaMultiple->id_AcudienteInfante = $relacionAcudienteInfante->id;
         $respuestaMultiple->save();
      }
 

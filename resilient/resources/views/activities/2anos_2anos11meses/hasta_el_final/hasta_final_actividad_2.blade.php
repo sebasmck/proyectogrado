@@ -83,7 +83,7 @@ Hasta el final
 
 <div class="card-actionbar">
                 <div class="card-actionbar-row">
-                <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                <a style="btn btn-flat btn-primary ink-reaction"> <button type="submit" class="btn btn-default ink-reaction btn-primary-dark" onclick="guardarRespuestasPorArrayTextArea([6,7,8])">Siguiente</button></a>
                     </div>
             </div>
 </div>
