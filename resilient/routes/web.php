@@ -611,3 +611,8 @@ Route::get('/SiempreContigo1', 'ActivityController@siempreContigo1')->name('/Sie
 Route::get('/SiempreContigo2', 'ActivityController@siempreContigo2')->name('/SiempreContigo2');
 Route::get('/SiempreContigo3', 'ActivityController@siempreContigo3')->name('/SiempreContigo3');
 Route::get('/CulminacionSiempreContigo', 'ActivityController@culminadoSiempreContigo')->name('/CulminacionSiempreContigo');
+
+
+// guardar Actividades respuesta multiple y respuesta abierta 
+Route::post('/SaveActivityOpen', 'ActivityController@guardarRespuestaAbiertaActividad')->name('/SaveActivityOpen');
+Route::post('/SavaActivityMulti', 'ActivityController@guardarRespuestaCerradaActividad(')->name('/SaveActivityMulti');
