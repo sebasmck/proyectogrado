@@ -412,7 +412,7 @@ class ActivityController extends Controller
         //insertar respuesta
         $respuestaPregunta->Id_Pregunta = 1; 
         $respuestaPregunta->Respuesta = $request->input('textarea2');
-        $respuestaPregunta->id_RelacionAcudienteInfante = null; 
+        $respuestaPregunta->id_AcudienteInfante = null; 
         $respuestaPregunta->save();
         return view('activities.2-11-meses.Actividad_PracticandoHumor.logrosObtenidos');
     }
@@ -462,7 +462,7 @@ class ActivityController extends Controller
         $RelacionInfante = null ; // Por el momento enviar vacio  
         $respuestaMultiple ->Seleccionada = $request->input('optionsRadios');
         $respuestaMultiple->Id_Pregunta = $pregunta;
-        $respuestaMultiple->id_RelacionAcudienteInfante = $RelacionInfante; 
+        $respuestaMultiple->id_AcudienteInfante = $RelacionInfante; 
         $respuestaMultiple->save();
         return view('activities.2-11-meses.Creando_Confianza.LogrosObtenidos');
     }
@@ -1073,7 +1073,7 @@ class ActivityController extends Controller
     }
 
     public function CaritasFelices4()
-    {
+    {   
         return view('activities.3-11-meses.CaritasFelices.CaritasFelices4');
     }
 
@@ -1711,6 +1711,37 @@ public function culminadoSiempreContigo()
     }
 
 
+
+     public function guardarRespuestaAbiertaActividad(Request $request)
+     {
+        $relacionAcudienteInfante = AcudienteInfante::where('Id_Infante',$infante)
+        ->where('Id_Acudiente',auth()->user()->cuidador->Id_Acudiente)
+        ->with(['actividadesAsignadas' => function($query) use ($actividad){
+            $query->where('Id_Actividad',$actividad)->first();
+        }])->first();
+        $preguntaActividad = $request->input('idPregunta');
+        $respuestaPregunta = new RespuestaAbiertaActividad ();  
+        $respuestaPregunta->Id_Pregunta = $preguntaActividad ; 
+        $respuestaPregunta->Respuesta = $request->input('respuesta');
+        $respuestaPregunta->id_AcudienteInfante = $relacionAcudienteInfante; 
+        $respuestaPregunta->save();
+     }
+
+     public function guardarRespuestaCerradaActividad(Request $request )
+     {
+        $relacionAcudienteInfante = AcudienteInfante::where('Id_Infante',$infante)
+        ->where('Id_Acudiente',auth()->user()->cuidador->Id_Acudiente)
+        ->with(['actividadesAsignadas' => function($query) use ($actividad){
+            $query->where('Id_Actividad',$actividad)->first();
+        }])->first();
+        $respuestaMultiple = new RespuestaMultipleActividad();
+        $pregunta = $request->input('idPregunta'); 
+        $RelacionInfante = $relacionAcudienteInfante ; 
+        $respuestaMultiple ->Seleccionada = $request->input('seleccionada');
+        $respuestaMultiple->Id_Pregunta = $pregunta;
+        $respuestaMultiple->id_AcudienteInfante = $RelacionInfante; 
+        $respuestaMultiple->save();
+     }
 
 
 
