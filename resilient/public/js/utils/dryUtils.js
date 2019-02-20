@@ -29,3 +29,4 @@ function preventDoubleSubmit(){
 
     $('form').preventDoubleSubmission();
 }
+

@@ -86,7 +86,8 @@ Caritas Felices
 
             <div class="card-actionbar">
                   <div class="card-actionbar-row">
-                  <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/CaritasFelices4')}}"> <button type="button" class="btn btn-default ink-reaction btn-primary-dark">Siguiente</button></a>
+                      <button type="button" class="btn btn-default ink-reaction btn-primary-dark" onclick="guardarRespuesta(1,null)">Siguiente</button>
+                  <a style="btn btn-flat btn-primary ink-reaction" href="{{route('/CaritasFelices4')}}"> </a>
                   </div>
             </div>
 

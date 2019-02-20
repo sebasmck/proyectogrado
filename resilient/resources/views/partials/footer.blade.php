@@ -41,6 +41,7 @@
 		<script src="{{URL::asset('js/libs/ckeditor/ckeditor.js')}}"></script>
 		<script src="{{URL::asset('js/libs/ckeditor/adapters/jquery.js')}}"></script>
 		<script src="{{URL::asset('js/utils/dryUtils.js')}}"></script>
+		<script src="{{URL::asset('js/utils/saveActivities.js')}}"></script>
 		
 		
 		<!-- prueba con este codigo para los checkbox-->
